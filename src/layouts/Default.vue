@@ -1,22 +1,17 @@
 <template lang='pug'>
   body
-    #homepage
+    slot
+    .footer
       .container
         .small
-          .page-title
-            h1 Nusendra Hanggarawan
-            h2 Software Engineer
-      .container
-        .small
-          .column
-            .label Blog Posts
-            .left
-              h3 New Blog
-              p this is the content
-            .right
-              h3 Oh shit
-              p what the fuck u want?
-              .sailboat
+          .social
+            ul
+              li.linkedin
+                a(href='https://www.linkedin.com/in/nusendra-hanggarawan-79854990/')
+              li.instagram
+                a(href='https://www.instagram.com/nusendra_/')
+              li.email
+                a(href='mailto:admin@nusendra.com') Feel free to mail me.
 </template>
 
 <static-query>
