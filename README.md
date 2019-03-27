@@ -1,5 +1,7 @@
 # Default starter for Gridsome
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/84ed5fcc-d6f3-4ca4-bff2-a6d849018bf0/deploy-status)](https://app.netlify.com/sites/nusendra/deploys)
+
 ### 1. Install Gridsome CLI tool if you don't have
 
 `npm install --global @gridsome/cli`
