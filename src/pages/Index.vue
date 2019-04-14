@@ -6,6 +6,7 @@
           .page-title
             .name Nusendra Hanggarawan
             .job Software Engineer
+          hr
           .column
             .left
               p I'm a software engineer who worked mostly with JavaScript language, Frontend and Backend. Sometimes I code in PHP too, using Lumen framework to build an API Services.
@@ -22,16 +23,11 @@
         .small
           .column
             .label Latest Blog
-            span(v-for="(item,index) in chunk" :key="index")
-              .left(v-if="item[0]")
-                .blog-title
-                  g-link(:to="item[0].node.path") {{ item[0].node.title }}
-                p {{ item[0].node.description }}
-              .right(v-if="item[1]")
-                .blog-title
-                  g-link(:to="item[1].node.path") {{ item[1].node.title }}
-                p {{ item[1].node.description }}
-                  .sailboat(v-if="index == chunk.length - 1")
+            .wide(v-for='(item, index) in this.$page.allPost.edges ' :key='index')
+              .blog-title
+                g-link(:to="item.node.path") {{ item.node.title }}
+                br
+                .meta(:title="item.node.date + ' | 0 views'")
 </template>
 
 <page-query>
@@ -54,13 +50,6 @@
 export default {
   metaInfo: {
     title: 'Home'
-  },
-  computed: {
-    chunk() {
-      const arr = this.$page.allPost.edges;
-      const chunk = (arr, j) => arr.reduce((a,b,i,g) => !(i % j) ? a.concat([g.slice(i,i+j)]) : a, []);
-      return chunk(arr, 2);
-    }
   }
 }
 </script>
