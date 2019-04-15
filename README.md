@@ -1,14 +1,5 @@
-# Default starter for Gridsome
+# Gridsome Starter Blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/84ed5fcc-d6f3-4ca4-bff2-a6d849018bf0/deploy-status)](https://app.netlify.com/sites/nusendra/deploys)
+This is a minimal starter blog kit for markdown.
 
-### 1. Install Gridsome CLI tool if you don't have
-
-`npm install --global @gridsome/cli`
-
-### 2. Create a Gridsome project
-
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gridsome/gridsome-starter-markdown-blog)

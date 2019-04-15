@@ -1,21 +1,18 @@
 {
-  "name": "blog",
+  "name": "gridsome-starter-markdown-blog",
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "dev": "gridsome develop",
+    "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/remark-prismjs": "^0.0.5",
     "@gridsome/source-filesystem": "^0.3.0",
-    "@gridsome/transformer-remark": "^0.2.1",
-    "gridsome": "^0.5.0",
-    "moment": "^2.24.0"
+    "@gridsome/transformer-remark": "^0.2.0",
+    "gridsome": "^0.5.0"
   },
   "devDependencies": {
     "pug": "^2.0.3",
-    "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0"
   }
 }
