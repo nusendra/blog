@@ -1,6 +1,18 @@
 module.exports = {
-  siteName: `Gridsome Starter Blog`,
-  titleTemplate: `%s - Gridsome`,
+  siteName: `Nusendra Hanggarawan`,
+  siteUrl: 'https://nusendra.com',
+  siteDescription: 'Personal Blog of Nusendra',
+  titleTemplate: `%s - Nusendra H.`,
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
 
   plugins: [
     {
