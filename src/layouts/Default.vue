@@ -1,6 +1,7 @@
 <template lang='pug'>
   div
     slot
+    p
     .footer
       .container
         .small
@@ -11,5 +12,5 @@
               li.instagram
                 a(href='https://www.instagram.com/nusendra_/')
               li.email
-                a(href='mailto:admin@nusendra.com') Feel free to mail me.
+                span Copyright © 2019. Built with Vue.js
 </template>

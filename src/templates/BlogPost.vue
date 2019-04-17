@@ -10,7 +10,7 @@
             .left
               p Home / Now / Contact
           .name {{ $page.blogPost.title }}
-          // .meta(title='Published at') {{ date }}
+          .meta(title='Published at') {{ $page.blogPost.date }}
           // .meta(title='Views') 123
       .container
         .small

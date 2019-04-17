@@ -2,7 +2,6 @@ module.exports = {
   siteName: `Nusendra Hanggarawan`,
   siteUrl: 'https://nusendra.com',
   siteDescription: 'Personal Blog of Nusendra',
-  titleTemplate: `%s - Nusendra H.`,
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -20,7 +19,24 @@ module.exports = {
       options: {
         path: 'blog/*.md',
         typeName: 'BlogPost',
-        route: '/:slug'
+        route: '/post/:slug'
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: ['/exclude-me'],
+        config: {
+          '/post/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7
+          }
+        }
       }
     }
   ]
