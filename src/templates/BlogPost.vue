@@ -24,7 +24,6 @@
       title
       date (format: "D MMMM, YYYY")
       content
-      image
     }
   }
 </page-query>
