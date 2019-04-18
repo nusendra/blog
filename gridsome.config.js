@@ -1,7 +1,7 @@
 module.exports = {
   siteName: `Nusendra Hanggarawan`,
   siteUrl: 'https://nusendra.com',
-  siteDescription: 'Personal Blog of Nusendra',
+  siteDescription: 'Personal web blog yang memuat konten seputar kehidupan programmer dan aktifitas ngoding',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -20,6 +20,12 @@ module.exports = {
         path: 'blog/*.md',
         typeName: 'BlogPost',
         route: '/post/:slug'
+      }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-110929778-1'
       }
     },
     {
