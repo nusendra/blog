@@ -22,7 +22,7 @@
       .container
         .small
           .column
-            .label Latest Blog
+            .label LATEST BLOG
               .wide(v-for="{ node } in $page.allBlogPost.edges")
                 .blog-title
                   router-link(:to="node.path") {{ node.title }}
