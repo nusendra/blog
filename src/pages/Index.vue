@@ -11,26 +11,11 @@
             .left
               p I'm a software engineer who worked mostly with JavaScript language, Frontend and Backend. Sometimes I code in PHP too, using Lumen framework to build an API Services.
             .right
-              .resume
-                .label Explore this blog
-                ul
-                  li
-                    .company Who am I?
-                    .company What am I doing right now?
-                    .company Read my blog posts
-                    .company Get in touch with me
+              Menu
       .container
         .small
           .column
-            .label BLOG POSTS
-              .wide(v-for="{ node } in $page.allBlogPost.edges")
-                .blog-title
-                  router-link(:to="node.path") {{ node.title }}
-                  br
-                  .meta(:title="node.date")
-              hr
-              br
-              Pager(:info="$page.allBlogPost.pageInfo")
+            BlogPost(:posts="$page.allBlogPost.edges" :pagination="$page.allBlogPost.pageInfo")
 </template>
 
 <page-query>
@@ -54,9 +39,13 @@
 </page-query>
 
 <script>
-import { Pager } from 'gridsome'
+import Menu from '../components/Menu'
+import BlogPost from '../components/BlogPost'
 
 export default {
-  components: { Pager }
+  components: {
+    Menu,
+    BlogPost
+  }
 }
 </script>
