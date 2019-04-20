@@ -41,9 +41,6 @@ $ node -v
 $ npm -v
 ```
 
-Jika muncul seperti dibawah ini, maka kalian siap untuk lanjut instalasi vuejs
-![nusendra-node-version](https://farm5.staticflickr.com/4613/38990999004_9edf9abcc2_o.png "nusendra node version")
-
 ## INSTALASI VUEJS
 
 Silakan temen temen buka terminal kalian, kemudian ketika seperti dibawah ini

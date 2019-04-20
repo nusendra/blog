@@ -1,7 +1,0 @@
-
----
-title: 
-date: 
-description: ""
-slug: 
----
