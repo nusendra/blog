@@ -22,17 +22,24 @@
       .container
         .small
           .column
-            .label LATEST BLOG
+            .label BLOG POSTS
               .wide(v-for="{ node } in $page.allBlogPost.edges")
                 .blog-title
                   router-link(:to="node.path") {{ node.title }}
                   br
                   .meta(:title="node.date")
+              hr
+              br
+              Pager(:info="$page.allBlogPost.pageInfo")
 </template>
 
 <page-query>
   query Home ($page: Int) {
-    allBlogPost (page: $page) {
+    allBlogPost (page: $page, perPage: 10) @paginate {
+      pageInfo {
+        totalPages
+        currentPage
+      }
       edges {
         node {
           _id
@@ -45,3 +52,11 @@
     }
   }
 </page-query>
+
+<script>
+import { Pager } from 'gridsome'
+
+export default {
+  components: { Pager }
+}
+</script>

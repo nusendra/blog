@@ -57,6 +57,10 @@ body {
   font-weight: 700
 }
 
+nav {
+  font-size: 1.8em;
+}
+
 .name {
   font-size: 2em;
   line-height: 1.2em;
