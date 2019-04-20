@@ -3,9 +3,7 @@
     #homepage
       .container
         .small
-          .page-title
-            .name Nusendra Hanggarawan
-            .job Software Engineer
+          Header
           hr
           .column
             .left
@@ -39,11 +37,13 @@
 </page-query>
 
 <script>
+import Header from '../components/Header'
 import Menu from '../components/Menu'
 import BlogPost from '../components/BlogPost'
 
 export default {
   components: {
+    Header,
     Menu,
     BlogPost
   }
