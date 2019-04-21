@@ -7,7 +7,6 @@
           hr
           .column
             .left
-              h3 Personal Blog of Nusendra H.
               p I'm a software engineer who worked mostly with JavaScript language, Frontend and Backend. Sometimes I code in PHP too, using Lumen framework to build an API Services.
             .right
               Menu

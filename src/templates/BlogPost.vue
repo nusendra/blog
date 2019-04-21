@@ -9,7 +9,7 @@
           .column
             .left
               p Home / Now / Contact
-          .name {{ $page.blogPost.title }}
+          .blog-title-big {{ $page.blogPost.title }}
           .meta(title='Published at') {{ $page.blogPost.date }}
           // .meta(title='Views') 123
       .container

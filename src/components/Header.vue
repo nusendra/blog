@@ -1,5 +1,6 @@
 <template lang='pug'>
   .page-title
-    .name Nusendra Hanggarawan
+    .name
+      h1 Nusendra Hanggarawan
     .job Software Engineer
 </template>
