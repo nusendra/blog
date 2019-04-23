@@ -63,10 +63,14 @@ nav {
 
 .name {
   font-size: 2em;
-  line-height: 1.2em;
+  line-height: 0.2em;
   padding: 20px 0;
   font-family: "ArgentCF-DemiBold";
   font-weight: 700
+}
+
+.name h1 {
+  font-size: 1em;
 }
 
 .job {
@@ -80,6 +84,14 @@ nav {
 .blog-title {
   font-weight: 300;
   margin: 20px 0 0px 0
+}
+
+.blog-title-big {
+  font-size: 2em;
+  line-height: 1.2em;
+  padding: 20px 0;
+  font-family: "ArgentCF-DemiBold";
+  font-weight: 700
 }
 
 h4 {
