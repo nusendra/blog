@@ -11,48 +11,56 @@ body {
 
 @font-face {
   font-family: "ArgentCF-DemiBold";
+  font-display: auto;
   src: url("./fonts/ArgentCF-DemiBold.woff2") format('woff2');
   font-weight: 500
 }
 
 @font-face {
   font-family: "ArgentCF-Bold";
+  font-display: auto;
   src: url("./fonts/ArgentCF-Bold.woff2") format('woff2');
   font-weight: 700
 }
 
 @font-face {
   font-family: "ArgentCF-Light";
+  font-display: auto;
   src: url("./fonts/ArgentCF-Light.woff2") format('woff2');
   font-weight: 200
 }
 
 @font-face {
   font-family: "ArgentCF-Thin";
+  font-display: auto;
   src: url("./fonts/ArgentCF-Light.woff2") format('woff2');
   font-weight: 100
 }
 
 @font-face {
   font-family: "ArgentCF-Regular";
+  font-display: auto;
   src: url("./fonts/ArgentCF-Regular.woff2") format('woff2');
   font-weight: 300
 }
 
 @font-face {
   font-family: "Avenir-Light";
+  font-display: auto;
   src: url("./fonts/avenir_light.woff2") format('woff2');
   font-weight: 500
 }
 
 @font-face {
   font-family: "Avenir-Medium";
+  font-display: auto;
   src: url("./fonts/avenir_medium.woff2") format('woff2');
   font-weight: 500
 }
 
 @font-face {
   font-family: "Avenir-Heavy";
+  font-display: auto;
   src: url("./fonts/avenir_heavy.woff2") format('woff2');
   font-weight: 700
 }

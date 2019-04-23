@@ -6,7 +6,7 @@ export default function (Vue, { head }) {
 
   head.link.push({
     href:
-      'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-tomorrow.min.css',
+      'https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism-tomorrow.min.css',
     rel: 'stylesheet'
   })
 
