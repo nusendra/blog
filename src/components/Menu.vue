@@ -1,6 +1,6 @@
 <template lang='pug'>
   .resume
-    .label Explore this blog
+    .label.with-spacing Explore this blog
     ul
       li
         .company

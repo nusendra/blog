@@ -6,16 +6,15 @@
           .page-title
             h3
               a(href='/') Nusendra Hanggarawan
-          .column
-            .left
-              p Home / Now / Contact
+          hr
           .blog-title-big {{ $page.blogPost.title }}
           .meta(title='Published at') {{ $page.blogPost.date }}
           // .meta(title='Views') 123
       .container
         .small
           .column
-            p(v-html="$page.blogPost.content")
+            .post-content
+              p(v-html="$page.blogPost.content")
 </template>
 
 <page-query>

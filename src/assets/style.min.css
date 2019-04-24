@@ -1,5 +1,5 @@
 body {
-  font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   padding: 0;
   background: #FFF;
   color: #181A1B;
@@ -9,103 +9,53 @@ body {
   -moz-osx-font-smoothing: grayscale
 }
 
-@font-face {
-  font-family: "ArgentCF-DemiBold";
-  font-display: auto;
-  src: url("./fonts/ArgentCF-DemiBold.woff2") format('woff2');
-  font-weight: 500
-}
-
-@font-face {
-  font-family: "ArgentCF-Bold";
-  font-display: auto;
-  src: url("./fonts/ArgentCF-Bold.woff2") format('woff2');
-  font-weight: 700
-}
-
-@font-face {
-  font-family: "ArgentCF-Light";
-  font-display: auto;
-  src: url("./fonts/ArgentCF-Light.woff2") format('woff2');
-  font-weight: 200
-}
-
-@font-face {
-  font-family: "ArgentCF-Thin";
-  font-display: auto;
-  src: url("./fonts/ArgentCF-Light.woff2") format('woff2');
-  font-weight: 100
-}
-
-@font-face {
-  font-family: "ArgentCF-Regular";
-  font-display: auto;
-  src: url("./fonts/ArgentCF-Regular.woff2") format('woff2');
-  font-weight: 300
-}
-
-@font-face {
-  font-family: "Avenir-Light";
-  font-display: auto;
-  src: url("./fonts/avenir_light.woff2") format('woff2');
-  font-weight: 500
-}
-
-@font-face {
-  font-family: "Avenir-Medium";
-  font-display: auto;
-  src: url("./fonts/avenir_medium.woff2") format('woff2');
-  font-weight: 500
-}
-
-@font-face {
-  font-family: "Avenir-Heavy";
-  font-display: auto;
-  src: url("./fonts/avenir_heavy.woff2") format('woff2');
-  font-weight: 700
-}
-
 nav {
   font-size: 1.8em;
 }
 
 .name {
+  font-family: 'Leckerli One', cursive;
   font-size: 2em;
   line-height: 0.2em;
   padding: 20px 0;
-  font-family: "ArgentCF-DemiBold";
   font-weight: 700
 }
 
 .name h1 {
+  font-family: 'Leckerli One', cursive;
   font-size: 1em;
   line-height: 1.0em;
 }
 
 .job {
-  font-size: 42px;
+  font-size: 0.5em;;
   line-height: 0.2em;
   padding: 20px 0;
-  font-family: "ArgentCF-Thin";
   font-weight: 100
 }
 
 .blog-title {
+  font-family: 'Leckerli One', cursive;
   font-weight: 300;
   margin: 20px 0 0px 0
 }
 
 .blog-title-big {
+  font-weight: 500;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
   line-height: 1.2em;
   padding: 20px 0;
-  font-family: "ArgentCF-DemiBold";
-  font-weight: 700
+}
+
+.small .column h2 {
+  font-weight: 200;
+  font-size: 1.7em;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h4 {
   margin: 30px 0 20px 0;
-  font-family: "Avenir-Heavy"
 }
 
 p {
@@ -131,7 +81,7 @@ a:hover {
 .quote {
   font-size: 1.5em;
   font-weight: 600;
-  font-family: "Avenir-Heavy"
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .quote p {
@@ -188,6 +138,7 @@ ul {
 }
 
 .column .wide {
+  letter-spacing: 0.1em;
   vertical-align: top;
   width: 100%;
   display: inline-block;
@@ -195,13 +146,9 @@ ul {
   box-sizing: border-box
 }
 
-.page-title h3 {
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  font-size: 1em;
-  margin-right: 10px;
-  font-weight: 800
+.page-title h3 a {
+  font-family: 'Leckerli One', cursive;
+  font-size: 1.5em;
 }
 
 .page-title h3.role {
@@ -214,7 +161,6 @@ ul {
   font-size: 0.9em;
   display: inline-block;
   margin-right: 40px;
-  font-family: "Avenir-Heavy"
 }
 
 .meta::before {
@@ -227,21 +173,23 @@ ul {
   margin-bottom: 8px
 }
 
+.with-spacing {
+  letter-spacing: 0.2em;
+}
+
 #homepage .label {
   color: #134db6;
   font-size: 0.75em;
-  letter-spacing: 0.2em;
-  font-family: "avenir-heavy"
 }
 
 #homepage .blog-title {
   font-size: 1.4em;
-  font-family: "ArgentCF-Demi"
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #homepage h4 {
   font-size: 1.4em;
-  font-family: "ArgentCF-DemiBold"
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #homepage a:hover,
@@ -254,19 +202,16 @@ ul {
   margin: 30px 0 32px 0
 }
 
-#homepage .page-title .name,
-#homepage .page-title .job {
+#homepage .page-title .name {
   margin: 0;
   padding: 0;
-  font-size: 2em
-}
-
-#homepage .page-title .name {
-  font-family: "ArgentCF-Bold"
+  font-size: 2em;
 }
 
 #homepage .page-title .job {
-  font-weight: 200
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
 }
 
 #homepage .resume {
@@ -317,7 +262,6 @@ ul {
   width: 200px;
   position: relative;
   right: -300px;
-  top: -100px;
   background-repeat: no-repeat;
   background-image: url(images/sailboat.svg);
   background-position: center
@@ -383,7 +327,6 @@ ul {
   height: 20px;
   padding: 10px;
   vertical-align: top;
-  font-family: "Avenir-Medium"
 }
 
 .footer {
@@ -399,7 +342,6 @@ ul {
 }
 
 .article h2 {
-  font-family: "ArgentCF-DemiBold";
   font-size: 2.2em
 }
 
@@ -410,10 +352,6 @@ ul {
 
 .article .workflow-detail {
   margin-top: -60px
-}
-
-.article a {
-  font-family: "Avenir-Heavy"
 }
 
 .small img {
@@ -449,15 +387,10 @@ video {
   margin-bottom: 32px
 }
 
-.component-library ul li:first-of-type {
-  font-family: "Avenir-Heavy"
-}
-
 #brand .label {
   text-transform: uppercase;
   font-size: 0.75em;
   opacity: 0.5;
-  font-family: "Avenir-Heavy";
   letter-spacing: 0.2em
 }
 
@@ -508,7 +441,6 @@ video {
 
 #brand .syllabus-container a {
   color: #FFF;
-  font-family: "Avenir-Heavy"
 }
 
 #brand .syllabus-image-1 {
@@ -574,12 +506,10 @@ video {
 }
 
 .footer h3 a {
-  font-family: "ArgentCF-DemiBold";
   font-size: 1.4em
 }
 
 .footer h4 a {
-  font-family: "ArgentCF-DemiBold";
   font-size: 1.4em
 }
 
@@ -593,12 +523,7 @@ video {
   padding-top: 50px
 }
 
-.article .footer a {
-  font-family: "Avenir-Light"
-}
-
 .article .footer h3 {
-  font-family: "ArgentCF-DemiBold";
   font-size: 1.4em
 }
 
@@ -607,7 +532,6 @@ video {
 }
 
 .article .footer h4 {
-  font-family: "ArgentCF-DemiBold";
   font-size: 1.4em
 }
 
@@ -617,14 +541,12 @@ video {
   font-size: 0.75em;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-family: "avenir-heavy"
 }
 
 .coming-soon::after {
   content: "COMING SOON";
   text-transform: uppercase;
   font-size: 0.4em;
-  font-family: "Avenir-Medium";
   letter-spacing: 0.2em;
   margin-left: 10px;
   vertical-align: middle;
@@ -635,7 +557,6 @@ video {
   content: "READING";
   text-transform: uppercase;
   font-size: 0.4em;
-  font-family: "Avenir-Medium";
   letter-spacing: 0.2em;
   margin-left: 10px;
   vertical-align: middle;

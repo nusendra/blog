@@ -4,11 +4,17 @@ import '~/assets/style.min.css'
 export default function (Vue, { head }) {
   Vue.component('Layout', DefaultLayout)
 
-  head.link.push({
-    href:
-      'https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism-tomorrow.min.css',
-    rel: 'stylesheet'
-  })
+  head.link.push(
+    {
+      href:
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism-tomorrow.min.css',
+      rel: 'stylesheet'
+    },
+    {
+      href: 'https://fonts.googleapis.com/css?family=Leckerli+One|Ubuntu:',
+      rel: 'stylesheet'
+    }
+  )
 
   head.meta.push(
     { name: 'robots', content: 'index,follow' },

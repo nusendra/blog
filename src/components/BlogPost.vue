@@ -1,5 +1,5 @@
 <template lang='pug'>
-  .label BLOG POSTS
+  .label.with-spacing BLOG POSTS
     .wide(v-for="{ node } in posts")
       .blog-title
         router-link(:to="node.path") {{ node.title }}
