@@ -49,6 +49,7 @@ nav {
 }
 
 .small .column h2 {
+  padding-top: 20px;
   font-weight: 200;
   font-size: 1.7em;
   font-family: 'Ubuntu', sans-serif;
