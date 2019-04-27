@@ -7,5 +7,6 @@
           router-link(to="about") Who am I?
         .company
           router-link(to="now") What am I doing right now?
-        .company Get in touch with me
+        .company
+          router-link(to="contact") Get in touch with me
 </template>
