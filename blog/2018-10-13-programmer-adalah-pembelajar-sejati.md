@@ -1,6 +1,7 @@
 ---
 title: Programmer adalah Pembelajar Sejati
 date: 2018-10-13 19:33:14
+tags: ['opini']
 description: "Programmer adalah pembelajar sejati, belum selesai kita belajar framework A udah muncul aja framework B. Berikut ini penjelasan dan opini saya mengenai hal ini."
 slug: programmer-adalah-pembelajar-sejati
 ---

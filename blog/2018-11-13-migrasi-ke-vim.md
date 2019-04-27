@@ -1,6 +1,7 @@
 ---
 title: Migrasi ke VIM
 date: 2018-11-13 06:46:35
+tags: ['opini']
 description: "Cerita singkat kenapa saya akhirnya migrasi ke VIM, yang awalnya memakai Atom dan Visual Studio Code"
 slug: migrasi-ke-vim
 ---

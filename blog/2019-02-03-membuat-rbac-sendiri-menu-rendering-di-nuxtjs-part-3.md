@@ -1,6 +1,7 @@
 ---
 title: "Membuat RBAC Sendiri : Menu Rendering di Nuxtjs - Part 3"
 date: 2019-02-03 16:15:13
+tags: ['opini','tips','nuxtjs']
 description: "Seri terakhir dari pembahasan RBAC ini akan fokus pada penyajian menu akses di frontend"
 slug: membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3
 ---

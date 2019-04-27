@@ -1,6 +1,7 @@
 ---
 title: Method Destroy di Controller Laravel 5 - Part 8
 date: 2017-12-31 06:46:59
+tags: ['laravel','php']
 description: "Method Destroy di Controller Laravel 5 merupakan salah satu dari keluarga besar yang bermarga CRUD. Method ini berfungsi untuk menghapus sebuah atau beberapa data sekaligus. Yuk mari kita cari tau.."
 slug: method-destroy-di-controller-laravel-5-part-8
 ---

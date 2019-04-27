@@ -1,6 +1,7 @@
 ---
 title: Manfaat dari berpikir negatif
 date: 2018-08-10 02:53:01
+tags: ['opini']
 description: "Gak selamanya berpikir negatif itu buruk, mari manfaatkan kekuatan dari berpikir negatif."
 slug: manfaat-dari-berpikir-negatif
 ---

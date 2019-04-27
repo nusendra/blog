@@ -1,6 +1,7 @@
 ---
 title: React Native 0.57 - Images is Not Showing on Generated APK
 date: 2018-10-23 22:25:35
+tags: ['javascript','reactnative']
 description: "Gambar ga muncul setelah generate APK di React Native 0.57? Baca postingan saya ini, insyaallah manjur :D"
 slug: react-native-057-images-is-not-showing-on-generated-apk
 ---

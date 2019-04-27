@@ -1,8 +1,9 @@
 ---
-title: "Duplikasi Object dan Array dengan Benar"
+title: "Duplikasi Object dan Array dengan Benar di JavaScript"
 date: 2019-04-25 11:55:00
-description: "Cara cloning / duplikasi data object atau array dengan benar"
-slug: duplikasi-object-atau-array-dengan-benar
+description: "Cara cloning / duplikasi data object atau array dengan benar di JavaScript"
+tags: ['javascript','tips']
+slug: duplikasi-object-atau-array-dengan-benar-di-javascript
 ---
 
 Udah lama ga nulis di blog, kali ini mau bahas gimana sih caranya kita nge-*clone* / duplikasi object dan array ke variable lain. Terkadang kita ada di suatu kondisi yang memaksa kita untuk *cloning* sebuah value dari satu variable ke variable yang lain. Yang jadi masalah adalah ketika kita *cloning* data, data tersebut masih terikat dengan variable asal, sehingga data di variable yang baru akan terus bergantung pada variable asal. Contoh nya seperti ini

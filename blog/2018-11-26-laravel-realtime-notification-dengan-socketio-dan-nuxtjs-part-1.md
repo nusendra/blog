@@ -1,6 +1,7 @@
 ---
 title: Laravel Realtime Notification dengan Socket.io dan Nuxtjs - Part 1
 date: 2018-11-26 20:25:55
+tags: ['laravel','php','javascript','nuxtjs']
 description: "Membuat notifikasi dengan Laravel Broadcast Notifications dan Socket.io"
 slug: laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1
 ---

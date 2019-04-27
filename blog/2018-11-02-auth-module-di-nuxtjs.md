@@ -1,6 +1,7 @@
 ---
 title: Auth Module di Nuxtjs
 date: 2018-11-02 21:58:52
+tags: ['nuxtjs']
 description: "Autentikasi jadi lebih mudah menggunakan Auth Module di Nuxtjs"
 slug: auth-module-di-nuxtjs
 ---

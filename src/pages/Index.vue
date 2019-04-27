@@ -30,6 +30,10 @@
           date (format: "D MMMM, YYYY")
           description
           path
+          tags {
+            title
+            path
+          }
         }
       }
     }

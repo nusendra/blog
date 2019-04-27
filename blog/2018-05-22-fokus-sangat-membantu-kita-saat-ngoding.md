@@ -1,6 +1,7 @@
 ---
 title: fokus-sangat-membantu-kita-saat-ngoding
 date: 2018-05-22 15:55:00
+tags: ['opini']
 description: "Berikut ini kiat kiat yang lumayan penting untuk diperhatikan ketika ngoding, biar fokus kita makin meningkat."
 slug: fokus-sangat-membantu-kita-saat-ngoding
 ---

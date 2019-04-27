@@ -1,6 +1,7 @@
 ---
 title: REST API dengan Nodejs dan Typescript - part 1
 date: 2018-09-09 18:56:03
+tags: ['typescript','expressjs','nodejs']
 description: "Cara membuat REST API menggunakan Nodejs, Expressjs, Typescript dan MongoDB"
 slug: rest-api-dengan-nodejs-dan-typescript-part-1
 ---

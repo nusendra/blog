@@ -1,6 +1,7 @@
 ---
 title: "Membuat RBAC Sendiri : Backend Response - Part 2"
 date: 2019-02-03 14:55:37
+tags: ['opini','tips']
 description: "Memberikan response yang dibutuhkan oleh Frontend untuk rendering menu RBAC."
 slug: membuat-rbac-sendiri-backend-response-part-2
 ---

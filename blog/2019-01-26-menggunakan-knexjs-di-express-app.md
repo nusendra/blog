@@ -1,6 +1,7 @@
 ---
 title: Menggunakan Knexjs di Express App
 date: 2019-01-26 12:53:35
+tags: ['expressjs']
 description: "Menggunakan Knexjs di Express App untuk memudahkan penulisan query di database."
 slug: menggunakan-knexjs-di-express-app
 ---

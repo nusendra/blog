@@ -1,6 +1,7 @@
 ---
 title: Memproteksi Laravel web App dari Serangan CSRF
 date: 2017-12-04 07:25:30
+tags: ['laravel','php']
 description: "CSRF merupakan salah satu ancaman besar bagi keamanan suatu website. Nah, di Laravel sendiri om Taylor udah nyediain fitur yang keren buat menanggulangi hal ini. Yuk simak penjelasannya."
 slug: memproteksi-laravel-web-app-dari-serangan-csrf
 ---

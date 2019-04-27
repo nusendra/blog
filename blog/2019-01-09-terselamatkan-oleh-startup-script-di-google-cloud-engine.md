@@ -1,6 +1,7 @@
 ---
 title: Terselamatkan oleh Startup Script di Google Cloud Engine
 date: 2019-01-09 13:48:58
+tags: ['tips','opini']
 description: "Lupa membuka akses ssh / port 22 di ufw bisa diatasi dengan fitur Startup Script di metadata GCE"
 slug: terselamatkan-oleh-startup-script-di-google-cloud-engine
 ---

@@ -1,6 +1,7 @@
 ---
 title: Optimasi Aset Berbasis Teks untuk Performa Web dengan GZIP Nginx
 date: 2018-12-26 18:11:40
+tags: ['devops']
 description: "Menggunakan fitur GZIP pada Nginx untuk meningkatkan kecepatan load suatu website dengan memperkecil bundle size aset berbasis teks."
 slug: Optimasi Aset Berbasis Teks untuk Performa Web dengan GZIP Nginx
 ---

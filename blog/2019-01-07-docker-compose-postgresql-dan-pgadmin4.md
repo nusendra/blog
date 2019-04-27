@@ -1,6 +1,7 @@
 ---
 title: Docker Compose PostgreSQL dan pgAdmin4
 date: 2019-01-07 10:57:25
+tags: ['devops']
 description: "Install PostgreSQL dan pgAdmin4 di docker menggunakan Docker Compose."
 slug: docker-compose-postgresql-dan-pgadmin4
 ---

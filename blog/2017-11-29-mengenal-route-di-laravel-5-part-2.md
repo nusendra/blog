@@ -1,6 +1,7 @@
 ---
 title: Mengenal Route di Laravel 5 - Part 2
 date: 2017-11-29 13:27:53
+tags: ['laravel','php']
 description: "Part lanjutan dari pembahasan route di Laravel ini akan sedikit masuk kedalam samudra routing nya Laravel. Yuk mari kita simak biar kita pinter :-)"
 slug: mengenal-route-di-laravel-5-part-2
 ---

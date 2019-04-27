@@ -1,6 +1,7 @@
 ---
 title: Menentukan Teknologi Sebelum Membuat Project
 date: 2018-01-20 14:59:09
+tags: ['opini']
 description: "Banyak programmer yang salah dalam menentukan teknologi sebelum membuat project, hal ini bisa mengakibatkan proses development kita jadi terganggu, bahkan bisa bikin pindah jalur. Duhh..."
 slug: menentukan-teknologi-yang-tepat-sebelum-membuat-project
 ---

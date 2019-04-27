@@ -1,6 +1,7 @@
 ---
 title: Method Update di Controller Laravel 5 - Part 7
 date: 2017-12-27 05:17:40
+tags: ['laravel','php']
 description: "Method Update data di Controller Laravel 5 sangat penting untuk dipelajari, karena method ini merupakan salah satu keluarga dari marga CRUD. Mari simak penjelasan singkat nya disini.."
 slug: method-update-di-controller-laravel-5-part-7
 ---

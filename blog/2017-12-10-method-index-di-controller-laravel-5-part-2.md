@@ -1,6 +1,7 @@
 ---
 title: Method Index di Controller Laravel 5 - Part 2
 date: 2017-12-10 18:40:44
+tags: ['laravel','php']
 description: "Apa sih kegunaan method index di Controller Laravel 5 ?? Yuk mari kita belajar bareng - bareng mengenai method index di Controller, serta bagaimana menggunakannya."
 slug: method-index-di-controller-laravel-5-part-2
 ---

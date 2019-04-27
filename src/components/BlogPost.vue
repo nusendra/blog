@@ -4,7 +4,8 @@
       .blog-title
         router-link(:to="node.path") {{ node.title }}
         br
-        .meta(:title="node.date")
+        .blog-info {{ node.date }}
+        .blog-info(v-for="(item,index) in node.tags") - {{ item.title }}
     hr
     br
     Pager(:info="pagination")
@@ -18,3 +19,12 @@ export default {
   components: { Pager }
 }
 </script>
+
+<style scoped>
+.blog-info {
+  padding-top: 5px;
+  padding-right: 5px;
+  font-size: 0.7em;
+  display: inline-block;
+}
+</style>

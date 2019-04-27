@@ -1,6 +1,7 @@
 ---
 title: Install dan Akses Remote MariaDB di VPS
 date: 2018-12-20 14:38:18
+tags: ['devops']
 description: "Mengakses database di VPS secara remote melalui mysql-client kita"
 slug: install-dan-akses-remote-mariadb-di-vps
 ---

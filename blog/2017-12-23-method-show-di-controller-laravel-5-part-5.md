@@ -1,6 +1,7 @@
 ---
 title: Method Show di Controller Laravel 5 - Part 5
 date: 2017-12-23 09:48:50
+tags: ['laravel','php']
 description: "Menampilkan detail dari sebuah data merupakan salah satu fitur dari sebuah web yang harus ada. Bagaimana cara implementasi nya? Saya akan memaparkan nya secara ringkas di postingan kali ini."
 slug: method-show-di-controller-laravel-5-part-5
 ---
