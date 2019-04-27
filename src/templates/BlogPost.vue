@@ -15,6 +15,7 @@
           .column
             .post-content
               p(v-html="$page.blogPost.content")
+              vue-disqus(shortname="https-nusendra-com" :identifier="$page.blogPost.title")
 </template>
 
 <page-query>

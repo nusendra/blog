@@ -1,7 +1,9 @@
 import DefaultLayout from '~/layouts/Default.vue'
+import VueDisqus from 'vue-disqus'
 import '~/assets/style.min.css'
 
 export default function (Vue, { head }) {
+  Vue.use(VueDisqus)
   Vue.component('Layout', DefaultLayout)
 
   head.link.push(
