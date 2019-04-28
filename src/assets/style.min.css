@@ -27,10 +27,10 @@ nav {
   line-height: 1.0em;
 }
 
-.job {
-  font-size: 0.5em;;
+.job h2 {
+  font-size: 1.2em;;
   line-height: 0.2em;
-  padding: 20px 0;
+  padding: 0 0;
   font-weight: 100
 }
 

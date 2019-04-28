@@ -2,5 +2,6 @@
   .page-title
     .name
       h1 Nusendra Hanggarawan
-    .job Software Engineer
+    .job
+      h2 Software Engineer
 </template>
