@@ -2,6 +2,7 @@ module.exports = {
   siteName: `Nusendra Hanggarawan`,
   siteUrl: 'https://nusendra.com',
   siteDescription: 'Personal web blog yang memuat konten seputar kehidupan programmer dan aktifitas ngoding',
+  titleTemplate: 'Nusendra Hanggarawan - %s',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

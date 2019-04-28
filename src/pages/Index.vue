@@ -50,6 +50,9 @@ export default {
     Header,
     Menu,
     BlogPost
+  },
+  metaInfo: {
+    title: 'Software Engineer'
   }
 }
 </script>
