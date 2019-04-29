@@ -1,5 +1,5 @@
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Karla', sans-serif;
   padding: 0;
   background: #FFF;
   color: #181A1B;
@@ -11,6 +11,13 @@ body {
 
 nav {
   font-size: 1.8em;
+}
+
+.column .center-image-post {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .name {
@@ -42,7 +49,7 @@ nav {
 
 .blog-title-big {
   font-weight: 500;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 2em;
   line-height: 1.2em;
   padding: 20px 0;
@@ -52,7 +59,7 @@ nav {
   padding-top: 20px;
   font-weight: 200;
   font-size: 1.7em;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 h4 {
@@ -82,7 +89,7 @@ a:hover {
 .quote {
   font-size: 1.5em;
   font-weight: 600;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 .quote p {
@@ -185,12 +192,12 @@ ul {
 
 #homepage .blog-title {
   font-size: 1.4em;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 #homepage h4 {
   font-size: 1.4em;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 #homepage a:hover,

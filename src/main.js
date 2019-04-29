@@ -13,7 +13,7 @@ export default function (Vue, { head }) {
       rel: 'stylesheet'
     },
     {
-      href: 'https://fonts.googleapis.com/css?family=Leckerli+One|Ubuntu:',
+      href: 'https://fonts.googleapis.com/css?family=Leckerli+One|Karla',
       rel: 'stylesheet'
     }
   )
