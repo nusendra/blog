@@ -30,6 +30,7 @@
           date (format: "D MMMM, YYYY")
           description
           path
+          draft
           tags {
             title
             path

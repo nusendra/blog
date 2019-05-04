@@ -1,7 +1,7 @@
 <template lang='pug'>
   .label.with-spacing BLOG POSTS
     .wide(v-for="{ node } in posts")
-      .blog-title
+      .blog-title(v-if='node.draft === null')
         router-link(:to="node.path") {{ node.title }}
         br
         .blog-info {{ node.date }}
