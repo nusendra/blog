@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Auth Module di Nuxtjs
 date: 2018-11-02 21:58:52
 tags: ['nuxtjs']

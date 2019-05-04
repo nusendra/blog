@@ -2,6 +2,7 @@
 title: Pengenalan Dasar tentang Lumen
 date: 2018-01-07 12:14:49
 tags: ['laravel','php']
+draft: false
 description: "Untuk mulai membuat RESTful API, Pengenalan Dasar tentang Lumen sangat perlu dan penting untuk dipelajari agar nantinya kita lebih mudah dalam membuat sebuah API service."
 slug: pengenalan-dasar-tentang-lumen
 ---

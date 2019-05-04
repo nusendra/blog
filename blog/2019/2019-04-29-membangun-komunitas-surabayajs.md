@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Membangun Komunitas SurabayaJS"
 date: 2019-04-29 17:11:00
 description: "Cerita singkat membangun komunitas IT di surabaya yang bernama SurabayaJS"

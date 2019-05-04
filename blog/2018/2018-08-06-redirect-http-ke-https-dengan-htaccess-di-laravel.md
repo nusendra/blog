@@ -2,6 +2,7 @@
 title: Redirect HTTP ke HTTPS dengan .htaccess di Laravel
 date: 2018-08-06 03:24:24
 tags: ['laravel','php']
+draft: false
 description: "Bagi kalian pengguna Laravel di shared hosting, berikut ini adalah cara redirect http ke https menggunakan .htaccess"
 slug: redirect-http-ke-https-dengan-htaccess-di-laravel
 ---

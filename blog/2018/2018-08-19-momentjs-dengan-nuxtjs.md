@@ -2,6 +2,7 @@
 title: MomentJS dengan NuxtJS
 date: 2018-08-09 04:52:31
 tags: ['javascript','nuxtjs']
+draft: false
 description: "Menggunakan Momentjs di Nuxtjs untuk memanipulasi dan menampilkan tanggal dengan keren"
 slug: momentjs-dengan-nuxtjs
 ---

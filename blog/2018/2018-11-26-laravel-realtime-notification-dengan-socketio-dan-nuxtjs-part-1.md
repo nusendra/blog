@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Laravel Realtime Notification dengan Socket.io dan Nuxtjs - Part 1
 date: 2018-11-26 20:25:55
 tags: ['laravel','php','javascript','nuxtjs']

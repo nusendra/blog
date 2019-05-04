@@ -2,6 +2,7 @@
 title: Berkomunitaslah, Dapatkan dan Sebarkan Manfaat
 date: 2018-08-20 14:06:17
 tags: ['opini']
+draft: false
 description: "Sebagai programmer kita wajib untuk berkomunitas untuk mendapatkan berbagai manfaat. Salah satu nya bersosialisasi"
 slug: berkomunitaslah-dapatkan-dan-sebarkan-manfaat
 ---

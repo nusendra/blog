@@ -2,6 +2,7 @@
 title: Method Create di Controller Laravel 5 - Part 3
 date: 2017-12-12 15:10:23
 tags: ['laravel','php']
+draft: false
 description: "Method Create di Controller Laravel berguna untuk menampilkan halaman form input data. Bagaimana cara penggunaan nya? Mari belajar bareng ..."
 slug: method-create-di-controller-laravel-5-part-3
 ---

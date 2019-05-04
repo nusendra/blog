@@ -2,6 +2,7 @@
 title: Jabber / XMPP menggunakan Nodejs
 date: 2018-08-26 22:08:54
 tags: ['javascript','nodejs']
+draft: false
 description: "Mari belajar membuat Jabber / XMPP client menggunakan Nodejs. XMPP ini adalah sebuah protocol komunikasi yang berbasis XML"
 slug: jabber-xmpp-menggunakan-nodejs
 ---

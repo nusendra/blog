@@ -2,6 +2,7 @@
 title: Method Edit di Controller Laravel 5 - Part 6
 date: 2017-12-25 23:24:10
 tags: ['laravel','php']
+draft: false
 description: "Method edit hampir sama dengan method show. Mereka memang bersaudara, tetapi ada hal lain yang membedakan mereka. Mau tau perbedaan nya? Yuk mari belajar bareng disini."
 slug: method-edit-di-controller-laravel-5-part-6
 ---

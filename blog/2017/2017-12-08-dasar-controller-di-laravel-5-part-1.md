@@ -2,6 +2,7 @@
 title: Dasar Controller di Laravel 5 - Part 1
 date: 2017-12-08 00:40:57
 tags: ['laravel','php']
+draft: false
 description: "Dasar Controller di Laravel 5 merupakan postingan tentang controller yang membahas method - method maupun fungsi - fungsi dasar dari sebuah Controller."
 slug: dasar-controller-di-laravel-5-part-1
 ---

@@ -2,6 +2,7 @@
 title: Mengenal Route di Laravel 5 - Part 1
 date: 2017-11-28 15:58:19
 tags: ['laravel', 'php']
+draft: false
 description: Routing adalah salah satu fitur terpenting yang disediakan oleh Laravel. Kita wajib memahami penggunaan route ini, karena ketika proses development, route akan sangat sering diakses.
 slug: mengenal-route-di-laravel-5-part-1
 ---

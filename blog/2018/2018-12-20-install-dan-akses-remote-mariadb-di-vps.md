@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Install dan Akses Remote MariaDB di VPS
 date: 2018-12-20 14:38:18
 tags: ['devops']

@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Setup HTTPS / SSL di Nuxtjs dan Laravel dengan Nginx
 date: 2018-12-24 14:30:09
 tags: ['devops','laravel','nuxtjs']

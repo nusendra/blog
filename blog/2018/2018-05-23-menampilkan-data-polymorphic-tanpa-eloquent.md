@@ -2,6 +2,7 @@
 title: Menampilkan data polymorphic tanpa eloquent
 date: 2018-05-23 04:21:02
 tags: ['laravel','php']
+draft: false
 description: "Menampilkan data polymorphic tanpa eloquent gampang - gampang susah. Kalo mau nampilin data polymorphic kita pake eloquent sih gampang gampang aja, tapi kalau tanpa eloquent gimana?"
 slug: menampilkan-data-polymorphic-tanpa-eloquent
 ---

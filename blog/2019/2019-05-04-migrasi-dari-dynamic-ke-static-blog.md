@@ -3,6 +3,7 @@ title: "Migrasi dari Dynamic ke Static Blog"
 date: 2019-05-04 07:27:00
 description: "Cerita singkat migrasi dari blog dinamis ke static blog"
 tags: ['opini', 'tips']
+draft: false
 slug: migrasi-dari-dynamic-ke-static-blog
 ---
 

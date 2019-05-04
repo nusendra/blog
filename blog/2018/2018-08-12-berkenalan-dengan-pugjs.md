@@ -2,6 +2,7 @@
 title: Berkenalan dengan PugJS
 date: 2018-08-23 14:20:46
 tags: ['javascript']
+draft: false
 description: "Pug hadir untuk menyederhanakan format html kalian sehingga kode html kalian bisa lebih mudah dan enak dibaca"
 slug: berkenalan-dengan-pugjs
 ---

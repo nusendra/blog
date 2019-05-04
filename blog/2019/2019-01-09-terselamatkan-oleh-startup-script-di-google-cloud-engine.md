@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Terselamatkan oleh Startup Script di Google Cloud Engine
 date: 2019-01-09 13:48:58
 tags: ['tips','opini']

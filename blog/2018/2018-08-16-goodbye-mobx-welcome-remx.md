@@ -2,6 +2,7 @@
 title: Goodbye MobX, Welcome RemX
 date: 2018-08-06 14:42:50
 tags: ['javascript','reactnative']
+draft: false
 description: "Selamat tinggal MobX, selamat datang RemX. State management minimalis untuk React Native"
 slug: goodbye-mobx-welcome-remx
 ---

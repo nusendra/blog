@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Optimasi Aset Berbasis Teks untuk Performa Web dengan GZIP Nginx
 date: 2018-12-26 18:11:40
 tags: ['devops']

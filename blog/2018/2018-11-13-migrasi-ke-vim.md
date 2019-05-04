@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Migrasi ke VIM
 date: 2018-11-13 06:46:35
 tags: ['opini']

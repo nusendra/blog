@@ -2,6 +2,7 @@
 title: Konfigurasi Dasar Laravel 5
 date: 2017-11-28 02:31:58
 tags: ['laravel', 'php']
+draft: false
 description: Sebelum melangkah lebih jauh dalam mengarungi lautan Laravel, kita perlu melakukan konfigurasi dasar terlebih dahulu. Agar nanti kita ngoding nya lebih nyaman
 slug: konfigurasi-dasar-laravel-5
 ---

@@ -2,6 +2,7 @@
 title: React Native - State Management dengan Remx
 date: 2018-08-16 13:53:27
 tags: ['javascript','reactnative']
+draft: false
 description: "Cara mudah mengimplementasikan state management di React Native menggunakan remx."
 slug: react-native-state-management-dengan-remx
 ---

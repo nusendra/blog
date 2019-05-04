@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Docker Compose PostgreSQL dan pgAdmin4
 date: 2019-01-07 10:57:25
 tags: ['devops']

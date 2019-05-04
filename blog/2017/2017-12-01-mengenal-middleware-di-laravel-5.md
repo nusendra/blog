@@ -2,6 +2,7 @@
 title: Mengenal Middleware di Laravel 5
 date: 2017-12-01 16:23:55
 tags: ['laravel','php']
+draft: false
 description: "Mengenal middleware di Laravel 5 wajib dilakukan, karena fitur ini sangat berguna untuk melakukan aksi filter request ke Controller. Yuk simak pembahasannya berikut ini"
 slug: mengenal-middleware-di-laravel-5
 ---

@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Menggunakan Knexjs di Express App
 date: 2019-01-26 12:53:35
 tags: ['expressjs']

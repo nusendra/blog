@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Membuat RBAC Sendiri : Menu Rendering di Nuxtjs - Part 3"
 date: 2019-02-03 16:15:13
 tags: ['opini','tips','nuxtjs']

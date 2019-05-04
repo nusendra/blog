@@ -3,6 +3,7 @@ title: Struktur Folder pada Laravel 5.5
 date: 2017-11-27 06:34:50
 description: "Setiap framework memiliki struktur direktori / folder yang berbeda, nah memahami struktur folder di Laravel pun sangat wajib diketahui bagi para pengguna Laravel"
 tags: ['laravel','php']
+draft: false
 slug: struktur-folder-pada-laravel-55
 ---
 

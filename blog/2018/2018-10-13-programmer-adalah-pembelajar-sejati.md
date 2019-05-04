@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Programmer adalah Pembelajar Sejati
 date: 2018-10-13 19:33:14
 tags: ['opini']
