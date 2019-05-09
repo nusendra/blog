@@ -2,7 +2,7 @@
 title: "Berkenalan Lebih Dekat dengan PWA"
 date: 2019-05-05 15:29:00
 description: "Mengenal lebih dekat dengan Progressive Web App"
-tags: ['opini']
+tags: ['opini', 'pwa']
 draft: false
 slug: berkenalan-lebih-dekat-dengan-pwa
 ---
