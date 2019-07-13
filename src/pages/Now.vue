@@ -8,19 +8,28 @@
           .column
             .wide
               .small
-                span Updated at 27 April, 2019
+                span Updated at 13 July, 2019
               h4 Jelasin dikit dong buat apa halaman ini
               p
                 Halaman now ini masih jarang diterapkan di beberapa blog di Indonesia, saya juga baru tau dari blog nya kang <a href="https://108kb.io/">Fariz Rizaldy</a>. Silakan baca baca di <a href="https://nownownow.com/">sini</a> untuk lebih lanjut mengenai halaman <b>now</b> ini.
               h4 Kerjaan
-              p Freelancer as a software engineer (Backend API Services, Frontend, Mobile Apps, you name it).
+              p Work as a Software Engineer (Freelance - Self Employed). Have several long-term clients in Surabaya.
+              h4 My Stacks
+              p
+                ol
+                  li Vue.js as a frontend JavaScript Framework.
+                  li Sveltejs.
+                  li React Native to build a mobile apps.
+                  li Fastify as backend REST API JS Framework.
+                  li Sometimes using Lumen PHP as backend services.
+                  li MongoDB, PostgreSQL, MariaDB. You know what the hell is this.
               h4 Project yang lagi dikerjain
               p
                 ol
                   li ERP PT. Benteng Api Technic
                   li Ahtefe Reload (Mobile Apps)
-                  li Payroll PT.BAT - PT. Ume Persada Indonesia
                   li Duitku Mobile Apps
+                  li Zetpy, E-commerce multichannel app in Malaysia
               h4 Software yang saya pake
               p
                 ol
