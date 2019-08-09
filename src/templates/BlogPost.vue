@@ -9,7 +9,7 @@
           hr
           .blog-title-big {{ $page.blogPost.title }}
           .meta(title='Published at') {{ $page.blogPost.date }}
-          // .meta(title='Views') 123
+          .meta(title='Total Views') {{ totalViews }}
       .container
         .small
           .column
@@ -34,6 +34,11 @@
 import { db } from '../libs/firestore';
 
 export default {
+  data() {
+    return {
+      totalViews: 'fetching total data view ...'
+    }
+  },
   metaInfo() {
     return {
       title: this.$page.blogPost.title
@@ -45,16 +50,21 @@ export default {
         let views = slug.views;
         let newViews = views + 1;
 
+        this.totalViews = newViews;
+
         // if document found, then increase the views count.
         db.collection('posts').doc(this.$page.blogPost.slug).update({
           views: newViews
         });
+
       })
       .catch(err => {
         // if document is not exists, then create one.
         db.collection('posts').doc(this.$page.blogPost.slug).set({
           views: 1
         });
+
+        this.totalViews = 1;
       });
   }
 }
