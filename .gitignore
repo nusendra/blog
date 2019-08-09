@@ -5,8 +5,8 @@ src/.temp
 node_modules
 dist
 .env
-.env.*
 .sw*
 *.sw*
 *.swp
 *.swo
+.directory
