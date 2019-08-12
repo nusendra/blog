@@ -13,8 +13,6 @@ Demi mencapai level tertentu dan memperoleh wawasan yang luas, hanya bisa didapa
 
 Sudah bukan rahasia lagi bahwa teknologi masa kini sangat cepat sekali berkembang. Dahulu device memory untuk menyimpan data beberapa megabytes saja ukurannya naudzubillah gede nya, sekarang hanya dengan mini flashdrive kita sudah bisa membawa device memory dengan kapasitas 1TB, bahkan bisa lebih gede lagi kapasitas nya. Begitu pula dengan bahasa pemrograman yang selalu berkembang dari masa ke masa. Misalnya saja seperti PHP yang selalu bertambah versi nya dengan penambahan - penambahan fitur yang luar biasa hebat nya. Dan yang lagi hype sekarang adalah Javascript, dulu nya yang cuma jalan sebagai DOM Manipulator di web frontend sekarang udah bisa kerja jadi backend, native mobile app, bahkan sampai IOT sekalipun.
 
-![5mb](http://media.factmyth.com/2015/09/ibm-350-hard-drive-fact-first-hard-drive.jpg)
-
 Nah dari semakin berkembang pesatnya bahasa pemrograman ini, para programmer dituntut untuk bisa mengikuti perkembangan jaman dan trend. Resiko paling besar jika ga mau mengikuti trend adalah, dia ga akan laku dipasaran karena emang teknologi yang dikuasai nya udah jadul. duuhh...
 
 ## Semakin tua, semakin malas belajar
