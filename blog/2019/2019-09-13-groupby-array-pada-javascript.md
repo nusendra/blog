@@ -97,6 +97,15 @@ console.log(groupArray1);
 console.log(groupArray2);
 ```
 
+Tambahan dikit, hasil diatas akan berbentuk object, jika kalian pengen object tersebut di convert ke array, bisa pakai fungsi dibawah ini
+
+```javascript
+const toArray1 = Object.values(groupArray1);
+const toArray2 = Object.values(groupArray2);
+```
+
+Maka nanti hasil nya akan jadi array dan bisa di `looping`.
+
 ---
 
 Demikian snippet singkat, semoga membantu buat temen - temen yang mungkin butuh solusi seperti diatas :). Semoga bermanfaat dan silakan dicoba :D
