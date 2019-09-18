@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
   Layout
     #homepage
       .container
@@ -30,28 +30,29 @@
                   li Ahtefe Reload (Mobile Apps)
                   li Duitku Mobile Apps
                   li Zetpy, E-commerce multichannel app in Malaysia
+                  li Taptoko
               h4 Software yang saya pake
               p
                 ol
-                  li OS: Linux (Debian)
-                  li Spreadsheet: Libre Office
-                  li Music Player: Clementine & Spotify
+                  li OS: Linux (Kubuntu) & MacOS Mojave
+                  li Spreadsheet: Libre Office & WPS
+                  li Music Player: Clementine, Spotify, Vox
                   li Movie Player: VLC
-                  li Code Editor: VIM
-                  li Database GUI: HeidiSQL (with Wine) & RoboMongo
+                  li Code Editor: VIM 8
+                  li Database GUI: RoboMongo, Sequel Pro, DBeaver
                   li Browsers: Google Chrome & Mozilla Firefox for Developer
                   li Mail: Mozilla Thunderbird
                   li RSS Reader: Mozilla Thunderbird
                   li Image Editing: GIMP & InkScape
-                  li Others: Telegram Desktop, Teamviewer
+                  li Others: Telegram Desktop, Anydesk
               p back to 
                 a(href='/') Home
 </template>
 
 <script>
-import Header from '../components/Header'
+import Header from '../components/Header';
 
 export default {
-  components: { Header }
-}
+  components: { Header },
+};
 </script>
