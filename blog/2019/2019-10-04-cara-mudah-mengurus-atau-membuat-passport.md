@@ -28,7 +28,7 @@ Habis tu, jangan lupa foto copy tuh semua dokumen nya. Foto copy di kertas A4, d
 Kalo udah, silakan buka [web antrian imigrasi](https://antrian.imigrasi.go.id) atau install aplikasi [layanan passport online](https://play.google.com/store/apps/details?id=id.go.imigrasi.layananwni&hl=in). Registrasi antrian ini wajib ya, kalau kamu ga antri ga bisa masuk ke kantor imigrasi ini (tapi denger denger petugas nya bilang bisa masuk, tapi harus dateng sebelum jam 8 pagi). Sebagai catatan, kuota pendaftaran online nya sangat terbatas dan pembukaan / pengisian kuota bakal di buka dua minggu sekali (Dibuka di hari Jumat siang sekitar jam 1 sampai minggu sore sekitar jam 4). Jadi kalau kalian ketinggalan registrasi online, ya harus nunggu 2 minggu lagi LOL.
 ## Gimana Ngurus nya?
 
-![antrian imigrasi nusendra](https://ik.imagekit.io/nusendra/IMAGE_2019-10-04_13_13_16_-XRYM-muY.jpg)
+![antrian imigrasi nusendra](https://ik.imagekit.io/nusendra/IMAGE_2019-10-04_13_13_20_sPPTgn77-.jpg)
 
 Ngurus bukan kurus ya haha. Jadi pertama kalian registrasi dulu melalui aplikasi / web diatas. Kalau udah ntar dapet QR code / bukti bahwa udah registrasi. Kalau udah ntar datang ke kantor imigrasi sesuai dengan dimana kalian mendaftar. Sebagai contoh disini saya mengurus passport ke kantor imigrasi juanda surabaya.
 
