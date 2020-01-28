@@ -1,3 +1,8 @@
+<header>
+  <Logo />
+  <Nav {segment} />
+</header>
+
 <script>
   import Logo from './Logo.svelte'
   import Nav from './Nav.svelte'
@@ -15,7 +20,3 @@
   }
 </style>
 
-<header>
-  <Logo />
-  <Nav {segment} />
-</header>

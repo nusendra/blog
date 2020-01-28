@@ -1,8 +1,8 @@
 <style>
   img {
     display: block;
-    height: 50px;
-    width: 50px;
+    margin-top: 10px;
+    width: 150px;
   }
 </style>
 

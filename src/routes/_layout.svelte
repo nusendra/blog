@@ -46,9 +46,8 @@
 
   <footer>
     <span>
-      &copy; {new Date().getFullYear()} Your Blog.
+      &copy; {new Date().getFullYear()} Nusendra.com
       Powered by <a href="https://sapper.svelte.dev" target="_blank">Sapper</a>.
-      Template by <a href="https://www.twitter.com/Charca" target="_blank">Maxi Ferreira</a>.
     </span>
   </footer>
 </div>
