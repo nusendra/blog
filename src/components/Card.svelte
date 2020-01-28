@@ -1,9 +1,15 @@
+<script>
+  export let title;
+  export let date;
+  export let excerpt;
+</script>
+
 <div class="card-grid-space">
   <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
     <div>
-      <h1>HTML Syntaxs</h1>
-      <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
-      <div class="date">6 Oct 2017</div>
+      <h1>{title}</h1>
+      <p>{excerpt}</p>
+      <div class="date">{date}</div>
       <div class="tags">
         <div class="tag">HTML</div>
       </div>
