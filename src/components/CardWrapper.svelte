@@ -35,8 +35,5 @@
   .cards-wrapper {
     padding: 4rem 2rem;
   }
-  .card {
-    max-width: calc(100vw - 4rem);
-  }
 }
 </style>

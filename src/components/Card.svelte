@@ -134,4 +134,10 @@ a {
 .card:hover:before, .card:hover:after {
   transform: scale(1);
 }
+
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: calc(100vw - 4rem);
+  }
+}
 </style>

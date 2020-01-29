@@ -68,6 +68,7 @@ export default {
 	server: {
 		input: config.server.input(),
 		output: config.server.output(),
+    sourceMap: false,
 		plugins: [
 			replace({
 				'process.browser': false,
