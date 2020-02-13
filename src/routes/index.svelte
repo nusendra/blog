@@ -10,18 +10,34 @@
 
 <script>
   export let posts;
-  let showItem = 20;
 
-  function add() {
-    showItem += 20;
+  let currentPage = 1;
+  let numberPerPage = 20;
+
+  $: begin = (currentPage - 1) * numberPerPage;
+  $: end = begin + numberPerPage;
+  $: postList = posts.slice(begin, end);
+
+  const numberOfPages = () => {
+    return Math.ceil(posts.length / numberPerPage);
   }
 
-  let y;
-  let i;
-  let o;
-</script>
+  const next = () => {
+    currentPage += 1;
+  }
 
-<svelte:window bind:scrollY={y} bind:innerHeight={i} bind:outerHeight={o}/>
+  const previous = () => {
+    currentPage -= 1;
+  }
+
+  const first = () => {
+    currentPage = 1;
+  }
+
+  const last = () => {
+    currentPage = numberOfPages();
+  }
+</script>
 
 <div id="homepage">
   <div class="container">
@@ -50,19 +66,21 @@
         <div class="label with-spacing">
           BLOG POSTS
           <div class="wide">
-            {#each posts.slice(0, showItem) as { title, printDate }, index}
+            {#each postList as { title, printDate }, index}
               <div class="blog-title">
                 <a href="/post/tips">{printDate} {title}</a>
-                y {y}
-                i {i}
-                o {o}
               </div>
             {/each}
           </div>
         </div>
       </div>
+      <p>
+      <hr />
+      <small>Page : {currentPage}</small>
+      <button on:click={first} disabled={currentPage == 1}>First</button>
+      <button on:click={previous} disabled={currentPage == 1}>Previous</button>
+      <button on:click={next} disabled={currentPage == numberOfPages()}>Next</button>
+      <button on:click={last} disabled={currentPage == numberOfPages()}>Last</button>
     </div>
   </div>
 </div>
-
-<button on:click={add}>test</button>
