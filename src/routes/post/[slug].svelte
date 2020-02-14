@@ -27,7 +27,7 @@
     <div class="small home-description">
       <div class="blog-title-big">{post.title}</div>
       <div title="Published at" class="meta">{post.printDate}</div>
-      <div title="Published at" class="meta">{post.printReadingTime}</div>
+      <div title="Reading Time" class="meta">{post.printReadingTime}</div>
     </div>
   </div>
   <div class="container">
