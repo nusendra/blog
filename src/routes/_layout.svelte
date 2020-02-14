@@ -1,6 +1,19 @@
 <div>
   <main>
-    <slot />
+    <div id="homepage">
+      <div class="container">
+        <div class="small">
+          <div class="page-title">
+            <div class="name">
+              <h1>Nusendra Hanggarawan</h1>
+            </div>
+            <span>Home / About / Now / Youtube</span>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <slot />
+    </div>
   </main>
 
   <footer class="container" style="margin-top: 50px;">

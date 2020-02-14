@@ -25,44 +25,38 @@
   });
 </script>
 
-<div id="homepage">
-  <div class="container">
-    <div class="small">
-      <div class="page-title">
-        <div class="name">
-          <h1>Nusendra Hanggarawan</h1>
-        </div>
-        <span>Home / About / Now / Youtube</span>
-        <hr />
+<div class="container">
+  <div class="small">
+    <div class="column home-description">
+      <div class="full">
+        <p>
+          I'm a software engineer who worked mostly with JavaScript language,
+          Frontend and Backend. Sometimes I code in PHP too, using Lumen
+          framework to build an API Services.
+        </p>
       </div>
-      <div class="column">
-        <div class="full">
-          <p>
-            I'm a software engineer who worked mostly with JavaScript language,
-            Frontend and Backend. Sometimes I code in PHP too, using Lumen
-            framework to build an API Services.
-          </p>
+    </div>
+    <div class="column">
+      <div class="label with-spacing">
+        BLOG POSTS
+        <div class="wide">
+          {#each chunkedPosts as { title, printDate, slug }, index}
+            <div class="blog-title">
+              <a href="/post/{slug}">{printDate} {title}</a>
+            </div>
+          {/each}
         </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="small">
-      <div class="column">
-        <div class="label with-spacing">
-          BLOG POSTS
-          <div class="wide">
-            {#each chunkedPosts as { title, printDate, slug }, index}
-              <div class="blog-title">
-                <a href="/post/{slug}">{printDate} {title}</a>
-              </div>
-            {/each}
-          </div>
-        </div>
-      </div>
-      <p>
-      <hr />
-      <Pagination posts={posts}/>
-    </div>
+    <p>
+    <hr />
+    <Pagination posts={posts}/>
   </div>
 </div>
+
+<style>
+.home-description {
+  margin-top: -70px;
+  margin-bottom: 40px;
+}
+</style>
