@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`blog.json`)
+    return this.fetch(`post.json`)
       .then(r => r.json())
       .then(posts => {
         return { posts };
@@ -52,9 +52,9 @@
         <div class="label with-spacing">
           BLOG POSTS
           <div class="wide">
-            {#each chunkedPosts as { title, printDate }, index}
+            {#each chunkedPosts as { title, printDate, slug }, index}
               <div class="blog-title">
-                <a href="/post/tips">{printDate} {title}</a>
+                <a href="/post/{slug}">{printDate} {title}</a>
               </div>
             {/each}
           </div>

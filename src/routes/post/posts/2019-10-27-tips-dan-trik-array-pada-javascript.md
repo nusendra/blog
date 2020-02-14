@@ -1,7 +1,7 @@
 ---
-title: "Tips dan Trik Array pada Javascript"
+title: 'Tips dan Trik Array pada Javascript'
 date: 2019-10-27 20:53:00
-description: "Banyak sekali metode atau trik dalam memanipulasi data pada sebuah array, berikut ini adalah tips dan trik dalam mengolah array pada JavaScript"
+description: 'Banyak sekali metode atau trik dalam memanipulasi data pada sebuah array, berikut ini adalah tips dan trik dalam mengolah array pada JavaScript'
 tags: ['opini', 'javascript']
 draft: false
 slug: tips-dan-trik-array-pada-javascript
@@ -38,12 +38,12 @@ terkadang kita sering menggunakan `.map` untuk memanipulasi data dengan cara `lo
 
 ```js
 let animals = [
-    { name: 'tiger', legs: 4 },
-    { name: 'elephant', legs: 4 },
-    { name: 'monkey', legs: 2 },
-    { name: 'ant', legs: 6 },
-    { name: 'octopus', legs: 8 },
-    { name: 'chicken', legs: 2 }
+  { name: 'tiger', legs: 4 },
+  { name: 'elephant', legs: 4 },
+  { name: 'monkey', legs: 2 },
+  { name: 'ant', legs: 6 },
+  { name: 'octopus', legs: 8 },
+  { name: 'chicken', legs: 2 },
 ];
 
 let animalNames = Array.from(animals, item => item.name);
@@ -79,7 +79,7 @@ console.log(animalsObject); // { 0: "tiger", 1: "elephant", 2: "monkey", 3: "ant
 ## 6. Mengisi array dengan function .fill()
 
 ```js
-let newArray = new Array(5).fill("wow");
+let newArray = new Array(5).fill('wow');
 console.log(newArray); // ["wow", "wow", "wow", "wow", "wow"]
 ```
 
@@ -92,7 +92,7 @@ let animals = ['tiger', 'elephant', 'monkey'];
 let flowers = ['rose', 'jasmine', 'orchid'];
 let vegetables = ['carrot', 'tomato', 'spinach'];
 
-let mergedArrays = [ ...animals, ...flowers, ...vegetables];
+let mergedArrays = [...animals, ...flowers, ...vegetables];
 console.log(mergedArrays); // ["tiger", "elephant", "monkey", "rose", "jasmine", "orchid", "carrot", "tomato", "spinach"]
 ```
 
@@ -102,7 +102,9 @@ console.log(mergedArrays); // ["tiger", "elephant", "monkey", "rose", "jasmine",
 let array1 = ['tiger', 'elephant', 'monkey'];
 let array2 = ['chicken', 'tiger', 'elephant'];
 
-var duplicatedValues = [ ...new Set(array1)].filter(item => array2.includes(item));
+var duplicatedValues = [...new Set(array1)].filter(item =>
+  array2.includes(item),
+);
 console.log(duplicatedValues); // [ 'tiger', 'elephant' ]
 ```
 
@@ -121,7 +123,7 @@ console.log(trueArray); // returns [“tiger”, 10, true, “cat”]
 ```js
 let animals = ['tiger', 'elephant', 'monkey', 'ant'];
 
-let randomAnimal = animals[(Math.floor(Math.random() * (animals.length)))];
+let randomAnimal = animals[Math.floor(Math.random() * animals.length)];
 console.log(randomAnimal); // 'monkey'
 ```
 
@@ -149,8 +151,8 @@ Jika kalian bingung dengan penggunaan reduce, coba ubah kode diatas menjadi sepe
 ```js
 let nums = [1, 2, 3, 4, 5];
 let sum = nums.reduce((x, y) => {
-  console.log("x : " + x);
-  console.log("y : " + y);
+  console.log('x : ' + x);
+  console.log('y : ' + y);
   return x + y;
 });
 console.log(sum); // 15
