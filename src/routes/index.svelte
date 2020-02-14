@@ -9,34 +9,20 @@
 </script>
 
 <script>
+  import { onMount } from "svelte";
+  import { posts as postStore, chunkedPosts as chunkedPostsStore} from "../stores";
+  import Pagination from "../components/Pagination.svelte";
+
   export let posts;
+  let chunkedPosts;
 
-  let currentPage = 1;
-  let numberPerPage = 20;
+  onMount(() => {
+    postStore.set(posts);
+  });
 
-  $: begin = (currentPage - 1) * numberPerPage;
-  $: end = begin + numberPerPage;
-  $: postList = posts.slice(begin, end);
-
-  const numberOfPages = () => {
-    return Math.ceil(posts.length / numberPerPage);
-  }
-
-  const next = () => {
-    currentPage += 1;
-  }
-
-  const previous = () => {
-    currentPage -= 1;
-  }
-
-  const first = () => {
-    currentPage = 1;
-  }
-
-  const last = () => {
-    currentPage = numberOfPages();
-  }
+  chunkedPostsStore.subscribe(value => {
+    chunkedPosts = value;
+  });
 </script>
 
 <div id="homepage">
@@ -66,7 +52,7 @@
         <div class="label with-spacing">
           BLOG POSTS
           <div class="wide">
-            {#each postList as { title, printDate }, index}
+            {#each chunkedPosts as { title, printDate }, index}
               <div class="blog-title">
                 <a href="/post/tips">{printDate} {title}</a>
               </div>
@@ -76,11 +62,7 @@
       </div>
       <p>
       <hr />
-      <small>Page : {currentPage}</small>
-      <button on:click={first} disabled={currentPage == 1}>First</button>
-      <button on:click={previous} disabled={currentPage == 1}>Previous</button>
-      <button on:click={next} disabled={currentPage == numberOfPages()}>Next</button>
-      <button on:click={last} disabled={currentPage == numberOfPages()}>Last</button>
+      <Pagination posts={posts}/>
     </div>
   </div>
 </div>
