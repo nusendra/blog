@@ -22,15 +22,27 @@
   <title>{post.title}</title>
 </svelte:head>
 
-<header>
-  <p>{post.printDate} ~ {post.printReadingTime}</p>
-  <h1>{post.title}</h1>
-  <hr />
-</header>
-<div class="container">
-  <article class="content">
-    {@html post.html}
-  </article>
-  <hr />
-  <Bio />
+<div class="article">
+  <div class="container">
+    <div class="small home-description">
+      <div class="blog-title-big">{post.title}</div>
+      <div title="Published at" class="meta">{post.printDate}</div>
+      <div title="Published at" class="meta">{post.printReadingTime}</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="small">
+      <div class="column">
+        <div class="post-content">
+          <p>{@html post.html}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+.home-description {
+  margin-top: -70px;
+}
+</style>
