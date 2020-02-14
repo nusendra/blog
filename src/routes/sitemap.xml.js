@@ -55,7 +55,7 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
     .map(
       post => `
     <url>
-      <loc>${BASE_URL}/blog/${post.slug}</loc>
+      <loc>${BASE_URL}/post/${post.slug}</loc>
       <priority>0.69</priority>
     </url>
   `,

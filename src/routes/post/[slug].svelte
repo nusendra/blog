@@ -14,7 +14,6 @@
 </script>
 
 <script>
-  import Bio from '../../components/Bio.svelte'
   export let post
 </script>
 

@@ -1,17 +1,11 @@
+<script>
+  import Header from "../components/Header.svelte";
+</script>
+
 <div>
   <main>
     <div id="homepage">
-      <div class="container">
-        <div class="small">
-          <div class="page-title">
-            <div class="name">
-              <h1>Nusendra Hanggarawan</h1>
-            </div>
-            <span>Home / About / Now / Youtube</span>
-            <hr />
-          </div>
-        </div>
-      </div>
+      <Header />
       <slot />
     </div>
   </main>
