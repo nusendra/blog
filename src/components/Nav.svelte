@@ -1,6 +1,6 @@
 <div>
-  <a href="/">Home /</a>
-  <a href="/about">About /</a>
-  <a href="/now">Now /</a>
-  <a href="/online-course">Online Course</a>
+  <a href='.'>home /</a>
+  <a href='about'>about /</a>
+  <a href='blog'>blog /</a>
+  <a href="online-course">Online Course</a>
 </div>

@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`post.json`)
+    return this.fetch(`blog.json`)
       .then(r => r.json())
       .then(posts => {
         return { posts };
@@ -25,6 +25,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>Nusendra Hanggarawan - Software Engineer</title>
+</svelte:head>
+
 <div class="container">
   <div class="small">
     <div class="column home-description">
@@ -42,7 +46,7 @@
         <div class="wide">
           {#each chunkedPosts as { title, printDate, slug }, index}
             <div class="blog-title">
-              <a href="/post/{slug}">{printDate} {title}</a>
+              <a href="/blog/{slug}">{printDate} {title}</a>
             </div>
           {/each}
         </div>

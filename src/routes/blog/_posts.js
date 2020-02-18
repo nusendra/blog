@@ -10,7 +10,7 @@ const readingTime = require('reading-time');
 require('prismjs/components/prism-jsx.min');
 
 const cwd = process.cwd();
-const POSTS_DIR = path.join(cwd, 'src/routes/post/posts/');
+const POSTS_DIR = path.join(cwd, 'src/routes/blog/posts/');
 const EXCERPT_SEPARATOR = '<!-- more -->';
 const renderer = new marked.Renderer();
 const linkRenderer = renderer.link;
@@ -46,7 +46,8 @@ const posts = fs
   .map(fileName => {
     const fileMd = fs.readFileSync(path.join(POSTS_DIR, fileName), 'utf8');
     const { data, content: rawContent } = matter(fileMd);
-    const { title, date, slug } = data;
+    const { title, date } = data;
+    const slug = fileName.split('.')[0];
     let content = rawContent;
     let excerpt = '';
 

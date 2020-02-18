@@ -6,7 +6,7 @@ const formatDate = require('date-fns/format');
 
 const BASE_URL = 'https://nusendra.com'; // TO CHANGE
 const pages = [''];
-const POSTS_DIR = path.join(cwd, 'src/routes/post/posts/');
+const POSTS_DIR = path.join(cwd, 'src/routes/blog/posts/');
 const EXCERPT_SEPARATOR = '<!-- more -->';
 
 fs.readdirSync('./src/routes').forEach(file => {
@@ -55,7 +55,7 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
     .map(
       post => `
     <url>
-      <loc>${BASE_URL}/post/${post.slug}</loc>
+      <loc>${BASE_URL}/blog/${post.slug}</loc>
       <priority>0.69</priority>
     </url>
   `,
