@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+    return this.fetch(`post.json`).then(r => r.json()).then(posts => {
       return { posts };
     });
   }
@@ -22,7 +22,7 @@
     {/if}
     <div class="post-item">
       <h2>
-        <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>
+        <a rel='prefetch' href='post/{post.slug}'>{post.title}</a>
       </h2>
       <p>{post.excerpt}</p>
       <div class="post-item-footer">

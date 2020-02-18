@@ -7,6 +7,9 @@
     <div id="homepage">
       <Header />
       <slot />
+
+      <!-- The link below is just for allow expost static post -->
+      <a href='post'></a>
     </div>
   </main>
 
