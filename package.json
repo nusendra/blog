@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "nusendra-blog",
+  "description": "Nusendras blog built with Sapper - Svelte",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
