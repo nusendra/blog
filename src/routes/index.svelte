@@ -6,9 +6,6 @@
         const xml = this.fetch('sitemap.xml')
         return { posts, xml };
       })
-      //.then(() => {
-      //  return this.fetch('sitemap.xml');
-      //});
   }
 </script>
 
