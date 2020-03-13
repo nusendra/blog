@@ -1,15 +1,32 @@
 <script>
-  import Header from "../components/Header.svelte";
+  import GoogleAnalytics from "../components/GoogleAnalytics.svelte";
 </script>
 
+<GoogleAnalytics />
 <div>
   <main>
     <div id="homepage">
-      <Header />
+      <div class="container">
+        <div class="small">
+          <div class="page-title">
+            <div class="name">
+              <a href="/">
+                <h1>Nusendra Hanggarawan</h1>
+              </a>
+            </div>
+            <div>
+              <a href=".">Home /</a>
+              <a href="about">About /</a>
+              <a href="online-course">Online Course</a>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
       <slot />
 
       <!-- The link below is just for allow expost static post -->
-      <a href='post'></a>
+      <a href="post"></a>
     </div>
   </main>
 
