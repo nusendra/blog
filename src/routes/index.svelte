@@ -3,10 +3,12 @@
     return this.fetch(`post.json`)
       .then(r => r.json())
       .then(posts => {
-        return { posts };
-      }).then(() => {
-        return this.fetch('sitemap.xml');
-      });
+        const xml = this.fetch('sitemap.xml')
+        return { posts, xml };
+      })
+      //.then(() => {
+      //  return this.fetch('sitemap.xml');
+      //});
   }
 </script>
 
