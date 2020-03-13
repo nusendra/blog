@@ -4,6 +4,8 @@
       .then(r => r.json())
       .then(posts => {
         return { posts };
+      }).then(() => {
+        return this.fetch('sitemap.xml');
       });
   }
 </script>
