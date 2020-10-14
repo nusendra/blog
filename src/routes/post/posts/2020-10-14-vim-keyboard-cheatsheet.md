@@ -232,11 +232,11 @@ Nah kali ini saya mau share cheatsheet VIM. Silakan menikmati
       <td>Mengubah text menjadi lower case / upper case</td>
     </tr>
     <tr>
-      <td>></td>
+      <td>&#62;</td>
       <td>Mengatur indentasi ke kanan</td>
     </tr>
     <tr>
-      <td><</td>
+      <td>&#60;</td>
       <td>Mengatur indentasi ke kiri</td>
     </tr>
     <tr>
