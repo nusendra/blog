@@ -68,7 +68,7 @@ apt-get install linux-headers-`uname -r|cut -d'-' -f3`-`uname -r|cut -d'-' -f4`
 echo "Cleaning is completed"
 ```
 
-Kemudian simpan di manapun, misalnya di /home. Jangna lupa juga jalanin
+Kemudian simpan di manapun, misalnya di /home. Jangan lupa juga jalanin
 ```
 $ sudo chmod +x clean.sh
 ```
