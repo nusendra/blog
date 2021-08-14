@@ -2,7 +2,7 @@ const c = [
 	() => import("../components/layout.svelte"),
 	() => import("../components/error.svelte"),
 	() => import("../../../src/routes/index.svelte"),
-	() => import("../../../src/routes/best-medium-format-camera-for-starting-out/index.md"),
+	() => import("../../../src/routes/test-blog-md/index.md"),
 	() => import("../../../src/routes/[slug].svelte")
 ];
 
@@ -12,8 +12,8 @@ export const routes = [
 	// src/routes/index.svelte
 	[/^\/$/, [c[0], c[2]], [c[1]]],
 
-	// src/routes/best-medium-format-camera-for-starting-out/index.md
-	[/^\/best-medium-format-camera-for-starting-out\/?$/, [c[0], c[3]], [c[1]]],
+	// src/routes/test-blog-md/index.md
+	[/^\/test-blog-md\/?$/, [c[0], c[3]], [c[1]]],
 
 	// src/routes/[slug].json.js
 	[/^\/([^/]+?)\.json$/],
