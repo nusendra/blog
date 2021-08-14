@@ -1,7 +1,7 @@
 import fs from "fs";
 import { compile } from "mdsvex";
 
-export const BLOG_PATH = "src/routes";
+export const BLOG_PATH = "src/routes/blog";
 
 export const getPostsContent = (location) => {
   const directories = fs
@@ -10,7 +10,7 @@ export const getPostsContent = (location) => {
   const articles = [];
 
   directories.forEach((element) => {
-    const contentPath = `${location}/${element}/index.md`;
+    const contentPath = `${location}/${element}.md`;
     if (fs.existsSync(contentPath)) {
       const content = fs.readFileSync(contentPath, { encoding: "utf-8" });
       articles.push({ slug: element, content });

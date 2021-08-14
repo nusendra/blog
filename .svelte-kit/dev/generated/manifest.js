@@ -2,8 +2,7 @@ const c = [
 	() => import("../components/layout.svelte"),
 	() => import("../components/error.svelte"),
 	() => import("../../../src/routes/index.svelte"),
-	() => import("../../../src/routes/best-medium-format-camera-for-starting-out/index.md"),
-	() => import("../../../src/routes/[slug].svelte")
+	() => import("../../../src/routes/blog/test-blog.md")
 ];
 
 const d = decodeURIComponent;
@@ -12,14 +11,11 @@ export const routes = [
 	// src/routes/index.svelte
 	[/^\/$/, [c[0], c[2]], [c[1]]],
 
-	// src/routes/best-medium-format-camera-for-starting-out/index.md
-	[/^\/best-medium-format-camera-for-starting-out\/?$/, [c[0], c[3]], [c[1]]],
+	// src/routes/blog/test-blog.md
+	[/^\/blog\/test-blog\/?$/, [c[0], c[3]], [c[1]]],
 
 	// src/routes/[slug].json.js
-	[/^\/([^/]+?)\.json$/],
-
-	// src/routes/[slug].svelte
-	[/^\/([^/]+?)\/?$/, [c[0], c[4]], [c[1]], (m) => ({ slug: d(m[1])})]
+	[/^\/([^/]+?)\.json$/]
 ];
 
 // we import the root layout/error components eagerly, so that
