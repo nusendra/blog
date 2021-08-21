@@ -9,5 +9,5 @@ yarn-error.log
 *.swp
 *.swo
 .directory
-/build
-/.svelte-kit
+build
+.svelte-kit
