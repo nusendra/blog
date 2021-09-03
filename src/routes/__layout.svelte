@@ -3,329 +3,182 @@
 	import "../tailwind.css";
 </script>
 
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
-	<nav id="header" class="fixed w-full z-10 top-0">
-		<div
-			id="progress"
-			class="h-1 z-20 top-0"
-			style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"
-		/>
-
-		<div
-			class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3"
-		>
-			<div class="pl-4">
-				<a
-					class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
-					href="https://nusendra.com"
+<div class="container mx-auto px-4">
+	<div
+		class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box"
+	>
+		<div class="px-2 mx-2 navbar-start">
+			<span class="text-lg font-bold"> DaisyUI </span>
+		</div>
+		<div class="hidden px-2 mx-2 navbar-center lg:flex">
+			<div class="flex items-stretch">
+				<a class="btn btn-ghost btn-sm rounded-btn"> Home </a>
+				<a class="btn btn-ghost btn-sm rounded-btn"> Portfolio </a>
+				<a class="btn btn-ghost btn-sm rounded-btn"> About </a>
+				<a class="btn btn-ghost btn-sm rounded-btn"> Contact </a>
+			</div>
+		</div>
+		<div class="navbar-end">
+			<button class="btn btn-square btn-ghost">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					class="inline-block w-6 h-6 stroke-current"
 				>
-					Minimal Blog
-				</a>
-			</div>
-
-			<div class="block lg:hidden pr-4">
-				<button
-					id="nav-toggle"
-					class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none"
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+					/>
+				</svg>
+			</button>
+			<button class="btn btn-square btn-ghost">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					class="inline-block w-6 h-6 stroke-current"
 				>
-					<svg
-						class="fill-current h-3 w-3"
-						viewBox="0 0 20 20"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<title>Menu</title>
-						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-					</svg>
-				</button>
-			</div>
-
-			<div
-				class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20"
-				id="nav-content"
-			>
-				<ul class="list-reset lg:flex justify-end flex-1 items-center">
-					<li class="mr-3">
-						<a
-							class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
-							href="https://nusendra.com">Active</a
-						>
-					</li>
-					<li class="mr-3">
-						<a
-							class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-							href="https://nusendra.com">link</a
-						>
-					</li>
-					<li class="mr-3">
-						<a
-							class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-							href="https://nusendra.com">link</a
-						>
-					</li>
-				</ul>
-			</div>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+					/>
+				</svg>
+			</button>
 		</div>
-	</nav>
-
-	<!--Container-->
-	<div class="container w-full md:max-w-3xl mx-auto pt-20">
-		<div
-			class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
-			style="font-family:Georgia,serif;"
-		>
-			<!--Title-->
-			<div class="font-sans">
-				<p class="text-base md:text-sm text-green-500 font-bold">
-					&lt; <a
-						href="nusendra.com"
-						class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-						>BACK TO BLOG</a
-					>
-				</p>
-				<h1
-					class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"
-				>
-					Welcome to Minimal Blog
-				</h1>
-				<p class="text-sm md:text-base font-normal text-gray-600">
-					Published 19 February 2019
-				</p>
-			</div>
-
-			<!--Post Content-->
-
-			<!--Lead Para-->
-			<p class="py-6">
-				👋 Welcome fellow <a
-					class="text-green-500 no-underline hover:underline"
-					href="https://www.tailwindcss.com">Tailwind CSS</a
-				> and miminal monochrome blog fan. This starter template provides a starting
-				point to create your own minimal monochrome blog using Tailwind CSS and vanilla
-				Javascript.
-			</p>
-
-			<p class="py-6">
-				The basic blog page layout is available and all using the default
-				Tailwind CSS classes (although there are a few hardcoded style tags). If
-				you are going to use this in your project, you will want to convert the
-				classes into components.
-			</p>
-
-			<h1 class="py-2 font-sans">Heading 1</h1>
-			<h2 class="py-2 font-sans">Heading 2</h2>
-			<h3 class="py-2 font-sans">Heading 3</h3>
-			<h4 class="py-2 font-sans">Heading 4</h4>
-			<h5 class="py-2 font-sans">Heading 5</h5>
-			<h6 class="py-2 font-sans">Heading 6</h6>
-
-			<p class="py-6">
-				Sed dignissim lectus ut tincidunt vulputate. Fusce tincidunt lacus
-				purus, in mattis tortor sollicitudin pretium. Phasellus at diam posuere,
-				scelerisque nisl sit amet, tincidunt urna. Cras nisi diam, pulvinar ut
-				molestie eget, eleifend ac magna. Sed at lorem condimentum, dignissim
-				lorem eu, blandit massa. Phasellus eleifend turpis vel erat bibendum
-				scelerisque. Maecenas id risus dictum, rhoncus odio vitae, maximus
-				purus. Etiam efficitur dolor in dolor molestie ornare. Aenean pulvinar
-				diam nec neque tincidunt, vitae molestie quam fermentum. Donec ac
-				pretium diam. Suspendisse sed odio risus. Nunc nec luctus nisi. Class
-				aptent taciti sociosqu ad litora torquent per conubia nostra, per
-				inceptos himenaeos. Duis nec nulla eget sem dictum elementum.
-			</p>
-
-			<ol>
-				<li class="py-3">
-					Maecenas accumsan lacus sit amet elementum porta. Aliquam eu libero
-					lectus. Fusce vehicula dictum mi. In non dolor at sem ullamcorper
-					venenatis ut sed dui. Ut ut est quam. Suspendisse quam quam, commodo
-					sit amet placerat in, interdum a ipsum. Morbi sit amet tellus
-					scelerisque tortor semper posuere.
-				</li>
-				<li class="py-3">
-					Morbi varius posuere blandit. Praesent gravida bibendum neque eget
-					commodo. Duis auctor ornare mauris, eu accumsan odio viverra in. Proin
-					sagittis maximus pharetra. Nullam lorem mauris, faucibus ut odio
-					tempus, ultrices aliquet ex. Nam id quam eget ipsum luctus hendrerit.
-					Ut eros magna, eleifend ac ornare vulputate, pretium nec felis.
-				</li>
-				<li class="py-3">
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia Curae; Nunc vitae pretium elit. Cras leo mauris,
-					tristique in risus ac, tristique rutrum velit. Mauris accumsan tempor
-					felis vitae gravida. Cras egestas convallis malesuada. Etiam ac ante
-					id tortor vulputate pretium. Maecenas vel sapien suscipit, elementum
-					odio et, consequat tellus.
-				</li>
-			</ol>
-
-			<blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
-				Example of blockquote - Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet
-				ligula.
-			</blockquote>
-
-			<p class="py-6">Example code block:</p>
-			<pre
-				class="bg-gray-900 rounded text-white font-mono text-base p-2 md:p-4">
-				<code class="break-words whitespace-pre-wrap">
-				</code>
-			</pre>
-
-			<!--/ Post Content-->
-		</div>
-
-		<!--Tags -->
-		<div class="text-base md:text-sm text-gray-500 px-4 py-6">
-			Tags: <a
-				href="nusendra.com"
-				class="text-base md:text-sm text-green-500 no-underline hover:underline"
-				>Link</a
-			>
-			.
-			<a
-				href="nusendra.com"
-				class="text-base md:text-sm text-green-500 no-underline hover:underline"
-				>Link</a
-			>
-		</div>
-
-		<!--Divider-->
-		<hr class="border-b-2 border-gray-400 mb-8 mx-4" />
-
-		<!--Subscribe-->
-		<div class="container px-4">
-			<div
-				class="font-sans bg-gradient-to-b from-green-100 to-gray-100 rounded-lg shadow-xl p-4 text-center"
-			>
-				<h2 class="font-bold break-normal text-xl md:text-3xl">
-					Subscribe to my Newsletter
-				</h2>
-				<h3 class="font-bold break-normal text-gray-600 text-sm md:text-base">
-					Get the latest posts delivered right to your inbox
-				</h3>
-				<div class="w-full text-center pt-4">
-					<form action="nusendra.com">
-						<div class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center">
-							<input
-								type="email"
-								placeholder="youremail@example.com"
-								class="flex-1 mt-4 appearance-none border border-gray-400 rounded shadow-md p-3 text-gray-600 mr-2 focus:outline-none"
-							/>
-							<button
-								type="submit"
-								class="flex-1 mt-4 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400"
-								>Subscribe</button
-							>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- /Subscribe-->
-
-		<!--Author-->
-		<div class="flex w-full items-center font-sans px-4 py-12">
-			<img
-				class="w-10 h-10 rounded-full mr-4"
-				src="http://i.pravatar.cc/300"
-				alt="Avatar of Author"
-			/>
-			<div class="flex-1 px-2">
-				<p class="text-base font-bold text-base md:text-xl leading-none mb-2">
-					Jo Bloggerson
-				</p>
-				<p class="text-gray-600 text-xs md:text-base">
-					Minimal Blog Tailwind CSS template by <a
-						class="text-green-500 no-underline hover:underline"
-						href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a
-					>
-				</p>
-			</div>
-			<div class="justify-end">
-				<button
-					class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
-					>Read More</button
-				>
-			</div>
-		</div>
-		<!--/Author-->
-
-		<!--Divider-->
-		<hr class="border-b-2 border-gray-400 mb-8 mx-4" />
-
-		<!--Next & Prev Links-->
-		<div class="font-sans flex justify-between content-center px-4 pb-12">
-			<div class="text-left">
-				<span class="text-xs md:text-sm font-normal text-gray-600"
-					>&lt; Previous Post</span
-				><br />
-				<p>
-					<a
-						href="nusendra.com"
-						class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-						>Blog title</a
-					>
-				</p>
-			</div>
-			<div class="text-right">
-				<span class="text-xs md:text-sm font-normal text-gray-600"
-					>Next Post &gt;</span
-				><br />
-				<p>
-					<a
-						href="nusendra.com"
-						class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-						>Blog title</a
-					>
-				</p>
-			</div>
-		</div>
-
-		<!--/Next & Prev Links-->
 	</div>
-	<!--/container-->
-
-	<footer class="bg-white border-t border-gray-400 shadow">
-		<div class="container max-w-4xl mx-auto flex py-8">
-			<div class="w-full mx-auto flex flex-wrap">
-				<div class="flex w-full md:w-1/2 ">
-					<div class="px-8">
-						<h3 class="font-bold text-gray-900">About</h3>
-						<p class="py-4 text-gray-600 text-sm">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-							vel mi ut felis tempus commodo nec id erat. Suspendisse
-							consectetur dapibus velit ut lacinia.
-						</p>
+	<div class="hero bg-base-200">
+		<div class="text-center hero-content mt-10 mb-10">
+			<div class="max-w-md">
+				<h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+				<p class="mb-5">
+					Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+					excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+					id nisi.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="flex bg-base-200">
+		<div class="md:flex-1 m-5">
+			<div class="card shadow-xl image-full">
+				<figure>
+					<img src="https://picsum.photos/id/1005/400/250" />
+				</figure>
+				<div class="justify-end card-body">
+					<h2 class="card-title">Image overlay</h2>
+					<p>
+						Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit
+						sit necessitatibus veritatis sed molestiae voluptates incidunt iure
+						sapiente.
+					</p>
+					<div class="card-actions">
+						<button class="btn btn-primary">Get Started</button>
 					</div>
 				</div>
-
-				<div class="flex w-full md:w-1/2">
-					<div class="px-8">
-						<h3 class="font-bold text-gray-900">Social</h3>
-						<ul class="list-reset items-center text-sm pt-3">
-							<li>
-								<a
-									class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-									href="nusendra.com">Add social link</a
-								>
-							</li>
-							<li>
-								<a
-									class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-									href="nusendra.com">Add social link</a
-								>
-							</li>
-							<li>
-								<a
-									class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-									href="nusendra.com">Add social link</a
-								>
-							</li>
-						</ul>
+			</div>
+		</div>
+		<div class="md:flex-1 m-5">
+			<div class="card shadow-xl image-full">
+				<figure>
+					<img src="https://picsum.photos/id/1005/400/250" />
+				</figure>
+				<div class="justify-end card-body">
+					<h2 class="card-title">Image overlay</h2>
+					<p>
+						Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit
+						sit necessitatibus veritatis sed molestiae voluptates incidunt iure
+						sapiente.
+					</p>
+					<div class="card-actions">
+						<button class="btn btn-primary">Get Started</button>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="md:flex-1 m-5">
+			<div class="card shadow-xl image-full">
+				<figure>
+					<img src="https://picsum.photos/id/1005/400/250" />
+				</figure>
+				<div class="justify-end card-body">
+					<h2 class="card-title">Image overlay</h2>
+					<p>
+						Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit
+						sit necessitatibus veritatis sed molestiae voluptates incidunt iure
+						sapiente.
+					</p>
+					<div class="card-actions">
+						<button class="btn btn-primary">Get Started</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="p-10 footer bg-base-300 text-base-content">
+		<div>
+			<span class="footer-title">Services</span>
+			<a class="link link-hover">Branding</a>
+			<a class="link link-hover">Design</a>
+			<a class="link link-hover">Marketing</a>
+			<a class="link link-hover">Advertisement</a>
+		</div>
+		<div>
+			<span class="footer-title">Company</span>
+			<a class="link link-hover">About us</a>
+			<a class="link link-hover">Contact</a>
+			<a class="link link-hover">Jobs</a>
+			<a class="link link-hover">Press kit</a>
+		</div>
+		<div>
+			<span class="footer-title">Social</span>
+			<div class="grid grid-flow-col gap-4">
+				<a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						class="fill-current"
+					>
+						<path
+							d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+						/>
+					</svg>
+				</a>
+				<a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						class="fill-current"
+					>
+						<path
+							d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+						/>
+					</svg>
+				</a>
+				<a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						class="fill-current"
+					>
+						<path
+							d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+						/>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</footer>
-</body>
+</div>
 
 <slot />
