@@ -3,329 +3,364 @@
 	import "../tailwind.css";
 </script>
 
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
-	<nav id="header" class="fixed w-full z-10 top-0">
-		<div
-			id="progress"
-			class="h-1 z-20 top-0"
-			style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"
-		/>
-
-		<div
-			class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3"
+<header class="text-gray-600 body-font">
+	<div
+		class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+	>
+		<a
+			class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
 		>
-			<div class="pl-4">
-				<a
-					class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
-					href="https://nusendra.com"
-				>
-					Minimal Blog
-				</a>
-			</div>
-
-			<div class="block lg:hidden pr-4">
-				<button
-					id="nav-toggle"
-					class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none"
-				>
-					<svg
-						class="fill-current h-3 w-3"
-						viewBox="0 0 20 20"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<title>Menu</title>
-						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-					</svg>
-				</button>
-			</div>
-
-			<div
-				class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20"
-				id="nav-content"
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+				viewBox="0 0 24 24"
 			>
-				<ul class="list-reset lg:flex justify-end flex-1 items-center">
-					<li class="mr-3">
-						<a
-							class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
-							href="https://nusendra.com">Active</a
-						>
-					</li>
-					<li class="mr-3">
-						<a
-							class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-							href="https://nusendra.com">link</a
-						>
-					</li>
-					<li class="mr-3">
-						<a
-							class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-							href="https://nusendra.com">link</a
-						>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<!--Container-->
-	<div class="container w-full md:max-w-3xl mx-auto pt-20">
-		<div
-			class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
-			style="font-family:Georgia,serif;"
+				<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+			</svg>
+			<span class="ml-3 text-xl">Tailblocks</span>
+		</a>
+		<nav
+			class="md:ml-auto flex flex-wrap items-center text-base justify-center"
 		>
-			<!--Title-->
-			<div class="font-sans">
-				<p class="text-base md:text-sm text-green-500 font-bold">
-					&lt; <a
-						href="nusendra.com"
-						class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-						>BACK TO BLOG</a
-					>
-				</p>
-				<h1
-					class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"
-				>
-					Welcome to Minimal Blog
-				</h1>
-				<p class="text-sm md:text-base font-normal text-gray-600">
-					Published 19 February 2019
-				</p>
-			</div>
-
-			<!--Post Content-->
-
-			<!--Lead Para-->
-			<p class="py-6">
-				👋 Welcome fellow <a
-					class="text-green-500 no-underline hover:underline"
-					href="https://www.tailwindcss.com">Tailwind CSS</a
-				> and miminal monochrome blog fan. This starter template provides a starting
-				point to create your own minimal monochrome blog using Tailwind CSS and vanilla
-				Javascript.
-			</p>
-
-			<p class="py-6">
-				The basic blog page layout is available and all using the default
-				Tailwind CSS classes (although there are a few hardcoded style tags). If
-				you are going to use this in your project, you will want to convert the
-				classes into components.
-			</p>
-
-			<h1 class="py-2 font-sans">Heading 1</h1>
-			<h2 class="py-2 font-sans">Heading 2</h2>
-			<h3 class="py-2 font-sans">Heading 3</h3>
-			<h4 class="py-2 font-sans">Heading 4</h4>
-			<h5 class="py-2 font-sans">Heading 5</h5>
-			<h6 class="py-2 font-sans">Heading 6</h6>
-
-			<p class="py-6">
-				Sed dignissim lectus ut tincidunt vulputate. Fusce tincidunt lacus
-				purus, in mattis tortor sollicitudin pretium. Phasellus at diam posuere,
-				scelerisque nisl sit amet, tincidunt urna. Cras nisi diam, pulvinar ut
-				molestie eget, eleifend ac magna. Sed at lorem condimentum, dignissim
-				lorem eu, blandit massa. Phasellus eleifend turpis vel erat bibendum
-				scelerisque. Maecenas id risus dictum, rhoncus odio vitae, maximus
-				purus. Etiam efficitur dolor in dolor molestie ornare. Aenean pulvinar
-				diam nec neque tincidunt, vitae molestie quam fermentum. Donec ac
-				pretium diam. Suspendisse sed odio risus. Nunc nec luctus nisi. Class
-				aptent taciti sociosqu ad litora torquent per conubia nostra, per
-				inceptos himenaeos. Duis nec nulla eget sem dictum elementum.
-			</p>
-
-			<ol>
-				<li class="py-3">
-					Maecenas accumsan lacus sit amet elementum porta. Aliquam eu libero
-					lectus. Fusce vehicula dictum mi. In non dolor at sem ullamcorper
-					venenatis ut sed dui. Ut ut est quam. Suspendisse quam quam, commodo
-					sit amet placerat in, interdum a ipsum. Morbi sit amet tellus
-					scelerisque tortor semper posuere.
-				</li>
-				<li class="py-3">
-					Morbi varius posuere blandit. Praesent gravida bibendum neque eget
-					commodo. Duis auctor ornare mauris, eu accumsan odio viverra in. Proin
-					sagittis maximus pharetra. Nullam lorem mauris, faucibus ut odio
-					tempus, ultrices aliquet ex. Nam id quam eget ipsum luctus hendrerit.
-					Ut eros magna, eleifend ac ornare vulputate, pretium nec felis.
-				</li>
-				<li class="py-3">
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia Curae; Nunc vitae pretium elit. Cras leo mauris,
-					tristique in risus ac, tristique rutrum velit. Mauris accumsan tempor
-					felis vitae gravida. Cras egestas convallis malesuada. Etiam ac ante
-					id tortor vulputate pretium. Maecenas vel sapien suscipit, elementum
-					odio et, consequat tellus.
-				</li>
-			</ol>
-
-			<blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
-				Example of blockquote - Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet
-				ligula.
-			</blockquote>
-
-			<p class="py-6">Example code block:</p>
-			<pre
-				class="bg-gray-900 rounded text-white font-mono text-base p-2 md:p-4">
-				<code class="break-words whitespace-pre-wrap">
-				</code>
-			</pre>
-
-			<!--/ Post Content-->
-		</div>
-
-		<!--Tags -->
-		<div class="text-base md:text-sm text-gray-500 px-4 py-6">
-			Tags: <a
-				href="nusendra.com"
-				class="text-base md:text-sm text-green-500 no-underline hover:underline"
-				>Link</a
+			<a class="mr-5 hover:text-gray-900">First Link</a>
+			<a class="mr-5 hover:text-gray-900">Second Link</a>
+			<a class="mr-5 hover:text-gray-900">Third Link</a>
+			<a class="mr-5 hover:text-gray-900">Fourth Link</a>
+		</nav>
+		<button
+			class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+			>Button
+			<svg
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				class="w-4 h-4 ml-1"
+				viewBox="0 0 24 24"
 			>
-			.
-			<a
-				href="nusendra.com"
-				class="text-base md:text-sm text-green-500 no-underline hover:underline"
-				>Link</a
-			>
-		</div>
-
-		<!--Divider-->
-		<hr class="border-b-2 border-gray-400 mb-8 mx-4" />
-
-		<!--Subscribe-->
-		<div class="container px-4">
-			<div
-				class="font-sans bg-gradient-to-b from-green-100 to-gray-100 rounded-lg shadow-xl p-4 text-center"
-			>
-				<h2 class="font-bold break-normal text-xl md:text-3xl">
-					Subscribe to my Newsletter
-				</h2>
-				<h3 class="font-bold break-normal text-gray-600 text-sm md:text-base">
-					Get the latest posts delivered right to your inbox
-				</h3>
-				<div class="w-full text-center pt-4">
-					<form action="nusendra.com">
-						<div class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center">
-							<input
-								type="email"
-								placeholder="youremail@example.com"
-								class="flex-1 mt-4 appearance-none border border-gray-400 rounded shadow-md p-3 text-gray-600 mr-2 focus:outline-none"
-							/>
-							<button
-								type="submit"
-								class="flex-1 mt-4 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400"
-								>Subscribe</button
-							>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- /Subscribe-->
-
-		<!--Author-->
-		<div class="flex w-full items-center font-sans px-4 py-12">
-			<img
-				class="w-10 h-10 rounded-full mr-4"
-				src="http://i.pravatar.cc/300"
-				alt="Avatar of Author"
-			/>
-			<div class="flex-1 px-2">
-				<p class="text-base font-bold text-base md:text-xl leading-none mb-2">
-					Jo Bloggerson
-				</p>
-				<p class="text-gray-600 text-xs md:text-base">
-					Minimal Blog Tailwind CSS template by <a
-						class="text-green-500 no-underline hover:underline"
-						href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a
-					>
-				</p>
-			</div>
-			<div class="justify-end">
-				<button
-					class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
-					>Read More</button
-				>
-			</div>
-		</div>
-		<!--/Author-->
-
-		<!--Divider-->
-		<hr class="border-b-2 border-gray-400 mb-8 mx-4" />
-
-		<!--Next & Prev Links-->
-		<div class="font-sans flex justify-between content-center px-4 pb-12">
-			<div class="text-left">
-				<span class="text-xs md:text-sm font-normal text-gray-600"
-					>&lt; Previous Post</span
-				><br />
-				<p>
-					<a
-						href="nusendra.com"
-						class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-						>Blog title</a
-					>
-				</p>
-			</div>
-			<div class="text-right">
-				<span class="text-xs md:text-sm font-normal text-gray-600"
-					>Next Post &gt;</span
-				><br />
-				<p>
-					<a
-						href="nusendra.com"
-						class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-						>Blog title</a
-					>
-				</p>
-			</div>
-		</div>
-
-		<!--/Next & Prev Links-->
+				<path d="M5 12h14M12 5l7 7-7 7" />
+			</svg>
+		</button>
 	</div>
-	<!--/container-->
+</header>
 
-	<footer class="bg-white border-t border-gray-400 shadow">
-		<div class="container max-w-4xl mx-auto flex py-8">
-			<div class="w-full mx-auto flex flex-wrap">
-				<div class="flex w-full md:w-1/2 ">
-					<div class="px-8">
-						<h3 class="font-bold text-gray-900">About</h3>
-						<p class="py-4 text-gray-600 text-sm">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-							vel mi ut felis tempus commodo nec id erat. Suspendisse
-							consectetur dapibus velit ut lacinia.
-						</p>
-					</div>
+<section class="text-gray-600 body-font">
+	<div class="container px-5 py-24 mx-auto">
+		<div class="flex flex-wrap w-full mb-20">
+			<div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+				<h1
+					class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+				>
+					Pitchfork Kickstarter Taxidermy
+				</h1>
+				<div class="h-1 w-20 bg-indigo-500 rounded" />
+			</div>
+			<p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+				Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+				gentrify, subway tile poke farm-to-table. Franzen you probably haven't
+				heard of them man bun deep jianbing selfies heirloom prism food truck
+				ugh squid celiac humblebrag.
+			</p>
+		</div>
+		<div class="flex flex-wrap -m-4">
+			<div class="xl:w-1/4 md:w-1/2 p-4">
+				<div class="bg-gray-100 p-6 rounded-lg">
+					<img
+						class="h-40 rounded w-full object-cover object-center mb-6"
+						src="https://dummyimage.com/720x400"
+						alt="content"
+					/>
+					<h3
+						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
+					>
+						SUBTITLE
+					</h3>
+					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+						Chichen Itza
+					</h2>
+					<p class="leading-relaxed text-base">
+						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+						hexagon disrupt edison bulbche.
+					</p>
 				</div>
-
-				<div class="flex w-full md:w-1/2">
-					<div class="px-8">
-						<h3 class="font-bold text-gray-900">Social</h3>
-						<ul class="list-reset items-center text-sm pt-3">
-							<li>
-								<a
-									class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-									href="nusendra.com">Add social link</a
-								>
-							</li>
-							<li>
-								<a
-									class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-									href="nusendra.com">Add social link</a
-								>
-							</li>
-							<li>
-								<a
-									class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-									href="nusendra.com">Add social link</a
-								>
-							</li>
-						</ul>
-					</div>
+			</div>
+			<div class="xl:w-1/4 md:w-1/2 p-4">
+				<div class="bg-gray-100 p-6 rounded-lg">
+					<img
+						class="h-40 rounded w-full object-cover object-center mb-6"
+						src="https://dummyimage.com/721x401"
+						alt="content"
+					/>
+					<h3
+						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
+					>
+						SUBTITLE
+					</h3>
+					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+						Colosseum Roma
+					</h2>
+					<p class="leading-relaxed text-base">
+						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+						hexagon disrupt edison bulbche.
+					</p>
+				</div>
+			</div>
+			<div class="xl:w-1/4 md:w-1/2 p-4">
+				<div class="bg-gray-100 p-6 rounded-lg">
+					<img
+						class="h-40 rounded w-full object-cover object-center mb-6"
+						src="https://dummyimage.com/722x402"
+						alt="content"
+					/>
+					<h3
+						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
+					>
+						SUBTITLE
+					</h3>
+					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+						Great Pyramid of Giza
+					</h2>
+					<p class="leading-relaxed text-base">
+						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+						hexagon disrupt edison bulbche.
+					</p>
+				</div>
+			</div>
+			<div class="xl:w-1/4 md:w-1/2 p-4">
+				<div class="bg-gray-100 p-6 rounded-lg">
+					<img
+						class="h-40 rounded w-full object-cover object-center mb-6"
+						src="https://dummyimage.com/723x403"
+						alt="content"
+					/>
+					<h3
+						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
+					>
+						SUBTITLE
+					</h3>
+					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+						San Francisco
+					</h2>
+					<p class="leading-relaxed text-base">
+						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+						hexagon disrupt edison bulbche.
+					</p>
 				</div>
 			</div>
 		</div>
-	</footer>
-</body>
+	</div>
+</section>
+
+<section class="text-gray-600 body-font overflow-hidden">
+	<div class="container px-5 py-24 mx-auto">
+		<div class="-my-8 divide-y-2 divide-gray-100">
+			<h1
+				class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+			>
+				Pitchfork Kickstarter Taxidermy
+			</h1>
+			<div class="py-8 flex flex-wrap md:flex-nowrap">
+				<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+					<span class="font-semibold title-font text-gray-700">CATEGORY</span>
+					<span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+				</div>
+				<div class="md:flex-grow">
+					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+						Bitters hashtag waistcoat fashion axe chia unicorn
+					</h2>
+					<p class="leading-relaxed">
+						Glossier echo park pug, church-key sartorial biodiesel vexillologist
+						pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger
+						bag selfies, poke vaporware kombucha lumbersexual pork belly
+						polaroid hoodie portland craft beer.
+					</p>
+					<a class="text-indigo-500 inline-flex items-center mt-4"
+						>Learn More
+						<svg
+							class="w-4 h-4 ml-2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M5 12h14" />
+							<path d="M12 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="py-8 flex flex-wrap md:flex-nowrap">
+				<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+					<span class="font-semibold title-font text-gray-700">CATEGORY</span>
+					<span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+				</div>
+				<div class="md:flex-grow">
+					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+						Meditation bushwick direct trade taxidermy shaman
+					</h2>
+					<p class="leading-relaxed">
+						Glossier echo park pug, church-key sartorial biodiesel vexillologist
+						pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger
+						bag selfies, poke vaporware kombucha lumbersexual pork belly
+						polaroid hoodie portland craft beer.
+					</p>
+					<a class="text-indigo-500 inline-flex items-center mt-4"
+						>Learn More
+						<svg
+							class="w-4 h-4 ml-2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M5 12h14" />
+							<path d="M12 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="py-8 flex flex-wrap md:flex-nowrap">
+				<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+					<span class="font-semibold title-font text-gray-700">CATEGORY</span>
+					<span class="text-sm text-gray-500">12 Jun 2019</span>
+				</div>
+				<div class="md:flex-grow">
+					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+						Woke master cleanse drinking vinegar salvia
+					</h2>
+					<p class="leading-relaxed">
+						Glossier echo park pug, church-key sartorial biodiesel vexillologist
+						pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger
+						bag selfies, poke vaporware kombucha lumbersexual pork belly
+						polaroid hoodie portland craft beer.
+					</p>
+					<a class="text-indigo-500 inline-flex items-center mt-4"
+						>Learn More
+						<svg
+							class="w-4 h-4 ml-2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M5 12h14" />
+							<path d="M12 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="text-gray-600 body-font">
+	<div
+		class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+	>
+		<a
+			class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+				viewBox="0 0 24 24"
+			>
+				<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+			</svg>
+			<span class="ml-3 text-xl">Tailblocks</span>
+		</a>
+		<p
+			class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+		>
+			© 2020 Tailblocks —
+			<a
+				href="https://twitter.com/knyttneve"
+				class="text-gray-600 ml-1"
+				rel="noopener noreferrer"
+				target="_blank">@knyttneve</a
+			>
+		</p>
+		<span
+			class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+		>
+			<a class="text-gray-500">
+				<svg
+					fill="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					class="w-5 h-5"
+					viewBox="0 0 24 24"
+				>
+					<path
+						d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+					/>
+				</svg>
+			</a>
+			<a class="ml-3 text-gray-500">
+				<svg
+					fill="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					class="w-5 h-5"
+					viewBox="0 0 24 24"
+				>
+					<path
+						d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+					/>
+				</svg>
+			</a>
+			<a class="ml-3 text-gray-500">
+				<svg
+					fill="none"
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					class="w-5 h-5"
+					viewBox="0 0 24 24"
+				>
+					<rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+					<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
+				</svg>
+			</a>
+			<a class="ml-3 text-gray-500">
+				<svg
+					fill="currentColor"
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="0"
+					class="w-5 h-5"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke="none"
+						d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+					/>
+					<circle cx="4" cy="4" r="2" stroke="none" />
+				</svg>
+			</a>
+		</span>
+	</div>
+</footer>
 
 <slot />
