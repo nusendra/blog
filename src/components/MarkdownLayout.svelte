@@ -10,7 +10,7 @@
 	<meta property="og:image" content={coverImageUrl} />
 </svelte:head>
 
-<article>
+<article class="prose lg:prose-xl">
 	<h1>{title}</h1>
 	<slot />
 	<a href="/blog">Back to blog index</a>

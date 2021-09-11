@@ -31,6 +31,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "daisyui": "^1.14.0"
   }
 }
