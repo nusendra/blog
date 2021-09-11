@@ -5,7 +5,7 @@
 		<a
 			class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
 		>
-			<span class="ml-3 text-2xl">nusendra</span>
+			<span class="ml-3 text-2xl">Nusendra</span>
 		</a>
 		<nav
 			class="md:ml-auto flex flex-wrap items-center text-base justify-center"

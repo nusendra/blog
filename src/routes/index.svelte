@@ -1,106 +1,74 @@
-<section class="text-gray-600 body-font bg-yellow-100">
+<script>
+	import YoutubeCard from "../components/YoutubeCard.svelte";
+</script>
+
+<section class="text-gray-600 body-font bg-gray-100">
 	<div class="container px-5 py-24 mx-auto">
 		<div class="flex flex-wrap w-full mb-20">
 			<div class="lg:w-1/2 w-full mb-6 lg:mb-0">
 				<h1
 					class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
 				>
-					Pitchfork Kickstarter Taxidermy
+					Latest Youtube Playlists
 				</h1>
-				<div class="h-1 w-20 bg-indigo-500 rounded" />
 			</div>
 			<p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
-				Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-				gentrify, subway tile poke farm-to-table. Franzen you probably haven't
-				heard of them man bun deep jianbing selfies heirloom prism food truck
-				ugh squid celiac humblebrag.
+				Saya membuat playlist youtube yang membahas mengenai programming mulai
+				dari dasar hingga bisa diimplementasikan ke dunia nyata. Video yang saya
+				buat adalah seputar JavaScript, TypeScript, Design Pattern, dan Vuejs.
+				Semoga playlist dibawah ini berguna untuk teman teman semuanya.
 			</p>
 		</div>
 		<div class="flex flex-wrap -m-4">
-			<div class="xl:w-1/4 md:w-1/2 p-4">
-				<div class="bg-gray-100 p-6 rounded-lg">
-					<img
-						class="h-40 rounded w-full object-cover object-center mb-6"
-						src="https://dummyimage.com/720x400"
-						alt="content"
-					/>
-					<h3
-						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-					>
-						SUBTITLE
-					</h3>
-					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-						Chichen Itza
-					</h2>
-					<p class="leading-relaxed text-base">
-						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-						hexagon disrupt edison bulbche.
-					</p>
-				</div>
-			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4">
-				<div class="bg-gray-100 p-6 rounded-lg">
-					<img
-						class="h-40 rounded w-full object-cover object-center mb-6"
-						src="https://dummyimage.com/721x401"
-						alt="content"
-					/>
-					<h3
-						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-					>
-						SUBTITLE
-					</h3>
-					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-						Colosseum Roma
-					</h2>
-					<p class="leading-relaxed text-base">
-						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-						hexagon disrupt edison bulbche.
-					</p>
-				</div>
-			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4">
-				<div class="bg-gray-100 p-6 rounded-lg">
-					<img
-						class="h-40 rounded w-full object-cover object-center mb-6"
-						src="https://dummyimage.com/722x402"
-						alt="content"
-					/>
-					<h3
-						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-					>
-						SUBTITLE
-					</h3>
-					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-						Great Pyramid of Giza
-					</h2>
-					<p class="leading-relaxed text-base">
-						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-						hexagon disrupt edison bulbche.
-					</p>
-				</div>
-			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4">
-				<div class="bg-gray-100 p-6 rounded-lg">
-					<img
-						class="h-40 rounded w-full object-cover object-center mb-6"
-						src="https://dummyimage.com/723x403"
-						alt="content"
-					/>
-					<h3
-						class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-					>
-						SUBTITLE
-					</h3>
-					<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-						San Francisco
-					</h2>
-					<p class="leading-relaxed text-base">
-						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-						hexagon disrupt edison bulbche.
-					</p>
-				</div>
-			</div>
+			<YoutubeCard
+				imageSource="https://i.ibb.co/tm5QJcr/VUE3-ADVANCE-1.png"
+				imageAlt="vue3 advance"
+				titleTag="Frontend, Vuejs"
+				title="Vue3 Tingkat Lanjut"
+				totalVideos="13"
+			/>
+			<YoutubeCard
+				imageSource="https://i.ibb.co/v1x0J5R/VUE3-ADVANCE.png"
+				imageAlt="vue3 composition api"
+				titleTag="Frontend, Vuejs"
+				title="Vue3 Composition API"
+				totalVideos="13"
+			/>
+			<YoutubeCard
+				imageSource="https://i.ibb.co/7JfFFRv/vue3-dasar.png"
+				imageAlt="vue3 dasar"
+				titleTag="Frontend, Vuejs"
+				title="Vue3 Tingkat Dasar"
+				totalVideos="30"
+			/>
+			<YoutubeCard
+				imageSource="https://i.ibb.co/n0xjW1L/ts-design-pattern.png"
+				imageAlt="typescript design pattern"
+				titleTag="Backend, TypeScript"
+				title="TypeScript Design Pattern"
+				totalVideos="18"
+			/>
+			<YoutubeCard
+				imageSource="https://i.ibb.co/brf0Cpt/ts-oop.png"
+				imageAlt="typescript oop"
+				titleTag="Backend, TypeScript"
+				title="TypeScript OOP"
+				totalVideos="30"
+			/>
+			<YoutubeCard
+				imageSource="https://i.ibb.co/LRqWHtz/ts-express.png"
+				imageAlt="typescript expressjs"
+				titleTag="Backend, TypeScript"
+				title="TypeScript & ExpressJS"
+				totalVideos="25"
+			/>
+			<YoutubeCard
+				imageSource="https://i.ibb.co/YZLBtYT/ts-dasar.png"
+				imageAlt="typescript dasar"
+				titleTag="Backend, TypeScript"
+				title="TypeScript Tingkat Dasar"
+				totalVideos="25"
+			/>
 		</div>
 	</div>
 </section>
