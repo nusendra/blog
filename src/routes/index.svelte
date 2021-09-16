@@ -1,67 +1,62 @@
 <script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`post.json`)
-      .then(r => r.json())
-      .then(posts => {
-        const xml = this.fetch('sitemap.xml')
-        return { posts, xml };
-      })
-  }
+	export async function load({ page, fetch }) {
+		const url = `/posts.json`;
+		const res = await fetch(url);
+		const posts = await res.json();
+
+		return {
+			props: {
+				posts: posts.slice(0, 3),
+			},
+		};
+	}
 </script>
 
 <script>
-  import { onMount } from "svelte";
-  import { posts as postStore, chunkedPosts as chunkedPostsStore} from "../stores";
-  import Pagination from "../components/Pagination.svelte";
+	import CourseList from "../components/CourseList.svelte";
+	import BlogList from "../components/BlogList.svelte";
 
-  export let posts;
-  let chunkedPosts;
-
-  onMount(() => {
-    postStore.set(posts);
-  });
-
-  chunkedPostsStore.subscribe(value => {
-    chunkedPosts = value;
-  });
+	export let posts;
 </script>
 
-<svelte:head>
-  <title>Nusendra Hanggarawan - Software Engineer</title>
-</svelte:head>
+<section class="text-gray-600 body-font bg-gray-100">
+	<div class="container px-5 py-24 mx-auto">
+		<div class="flex flex-wrap w-full mb-20">
+			<div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+				<h1
+					class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+				>
+					Latest Youtube Playlists
+				</h1>
+			</div>
+			<p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+				Saya membuat playlist youtube yang membahas mengenai programming mulai
+				dari dasar hingga bisa diimplementasikan ke dunia nyata. Video yang saya
+				buat adalah seputar JavaScript, TypeScript, Design Pattern, dan Vuejs.
+				Semoga playlist dibawah ini berguna untuk teman teman semuanya.
+			</p>
+		</div>
+		<CourseList />
+	</div>
+</section>
 
-<div class="container">
-  <div class="small">
-    <div class="column home-description">
-      <div class="full">
-        <p>
-          I'm a software engineer who worked mostly with JavaScript language,
-          Frontend and Backend. Sometimes I code in PHP too, using Lumen
-          framework to build an API Services.
-        </p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="label with-spacing">
-        BLOG POSTS
-        <div class="wide">
-          {#each chunkedPosts as { title, printDate, slug }, index}
-            <div class="blog-title">
-              <a href="post/{slug}">{printDate} {title}</a>
-            </div>
-          {/each}
-        </div>
-      </div>
-    </div>
-    <p>
-    <hr />
-    <Pagination posts={posts}/>
-  </div>
-</div>
-
-<style>
-.home-description {
-  margin-top: -70px;
-  margin-bottom: 40px;
-}
-</style>
+<section class="text-gray-600 body-font overflow-hidden">
+	<div class="container px-5 py-24 mx-auto">
+		<div class="-my-8 divide-y-2 divide-gray-100">
+			<h1
+				class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+			>
+				Latest Blog Posts
+			</h1>
+			{#each posts as item, i}
+				<BlogList
+					slug={item.slug}
+					tags={item.tags.join(", ")}
+					date={item.formatDistance}
+					title={item.title}
+					description={item.description}
+				/>
+			{/each}
+		</div>
+	</div>
+</section>
