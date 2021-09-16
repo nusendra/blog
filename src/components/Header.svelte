@@ -13,7 +13,7 @@
 		>
 			<a href="/" class="mr-5 hover:text-gray-900">Home</a>
 			<a href="/blog" class="mr-5 hover:text-gray-900">Blog</a>
-			<a class="mr-5 hover:text-gray-900">Course</a>
+			<a href="/course" class="mr-5 hover:text-gray-900">Course</a>
 			<a class="mr-5 hover:text-gray-900">Now</a>
 			<a class="mr-5 hover:text-gray-900">Contact</a>
 		</nav>
