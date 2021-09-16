@@ -1,5 +1,5 @@
 <script>
-	import formatDate from "date-fns/format";
+	import { format } from "date-fns";
 
 	export let title;
 	export let date;
@@ -17,7 +17,7 @@
 				{title}
 			</h1>
 			<h4 class="text-sm">
-				Published at {formatDate(new Date(date), "yyyy-MM-dd")}
+				Published at {format(new Date(date), "yyyy-MM-dd")}
 			</h4>
 			<hr />
 			<slot />

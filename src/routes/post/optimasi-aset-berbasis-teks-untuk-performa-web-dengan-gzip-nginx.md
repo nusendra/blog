@@ -19,7 +19,7 @@ Berikut ini hasil dari Lighthouse
 
 ## Enable GZIP di Nginx
 
-Buka file nginx.conf di folder /etc/nginx/ kemudian pada block http { ... } edit / tambahkan beberapa baris kode berikut ini
+Buka file nginx.conf di folder /etc/nginx/ kemudian pada block http edit / tambahkan beberapa baris kode berikut ini
 
 ```
 gzip on;
