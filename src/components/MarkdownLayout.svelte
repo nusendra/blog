@@ -1,17 +1,26 @@
 <script>
-	// These props get filled in from the page's front matter
-	export let title
-	export let coverImageUrl
+	import formatDate from "date-fns/format";
+
+	export let title;
+	export let date;
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 	<meta property="og:title" content={title} />
-	<meta property="og:image" content={coverImageUrl} />
 </svelte:head>
 
-<article class="prose lg:prose-xl">
-	<h1>{title}</h1>
-	<slot />
-	<a href="/blog">Back to blog index</a>
-</article>
+<div class="container px-5 py-24 mx-auto flex flex-wrap flex-col">
+	<article class="prose prose-lg max-w-none">
+		<div class="lg:w-2/3 mx-auto leading-relaxed text-base">
+			<h1 class="sm:text-xl text-xl font-medium title-font text-gray-900">
+				{title}
+			</h1>
+			<h4 class="text-sm">
+				Published at {formatDate(new Date(date), "yyyy-MM-dd")}
+			</h4>
+			<hr />
+			<slot />
+		</div>
+	</article>
+</div>

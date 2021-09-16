@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import grayMatter from "gray-matter";
+import formatDate from "date-fns/format";
 
 export async function get() {
 	const cwd = process.cwd();
@@ -12,15 +13,27 @@ export async function get() {
 		const { title, date, slug, description } = data;
 		let content = rawContent;
 		let excerpt = "";
+		const printDate = formatDate(new Date(date), "yyyy-MM-dd");
 
 		return {
 			title: title || slug,
 			slug,
-			date,
+			date: printDate,
 			excerpt,
 			description,
 		};
 	});
 
-	return { body: JSON.stringify(posts) };
+	const sortedPosts = () => {
+		return posts.sort((a, b) => {
+			const dateA = new Date(a.date);
+			const dateB = new Date(b.date);
+
+			if (dateA > dateB) return -1;
+			if (dateA < dateB) return 1;
+			return 0;
+		});
+	};
+
+	return { body: JSON.stringify(sortedPosts()) };
 }
