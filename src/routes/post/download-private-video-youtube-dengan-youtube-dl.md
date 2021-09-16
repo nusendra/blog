@@ -4,7 +4,7 @@ date: 2020-04-02 03:00:00
 description: 'Cara mendownload private channel / private video youtube dengan menggunakan youtube-dl'
 tags: ['trik']
 draft: false
-slug: download-private-video-youtube-youtube-dl
+slug: download-private-video-youtube-dengan-youtube-dl
 ---
 
 Postingan kali ini akan membahas tentang bagaimana cara mendownload video private youtube atau channel youtube yang emang di bikin private. Kasus ini saya dapat ketika saya pengen mendownload semua video private saya yang ada di youtube (Ingat ya, ini video private pribadi, bukan video private dari channel lain). Nah karena mendownload private video pakai youtube-dl itu agak agak merepotkan, dan yang jelas saya sendiri gagal menggunakan command **-u username -p password**, akhir nya terpaksa harus pakai cookies. Berikut ini trik nya

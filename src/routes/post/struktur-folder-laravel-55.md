@@ -4,7 +4,7 @@ date: 2017-11-27 06:34:50
 description: "Setiap framework memiliki struktur direktori / folder yang berbeda, nah memahami struktur folder di Laravel pun sangat wajib diketahui bagi para pengguna Laravel"
 tags: ["laravel", "php"]
 draft: false
-slug: struktur-folder-pada-laravel-55
+slug: struktur-folder-laravel-55
 ---
 
 Sebelum benar benar menggunakan Laravel (saat postingan ini dibuat, Laravel masih di versi 5.5 LTS), kita harus memahami betul apa aja sih kegunaan dan fungsi dari masing - masing foldernya. Dengan memahami kegunaan dan struktur folder yang ada di Laravel, kita nantinya akan sangat mudah dalam membangun sebuah aplikasi. mari kita mulai ...

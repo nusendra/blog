@@ -4,7 +4,7 @@ title: Optimasi Aset Berbasis Teks untuk Performa Web dengan GZIP Nginx
 date: 2018-12-26 18:11:40
 tags: ['devops']
 description: "Menggunakan fitur GZIP pada Nginx untuk meningkatkan kecepatan load suatu website dengan memperkecil bundle size aset berbasis teks."
-slug: Optimasi Aset Berbasis Teks untuk Performa Web dengan GZIP Nginx
+slug: optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx
 ---
 
 Pada suatu halaman website, ada jenis file text yang sering bikin gendut halaman web, tentunya kedua hal ini juga bisa memperlambat loading web, kedua file ini adalah CSS dan Javascript. Ada banyak sekali cara untuk mengoptimalkan javascript dan css, salah satu nya ada GZIP yang akan kita bahas kali ini. Sederhananya, GZIP ini membantu untuk mengkompresi file berbasis text menjadi bundle yang lebih kecil, sehingga browser bisa lebih cepat dalam load website nya. Sama seperti beberapa file yang di kompress menjadi .rar atau .zip yang ukurannya jadi lebih kecil.

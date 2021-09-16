@@ -17006,14 +17006,14 @@ function stringifyString(str2) {
   result += '"';
   return result;
 }
-function noop$1() {
+function noop() {
 }
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
 Promise.resolve();
 var subscriber_queue = [];
-function writable(value, start = noop$1) {
+function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
   function set(new_value) {
@@ -17037,11 +17037,11 @@ function writable(value, start = noop$1) {
   function update(fn) {
     set(fn(value));
   }
-  function subscribe2(run2, invalidate = noop$1) {
+  function subscribe(run2, invalidate = noop) {
     const subscriber = [run2, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
-      stop = start(set) || noop$1;
+      stop = start(set) || noop;
     }
     run2(value);
     return () => {
@@ -17052,7 +17052,7 @@ function writable(value, start = noop$1) {
       }
     };
   }
-  return { set, update, subscribe: subscribe2 };
+  return { set, update, subscribe };
 }
 function hash(value) {
   let hash2 = 5381;
@@ -17578,7 +17578,7 @@ async function respond$1(opts) {
   const { request, options: options22, state, $session, route } = opts;
   let nodes;
   try {
-    nodes = await Promise.all(route.a.map((id2) => id2 ? options22.load_component(id2) : void 0));
+    nodes = await Promise.all(route.a.map((id) => id ? options22.load_component(id) : void 0));
   } catch (err) {
     const error3 = coalesce_to_error(err);
     options22.handle_error(error3, request);
@@ -17967,8 +17967,6 @@ async function respond(incoming, options22, state = {}) {
     };
   }
 }
-function noop() {
-}
 function run(fn) {
   return fn();
 }
@@ -17977,13 +17975,6 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
-}
-function subscribe(store, ...callbacks) {
-  if (store == null) {
-    return noop;
-  }
-  const unsub = store.subscribe(...callbacks);
-  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
 var current_component;
 function set_current_component(component) {
@@ -18131,13 +18122,13 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-27902ff4.js",
+      file: assets + "/_app/start-4685e836.js",
       css: [assets + "/_app/assets/start-d5b4de3e.css"],
-      js: [assets + "/_app/start-27902ff4.js", assets + "/_app/chunks/vendor-bbec6117.js"]
+      js: [assets + "/_app/start-4685e836.js", assets + "/_app/chunks/vendor-7bb78b77.js"]
     },
     fetched: void 0,
     floc: false,
-    get_component_path: (id2) => assets + "/_app/" + entry_lookup[id2],
+    get_component_path: (id) => assets + "/_app/" + entry_lookup[id],
     get_stack: (error2) => String(error2),
     handle_error: (error2, request) => {
       hooks.handleError({ error: error2, request });
@@ -18225,13 +18216,6 @@ var manifest = {
     },
     {
       type: "page",
-      pattern: /^\/post\/how-to-yank-or-copy-text-from-different-instances-of-vim\/?$/,
-      params: empty,
-      a: ["src/routes/__layout.svelte", "src/routes/post/how-to-yank-or-copy-text-from-different-instances-of-vim.md"],
-      b: [".svelte-kit/build/components/error.svelte"]
-    },
-    {
-      type: "page",
       pattern: /^\/post\/terselamatkan-oleh-startup-script-di-google-cloud-engine\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md"],
@@ -18253,9 +18237,9 @@ var manifest = {
     },
     {
       type: "page",
-      pattern: /^\/post\/duplikasi-object-dan-array-dengan-benar-di-javascript\/?$/,
+      pattern: /^\/post\/duplikasi-object-atau-array-dengan-benar-di-javascript\/?$/,
       params: empty,
-      a: ["src/routes/__layout.svelte", "src/routes/post/duplikasi-object-dan-array-dengan-benar-di-javascript.md"],
+      a: ["src/routes/__layout.svelte", "src/routes/post/duplikasi-object-atau-array-dengan-benar-di-javascript.md"],
       b: [".svelte-kit/build/components/error.svelte"]
     },
     {
@@ -18263,13 +18247,6 @@ var manifest = {
       pattern: /^\/post\/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md"],
-      b: [".svelte-kit/build/components/error.svelte"]
-    },
-    {
-      type: "page",
-      pattern: /^\/post\/mini-workshop-speed-up-vuejs-development-with-nuxt\/?$/,
-      params: empty,
-      a: ["src/routes/__layout.svelte", "src/routes/post/mini-workshop-speed-up-vuejs-development-with-nuxt.md"],
       b: [".svelte-kit/build/components/error.svelte"]
     },
     {
@@ -18295,9 +18272,23 @@ var manifest = {
     },
     {
       type: "page",
+      pattern: /^\/post\/yank-or-copy-text-from-different-instances-of-vim\/?$/,
+      params: empty,
+      a: ["src/routes/__layout.svelte", "src/routes/post/yank-or-copy-text-from-different-instances-of-vim.md"],
+      b: [".svelte-kit/build/components/error.svelte"]
+    },
+    {
+      type: "page",
       pattern: /^\/post\/download-private-video-youtube-dengan-youtube-dl\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/post/download-private-video-youtube-dengan-youtube-dl.md"],
+      b: [".svelte-kit/build/components/error.svelte"]
+    },
+    {
+      type: "page",
+      pattern: /^\/post\/bagaimana-saya-mengatur-waktu-sebagai-developer\/?$/,
+      params: empty,
+      a: ["src/routes/__layout.svelte", "src/routes/post/bagaimana-saya-mengatur-waktu-sebagai-developer.md"],
       b: [".svelte-kit/build/components/error.svelte"]
     },
     {
@@ -18326,6 +18317,13 @@ var manifest = {
       pattern: /^\/post\/memproteksi-laravel-web-app-dari-serangan-csrf\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/post/memproteksi-laravel-web-app-dari-serangan-csrf.md"],
+      b: [".svelte-kit/build/components/error.svelte"]
+    },
+    {
+      type: "page",
+      pattern: /^\/post\/mini-workshop-speed-up-development-with-nuxtjs\/?$/,
+      params: empty,
+      a: ["src/routes/__layout.svelte", "src/routes/post/mini-workshop-speed-up-development-with-nuxtjs.md"],
       b: [".svelte-kit/build/components/error.svelte"]
     },
     {
@@ -18477,13 +18475,6 @@ var manifest = {
     },
     {
       type: "page",
-      pattern: /^\/post\/dasar-controller-di-laravel-5-part-1\/?$/,
-      params: empty,
-      a: ["src/routes/__layout.svelte", "src/routes/post/dasar-controller-di-laravel-5-part-1.md"],
-      b: [".svelte-kit/build/components/error.svelte"]
-    },
-    {
-      type: "page",
       pattern: /^\/post\/migrasi-dari-dynamic-ke-static-blog\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/post/migrasi-dari-dynamic-ke-static-blog.md"],
@@ -18529,13 +18520,6 @@ var manifest = {
       pattern: /^\/post\/berkenalan-lebih-dekat-dengan-pwa\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/post/berkenalan-lebih-dekat-dengan-pwa.md"],
-      b: [".svelte-kit/build/components/error.svelte"]
-    },
-    {
-      type: "page",
-      pattern: /^\/post\/manajemen-waktu-sebagai-developer\/?$/,
-      params: empty,
-      a: ["src/routes/__layout.svelte", "src/routes/post/manajemen-waktu-sebagai-developer.md"],
       b: [".svelte-kit/build/components/error.svelte"]
     },
     {
@@ -18749,9 +18733,6 @@ var module_lookup = {
   "src/routes/post/mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern.md": () => Promise.resolve().then(function() {
     return mengorganisirApiCallDiNuxtjsDenganRepositoryPattern;
   }),
-  "src/routes/post/how-to-yank-or-copy-text-from-different-instances-of-vim.md": () => Promise.resolve().then(function() {
-    return howToYankOrCopyTextFromDifferentInstancesOfVim;
-  }),
   "src/routes/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md": () => Promise.resolve().then(function() {
     return terselamatkanOlehStartupScriptDiGoogleCloudEngine;
   }),
@@ -18761,14 +18742,11 @@ var module_lookup = {
   "src/routes/post/react-native-057-images-is-not-showing-on-generated-apk.md": () => Promise.resolve().then(function() {
     return reactNative057ImagesIsNotShowingOnGeneratedApk;
   }),
-  "src/routes/post/duplikasi-object-dan-array-dengan-benar-di-javascript.md": () => Promise.resolve().then(function() {
-    return duplikasiObjectDanArrayDenganBenarDiJavascript;
+  "src/routes/post/duplikasi-object-atau-array-dengan-benar-di-javascript.md": () => Promise.resolve().then(function() {
+    return duplikasiObjectAtauArrayDenganBenarDiJavascript;
   }),
   "src/routes/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md": () => Promise.resolve().then(function() {
     return membuatRbacSendiriMenuRenderingDiNuxtjsPart3;
-  }),
-  "src/routes/post/mini-workshop-speed-up-vuejs-development-with-nuxt.md": () => Promise.resolve().then(function() {
-    return miniWorkshopSpeedUpVuejsDevelopmentWithNuxt;
   }),
   "src/routes/post/setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx.md": () => Promise.resolve().then(function() {
     return setupHttpsSslDiNuxtjsDanLaravelDenganNginx;
@@ -18779,8 +18757,14 @@ var module_lookup = {
   "src/routes/post/redirect-http-ke-https-dengan-htaccess-di-laravel.md": () => Promise.resolve().then(function() {
     return redirectHttpKeHttpsDenganHtaccessDiLaravel;
   }),
+  "src/routes/post/yank-or-copy-text-from-different-instances-of-vim.md": () => Promise.resolve().then(function() {
+    return yankOrCopyTextFromDifferentInstancesOfVim;
+  }),
   "src/routes/post/download-private-video-youtube-dengan-youtube-dl.md": () => Promise.resolve().then(function() {
     return downloadPrivateVideoYoutubeDenganYoutubeDl;
+  }),
+  "src/routes/post/bagaimana-saya-mengatur-waktu-sebagai-developer.md": () => Promise.resolve().then(function() {
+    return bagaimanaSayaMengaturWaktuSebagaiDeveloper;
   }),
   "src/routes/post/migrasi-blog-dari-vue-gridsome-ke-svelte-sapper.md": () => Promise.resolve().then(function() {
     return migrasiBlogDariVueGridsomeKeSvelteSapper;
@@ -18793,6 +18777,9 @@ var module_lookup = {
   }),
   "src/routes/post/memproteksi-laravel-web-app-dari-serangan-csrf.md": () => Promise.resolve().then(function() {
     return memproteksiLaravelWebAppDariSeranganCsrf;
+  }),
+  "src/routes/post/mini-workshop-speed-up-development-with-nuxtjs.md": () => Promise.resolve().then(function() {
+    return miniWorkshopSpeedUpDevelopmentWithNuxtjs;
   }),
   "src/routes/post/berkomunitaslah-dapatkan-dan-sebarkan-manfaat.md": () => Promise.resolve().then(function() {
     return berkomunitaslahDapatkanDanSebarkanManfaat;
@@ -18857,9 +18844,6 @@ var module_lookup = {
   "src/routes/post/docker-compose-postgresql-dan-pgadmin4.md": () => Promise.resolve().then(function() {
     return dockerComposePostgresqlDanPgadmin4;
   }),
-  "src/routes/post/dasar-controller-di-laravel-5-part-1.md": () => Promise.resolve().then(function() {
-    return dasarControllerDiLaravel5Part1;
-  }),
   "src/routes/post/migrasi-dari-dynamic-ke-static-blog.md": () => Promise.resolve().then(function() {
     return migrasiDariDynamicKeStaticBlog;
   }),
@@ -18880,9 +18864,6 @@ var module_lookup = {
   }),
   "src/routes/post/berkenalan-lebih-dekat-dengan-pwa.md": () => Promise.resolve().then(function() {
     return berkenalanLebihDekatDenganPwa;
-  }),
-  "src/routes/post/manajemen-waktu-sebagai-developer.md": () => Promise.resolve().then(function() {
-    return manajemenWaktuSebagaiDeveloper;
   }),
   "src/routes/post/menggunakan-knexjs-di-express-app.md": () => Promise.resolve().then(function() {
     return menggunakanKnexjsDiExpressApp;
@@ -18960,7 +18941,7 @@ var module_lookup = {
     return spaVsMpa;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-60d5a5ff.js", "css": ["assets/pages/__layout.svelte-7a82de8e.css"], "js": ["pages/__layout.svelte-60d5a5ff.js", "chunks/vendor-bbec6117.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-b6da0261.js", "css": [], "js": ["error.svelte-b6da0261.js", "chunks/vendor-bbec6117.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-eb815b25.js", "css": [], "js": ["pages/index.svelte-eb815b25.js", "chunks/vendor-bbec6117.js", "chunks/CourseList-ff5825df.js", "chunks/BlogList-71fae4ed.js"], "styles": [] }, "src/routes/course.svelte": { "entry": "pages/course.svelte-f00fc29c.js", "css": [], "js": ["pages/course.svelte-f00fc29c.js", "chunks/vendor-bbec6117.js", "chunks/CourseList-ff5825df.js"], "styles": [] }, "src/routes/blog.svelte": { "entry": "pages/blog.svelte-94e247ac.js", "css": [], "js": ["pages/blog.svelte-94e247ac.js", "chunks/vendor-bbec6117.js", "chunks/BlogList-71fae4ed.js"], "styles": [] }, "src/routes/post/optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx.md": { "entry": "pages/post/optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx.md-c8f0d7c9.js", "css": [], "js": ["pages/post/optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx.md-c8f0d7c9.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1.md": { "entry": "pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1.md-245df8e7.js", "css": [], "js": ["pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1.md-245df8e7.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2.md": { "entry": "pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2.md-1171e386.js", "css": [], "js": ["pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2.md-1171e386.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern.md": { "entry": "pages/post/mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern.md-ed72eeca.js", "css": [], "js": ["pages/post/mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern.md-ed72eeca.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/how-to-yank-or-copy-text-from-different-instances-of-vim.md": { "entry": "pages/post/how-to-yank-or-copy-text-from-different-instances-of-vim.md-9d2ee397.js", "css": [], "js": ["pages/post/how-to-yank-or-copy-text-from-different-instances-of-vim.md-9d2ee397.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md": { "entry": "pages/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md-ebdec31e.js", "css": [], "js": ["pages/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md-ebdec31e.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/menentukan-teknologi-yang-tepat-sebelum-membuat-project.md": { "entry": "pages/post/menentukan-teknologi-yang-tepat-sebelum-membuat-project.md-0a990b9a.js", "css": [], "js": ["pages/post/menentukan-teknologi-yang-tepat-sebelum-membuat-project.md-0a990b9a.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/react-native-057-images-is-not-showing-on-generated-apk.md": { "entry": "pages/post/react-native-057-images-is-not-showing-on-generated-apk.md-b6c6af8d.js", "css": [], "js": ["pages/post/react-native-057-images-is-not-showing-on-generated-apk.md-b6c6af8d.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/duplikasi-object-dan-array-dengan-benar-di-javascript.md": { "entry": "pages/post/duplikasi-object-dan-array-dengan-benar-di-javascript.md-884174d6.js", "css": [], "js": ["pages/post/duplikasi-object-dan-array-dengan-benar-di-javascript.md-884174d6.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md": { "entry": "pages/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md-f868dc38.js", "css": [], "js": ["pages/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md-f868dc38.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/mini-workshop-speed-up-vuejs-development-with-nuxt.md": { "entry": "pages/post/mini-workshop-speed-up-vuejs-development-with-nuxt.md-222ba989.js", "css": [], "js": ["pages/post/mini-workshop-speed-up-vuejs-development-with-nuxt.md-222ba989.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx.md": { "entry": "pages/post/setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx.md-8b46a279.js", "css": [], "js": ["pages/post/setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx.md-8b46a279.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/workshop-vuejs-basic-bersama-komunitas-surabayadev.md": { "entry": "pages/post/workshop-vuejs-basic-bersama-komunitas-surabayadev.md-f505a0dd.js", "css": [], "js": ["pages/post/workshop-vuejs-basic-bersama-komunitas-surabayadev.md-f505a0dd.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/redirect-http-ke-https-dengan-htaccess-di-laravel.md": { "entry": "pages/post/redirect-http-ke-https-dengan-htaccess-di-laravel.md-6f0f3d07.js", "css": [], "js": ["pages/post/redirect-http-ke-https-dengan-htaccess-di-laravel.md-6f0f3d07.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/download-private-video-youtube-dengan-youtube-dl.md": { "entry": "pages/post/download-private-video-youtube-dengan-youtube-dl.md-76906c15.js", "css": [], "js": ["pages/post/download-private-video-youtube-dengan-youtube-dl.md-76906c15.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/migrasi-blog-dari-vue-gridsome-ke-svelte-sapper.md": { "entry": "pages/post/migrasi-blog-dari-vue-gridsome-ke-svelte-sapper.md-4d334f5e.js", "css": [], "js": ["pages/post/migrasi-blog-dari-vue-gridsome-ke-svelte-sapper.md-4d334f5e.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1.md": { "entry": "pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1.md-b8492e7a.js", "css": [], "js": ["pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1.md-b8492e7a.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2.md": { "entry": "pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2.md-6fea98f7.js", "css": [], "js": ["pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2.md-6fea98f7.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/memproteksi-laravel-web-app-dari-serangan-csrf.md": { "entry": "pages/post/memproteksi-laravel-web-app-dari-serangan-csrf.md-a3ab3649.js", "css": [], "js": ["pages/post/memproteksi-laravel-web-app-dari-serangan-csrf.md-a3ab3649.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/berkomunitaslah-dapatkan-dan-sebarkan-manfaat.md": { "entry": "pages/post/berkomunitaslah-dapatkan-dan-sebarkan-manfaat.md-d4bf384a.js", "css": [], "js": ["pages/post/berkomunitaslah-dapatkan-dan-sebarkan-manfaat.md-d4bf384a.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/method-destroy-di-controller-laravel-5-part-8.md": { "entry": "pages/post/method-destroy-di-controller-laravel-5-part-8.md-c04c6115.js", "css": [], "js": ["pages/post/method-destroy-di-controller-laravel-5-part-8.md-c04c6115.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/membuat-rbac-sendiri-backend-response-part-2.md": { "entry": "pages/post/membuat-rbac-sendiri-backend-response-part-2.md-8fd4c141.js", "css": [], "js": ["pages/post/membuat-rbac-sendiri-backend-response-part-2.md-8fd4c141.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/method-create-di-controller-laravel-5-part-3.md": { "entry": "pages/post/method-create-di-controller-laravel-5-part-3.md-9fe6965f.js", "css": [], "js": ["pages/post/method-create-di-controller-laravel-5-part-3.md-9fe6965f.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/method-update-di-controller-laravel-5-part-7.md": { "entry": "pages/post/method-update-di-controller-laravel-5-part-7.md-d6742f53.js", "css": [], "js": ["pages/post/method-update-di-controller-laravel-5-part-7.md-d6742f53.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/rest-api-dengan-nodejs-dan-typescript-part-1.md": { "entry": "pages/post/rest-api-dengan-nodejs-dan-typescript-part-1.md-198cd191.js", "css": [], "js": ["pages/post/rest-api-dengan-nodejs-dan-typescript-part-1.md-198cd191.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/rest-api-dengan-nodejs-dan-typescript-part-2.md": { "entry": "pages/post/rest-api-dengan-nodejs-dan-typescript-part-2.md-01863e57.js", "css": [], "js": ["pages/post/rest-api-dengan-nodejs-dan-typescript-part-2.md-01863e57.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/rest-api-dengan-nodejs-dan-typescript-part-3.md": { "entry": "pages/post/rest-api-dengan-nodejs-dan-typescript-part-3.md-5d753482.js", "css": [], "js": ["pages/post/rest-api-dengan-nodejs-dan-typescript-part-3.md-5d753482.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/menampilkan-data-polymorphic-tanpa-eloquent.md": { "entry": "pages/post/menampilkan-data-polymorphic-tanpa-eloquent.md-c9162a1c.js", "css": [], "js": ["pages/post/menampilkan-data-polymorphic-tanpa-eloquent.md-c9162a1c.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/method-index-di-controller-laravel-5-part-2.md": { "entry": "pages/post/method-index-di-controller-laravel-5-part-2.md-18d0126c.js", "css": [], "js": ["pages/post/method-index-di-controller-laravel-5-part-2.md-18d0126c.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/method-store-di-controller-laravel-5-part-4.md": { "entry": "pages/post/method-store-di-controller-laravel-5-part-4.md-506d4329.js", "css": [], "js": ["pages/post/method-store-di-controller-laravel-5-part-4.md-506d4329.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/membersihkan-disk-usage-pada-ubuntu-server.md": { "entry": "pages/post/membersihkan-disk-usage-pada-ubuntu-server.md-10552e25.js", "css": [], "js": ["pages/post/membersihkan-disk-usage-pada-ubuntu-server.md-10552e25.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/method-edit-di-controller-laravel-5-part-6.md": { "entry": "pages/post/method-edit-di-controller-laravel-5-part-6.md-714c8e10.js", "css": [], "js": ["pages/post/method-edit-di-controller-laravel-5-part-6.md-714c8e10.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/method-show-di-controller-laravel-5-part-5.md": { "entry": "pages/post/method-show-di-controller-laravel-5-part-5.md-034f4727.js", "css": [], "js": ["pages/post/method-show-di-controller-laravel-5-part-5.md-034f4727.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/cara-mudah-mengurus-atau-membuat-passport.md": { "entry": "pages/post/cara-mudah-mengurus-atau-membuat-passport.md-a34cdd08.js", "css": [], "js": ["pages/post/cara-mudah-mengurus-atau-membuat-passport.md-a34cdd08.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/react-native-state-management-dengan-remx.md": { "entry": "pages/post/react-native-state-management-dengan-remx.md-0cb9707a.js", "css": [], "js": ["pages/post/react-native-state-management-dengan-remx.md-0cb9707a.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/fokus-sangat-membantu-kita-saat-ngoding.md": { "entry": "pages/post/fokus-sangat-membantu-kita-saat-ngoding.md-9be27196.js", "css": [], "js": ["pages/post/fokus-sangat-membantu-kita-saat-ngoding.md-9be27196.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/install-dan-akses-remote-mariadb-di-vps.md": { "entry": "pages/post/install-dan-akses-remote-mariadb-di-vps.md-268b9e6d.js", "css": [], "js": ["pages/post/install-dan-akses-remote-mariadb-di-vps.md-268b9e6d.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/jangan-dibuka-nanti-jadi-lemot-44440000.md": { "entry": "pages/post/jangan-dibuka-nanti-jadi-lemot-44440000.md-c7552172.js", "css": [], "js": ["pages/post/jangan-dibuka-nanti-jadi-lemot-44440000.md-c7552172.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/memajukan-komunitas-di-webunconfid-2018.md": { "entry": "pages/post/memajukan-komunitas-di-webunconfid-2018.md-ae8ab661.js", "css": [], "js": ["pages/post/memajukan-komunitas-di-webunconfid-2018.md-ae8ab661.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/docker-compose-postgresql-dan-pgadmin4.md": { "entry": "pages/post/docker-compose-postgresql-dan-pgadmin4.md-23275f80.js", "css": [], "js": ["pages/post/docker-compose-postgresql-dan-pgadmin4.md-23275f80.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/dasar-controller-di-laravel-5-part-1.md": { "entry": "pages/post/dasar-controller-di-laravel-5-part-1.md-da853f62.js", "css": [], "js": ["pages/post/dasar-controller-di-laravel-5-part-1.md-da853f62.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/migrasi-dari-dynamic-ke-static-blog.md": { "entry": "pages/post/migrasi-dari-dynamic-ke-static-blog.md-6162958d.js", "css": [], "js": ["pages/post/migrasi-dari-dynamic-ke-static-blog.md-6162958d.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/programmer-adalah-pembelajar-sejati.md": { "entry": "pages/post/programmer-adalah-pembelajar-sejati.md-90598cdc.js", "css": [], "js": ["pages/post/programmer-adalah-pembelajar-sejati.md-90598cdc.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/tips-dan-trik-array-pada-javascript.md": { "entry": "pages/post/tips-dan-trik-array-pada-javascript.md-440e8976.js", "css": [], "js": ["pages/post/tips-dan-trik-array-pada-javascript.md-440e8976.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/membuat-rbac-sendiri-konsep-part-1.md": { "entry": "pages/post/membuat-rbac-sendiri-konsep-part-1.md-78b653e4.js", "css": [], "js": ["pages/post/membuat-rbac-sendiri-konsep-part-1.md-78b653e4.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/mengenal-route-di-laravel-5-part-1.md": { "entry": "pages/post/mengenal-route-di-laravel-5-part-1.md-7a4b351d.js", "css": [], "js": ["pages/post/mengenal-route-di-laravel-5-part-1.md-7a4b351d.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/mengenal-route-di-laravel-5-part-2.md": { "entry": "pages/post/mengenal-route-di-laravel-5-part-2.md-db8aad85.js", "css": [], "js": ["pages/post/mengenal-route-di-laravel-5-part-2.md-db8aad85.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/berkenalan-lebih-dekat-dengan-pwa.md": { "entry": "pages/post/berkenalan-lebih-dekat-dengan-pwa.md-9cbe80c0.js", "css": [], "js": ["pages/post/berkenalan-lebih-dekat-dengan-pwa.md-9cbe80c0.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/manajemen-waktu-sebagai-developer.md": { "entry": "pages/post/manajemen-waktu-sebagai-developer.md-420267ae.js", "css": [], "js": ["pages/post/manajemen-waktu-sebagai-developer.md-420267ae.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/menggunakan-knexjs-di-express-app.md": { "entry": "pages/post/menggunakan-knexjs-di-express-app.md-8719ee8f.js", "css": [], "js": ["pages/post/menggunakan-knexjs-di-express-app.md-8719ee8f.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/mengenal-middleware-di-laravel-5.md": { "entry": "pages/post/mengenal-middleware-di-laravel-5.md-af4a039f.js", "css": [], "js": ["pages/post/mengenal-middleware-di-laravel-5.md-af4a039f.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/jabber-xmpp-menggunakan-nodejs.md": { "entry": "pages/post/jabber-xmpp-menggunakan-nodejs.md-75dad966.js", "css": [], "js": ["pages/post/jabber-xmpp-menggunakan-nodejs.md-75dad966.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/membangun-komunitas-surabayajs.md": { "entry": "pages/post/membangun-komunitas-surabayajs.md-07a34948.js", "css": [], "js": ["pages/post/membangun-komunitas-surabayajs.md-07a34948.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/menyematkan-data-pada-vue-slot.md": { "entry": "pages/post/menyematkan-data-pada-vue-slot.md-e4db2e25.js", "css": [], "js": ["pages/post/menyematkan-data-pada-vue-slot.md-e4db2e25.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/pengenalan-dasar-tentang-lumen.md": { "entry": "pages/post/pengenalan-dasar-tentang-lumen.md-86da0a3c.js", "css": [], "js": ["pages/post/pengenalan-dasar-tentang-lumen.md-86da0a3c.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/groupby-array-pada-javascript.md": { "entry": "pages/post/groupby-array-pada-javascript.md-8f826355.js", "css": [], "js": ["pages/post/groupby-array-pada-javascript.md-8f826355.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/manfaat-dari-berpikir-negatif.md": { "entry": "pages/post/manfaat-dari-berpikir-negatif.md-31c1a6f3.js", "css": [], "js": ["pages/post/manfaat-dari-berpikir-negatif.md-31c1a6f3.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/how-to-setup-my-personal-vim.md": { "entry": "pages/post/how-to-setup-my-personal-vim.md-4eabc038.js", "css": [], "js": ["pages/post/how-to-setup-my-personal-vim.md-4eabc038.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/konfigurasi-dasar-laravel-5.md": { "entry": "pages/post/konfigurasi-dasar-laravel-5.md-17b22e99.js", "css": [], "js": ["pages/post/konfigurasi-dasar-laravel-5.md-17b22e99.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/struktur-folder-laravel-55.md": { "entry": "pages/post/struktur-folder-laravel-55.md-ee4d21c8.js", "css": [], "js": ["pages/post/struktur-folder-laravel-55.md-ee4d21c8.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/goodbye-mobx-welcome-remx.md": { "entry": "pages/post/goodbye-mobx-welcome-remx.md-87e7d362.js", "css": [], "js": ["pages/post/goodbye-mobx-welcome-remx.md-87e7d362.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/surabayajs-meetup-perdana.md": { "entry": "pages/post/surabayajs-meetup-perdana.md-5eaa90e5.js", "css": [], "js": ["pages/post/surabayajs-meetup-perdana.md-5eaa90e5.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/surabayajs-meetup-ketiga.md": { "entry": "pages/post/surabayajs-meetup-ketiga.md-a46b1725.js", "css": [], "js": ["pages/post/surabayajs-meetup-ketiga.md-a46b1725.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/berkenalan-dengan-pugjs.md": { "entry": "pages/post/berkenalan-dengan-pugjs.md-7205e368.js", "css": [], "js": ["pages/post/berkenalan-dengan-pugjs.md-7205e368.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/berkenalan-dengan-vuejs.md": { "entry": "pages/post/berkenalan-dengan-vuejs.md-7e472eb3.js", "css": [], "js": ["pages/post/berkenalan-dengan-vuejs.md-7e472eb3.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/manfaat-menggunakan-pwa.md": { "entry": "pages/post/manfaat-menggunakan-pwa.md-be7a51f0.js", "css": [], "js": ["pages/post/manfaat-menggunakan-pwa.md-be7a51f0.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/surabayajs-meetup-kedua.md": { "entry": "pages/post/surabayajs-meetup-kedua.md-51bcdef5.js", "css": [], "js": ["pages/post/surabayajs-meetup-kedua.md-51bcdef5.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/vim-keyboard-cheatsheet.md": { "entry": "pages/post/vim-keyboard-cheatsheet.md-42256d4a.js", "css": [], "js": ["pages/post/vim-keyboard-cheatsheet.md-42256d4a.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/momentjs-dengan-nuxtjs.md": { "entry": "pages/post/momentjs-dengan-nuxtjs.md-6ee17af2.js", "css": [], "js": ["pages/post/momentjs-dengan-nuxtjs.md-6ee17af2.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/setting-vhost-di-nginx.md": { "entry": "pages/post/setting-vhost-di-nginx.md-89c2ce00.js", "css": [], "js": ["pages/post/setting-vhost-di-nginx.md-89c2ce00.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/auth-module-di-nuxtjs.md": { "entry": "pages/post/auth-module-di-nuxtjs.md-dcc53774.js", "css": [], "js": ["pages/post/auth-module-di-nuxtjs.md-dcc53774.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/perubahan-jam-tidur.md": { "entry": "pages/post/perubahan-jam-tidur.md-b8ec8950.js", "css": [], "js": ["pages/post/perubahan-jam-tidur.md-b8ec8950.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/migrasi-ke-vim.md": { "entry": "pages/post/migrasi-ke-vim.md-ac13b93a.js", "css": [], "js": ["pages/post/migrasi-ke-vim.md-ac13b93a.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] }, "src/routes/post/spa-vs-mpa.md": { "entry": "pages/post/spa-vs-mpa.md-474117c7.js", "css": [], "js": ["pages/post/spa-vs-mpa.md-474117c7.js", "chunks/vendor-bbec6117.js", "chunks/MarkdownLayout-ec9820e6.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-9b58db0e.js", "css": ["assets/pages/__layout.svelte-7a82de8e.css"], "js": ["pages/__layout.svelte-9b58db0e.js", "chunks/vendor-7bb78b77.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-22711ad7.js", "css": [], "js": ["error.svelte-22711ad7.js", "chunks/vendor-7bb78b77.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-92667816.js", "css": [], "js": ["pages/index.svelte-92667816.js", "chunks/vendor-7bb78b77.js", "chunks/CourseList-907e78b9.js", "chunks/BlogList-3e7ab3c0.js"], "styles": [] }, "src/routes/course.svelte": { "entry": "pages/course.svelte-a9e1e497.js", "css": [], "js": ["pages/course.svelte-a9e1e497.js", "chunks/vendor-7bb78b77.js", "chunks/CourseList-907e78b9.js"], "styles": [] }, "src/routes/blog.svelte": { "entry": "pages/blog.svelte-c95ea6d8.js", "css": [], "js": ["pages/blog.svelte-c95ea6d8.js", "chunks/vendor-7bb78b77.js", "chunks/BlogList-3e7ab3c0.js"], "styles": [] }, "src/routes/post/optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx.md": { "entry": "pages/post/optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx.md-c3d08b24.js", "css": [], "js": ["pages/post/optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx.md-c3d08b24.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1.md": { "entry": "pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1.md-10aa81ac.js", "css": [], "js": ["pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1.md-10aa81ac.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2.md": { "entry": "pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2.md-78609dc6.js", "css": [], "js": ["pages/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2.md-78609dc6.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern.md": { "entry": "pages/post/mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern.md-3ef52505.js", "css": [], "js": ["pages/post/mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern.md-3ef52505.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md": { "entry": "pages/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md-cc70b823.js", "css": [], "js": ["pages/post/terselamatkan-oleh-startup-script-di-google-cloud-engine.md-cc70b823.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/menentukan-teknologi-yang-tepat-sebelum-membuat-project.md": { "entry": "pages/post/menentukan-teknologi-yang-tepat-sebelum-membuat-project.md-aa522090.js", "css": [], "js": ["pages/post/menentukan-teknologi-yang-tepat-sebelum-membuat-project.md-aa522090.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/react-native-057-images-is-not-showing-on-generated-apk.md": { "entry": "pages/post/react-native-057-images-is-not-showing-on-generated-apk.md-1a8ba065.js", "css": [], "js": ["pages/post/react-native-057-images-is-not-showing-on-generated-apk.md-1a8ba065.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/duplikasi-object-atau-array-dengan-benar-di-javascript.md": { "entry": "pages/post/duplikasi-object-atau-array-dengan-benar-di-javascript.md-a2f912ed.js", "css": [], "js": ["pages/post/duplikasi-object-atau-array-dengan-benar-di-javascript.md-a2f912ed.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md": { "entry": "pages/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md-7586fced.js", "css": [], "js": ["pages/post/membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3.md-7586fced.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx.md": { "entry": "pages/post/setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx.md-760b8646.js", "css": [], "js": ["pages/post/setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx.md-760b8646.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/workshop-vuejs-basic-bersama-komunitas-surabayadev.md": { "entry": "pages/post/workshop-vuejs-basic-bersama-komunitas-surabayadev.md-aaa58599.js", "css": [], "js": ["pages/post/workshop-vuejs-basic-bersama-komunitas-surabayadev.md-aaa58599.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/redirect-http-ke-https-dengan-htaccess-di-laravel.md": { "entry": "pages/post/redirect-http-ke-https-dengan-htaccess-di-laravel.md-28e6a38b.js", "css": [], "js": ["pages/post/redirect-http-ke-https-dengan-htaccess-di-laravel.md-28e6a38b.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/yank-or-copy-text-from-different-instances-of-vim.md": { "entry": "pages/post/yank-or-copy-text-from-different-instances-of-vim.md-2eaa9b68.js", "css": [], "js": ["pages/post/yank-or-copy-text-from-different-instances-of-vim.md-2eaa9b68.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/download-private-video-youtube-dengan-youtube-dl.md": { "entry": "pages/post/download-private-video-youtube-dengan-youtube-dl.md-168936c1.js", "css": [], "js": ["pages/post/download-private-video-youtube-dengan-youtube-dl.md-168936c1.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/bagaimana-saya-mengatur-waktu-sebagai-developer.md": { "entry": "pages/post/bagaimana-saya-mengatur-waktu-sebagai-developer.md-53b36ef8.js", "css": [], "js": ["pages/post/bagaimana-saya-mengatur-waktu-sebagai-developer.md-53b36ef8.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/migrasi-blog-dari-vue-gridsome-ke-svelte-sapper.md": { "entry": "pages/post/migrasi-blog-dari-vue-gridsome-ke-svelte-sapper.md-0ddde707.js", "css": [], "js": ["pages/post/migrasi-blog-dari-vue-gridsome-ke-svelte-sapper.md-0ddde707.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1.md": { "entry": "pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1.md-903e1753.js", "css": [], "js": ["pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1.md-903e1753.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2.md": { "entry": "pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2.md-166574a0.js", "css": [], "js": ["pages/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2.md-166574a0.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/memproteksi-laravel-web-app-dari-serangan-csrf.md": { "entry": "pages/post/memproteksi-laravel-web-app-dari-serangan-csrf.md-9faf8c39.js", "css": [], "js": ["pages/post/memproteksi-laravel-web-app-dari-serangan-csrf.md-9faf8c39.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/mini-workshop-speed-up-development-with-nuxtjs.md": { "entry": "pages/post/mini-workshop-speed-up-development-with-nuxtjs.md-11f955b1.js", "css": [], "js": ["pages/post/mini-workshop-speed-up-development-with-nuxtjs.md-11f955b1.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/berkomunitaslah-dapatkan-dan-sebarkan-manfaat.md": { "entry": "pages/post/berkomunitaslah-dapatkan-dan-sebarkan-manfaat.md-2f2daa96.js", "css": [], "js": ["pages/post/berkomunitaslah-dapatkan-dan-sebarkan-manfaat.md-2f2daa96.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/method-destroy-di-controller-laravel-5-part-8.md": { "entry": "pages/post/method-destroy-di-controller-laravel-5-part-8.md-20434d54.js", "css": [], "js": ["pages/post/method-destroy-di-controller-laravel-5-part-8.md-20434d54.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/membuat-rbac-sendiri-backend-response-part-2.md": { "entry": "pages/post/membuat-rbac-sendiri-backend-response-part-2.md-47321354.js", "css": [], "js": ["pages/post/membuat-rbac-sendiri-backend-response-part-2.md-47321354.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/method-create-di-controller-laravel-5-part-3.md": { "entry": "pages/post/method-create-di-controller-laravel-5-part-3.md-a19c0ff9.js", "css": [], "js": ["pages/post/method-create-di-controller-laravel-5-part-3.md-a19c0ff9.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/method-update-di-controller-laravel-5-part-7.md": { "entry": "pages/post/method-update-di-controller-laravel-5-part-7.md-b20c77a9.js", "css": [], "js": ["pages/post/method-update-di-controller-laravel-5-part-7.md-b20c77a9.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/rest-api-dengan-nodejs-dan-typescript-part-1.md": { "entry": "pages/post/rest-api-dengan-nodejs-dan-typescript-part-1.md-976bcb71.js", "css": [], "js": ["pages/post/rest-api-dengan-nodejs-dan-typescript-part-1.md-976bcb71.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/rest-api-dengan-nodejs-dan-typescript-part-2.md": { "entry": "pages/post/rest-api-dengan-nodejs-dan-typescript-part-2.md-6cb0ea40.js", "css": [], "js": ["pages/post/rest-api-dengan-nodejs-dan-typescript-part-2.md-6cb0ea40.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/rest-api-dengan-nodejs-dan-typescript-part-3.md": { "entry": "pages/post/rest-api-dengan-nodejs-dan-typescript-part-3.md-8c34add5.js", "css": [], "js": ["pages/post/rest-api-dengan-nodejs-dan-typescript-part-3.md-8c34add5.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/menampilkan-data-polymorphic-tanpa-eloquent.md": { "entry": "pages/post/menampilkan-data-polymorphic-tanpa-eloquent.md-8364ea67.js", "css": [], "js": ["pages/post/menampilkan-data-polymorphic-tanpa-eloquent.md-8364ea67.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/method-index-di-controller-laravel-5-part-2.md": { "entry": "pages/post/method-index-di-controller-laravel-5-part-2.md-542ea532.js", "css": [], "js": ["pages/post/method-index-di-controller-laravel-5-part-2.md-542ea532.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/method-store-di-controller-laravel-5-part-4.md": { "entry": "pages/post/method-store-di-controller-laravel-5-part-4.md-0c60881d.js", "css": [], "js": ["pages/post/method-store-di-controller-laravel-5-part-4.md-0c60881d.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/membersihkan-disk-usage-pada-ubuntu-server.md": { "entry": "pages/post/membersihkan-disk-usage-pada-ubuntu-server.md-b3324139.js", "css": [], "js": ["pages/post/membersihkan-disk-usage-pada-ubuntu-server.md-b3324139.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/method-edit-di-controller-laravel-5-part-6.md": { "entry": "pages/post/method-edit-di-controller-laravel-5-part-6.md-0c13173a.js", "css": [], "js": ["pages/post/method-edit-di-controller-laravel-5-part-6.md-0c13173a.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/method-show-di-controller-laravel-5-part-5.md": { "entry": "pages/post/method-show-di-controller-laravel-5-part-5.md-d0d7bd27.js", "css": [], "js": ["pages/post/method-show-di-controller-laravel-5-part-5.md-d0d7bd27.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/cara-mudah-mengurus-atau-membuat-passport.md": { "entry": "pages/post/cara-mudah-mengurus-atau-membuat-passport.md-5d679050.js", "css": [], "js": ["pages/post/cara-mudah-mengurus-atau-membuat-passport.md-5d679050.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/react-native-state-management-dengan-remx.md": { "entry": "pages/post/react-native-state-management-dengan-remx.md-490e382c.js", "css": [], "js": ["pages/post/react-native-state-management-dengan-remx.md-490e382c.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/fokus-sangat-membantu-kita-saat-ngoding.md": { "entry": "pages/post/fokus-sangat-membantu-kita-saat-ngoding.md-2a5d8e4c.js", "css": [], "js": ["pages/post/fokus-sangat-membantu-kita-saat-ngoding.md-2a5d8e4c.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/install-dan-akses-remote-mariadb-di-vps.md": { "entry": "pages/post/install-dan-akses-remote-mariadb-di-vps.md-533f97d1.js", "css": [], "js": ["pages/post/install-dan-akses-remote-mariadb-di-vps.md-533f97d1.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/jangan-dibuka-nanti-jadi-lemot-44440000.md": { "entry": "pages/post/jangan-dibuka-nanti-jadi-lemot-44440000.md-a2cd5bd3.js", "css": [], "js": ["pages/post/jangan-dibuka-nanti-jadi-lemot-44440000.md-a2cd5bd3.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/memajukan-komunitas-di-webunconfid-2018.md": { "entry": "pages/post/memajukan-komunitas-di-webunconfid-2018.md-c701fe7c.js", "css": [], "js": ["pages/post/memajukan-komunitas-di-webunconfid-2018.md-c701fe7c.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/docker-compose-postgresql-dan-pgadmin4.md": { "entry": "pages/post/docker-compose-postgresql-dan-pgadmin4.md-a9415dca.js", "css": [], "js": ["pages/post/docker-compose-postgresql-dan-pgadmin4.md-a9415dca.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/migrasi-dari-dynamic-ke-static-blog.md": { "entry": "pages/post/migrasi-dari-dynamic-ke-static-blog.md-7e0d1d9a.js", "css": [], "js": ["pages/post/migrasi-dari-dynamic-ke-static-blog.md-7e0d1d9a.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/programmer-adalah-pembelajar-sejati.md": { "entry": "pages/post/programmer-adalah-pembelajar-sejati.md-1295dbd1.js", "css": [], "js": ["pages/post/programmer-adalah-pembelajar-sejati.md-1295dbd1.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/tips-dan-trik-array-pada-javascript.md": { "entry": "pages/post/tips-dan-trik-array-pada-javascript.md-63f0df56.js", "css": [], "js": ["pages/post/tips-dan-trik-array-pada-javascript.md-63f0df56.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/membuat-rbac-sendiri-konsep-part-1.md": { "entry": "pages/post/membuat-rbac-sendiri-konsep-part-1.md-f8aab59d.js", "css": [], "js": ["pages/post/membuat-rbac-sendiri-konsep-part-1.md-f8aab59d.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/mengenal-route-di-laravel-5-part-1.md": { "entry": "pages/post/mengenal-route-di-laravel-5-part-1.md-fa6a30db.js", "css": [], "js": ["pages/post/mengenal-route-di-laravel-5-part-1.md-fa6a30db.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/mengenal-route-di-laravel-5-part-2.md": { "entry": "pages/post/mengenal-route-di-laravel-5-part-2.md-adebac2f.js", "css": [], "js": ["pages/post/mengenal-route-di-laravel-5-part-2.md-adebac2f.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/berkenalan-lebih-dekat-dengan-pwa.md": { "entry": "pages/post/berkenalan-lebih-dekat-dengan-pwa.md-0caf3b12.js", "css": [], "js": ["pages/post/berkenalan-lebih-dekat-dengan-pwa.md-0caf3b12.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/menggunakan-knexjs-di-express-app.md": { "entry": "pages/post/menggunakan-knexjs-di-express-app.md-365037a7.js", "css": [], "js": ["pages/post/menggunakan-knexjs-di-express-app.md-365037a7.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/mengenal-middleware-di-laravel-5.md": { "entry": "pages/post/mengenal-middleware-di-laravel-5.md-bac50cb0.js", "css": [], "js": ["pages/post/mengenal-middleware-di-laravel-5.md-bac50cb0.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/jabber-xmpp-menggunakan-nodejs.md": { "entry": "pages/post/jabber-xmpp-menggunakan-nodejs.md-563d3ccb.js", "css": [], "js": ["pages/post/jabber-xmpp-menggunakan-nodejs.md-563d3ccb.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/membangun-komunitas-surabayajs.md": { "entry": "pages/post/membangun-komunitas-surabayajs.md-f50f442f.js", "css": [], "js": ["pages/post/membangun-komunitas-surabayajs.md-f50f442f.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/menyematkan-data-pada-vue-slot.md": { "entry": "pages/post/menyematkan-data-pada-vue-slot.md-1c0827cb.js", "css": [], "js": ["pages/post/menyematkan-data-pada-vue-slot.md-1c0827cb.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/pengenalan-dasar-tentang-lumen.md": { "entry": "pages/post/pengenalan-dasar-tentang-lumen.md-2d0bb9bd.js", "css": [], "js": ["pages/post/pengenalan-dasar-tentang-lumen.md-2d0bb9bd.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/groupby-array-pada-javascript.md": { "entry": "pages/post/groupby-array-pada-javascript.md-19de6c2a.js", "css": [], "js": ["pages/post/groupby-array-pada-javascript.md-19de6c2a.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/manfaat-dari-berpikir-negatif.md": { "entry": "pages/post/manfaat-dari-berpikir-negatif.md-16a27a39.js", "css": [], "js": ["pages/post/manfaat-dari-berpikir-negatif.md-16a27a39.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/how-to-setup-my-personal-vim.md": { "entry": "pages/post/how-to-setup-my-personal-vim.md-382ece06.js", "css": [], "js": ["pages/post/how-to-setup-my-personal-vim.md-382ece06.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/konfigurasi-dasar-laravel-5.md": { "entry": "pages/post/konfigurasi-dasar-laravel-5.md-b606a701.js", "css": [], "js": ["pages/post/konfigurasi-dasar-laravel-5.md-b606a701.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/struktur-folder-laravel-55.md": { "entry": "pages/post/struktur-folder-laravel-55.md-5ab31904.js", "css": [], "js": ["pages/post/struktur-folder-laravel-55.md-5ab31904.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/goodbye-mobx-welcome-remx.md": { "entry": "pages/post/goodbye-mobx-welcome-remx.md-e3645557.js", "css": [], "js": ["pages/post/goodbye-mobx-welcome-remx.md-e3645557.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/surabayajs-meetup-perdana.md": { "entry": "pages/post/surabayajs-meetup-perdana.md-76035552.js", "css": [], "js": ["pages/post/surabayajs-meetup-perdana.md-76035552.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/surabayajs-meetup-ketiga.md": { "entry": "pages/post/surabayajs-meetup-ketiga.md-7e27994b.js", "css": [], "js": ["pages/post/surabayajs-meetup-ketiga.md-7e27994b.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/berkenalan-dengan-pugjs.md": { "entry": "pages/post/berkenalan-dengan-pugjs.md-4f8ae43e.js", "css": [], "js": ["pages/post/berkenalan-dengan-pugjs.md-4f8ae43e.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/berkenalan-dengan-vuejs.md": { "entry": "pages/post/berkenalan-dengan-vuejs.md-2466e5f1.js", "css": [], "js": ["pages/post/berkenalan-dengan-vuejs.md-2466e5f1.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/manfaat-menggunakan-pwa.md": { "entry": "pages/post/manfaat-menggunakan-pwa.md-9112cf5d.js", "css": [], "js": ["pages/post/manfaat-menggunakan-pwa.md-9112cf5d.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/surabayajs-meetup-kedua.md": { "entry": "pages/post/surabayajs-meetup-kedua.md-80f3ee12.js", "css": [], "js": ["pages/post/surabayajs-meetup-kedua.md-80f3ee12.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/vim-keyboard-cheatsheet.md": { "entry": "pages/post/vim-keyboard-cheatsheet.md-eb7460df.js", "css": [], "js": ["pages/post/vim-keyboard-cheatsheet.md-eb7460df.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/momentjs-dengan-nuxtjs.md": { "entry": "pages/post/momentjs-dengan-nuxtjs.md-15d3cf87.js", "css": [], "js": ["pages/post/momentjs-dengan-nuxtjs.md-15d3cf87.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/setting-vhost-di-nginx.md": { "entry": "pages/post/setting-vhost-di-nginx.md-10a40d37.js", "css": [], "js": ["pages/post/setting-vhost-di-nginx.md-10a40d37.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/auth-module-di-nuxtjs.md": { "entry": "pages/post/auth-module-di-nuxtjs.md-0d43a6fc.js", "css": [], "js": ["pages/post/auth-module-di-nuxtjs.md-0d43a6fc.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/perubahan-jam-tidur.md": { "entry": "pages/post/perubahan-jam-tidur.md-3e3cf569.js", "css": [], "js": ["pages/post/perubahan-jam-tidur.md-3e3cf569.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/migrasi-ke-vim.md": { "entry": "pages/post/migrasi-ke-vim.md-0ca3fda2.js", "css": [], "js": ["pages/post/migrasi-ke-vim.md-0ca3fda2.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] }, "src/routes/post/spa-vs-mpa.md": { "entry": "pages/post/spa-vs-mpa.md-45298740.js", "css": [], "js": ["pages/post/spa-vs-mpa.md-45298740.js", "chunks/vendor-7bb78b77.js", "chunks/MarkdownLayout-0ae02905.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -18978,8 +18959,7 @@ function render(request, {
   return respond({ ...request, host }, options2, { prerender });
 }
 async function get() {
-  const cwd = process.cwd();
-  const POSTS_DIR = import_path.default.join(cwd, "./src/routes/post");
+  const POSTS_DIR = "src/routes/post";
   const posts = import_fs.default.readdirSync(POSTS_DIR).map((fileName) => {
     const fileMd = import_fs.default.readFileSync(import_path.default.join(POSTS_DIR, fileName), "utf8");
     const { data, content: rawContent } = (0, import_gray_matter.default)(fileMd);
@@ -19250,16 +19230,16 @@ var MarkdownLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
 			<hr>
 			${slots.default ? slots.default({}) : ``}</div></article></div>`;
 });
-var metadata$19 = {
+var metadata$18 = {
   "draft": false,
   "title": "Optimasi Aset Berbasis Teks untuk Performa Web dengan GZIP Nginx",
   "date": "2018-12-26T18:11:40.000Z",
   "tags": ["devops"],
   "description": "Menggunakan fitur GZIP pada Nginx untuk meningkatkan kecepatan load suatu website dengan memperkecil bundle size aset berbasis teks.",
-  "slug": "Optimasi Aset Berbasis Teks untuk Performa Web dengan GZIP Nginx"
+  "slug": "optimasi-aset-berbasis-teks-untuk-performa-web-dengan-gzip-nginx"
 };
 var Optimasi_aset_berbasis_teks_untuk_performa_web_dengan_gzip_nginx = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$19), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$18), {}, {
     default: () => `<p>Pada suatu halaman website, ada jenis file text yang sering bikin gendut halaman web, tentunya kedua hal ini juga bisa memperlambat loading web, kedua file ini adalah CSS dan Javascript. Ada banyak sekali cara untuk mengoptimalkan javascript dan css, salah satu nya ada GZIP yang akan kita bahas kali ini. Sederhananya, GZIP ini membantu untuk mengkompresi file berbasis text menjadi bundle yang lebih kecil, sehingga browser bisa lebih cepat dalam load website nya. Sama seperti beberapa file yang di kompress menjadi .rar atau .zip yang ukurannya jadi lebih kecil.</p>
 <p>Nah kali ini kita akan coba mengoptimalkan aset js, css, dll yang berbasis teks dengan cara mengecilkan ukuran mereka menggunakan GZIP di Nginx. Sebelum kita implementasi, baiknya kita lihat dulu sebuah web yang di load tanpa pakai GZIP.</p>
 <p><img src="${"https://cdn.staticaly.com/img/farm5.staticflickr.com/4850/46419296102_2856651815_b.jpg"}" alt="${"aset sebelum gzip"}"></p>
@@ -19290,9 +19270,9 @@ var optimasiAsetBerbasisTeksUntukPerformaWebDenganGzipNginx = /* @__PURE__ */ Ob
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Optimasi_aset_berbasis_teks_untuk_performa_web_dengan_gzip_nginx,
-  metadata: metadata$19
+  metadata: metadata$18
 });
-var metadata$18 = {
+var metadata$17 = {
   "draft": false,
   "title": "Laravel Realtime Notification dengan Socket.io dan Nuxtjs - Part 1",
   "date": "2018-11-26T20:25:55.000Z",
@@ -19301,7 +19281,7 @@ var metadata$18 = {
   "slug": "laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1"
 };
 var Laravel_realtime_notification_dengan_socketio_dan_nuxtjs_part_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$18), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$17), {}, {
     default: () => `<p>Mau bahas Laravel lagi, mumpung ada project yang balik pake Laravel lagi. Kali ini mau bahas Laravel broadcast notification menggunakan socket.io. Sebenernya bingung mau bikin judul apa, karena nanti insya allah bakal lumayan panjang, bahkan judul segitu pun kayaknya belum cukup untuk menampung apa yang mau kita bahas kali ini. Yak secara singkat kita akan belajar bikin sebuah sistem notifikasi menggunakan Laravel, gak berhenti sampai disitu kita akan coba pakai socket.io untuk server websocket nya (engga pakai Pusher, soalnya ada limitasi) yang berfungsi untuk mengirimkan sebuah notifikasi jika ada event yang sedang / telah dilakukan. Lebih jauh lagi kita akan coba terapkan socket listener nya di Nuxtjs. Oh iya untuk channel nya kita pake Private Channel ya, karena ini kan notifikasi, jadi ga semua orang bisa dapat notifikasi nya.</p>
 <p>Baik, kita akan coba ngurusin Laravel (backend) nya dulu, pertama yang harus kita persiapkan adalah :</p>
 <ol><li>Install Laravel</li>
@@ -19394,9 +19374,9 @@ var laravelRealtimeNotificationDenganSocketioDanNuxtjsPart1 = /* @__PURE__ */ Ob
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Laravel_realtime_notification_dengan_socketio_dan_nuxtjs_part_1,
-  metadata: metadata$18
+  metadata: metadata$17
 });
-var metadata$17 = {
+var metadata$16 = {
   "draft": false,
   "title": "Laravel Realtime Notification dengan Socket.io dan Nuxtjs - Part 2",
   "date": "2018-11-30T22:37:07.000Z",
@@ -19405,7 +19385,7 @@ var metadata$17 = {
   "slug": "laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2"
 };
 var Laravel_realtime_notification_dengan_socketio_dan_nuxtjs_part_2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$17), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$16), {}, {
     default: () => `<p>Melanjutkan dari postingan yang <a href="${"https://nusendra.com/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1"}" rel="${"nofollow"}">pertama</a> dengan judul yang sama, yakni Laravel realtime notification dengan socket.io. Pada postingan kali ini kita akan coba implementasi Laravel echo kedalam Nuxtjs. Pastikan kalian udah baca part pertama nya ya, karena kali ini kita akan coba menerapkan notifikasi di Nuxtjs menggunakan socket.io dengan private channel.</p>
 <h2>Install Library</h2>
 <p>Langkah pertama yang patut kita lakukan adalah memasang library Laravel Echo, socket.io-client dan Push.js (yang ini optional, boleh pakai atau engga, ga ada masalah). Langsung aja yok install, masuk ke direktori project Nuxt kalian kemudian buka terminal dan ketikkan dibawah ini</p>
@@ -19463,9 +19443,9 @@ var laravelRealtimeNotificationDenganSocketioDanNuxtjsPart2 = /* @__PURE__ */ Ob
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Laravel_realtime_notification_dengan_socketio_dan_nuxtjs_part_2,
-  metadata: metadata$17
+  metadata: metadata$16
 });
-var metadata$16 = {
+var metadata$15 = {
   "title": "Mengorganisir API Call di Nuxtjs dengan Repository Pattern",
   "date": "2020-02-28T22:24:00.000Z",
   "description": "Mengorganisir dan membuat abstraksi pada setiap fungsi API call kita di Nuxtjs dengan Repository Pattern",
@@ -19474,7 +19454,7 @@ var metadata$16 = {
   "slug": "mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern"
 };
 var Mengorganisir_api_call_di_nuxtjs_dengan_repository_pattern = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$16), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$15), {}, {
     default: () => `<p>Jika kalian pernah membaca tentang beberapa design pattern, maka kalian akan sering menjumpai repository pattern. Yak, repository pattern adalah sebuah pola / pendekatan untuk memisahkan beberapa logic menjadi suatu fungsi individu (<em>separation of concern</em>), biasanya pattern ini dipakai untuk memisahkan proses antara logic dengan persistensi data. Contoh gampang nya adalah seperti berikut ini</p>
 <pre class="${"language-js"}"><!-- HTML_TAG_START -->${`<code class="language-js"><span class="token comment">// File Controller</span>
 
@@ -19583,30 +19563,6 @@ var mengorganisirApiCallDiNuxtjsDenganRepositoryPattern = /* @__PURE__ */ Object
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Mengorganisir_api_call_di_nuxtjs_dengan_repository_pattern,
-  metadata: metadata$16
-});
-var metadata$15 = {
-  "title": "Yank Text from Different Instances of Vim",
-  "date": "2019-09-25T10:20:00.000Z",
-  "description": "How to copy the text from different instances of vim, seems like copy from terminal one to another",
-  "tags": ["snippet", "vim"],
-  "draft": false,
-  "slug": "yank-or-copy-text-from-different-instances-of-vim"
-};
-var How_to_yank_or_copy_text_from_different_instances_of_vim = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$15), {}, {
-    default: () => `<p>For vscode user or other text editor (except vim), this is not a big problem they just have to copy it and then paste it to the other text editor. But for vim users, this might be a problem. Because, in Vim we can\u2019t just copy (yank) from one terminal (instance 1) to another (instance 2). So, how to do this?</p>
-<p>First install Gvim  (google it, u can do this right?). And then go to the first terminal / vim, then type this</p>
-<pre class="${"language-undefined"}"><!-- HTML_TAG_START -->${`<code class="language-undefined">&quot;+yy</code>`}<!-- HTML_TAG_END --></pre>
-<p>The command above will copy / yank the text to the global cut buffer, then paste it to the second terminal / vim</p>
-<pre class="${"language-undefined"}"><!-- HTML_TAG_START -->${`<code class="language-undefined">&quot;+p</code>`}<!-- HTML_TAG_END --></pre>
-<p>as simple as that, sorry this blog post is only for my personal preference :D, so i write it down straight forward. Thanks for reading, hope this helps u out.</p>`
-  })}`;
-});
-var howToYankOrCopyTextFromDifferentInstancesOfVim = /* @__PURE__ */ Object.freeze({
-  __proto__: null,
-  [Symbol.toStringTag]: "Module",
-  "default": How_to_yank_or_copy_text_from_different_instances_of_vim,
   metadata: metadata$15
 });
 var metadata$14 = {
@@ -19718,7 +19674,7 @@ var metadata$11 = {
   "tags": ["javascript", "tips"],
   "slug": "duplikasi-object-atau-array-dengan-benar-di-javascript"
 };
-var Duplikasi_object_dan_array_dengan_benar_di_javascript = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+var Duplikasi_object_atau_array_dengan_benar_di_javascript = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$11), {}, {
     default: () => `<p>Udah lama ga nulis di blog, kali ini mau bahas gimana sih caranya kita nge-<em>clone</em> / duplikasi object dan array ke variable lain. Terkadang kita ada di suatu kondisi yang memaksa kita untuk <em>cloning</em> sebuah value dari satu variable ke variable yang lain. Yang jadi masalah adalah ketika kita <em>cloning</em> data, data tersebut masih terikat dengan variable asal, sehingga data di variable yang baru akan terus bergantung pada variable asal. Contoh nya seperti ini</p>
 <pre class="${"language-js"}"><!-- HTML_TAG_START -->${`<code class="language-js"><span class="token keyword">let</span> asli <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -19760,10 +19716,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Akhir kata, semoga tips singkat ini bisa menambah wawasan teman - teman pembaca budiman sekalian. Makasih udah mampir :-)</p>`
   })}`;
 });
-var duplikasiObjectDanArrayDenganBenarDiJavascript = /* @__PURE__ */ Object.freeze({
+var duplikasiObjectAtauArrayDenganBenarDiJavascript = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
-  "default": Duplikasi_object_dan_array_dengan_benar_di_javascript,
+  "default": Duplikasi_object_atau_array_dengan_benar_di_javascript,
   metadata: metadata$11
 });
 var metadata$10 = {
@@ -20002,46 +19958,6 @@ var membuatRbacSendiriMenuRenderingDiNuxtjsPart3 = /* @__PURE__ */ Object.freeze
   metadata: metadata$10
 });
 var metadata$$ = {
-  "title": "Mini Workshop Speed Up Vuejs Development with Nuxtjs",
-  "date": "2019-05-06T15:37:00.000Z",
-  "description": "",
-  "tags": ["opini", "nuxtjs", "vuejs"],
-  "draft": false,
-  "slug": "mini-workshop-speed-up-development-with-nuxtjs"
-};
-var Mini_workshop_speed_up_vuejs_development_with_nuxt = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$$), {}, {
-    default: () => `<p>Cerita sedikit mengenai pengalaman bulan Februari 2019 kemarin ketika ngisi acara mini workshop di komunitas SurabayaDev, dengan judul Speed Up Vuejs Development with Nuxtjs. Kebetulan di komunitas ini masih belum ada yang bahas Nuxt, yaudah deh bawain topik itu. Singkatnya, Nuxt ini dipakai untuk mempersingkat dan mempermudah proses development seperti vuejs tanpa route, memudahkan proses SSR, simple vuex module, dll.</p>
-<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/live.staticflickr.com/65535/33909719568_0ee0af34a8_c.jpg"}" style="${"width:100%;height:auto;"}">
-<h2>PROS</h2>
-<p>Manfaat yang paling besar ketika menggunakan Nuxt adalah</p>
-<h3>Simple Routing</h3>
-<p>Jika kita pakai Vuejs, kita harus mendaftarkan component kedalam file vue-router. Nah di Nuxtjs, kita tak perlu melakukan hal yang membosankan tersebut, kita hanya perlu membuat file <code>.vue</code> kedalam folder pages, dan #boom secara otomatis nuxt sudah ngurusin route nya untuk kita.</p>
-<h3>Layout System</h3>
-<p>Salah satu yang melelahkan ketika pakai vue adalah, kita harus bikin layout sendiri (seperti dashboard layout, login / register layout, dll). Di Nuxt sendiri sudah disediakan template layout yang bisa langsung kita pakai.</p>
-<h3>Server Side Rendering</h3>
-<p>Urusan SSR? Ketika install pilih mode Universal, kemudian pada component bikin manfaatin fitur asyncData, yarn run build, yarn run start. Kelar deh SSR nya.</p>
-<h3>Directory Structure</h3>
-<p>Di Vue kita harus menyusun sendiri struktur folder dari aplikasi kita, sedangkan di Nuxt sudah ada struktur nya yang sudah jadi standart. Jadi langsung pakai, developer Nuxt yang lain ga akan kebingungan karena struktur ini udah jadi standart ketika pengembangan web menggunakan Nuxt.</p>
-<h3>Built-in Loading</h3>
-<p>Coba liat loading bar yang ada di youtube, nah Nuxt secara default udah tersedia loading bar seperti itu.</p>
-<h3>Simplify Vuex</h3>
-<p>Module di Vuex jadi makin gampang, tinggal bikin file <code>.js</code> dan export beberapa function disana, udah jadi module vuex.</p>
-<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/live.staticflickr.com/65535/33909718908_f9a3428b8f_c.jpg"}" style="${"width:100%;height:auto;"}">
-<h2>CONS</h2>
-<p>Mungkin Cons nya, size lebih besar dikit daripada Vue. Hal ini wajar saja, karena di Nuxt sudah terinstall Vue-router dan Vuex secara otomatis.</p>
-<hr>
-<p>Mini workshop ini adalah kegiatan awal yang nanti nya akan dijadikan full workshop yang akan ngebahas Vuejs basic. Bagi yang pengen liat slide saya, bisa <a href="${"https://docs.google.com/presentation/d/1gHl1dErhOjIJf5MkHqSialDh52s96_8Eaqf9KGqjENs/edit?usp=sharing"}" rel="${"nofollow"}">klik link ini</a></p>
-<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/live.staticflickr.com/65535/32843294567_2dfb3c408a_c.jpg"}" style="${"width:100%;height:auto;"}">`
-  })}`;
-});
-var miniWorkshopSpeedUpVuejsDevelopmentWithNuxt = /* @__PURE__ */ Object.freeze({
-  __proto__: null,
-  [Symbol.toStringTag]: "Module",
-  "default": Mini_workshop_speed_up_vuejs_development_with_nuxt,
-  metadata: metadata$$
-});
-var metadata$_ = {
   "draft": false,
   "title": "Setup HTTPS / SSL di Nuxtjs dan Laravel dengan Nginx",
   "date": "2018-12-24T14:30:09.000Z",
@@ -20050,7 +19966,7 @@ var metadata$_ = {
   "slug": "setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx"
 };
 var Setup_https_ssl_di_nuxtjs_dan_laravel_dengan_nginx = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$_), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$$), {}, {
     default: () => `<p>Sebenernya agak bingung milih judul, karena bakal banyak teknologi yang akan saya usung disini. Detailnya, Bagaimana cara menerapkan HTTPS di project Nuxtjs dan Laravel menggunakan Let\u2019s Encrypt. Jadi disini ada 3 kondisi, frontend menggunakan Nuxtjs dengan mode SPA, backend menggunakan Laravel, untuk web socket memakai socket.io dan Laravel echo server, untuk SSL nya sendiri kita pakai gratisan dari Let\u2019ts Encrypt.</p>
 <p>Kondisi yang ada seperti ini, Hanya menggunakan 1 domain, dan engga boleh bikin sub domain. Karena Let\u2019s encrypt hanya bisa dipakai di web public dengan port 80 / 443, maka kita ga boleh deploy backend dan web socket nya menggunakan port selain 80. Untuk frontend sendiri bakal pakai port 80, karena nanti dia yang akan diakses oleh public. Sedangkan jika port 80 nya sudah terenkripsi dengan SSL, maka untuk akses API nya juga harus melalui HTTPS.</p>
 <p>Cara yang paling dekat dan efisien adalah, kita buat sebuah domain dengan 2 buah sub directory untuk backend dan web socket nya. Oh iya, artikel ini ada kaitannya dengan postingan sebelumnya ya <a href="${"https://nusendra.com/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1"}" rel="${"nofollow"}">https://nusendra.com/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1</a> dan <a href="${"https://nusendra.com/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2"}" rel="${"nofollow"}">https://nusendra.com/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2</a>. Jadi jika temen temen pengen lebih paham mengenai realtime notifikasi menggunakan socket io, maka perlu dibaca dulu.</p>
@@ -20182,9 +20098,9 @@ var setupHttpsSslDiNuxtjsDanLaravelDenganNginx = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Setup_https_ssl_di_nuxtjs_dan_laravel_dengan_nginx,
-  metadata: metadata$_
+  metadata: metadata$$
 });
-var metadata$Z = {
+var metadata$_ = {
   "title": "Workshop Vuejs Basic Bersama Komunitas SurabayaDEV",
   "date": "2019-05-08T15:50:00.000Z",
   "description": "Pengalaman sewaktu mengisi workshop Vuejs basic bareng SurabayaDEV",
@@ -20193,7 +20109,7 @@ var metadata$Z = {
   "slug": "workshop-vuejs-basic-bersama-komunitas-surabayadev"
 };
 var Workshop_vuejs_basic_bersama_komunitas_surabayadev = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$Z), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$_), {}, {
     default: () => `<p>Setelah ngisi mini workshop yang bahas Nuxt pada bulan Februari kemarin, karena antusias dari audience dan bahkan ada beberapa peserta yang pengen datang namun kuota sudah penuh, akhirnya SurabayaDev dan saya <em>partner</em>an untuk ngadain acara workshop Vuejs basic. Workshop ini ditujukan untuk peserta yang benar benar masih baru mulai di dunia Vuejs, jadi topik yang saya bahas adalah topik yang basic banget. Namun saya juga bawa beberapa kasus beserta best practice di <em>real world</em>.</p>
 <img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/live.staticflickr.com/65535/32863536077_8f3dbe4852_c.jpg"}" style="${"width:100%;height:auto;"}">
 <h2>Materi yang saya bahas</h2>
@@ -20228,9 +20144,9 @@ var workshopVuejsBasicBersamaKomunitasSurabayadev = /* @__PURE__ */ Object.freez
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Workshop_vuejs_basic_bersama_komunitas_surabayadev,
-  metadata: metadata$Z
+  metadata: metadata$_
 });
-var metadata$Y = {
+var metadata$Z = {
   "title": "Redirect HTTP ke HTTPS dengan .htaccess di Laravel",
   "date": "2018-08-06T03:24:24.000Z",
   "tags": ["laravel", "php"],
@@ -20239,7 +20155,7 @@ var metadata$Y = {
   "slug": "redirect-http-ke-https-dengan-htaccess-di-laravel"
 };
 var Redirect_http_ke_https_dengan_htaccess_di_laravel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$Y), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$Z), {}, {
     default: () => `<p>Bagi beberapa pengguna apache mungkin pernah mengalami bagaimana redirect http ke https menggunakan .htaccess di Laravel. Karena disini kita punya 2 pekerjaan yang harus di kerjakan, yakni</p>
 <ol><li>Bagaimana cara redirect http ke https</li>
 <li>Menghapus public url (default di laravel, url selalu ada public nya)</li></ol>
@@ -20264,6 +20180,30 @@ var redirectHttpKeHttpsDenganHtaccessDiLaravel = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Redirect_http_ke_https_dengan_htaccess_di_laravel,
+  metadata: metadata$Z
+});
+var metadata$Y = {
+  "title": "Yank Text from Different Instances of Vim",
+  "date": "2019-09-25T10:20:00.000Z",
+  "description": "How to copy the text from different instances of vim, seems like copy from terminal one to another",
+  "tags": ["snippet", "vim"],
+  "draft": false,
+  "slug": "yank-or-copy-text-from-different-instances-of-vim"
+};
+var Yank_or_copy_text_from_different_instances_of_vim = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$Y), {}, {
+    default: () => `<p>For vscode user or other text editor (except vim), this is not a big problem they just have to copy it and then paste it to the other text editor. But for vim users, this might be a problem. Because, in Vim we can\u2019t just copy (yank) from one terminal (instance 1) to another (instance 2). So, how to do this?</p>
+<p>First install Gvim  (google it, u can do this right?). And then go to the first terminal / vim, then type this</p>
+<pre class="${"language-undefined"}"><!-- HTML_TAG_START -->${`<code class="language-undefined">&quot;+yy</code>`}<!-- HTML_TAG_END --></pre>
+<p>The command above will copy / yank the text to the global cut buffer, then paste it to the second terminal / vim</p>
+<pre class="${"language-undefined"}"><!-- HTML_TAG_START -->${`<code class="language-undefined">&quot;+p</code>`}<!-- HTML_TAG_END --></pre>
+<p>as simple as that, sorry this blog post is only for my personal preference :D, so i write it down straight forward. Thanks for reading, hope this helps u out.</p>`
+  })}`;
+});
+var yankOrCopyTextFromDifferentInstancesOfVim = /* @__PURE__ */ Object.freeze({
+  __proto__: null,
+  [Symbol.toStringTag]: "Module",
+  "default": Yank_or_copy_text_from_different_instances_of_vim,
   metadata: metadata$Y
 });
 var metadata$X = {
@@ -20272,7 +20212,7 @@ var metadata$X = {
   "description": "Cara mendownload private channel / private video youtube dengan menggunakan youtube-dl",
   "tags": ["trik"],
   "draft": false,
-  "slug": "download-private-video-youtube-youtube-dl"
+  "slug": "download-private-video-youtube-dengan-youtube-dl"
 };
 var Download_private_video_youtube_dengan_youtube_dl = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$X), {}, {
@@ -20322,6 +20262,48 @@ var downloadPrivateVideoYoutubeDenganYoutubeDl = /* @__PURE__ */ Object.freeze({
   metadata: metadata$X
 });
 var metadata$W = {
+  "title": "Bagaimana Saya Mengatur Waktu sebagai Developer",
+  "date": "2019-07-20T08:18:00.000Z",
+  "description": "Sebagai seorang developer, apalagi seorang freelancer wajib punya time management agar work-life balance nya berjalan dengan baik",
+  "tags": ["opini"],
+  "draft": false,
+  "slug": "bagaimana-saya-mengatur-waktu-sebagai-developer"
+};
+var Bagaimana_saya_mengatur_waktu_sebagai_developer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$W), {}, {
+    default: () => `<img class="${"center-image-post"}" src="${"https://cdn.statically.io/img/d3tvpxjako9ywy.cloudfront.net/blog/content/uploads/2018/11/Time_Management_Apps_You_Should_Start_Using_Yesterday_1-896x518.jpg"}" style="${"width:100%;height:auto;"}">
+<br>
+<h2>Why we need a time management?</h2>
+<p>Manajemen waktu adalah bagaimana kita mengatur waktu sehingga di setiap aktivitas nya mendapatkan porsi / bagian waktu yang sesuai dengan kebutuhan. Bayangkan jika kita tidak punya manajemen waktu yang baik, hidup mu ga akan berjalan teratur dan yang terjadi malah kesehatanmu juga bakal terganggu.</p>
+<p>Bagi developer kantoran sih hal ini aman aman saja ya. Karena waktu kerja nya sudah pasti, berangkat jam 8 dan pulang jam 4 sore. Ntar dirumah terserah mau ngapain. Tidur pun terserah jam berapa. Nah bagi pekerja yang seperti ini, pulang ngantor trus nyantai, gaji dan skill nya juga biasanya nyantai, alias nyantai ga naik naik jajaja.</p>
+<p>Nah bagi seorang freelancer, time management ini sangat sangat penting sekali. Kalau sampai ga nurut, bisa <em>keteteran</em> hidup lu. Biasa nya seorang freelancer tiap bulannya punya beberapa project yang harus digarap, sehingga dia harus bener bener bisa bagi waktu kapan harus ngerjain proyek A, kapan harus ngerjain proyek B. Gak mau kan kalau si client teriak teriak mulu?</p>
+<h2>Seringnya lupa waktu</h2>
+<p>Bangsat si nusendra, sok sok an ceramah padahal diri nya juga sering lupa waktu. Saya pribadi, <em>currently</em> ketika artikel ini ditulis lagi pegang 3 project (malahan ini ada masuk 1 lagi, tapi cuman company profile aja sih, ez). Kadang kewalahan dengan pembagian waktu nya. Saking capek nya, kadang niat ngoding sampe malam eh ketiduran di sofa / bed. Padahal sebelum sebelumnya ga bakal bisa tidur sebelum jam 12an. Fisik mulai menurun kali ya haha.</p>
+<p>Nah karena amburadul nya waktu, ini juga lagi berusaha untuk memastikan bahwa time management nya berjalan dengan teratur dan baik. Biar ga nakal lagi buang buang waktu buat hal - hal yang ga penting.</p>
+<h2>Terlambat tidur, terlambat bangun</h2>
+<p>Pernah liat ada meme yang <em>nyinggung</em> kalo developer tuh, susah tidur, tapi susah bangun juga. Tidur jam 12 malem, bangun jam 8 pagi haha. Parah sih kalo ini.</p>
+<p><img src="${"https://media.giphy.com/media/xT8qBvH1pAhtfSx52U/giphy.gif"}" alt="${"ngantuk"}"></p>
+<p>Mayoritas para programmer yang doyan ngoding, doi ga akan tidur sebelum masalah nya terselesaikan. Kalau kerjaan nya belum kelar, atau bahkan masih penasaran kenapa kode nya ga <em>work</em>, dijamin dah ga bakal mampir ke tempat tidur sebelum bener bener beres. baru ntar pengen tidur kalau udah pas mentok banget dan udah males lanjut haha.</p>
+<p>Akibat nya, telat tidur, telat juga bangun nya. Telat sholat subuh juga cooyy.</p>
+<h2>How i manage my time</h2>
+<p>Oh iya, perlu diingat ya. Hidup ku dan hidup mu berbeda, kita punya masalah masing - masing. Jadi lu ga bisa telan mentah mentah tulisan ini.</p>
+<p>Oke saya telaah dulu kondisi saya. Seorang freelancer yang saat ini ngerjain 3 project. Maka time management yang akan saya terapkan adalah..</p>
+<ol><li>Pagi, ngantor dengan jarak 30 menit dari rumah. Ngerjain project kantor dari jam 08:30 - 16:30.</li>
+<li>Pulang nya, nyampe rumah rehat bentar, makan dan lainnya. Baru mulai gas lagi project kedua mulai jam 19:00 malam sampe jam 20:00. Habis itu wajib tidur.</li>
+<li>Bangun jam 4, lanjut ngoding lagi (untuk project kedua) sampe jam 07:00 / 07:30.</li>
+<li>Karena hari sabtu di kantor cuma setengah hari. Maka sisa nya bisa untuk ngerjain project ke 3 mulai dari sabtu siang sampai minggu malam.</li></ol>
+<p>Loh gak ada jam santai nya? Emang gak ada. Ingat bro, di dunia itu bukan waktu nya untuk bersantai santai, di dunia itu waktu nya kerja (kerja juga pahala kan?), nanti istirahat benerannya ketika udah di alam setelah dunia. (alesan aja ini mah, aslinya no life banget haha).</p>
+<p>NB : Padahal kenyataannya susaaaahhhh banget controlling my daily life kaya diatas. kadang ada beberapa waktu yang kelewatan, karena kecapean :(</p>
+<p><img src="${"https://media.giphy.com/media/LTYT5GTIiAMBa/giphy.gif"}" alt="${"managing time"}"></p>`
+  })}`;
+});
+var bagaimanaSayaMengaturWaktuSebagaiDeveloper = /* @__PURE__ */ Object.freeze({
+  __proto__: null,
+  [Symbol.toStringTag]: "Module",
+  "default": Bagaimana_saya_mengatur_waktu_sebagai_developer,
+  metadata: metadata$W
+});
+var metadata$V = {
   "title": "Migrasi Blog dari Vue Gridsome ke Svelte Sapper",
   "date": "2020-03-13T19:46:00.000Z",
   "description": "Cerita mengenai perpindahan / migrasi stack blog dari Gridsome ke Sapper",
@@ -20330,7 +20312,7 @@ var metadata$W = {
   "slug": "migrasi-blog-dari-vue-gridsome-ke-svelte-sapper"
 };
 var Migrasi_blog_dari_vue_gridsome_ke_svelte_sapper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$W), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$V), {}, {
     default: () => `<p>Artikel kali ini akan membahas tentang kenapa saya migrasi blog dari yang awalnya menggunakan Vue dengan framework Gridsome ke Svelte dengan Sapper nya. Mungkin sebelum masuk kesana saya pengen cerita bentar tentang stack apa saja yang saya pakai ketika menggeluti dunia blogging ini.</p>
 <p>Note : Tenang, postingan kali ini ga ada kodingan nya kok :)</p>
 <h2>Blogspot dan Wordpress</h2>
@@ -20358,9 +20340,9 @@ var migrasiBlogDariVueGridsomeKeSvelteSapper = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Migrasi_blog_dari_vue_gridsome_ke_svelte_sapper,
-  metadata: metadata$W
+  metadata: metadata$V
 });
-var metadata$V = {
+var metadata$U = {
   "draft": false,
   "title": "TDD Menggunakan Mocha dan Chai di Nodejs - Part 1",
   "date": "2018-09-23T14:29:38.000Z",
@@ -20369,7 +20351,7 @@ var metadata$V = {
   "slug": "tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1"
 };
 var Tdd_menggunakan_mocha_dan_chai_di_nodejs_part_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$V), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$U), {}, {
     default: () => `<p>Halo man teman, kali ini saya akan share tentang TDD menggunakan mocha dan chai di nodejs. Sebelum kita belajar bikin testing nya, lebih baik kita harus paham dan tau dulu mengenai apa itu TDD. TDD adalah singkatan dari Test Driven Development, kalian dapat dengan mudah mencari artikel mengenai TDD ini di mbah kita, yaitu google. Namun saya akan jelaskan secara singkat disini, TDD adalah sebuah konsep development yang berbasis test.</p>
 <ol><li>Pertama kita bikin sebuah konsep / mockup / testing nya.</li>
 <li>Kemudian kita mulai menuliskan kode (ngoding / develop) untuk aplikasi yang sedang dibuat</li>
@@ -20483,9 +20465,9 @@ var tddMenggunakanMochaDanChaiDiNodejsPart1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Tdd_menggunakan_mocha_dan_chai_di_nodejs_part_1,
-  metadata: metadata$V
+  metadata: metadata$U
 });
-var metadata$U = {
+var metadata$T = {
   "draft": false,
   "title": "TDD Menggunakan Mocha dan Chai di Nodejs - Part 2",
   "date": "2018-09-23T15:32:10.000Z",
@@ -20494,7 +20476,7 @@ var metadata$U = {
   "slug": "tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2"
 };
 var Tdd_menggunakan_mocha_dan_chai_di_nodejs_part_2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$U), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$T), {}, {
     default: () => `<p>Melanjutkan dari postingan part 1 <a href="${"https://nusendra.com/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1"}" rel="${"nofollow"}">disini</a>, kita akan melanjutkan implementasi konsep TDD menggunakan Mocha dan Chai di nodejs. Pada tulisan part 1, kita sudah bikin testing nya (pengujian pendaftaran user dan pengujian user tidak bisa daftar jika username sudah ada). Maka pada part 2 ini kita akan memperbaiki app kita agar lolos pengujian (passed). Baik, mari kita lihat kembali hasil test dari pengujian di part 1</p>
 <p><img src="${"https://farm2.staticflickr.com/1917/44136674284_0665742a57_c.jpg"}" alt="${"nusendra-tdd-fail"}"></p>
 <p>Disini dikatakan bahwa pengujian kedua nya gagal karena di masing - masing pengujian tidak mendapatkan response apapun, karena memang di app kita belum menambahkan fitur registrasi. Yuk kita perbaiki satu satu. Pertama kita buat dahulu file model nya. </p>
@@ -20591,9 +20573,9 @@ var tddMenggunakanMochaDanChaiDiNodejsPart2 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Tdd_menggunakan_mocha_dan_chai_di_nodejs_part_2,
-  metadata: metadata$U
+  metadata: metadata$T
 });
-var metadata$T = {
+var metadata$S = {
   "title": "Memproteksi Laravel web App dari Serangan CSRF",
   "date": "2017-12-04T07:25:30.000Z",
   "tags": ["laravel", "php"],
@@ -20602,7 +20584,7 @@ var metadata$T = {
   "slug": "memproteksi-laravel-web-app-dari-serangan-csrf"
 };
 var Memproteksi_laravel_web_app_dari_serangan_csrf = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$T), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$S), {}, {
     default: () => `<p>Memproteksi laravel app dari serangan CSRF sangatlah penting dan wajib diimplementasikan di setiap aksi post / put / patch.  CSRF sendiri adalah cross site request forgery, apa maksudnya nih?? Maksudnya adalah csrf ini merupakan salah satu lubang di web app yang bekerja dengan cara mengeksploitasi suatu aksi dan eksploitasi ini memanfaatkan otentikasi milik salah satu user.</p>
 <p>Setelah kita tau bahaya nya si csrf, maka om Taylor dengan kebaikan hati nya menciptakan fitur di Laravel untuk mengatasi hal seperti ini. Cara mengimplementasikan ini cukup mudah dan ada beberapa langkah. Simak langkah nya dibawah ini.</p>
 <p>Setiap kali kalian membuat suatu form di html (blade), jangan lupa untuk menaruh kode csrf_field dibawah ini didalam tag form kalian</p>
@@ -20638,9 +20620,49 @@ var memproteksiLaravelWebAppDariSeranganCsrf = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Memproteksi_laravel_web_app_dari_serangan_csrf,
-  metadata: metadata$T
+  metadata: metadata$S
 });
-var metadata$S = {
+var metadata$R = {
+  "title": "Mini Workshop Speed Up Vuejs Development with Nuxtjs",
+  "date": "2019-05-06T15:37:00.000Z",
+  "description": "",
+  "tags": ["opini", "nuxtjs", "vuejs"],
+  "draft": false,
+  "slug": "mini-workshop-speed-up-development-with-nuxtjs"
+};
+var Mini_workshop_speed_up_development_with_nuxtjs = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$R), {}, {
+    default: () => `<p>Cerita sedikit mengenai pengalaman bulan Februari 2019 kemarin ketika ngisi acara mini workshop di komunitas SurabayaDev, dengan judul Speed Up Vuejs Development with Nuxtjs. Kebetulan di komunitas ini masih belum ada yang bahas Nuxt, yaudah deh bawain topik itu. Singkatnya, Nuxt ini dipakai untuk mempersingkat dan mempermudah proses development seperti vuejs tanpa route, memudahkan proses SSR, simple vuex module, dll.</p>
+<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/live.staticflickr.com/65535/33909719568_0ee0af34a8_c.jpg"}" style="${"width:100%;height:auto;"}">
+<h2>PROS</h2>
+<p>Manfaat yang paling besar ketika menggunakan Nuxt adalah</p>
+<h3>Simple Routing</h3>
+<p>Jika kita pakai Vuejs, kita harus mendaftarkan component kedalam file vue-router. Nah di Nuxtjs, kita tak perlu melakukan hal yang membosankan tersebut, kita hanya perlu membuat file <code>.vue</code> kedalam folder pages, dan #boom secara otomatis nuxt sudah ngurusin route nya untuk kita.</p>
+<h3>Layout System</h3>
+<p>Salah satu yang melelahkan ketika pakai vue adalah, kita harus bikin layout sendiri (seperti dashboard layout, login / register layout, dll). Di Nuxt sendiri sudah disediakan template layout yang bisa langsung kita pakai.</p>
+<h3>Server Side Rendering</h3>
+<p>Urusan SSR? Ketika install pilih mode Universal, kemudian pada component bikin manfaatin fitur asyncData, yarn run build, yarn run start. Kelar deh SSR nya.</p>
+<h3>Directory Structure</h3>
+<p>Di Vue kita harus menyusun sendiri struktur folder dari aplikasi kita, sedangkan di Nuxt sudah ada struktur nya yang sudah jadi standart. Jadi langsung pakai, developer Nuxt yang lain ga akan kebingungan karena struktur ini udah jadi standart ketika pengembangan web menggunakan Nuxt.</p>
+<h3>Built-in Loading</h3>
+<p>Coba liat loading bar yang ada di youtube, nah Nuxt secara default udah tersedia loading bar seperti itu.</p>
+<h3>Simplify Vuex</h3>
+<p>Module di Vuex jadi makin gampang, tinggal bikin file <code>.js</code> dan export beberapa function disana, udah jadi module vuex.</p>
+<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/live.staticflickr.com/65535/33909718908_f9a3428b8f_c.jpg"}" style="${"width:100%;height:auto;"}">
+<h2>CONS</h2>
+<p>Mungkin Cons nya, size lebih besar dikit daripada Vue. Hal ini wajar saja, karena di Nuxt sudah terinstall Vue-router dan Vuex secara otomatis.</p>
+<hr>
+<p>Mini workshop ini adalah kegiatan awal yang nanti nya akan dijadikan full workshop yang akan ngebahas Vuejs basic. Bagi yang pengen liat slide saya, bisa <a href="${"https://docs.google.com/presentation/d/1gHl1dErhOjIJf5MkHqSialDh52s96_8Eaqf9KGqjENs/edit?usp=sharing"}" rel="${"nofollow"}">klik link ini</a></p>
+<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/live.staticflickr.com/65535/32843294567_2dfb3c408a_c.jpg"}" style="${"width:100%;height:auto;"}">`
+  })}`;
+});
+var miniWorkshopSpeedUpDevelopmentWithNuxtjs = /* @__PURE__ */ Object.freeze({
+  __proto__: null,
+  [Symbol.toStringTag]: "Module",
+  "default": Mini_workshop_speed_up_development_with_nuxtjs,
+  metadata: metadata$R
+});
+var metadata$Q = {
   "title": "Berkomunitaslah, Dapatkan dan Sebarkan Manfaat",
   "date": "2018-08-20T14:06:17.000Z",
   "tags": ["opini"],
@@ -20649,7 +20671,7 @@ var metadata$S = {
   "slug": "berkomunitaslah-dapatkan-dan-sebarkan-manfaat"
 };
 var Berkomunitaslah_dapatkan_dan_sebarkan_manfaat = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$S), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$Q), {}, {
     default: () => `<p>Komunitas merupakan faktor yang sangat penting bagi keberlangsungan hidup kita, baik secara real maupun digital. Kita hidup sebagai makhluk yang bersosial sepatutnya juga menjaga kehidupan sosial kita. Komunitas bisa meliputi banyak hal, contoh nya komunitas pecinta motor, komunitas pendaki gunung, dan yang sekarang akan saya bahas adalah komunitas programming.</p>
 <p>Jika kita lihat dari beberapa contoh diatas, bisa kita tarik kesimpulan bahwa komunitas merupakan perkumpulan orang orang yang memiliki visi, misi, dan hobi yang sama. Saya pribadi menjadikan kegiatan / aktivitas ngoding sebagai hobi, lebih jauh lagi saya sudah menempa mindset saya bahwa ngoding ini adalah sebuah permainan. Kita gak akan merasa bosan ataupun lelah jika melakukan kegiatan yang menyenangkan, yakni bermain. Maka disini saya menganggap bahwa ngoding itu adalah sebuah permainan yang harus dimenangkan, <em>nerd</em> banget yak? haha</p>
 <p>Kita balik lagi, setiap hobi pasti ada aja komunitas nya, dari hobi yang keren sampai hobi yang aneh. Di dalam komunitas, kita bisa saling membagikan pengalaman, melakukan suatu kegiatan bareng, mendapatkan solusi dari anggota komunitas lain, ketemu dengan orang baru, mendapat teman baru, dan sebagainya. Nah yang akan kita bahas kali ini adalah tentang komunitas IT, yaitu programming.</p>
@@ -20674,9 +20696,9 @@ var berkomunitaslahDapatkanDanSebarkanManfaat = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Berkomunitaslah_dapatkan_dan_sebarkan_manfaat,
-  metadata: metadata$S
+  metadata: metadata$Q
 });
-var metadata$R = {
+var metadata$P = {
   "title": "Method Destroy di Controller Laravel 5 - Part 8",
   "date": "2017-12-31T06:46:59.000Z",
   "tags": ["laravel", "php"],
@@ -20685,7 +20707,7 @@ var metadata$R = {
   "slug": "method-destroy-di-controller-laravel-5-part-8"
 };
 var Method_destroy_di_controller_laravel_5_part_8 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$R), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$P), {}, {
     default: () => `<p>Method terakhir yang akan saya bahas disini adalah method destroy di controller laralel 5. Method destroy ini berfungsi untuk menghapus row berdasarkan id yang dicari. Bisa juga sih langsung menghapus beberapa / banyak row. Tergantung situasi dan kondisi.</p>
 <p>Baiklah kita langsung saja melangkah ke baris kode kita.</p>
 <p>Pertama silakan temen - temen buat route untuk menangani proses hapus data ini</p>
@@ -20708,9 +20730,9 @@ var methodDestroyDiControllerLaravel5Part8 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Method_destroy_di_controller_laravel_5_part_8,
-  metadata: metadata$R
+  metadata: metadata$P
 });
-var metadata$Q = {
+var metadata$O = {
   "draft": false,
   "title": "Membuat RBAC Sendiri : Backend Response - Part 2",
   "date": "2019-02-03T14:55:37.000Z",
@@ -20719,7 +20741,7 @@ var metadata$Q = {
   "slug": "membuat-rbac-sendiri-backend-response-part-2"
 };
 var Membuat_rbac_sendiri_backend_response_part_2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$Q), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$O), {}, {
     default: () => `<p>Melanjutkan dari postingan <a href="${"https://nusendra.com/post/membuat-rbac-sendiri-konsep-part-1"}" rel="${"nofollow"}">part 1</a>, kali ini kita akan belajar bagaimana mengimplementasi kan konsep kita di aplikasi yang sesungguh nya. Di part 1 saya bilang untuk backend saya skip saja, ah oke saya akan mengingkari nya :D. Di part 2 ini saya akan mulai dari backend yang akan saya paparkan secara sederhana dan simple saja. Jadi pada backend ini kita akan membuat fungsi login, yang mana jika user berhasil login, maka user akan mendapatkan detail si user tersebut (nama, username, jabatan, token, write_menu, dan readonly_menu). Jadi ketika frontend mendapatkan response dari backend yang berupa data data tersebut, nanti nya tinggal urusan frontend me render menu menu nya (sesuai dengan user role).</p>
 <p>Oh iya, untuk kasus RBAC ini kita bedakan ya antara backend dan frontend nya (multi repo).</p>
 <h2>Backend</h2>
@@ -20823,9 +20845,9 @@ var membuatRbacSendiriBackendResponsePart2 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Membuat_rbac_sendiri_backend_response_part_2,
-  metadata: metadata$Q
+  metadata: metadata$O
 });
-var metadata$P = {
+var metadata$N = {
   "title": "Method Create di Controller Laravel 5 - Part 3",
   "date": "2017-12-12T15:10:23.000Z",
   "tags": ["laravel", "php"],
@@ -20834,10 +20856,7 @@ var metadata$P = {
   "slug": "method-create-di-controller-laravel-5-part-3"
 };
 var Method_create_di_controller_laravel_5_part_3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $teks, $$unsubscribe_teks;
-  $$unsubscribe_teks = subscribe(teks, (value) => $teks = value);
-  $$unsubscribe_teks();
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$P), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$N), {}, {
     default: () => `<p>Setiap aktivitas CRUD di web app manapun membutuhkan halaman form untuk menginput data, nah disinilah kegunaan dari method create. Method ini berfungsi untuk menampilkan halaman input / insert data yang umumnya berupa form.</p>
 <p>Yaa memang tidak semua aktivitas input data melalui halaman create (khusus), kadang ada juga app yang menginput data melalui pop up modal. Nah untuk kasus input data form yang berupa pop up modal, method create ini tidak dibutuhkan. Method create ini digunakan hanya ketika kita ingin membuat halaman form input data di halaman baru.</p>
 <p>langsung saja ke contoh implementasi nya. Untuk bisa menggunakan method ini, pertama kita tentukan dulu route nya. Oh iya, jangan lupa untuk baca part sebelumnya ya, karena masih ada sangkut paut nya dengan post sebelumnya. Silakan baca di Part 1 dan Part 2. Yuk lanjut !!</p>
@@ -20851,7 +20870,7 @@ var Method_create_di_controller_laravel_5_part_3 = create_ssr_component(($$resul
     <span class="token variable">$teks</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"Ini adalah halaman create post"</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'CreatePost'</span><span class="token punctuation">,</span><span class="token function">compact</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'teks'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code>`}<!-- HTML_TAG_END --></pre>
-<p>Setelah itu kita bisa mengakses nya melalui URL http://localhost/post/create. Kemudian silakan temen - temen create sebuah halaman view, misalnya CreatePost.blade.php. Jangan lupa untuk menampilkan teks yang di passing dari controller tadi ya. dengan cara @${escape({ $teks })}. Maka nanti temen temen akan mendapati tulisan \u201CIni adalah halaman create post\u201D di halaman CreatePost kalian.</p>
+<p>Setelah itu kita bisa mengakses nya melalui URL http://localhost/post/create. Kemudian silakan temen - temen create sebuah halaman view, misalnya CreatePost.blade.php. Jangan lupa untuk menampilkan teks yang di passing dari controller tadi ya.</p>
 <hr>
 <p>Akhir kata, semoga bermanfaat ya :-)</p>`
   })}`;
@@ -20860,9 +20879,9 @@ var methodCreateDiControllerLaravel5Part3 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Method_create_di_controller_laravel_5_part_3,
-  metadata: metadata$P
+  metadata: metadata$N
 });
-var metadata$O = {
+var metadata$M = {
   "title": "Method Update di Controller Laravel 5 - Part 7",
   "date": "2017-12-27T05:17:40.000Z",
   "tags": ["laravel", "php"],
@@ -20871,7 +20890,7 @@ var metadata$O = {
   "slug": "method-update-di-controller-laravel-5-part-7"
 };
 var Method_update_di_controller_laravel_5_part_7 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$O), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$M), {}, {
     default: () => `<p>Setelah kita belajar method edit, lanjut kita belajar mengenai method update di Controller Laravel 5. Method update ini berfungsi untuk melakukan perubahan data yang ada di dalam database. Sebenarnya kita juga bisa sih melakukan update data di method store, tapi itu tidak direkomendasikan karena tujuan kita adalah menjadikan route kita RESTful.</p>
 <p>Baiklah langsung saja ke koding. Pertama silakan temen - temen bikin route untuk handle update data ini</p>
 <pre class="${"language-php"}"><!-- HTML_TAG_START -->${`<code class="language-php"><span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'post/&#123;id&#125;'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@update'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>`}<!-- HTML_TAG_END --></pre>
@@ -20897,9 +20916,9 @@ var methodUpdateDiControllerLaravel5Part7 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Method_update_di_controller_laravel_5_part_7,
-  metadata: metadata$O
+  metadata: metadata$M
 });
-var metadata$N = {
+var metadata$L = {
   "title": "REST API dengan Nodejs dan Typescript - part 1",
   "date": "2018-09-09T18:56:03.000Z",
   "tags": ["typescript", "expressjs", "nodejs"],
@@ -20908,7 +20927,7 @@ var metadata$N = {
   "slug": "rest-api-dengan-nodejs-dan-typescript-part-1"
 };
 var Rest_api_dengan_nodejs_dan_typescript_part_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$N), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$L), {}, {
     default: () => `<p>Baik kali ini saya akan sharing sedikit bagaimana membuat REST API menggunakan Nodejs dan typescript. Sebagai informasi awal, NodeJS adalah runtime Javascript yang berjalan diatas mesin Javascript Chrome V8. Bagi kalian yang suka bikin frontend web pake javascript framework, maka tentunya dibagian backend paling enak dan cocok bisa pake Nodejs karena natively Nodejs menggunakan json sebagai komunikasi dan pertukaran data nya. Sedangkan TS (Typescript) sendiri adalah bahasa pemrograman berbasis javascript yang memiliki fitur strong-typing &amp; konsep pemrograman OOP klasik ( class, interface), cocok banget bagi kalian yang suka main OOP.</p>
 <p>Pada bagian pertama ini saya akan menjelaskan terlebih dahulu environment dan packages apa saja yang akan kita pakai nanti. Secara garis besar di sisi environment kita akan menggunakan NodeJS sebagai backend server nya dan MongoDB sebagai database persistent nya. Untuk package standart kita akan pakai sebagai berikut:</p>
 <ol><li>Typescript untuk superset javascript</li>
@@ -20977,9 +20996,9 @@ var restApiDenganNodejsDanTypescriptPart1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Rest_api_dengan_nodejs_dan_typescript_part_1,
-  metadata: metadata$N
+  metadata: metadata$L
 });
-var metadata$M = {
+var metadata$K = {
   "title": "REST API dengan Nodejs dan Typescript - part 2",
   "draft": false,
   "date": "2018-09-16T22:57:57.000Z",
@@ -20988,7 +21007,7 @@ var metadata$M = {
   "slug": "rest-api-dengan-nodejs-dan-typescript-part-2"
 };
 var Rest_api_dengan_nodejs_dan_typescript_part_2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$M), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$K), {}, {
     default: () => `<p>Artikel lanjutan tentang membuat REST API dengan Nodejs dan Typescript. Di part 2 ini kita akan setting app server core kita dan implementasi mongoose. Kita kilas balik lagi terlebih dahulu, berikut ini package yang akan saya gunakan dan script untuk menjalankan server kita</p>
 <pre class="${"language-javascript"}"><!-- HTML_TAG_START -->${`<code class="language-javascript"><span class="token punctuation">&#123;</span>
   <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"Nodejs with TS"</span><span class="token punctuation">,</span>
@@ -21145,9 +21164,9 @@ var restApiDenganNodejsDanTypescriptPart2 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Rest_api_dengan_nodejs_dan_typescript_part_2,
-  metadata: metadata$M
+  metadata: metadata$K
 });
-var metadata$L = {
+var metadata$J = {
   "draft": false,
   "title": "REST API dengan Nodejs dan Typescript - part 3",
   "date": "2018-09-17T07:48:05.000Z",
@@ -21156,7 +21175,7 @@ var metadata$L = {
   "slug": "rest-api-dengan-nodejs-dan-typescript-part-3"
 };
 var Rest_api_dengan_nodejs_dan_typescript_part_3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$L), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$J), {}, {
     default: () => `<p>Di penghujung tutorial series ini, kita menginjak part 3 cara membuat REST API dengan Nodejs dan Typescript. Kita kilas balik sebentar, pada <a href="${"https://nusendra.com/post/rest-api-dengan-nodejs-dan-typescript-part-1"}" rel="${"nofollow"}">part 1</a> kita sudah belajar bagaimana memulai membuat project ini, dengan menambahkan dependencies yang diperlukan. Kemudian lanjut ke <a href="${"https://nusendra.com/post/rest-api-dengan-nodejs-dan-typescript-part-1"}" rel="${"nofollow"}">part 2</a> kita membuat file core server yang mana ini akan menjalankan server REST API kita. Nah di penghujung tutorial series part 3 ini kita akan belajar bareng bagaimana membuat routes dan model mongodb nya.</p>
 <p>Pertama mari kita buka file yang sudah kita buat seperti di part 1. Kita buka <code>src/models/user.ts</code> kemudian isikan seperti berikut ini</p>
 <pre class="${"language-javascript"}"><!-- HTML_TAG_START -->${`<code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span>Schema<span class="token punctuation">,</span> model<span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'mongoose'</span><span class="token punctuation">;</span>
@@ -21291,9 +21310,9 @@ var restApiDenganNodejsDanTypescriptPart3 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Rest_api_dengan_nodejs_dan_typescript_part_3,
-  metadata: metadata$L
+  metadata: metadata$J
 });
-var metadata$K = {
+var metadata$I = {
   "title": "Menampilkan data polymorphic tanpa eloquent",
   "date": "2018-05-23T04:21:02.000Z",
   "tags": ["laravel", "php"],
@@ -21302,7 +21321,7 @@ var metadata$K = {
   "slug": "menampilkan-data-polymorphic-tanpa-eloquent"
 };
 var Menampilkan_data_polymorphic_tanpa_eloquent = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$K), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$I), {}, {
     default: () => `<p>Menampilkan data polymorphic tanpa eloquent gampang - gampang susah. Kalo mau nampilin data polymorphic kita pake eloquent sih gampang gampang aja, tapi kalau tanpa eloquent gimana? Sebuah tantangan tersendiri bagi kemampuan logika kita hehe. Polymorphic ini sendiri merupakan fitur dari Laravel yang dipakai di model dan eloquent ORM.</p>
 <p>Memanggil data polymorphic pada dasarnya ga bisa di terapkan pakai Query Builder / raw query, karena fungsi ini miliknya eloquent. Maka disini kita akan pakai logika kita untuk handle problem ini</p>
 <p>Oh iya, yang belum paham apa itu polymorphic, silakan baca baca dulu di docs nya <a href="${"https://laravel.com/docs/5.6/eloquent-relationships#polymorphic-relations"}" rel="${"nofollow"}">https://laravel.com/docs/5.6/eloquent-relationships#polymorphic-relations</a>. Di docs nya ini udah lengkap banget, jadi ga perlu saya jelaskan lagi tentang bagaimana cara konfigurasi nya, bikin table nya, insert data polymorphic nya, dll.</p>
@@ -21367,9 +21386,9 @@ var menampilkanDataPolymorphicTanpaEloquent = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Menampilkan_data_polymorphic_tanpa_eloquent,
-  metadata: metadata$K
+  metadata: metadata$I
 });
-var metadata$J = {
+var metadata$H = {
   "title": "Method Index di Controller Laravel 5 - Part 2",
   "date": "2017-12-10T18:40:44.000Z",
   "tags": ["laravel", "php"],
@@ -21378,7 +21397,7 @@ var metadata$J = {
   "slug": "method-index-di-controller-laravel-5-part-2"
 };
 var Method_index_di_controller_laravel_5_part_2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$J), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$H), {}, {
     default: () => `<p>Kali ini saya akan melanjutkan postingan tentang Controller di Laravel 5. Bagi yang belum baca dasar - dasar controller, bisa dilihat di postingan berikut ini <a href="${"https://nusendra.com/post/dasar-controller-di-laravel-5-part-1"}" rel="${"nofollow"}">Dasar Controller di Laravel 5 - Part 1</a>. Setelah kita pahami bersama bagaimana sebuah Controller bekerja, sekarang yuk mari kita lanjut selami salah satu method yang ada di Resource Controller, yaitu Index.</p>
 <p>Method index ini bisa diartikan sebagai halaman awal / basis dari suatu fitur web. Misalnya dalam kasus Halaman Post, Index ini merupakan daftar seluruh / sebagian dari Post. Sehingga nantinya user / admin bisa mengolah halaman Post dengan klik tombol edit / tambah di halaman Post.</p>
 <p>Nah untuk memanggil method index ini, kita perlu mendefinisikan di resource / get route, perhatikan script dibawah ini.</p>
@@ -21411,9 +21430,9 @@ var methodIndexDiControllerLaravel5Part2 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Method_index_di_controller_laravel_5_part_2,
-  metadata: metadata$J
+  metadata: metadata$H
 });
-var metadata$I = {
+var metadata$G = {
   "title": "Method Store di Controller Laravel 5 - Part 4",
   "date": "2017-12-15T03:49:06.000Z",
   "tags": ["laravel", "php"],
@@ -21422,7 +21441,7 @@ var metadata$I = {
   "slug": "method-store-di-controller-laravel-5-part-4"
 };
 var Method_store_di_controller_laravel_5_part_4 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$I), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$G), {}, {
     default: () => `<p>Setelah kita di post sebelumnya belajar bareng tentang method index dan method create yang mana keduanya adalah action dengan method GET. Sekarang mari kita lanjut belajar mengenal method Store di Controller, yang mana action ini menggunakan method POST sebagai HTTP request nya.</p>
 <p>Method Store ini akan bekerja ketika kita mengirimkan data dengan method POST pada ajax misalnya. Langsung saja kita masuk ke contoh implementasi nya.</p>
 <p>Pada route, siapkan baris kode seperti dibawah ini</p>
@@ -21449,9 +21468,9 @@ var methodStoreDiControllerLaravel5Part4 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Method_store_di_controller_laravel_5_part_4,
-  metadata: metadata$I
+  metadata: metadata$G
 });
-var metadata$H = {
+var metadata$F = {
   "title": "Membersihkan Disk Usage pada Ubuntu Server",
   "date": "2020-09-04T06:00:00.000Z",
   "description": "Solusi untuk disk usage anda yang kepenuhan",
@@ -21460,7 +21479,7 @@ var metadata$H = {
   "slug": "membersihkan-disk-usage-pada-ubuntu-server"
 };
 var Membersihkan_disk_usage_pada_ubuntu_server = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$H), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$F), {}, {
     default: () => `<p>Postingan kali ini sebenernya lebih ke catatan pribadi, tapi kalau memang bisa membantu temen - temen yang membutuhkan ya alhamdulillah :D</p>
 <p>Kalian pasti sering / pernah mengalami disk usage di ubuntu server (warga cpanel minggir dulu) mengalami kepenuhan, biasanya diawali dengan lambat nya performa website kalian yang kadang tiba tiba not responding. Dan ketika kita cek masuk ke server dengan mengetikkan <code>df -h</code> ternyata disk usage nya udah 100% aja. Nah gimana cara bersihinnya?</p>
 <p>Hal yang paling cepet dipikirin adalah dengan <code>apt autoremove</code>, namun yang satu ini ga bisa menghapus dengan efektif, hanya beberapa cache dan file yang ga dibutuhkan aja. Dibawah ini contoh setelah ngejalanin <code>apt autoremove</code>.</p>
@@ -21529,9 +21548,9 @@ var membersihkanDiskUsagePadaUbuntuServer = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Membersihkan_disk_usage_pada_ubuntu_server,
-  metadata: metadata$H
+  metadata: metadata$F
 });
-var metadata$G = {
+var metadata$E = {
   "title": "Method Edit di Controller Laravel 5 - Part 6",
   "date": "2017-12-25T23:24:10.000Z",
   "tags": ["laravel", "php"],
@@ -21540,7 +21559,7 @@ var metadata$G = {
   "slug": "method-edit-di-controller-laravel-5-part-6"
 };
 var Method_edit_di_controller_laravel_5_part_6 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$G), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$E), {}, {
     default: () => `<p>Menginjak ke part 6 saya akan membahas tentang method edit di controller Laravel 5. Method ini berisi perintah yang akan menampilkan halaman edit data dari sebuah row. Sebenarnya method edit ini hampir sama dengan method show (baca Method Show di Controller Laravel 5 - Part 5), cuman bedanya kalau show hanya menampilkan data saja, sedangkan edit kita nanti bisa mengedit data nya. Bisa juga sih kita melakukan edit data menggunakan method show, tapi itu tidak disarankan dan memang bukan tempat nya.</p>
 <p>Langsung aja yuk kita ke baris kode nya. Seperti biasa, siapkan sebuah route untuk handle method edit ini.</p>
 <pre class="${"language-php"}"><!-- HTML_TAG_START -->${`<code class="language-php"><span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'post/&#123;id&#125;/edit'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@edit'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>`}<!-- HTML_TAG_END --></pre>
@@ -21565,9 +21584,9 @@ var methodEditDiControllerLaravel5Part6 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Method_edit_di_controller_laravel_5_part_6,
-  metadata: metadata$G
+  metadata: metadata$E
 });
-var metadata$F = {
+var metadata$D = {
   "title": "Method Show di Controller Laravel 5 - Part 5",
   "date": "2017-12-23T09:48:50.000Z",
   "tags": ["laravel", "php"],
@@ -21576,7 +21595,7 @@ var metadata$F = {
   "slug": "method-show-di-controller-laravel-5-part-5"
 };
 var Method_show_di_controller_laravel_5_part_5 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$F), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$D), {}, {
     default: () => `<p>Udah sekitar seminggu nih belum update blog hehe. Kali ini saya akan bahas sedikit tentang method show yang ada di Controller. Show ini berfungsi untuk menampilkan single row dari database. Single row disini maksudnya kita menampilkan detail data dari sebuah row. Contoh mudahnya, kita menampilkan blog post, menampilkan detail dari suatu barang di inventory, menampilkan user profile, dll.</p>
 <p>Yuk langsung kita lanjut ke koding nya, biar tambah paham pengimplementasiannya.</p>
 <p>Untuk route yang diperlukan untuk action show ini bisa menggunakan salah satu dibawah ini.</p>
@@ -21605,9 +21624,9 @@ var methodShowDiControllerLaravel5Part5 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Method_show_di_controller_laravel_5_part_5,
-  metadata: metadata$F
+  metadata: metadata$D
 });
-var metadata$E = {
+var metadata$C = {
   "title": "Cara Mudah Mengurus atau Membuat Passport",
   "date": "2019-10-04T11:20:00.000Z",
   "description": "",
@@ -21616,7 +21635,7 @@ var metadata$E = {
   "slug": "cara-mudah-mengurus-atau-membuat-passport"
 };
 var Cara_mudah_mengurus_atau_membuat_passport = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$E), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$C), {}, {
     default: () => `<p>Pergi keluar negeri untuk tujuan berlibur maupun ada pekerjaan memang menyenangkan, namun sebelum bisa bepergian keluar, ada beberapa hal yang wajib dipersiapkan terlebih dahulu, salah satunya adalah passport. Passport merupakan dokumen wajib yang harus dimiliki oleh para calon imigran yang akan berkelana di luar indonesia, berfungsi sebagai dokumen / kartu identitas kita selama berada di negeri orang (semacam pengganti KTP lah).</p>
 <p>Nah kali ini saya mo share pengalaman saja bagaimana mudahnya membuat / mengurus passport di kantor imigrasi. Nah kebetulan lagi ada project dari Malaysia nih, karena sebelum nya belom pernah bepergian ke luar indonesia (anak rumahan banget anjir) yaodah terpaksa dah ngurus passport. Oke langsung aja, apa sih yang perlu siapin terlebih dahulu? Dokumen lo !! Berikut ini yang wajib temen - temen siapin.</p>
 <h2>Siapin dulu nih</h2>
@@ -21647,9 +21666,9 @@ var caraMudahMengurusAtauMembuatPassport = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Cara_mudah_mengurus_atau_membuat_passport,
-  metadata: metadata$E
+  metadata: metadata$C
 });
-var metadata$D = {
+var metadata$B = {
   "title": "React Native - State Management dengan Remx",
   "date": "2018-08-16T13:53:27.000Z",
   "tags": ["javascript", "reactnative"],
@@ -21658,7 +21677,7 @@ var metadata$D = {
   "slug": "react-native-state-management-dengan-remx"
 };
 var React_native_state_management_dengan_remx = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$D), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$B), {}, {
     default: () => `<p>State management di React Native ada bermacam - macam, salah satu nya remx. Oh iya, sebelum lanjut saya mau jelaskan dulu kenapa saya beralih dari Mobx ke Remx, dan kenapa saya gak pake Redux seperti pada umumnya. Silakan baca ke post saya <a href="${"https://nusendra.com/post/goodbye-mobx-welcome-remx"}" rel="${"nofollow"}">kesini</a>. Ok, mungkin akan saya jelaskan lagi kenapa kita harus pake state management, dan apa kelebihannya daripada kita menyimpan data di local component state.</p>
 <h3>Local Component State</h3>
 <ul><li>Kelebihan : Mudah, kita tinggal mainin setState dan this.state saja untuk membaca state nya</li>
@@ -21749,9 +21768,9 @@ var reactNativeStateManagementDenganRemx = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": React_native_state_management_dengan_remx,
-  metadata: metadata$D
+  metadata: metadata$B
 });
-var metadata$C = {
+var metadata$A = {
   "title": "fokus-sangat-membantu-kita-saat-ngoding",
   "date": "2018-05-22T15:55:00.000Z",
   "tags": ["opini"],
@@ -21760,7 +21779,7 @@ var metadata$C = {
   "slug": "fokus-sangat-membantu-kita-saat-ngoding"
 };
 var Fokus_sangat_membantu_kita_saat_ngoding = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$C), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$A), {}, {
     default: () => `<p><strong>Fokus sangat membantu kita saat ngoding</strong>. Fokus, adalah sebuah syarat utama agar kita bisa mengerjakan suatu pekerjaan dengan lebih cepat, cermat dan tepat. Bagi developer / programmer, fokus ini adalah suatu elemen penting yang tidak boleh dilewatkan ketika bekerja. Nah, sekarang bagaimana kita bisa mendapatkan kekuatan super yang bernama fokus ini? Tentunya banyak sekali cara nya, yuk kita bahas bareng bareng.</p>
 <h2>PERUT KENYANG</h2>
 <p>Salah satu quote yang bikin saya ngakak masalah lapar adalah \u201Clapar brutal, kenyang bego\u201D hahaha. Siapa sih yang bisa fokus dengan perut lapar? Mayoritas manusia bakalan engga bisa fokus kalo lagi lapar, karena rendahnya gula darah bisa menurunkan tingkat kefokusan kita. Nah makanya kalo mau mulai ngoding, isi perut dulu secukupnya. Ga usah berlebihan, kalo terlalu kenyang malah bikin ngantuk.</p>
@@ -21778,9 +21797,9 @@ var fokusSangatMembantuKitaSaatNgoding = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Fokus_sangat_membantu_kita_saat_ngoding,
-  metadata: metadata$C
+  metadata: metadata$A
 });
-var metadata$B = {
+var metadata$z = {
   "draft": false,
   "title": "Install dan Akses Remote MariaDB di VPS",
   "date": "2018-12-20T14:38:18.000Z",
@@ -21789,7 +21808,7 @@ var metadata$B = {
   "slug": "install-dan-akses-remote-mariadb-di-vps"
 };
 var Install_dan_akses_remote_mariadb_di_vps = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$B), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$z), {}, {
     default: () => `<p>Apa banget ya bahasannya, terkesan receh memang haha. Tapi saya pribadi perlu mencatat ini karena barusan entah kenapa problem banget ngurusin hal hal receh begini. Takut lupa, maka perlu saya catat saja. Materi kali ini bagaimana cara kita install MariaDB 10.2 dan bagaimana cara akses remote database melalui mysql client (cli / GUI) di sistem lokal kita.</p>
 <h2>Instalasi</h2>
 <pre class="${"language-undefined"}"><!-- HTML_TAG_START -->${`<code class="language-undefined">$ sudo apt install build-essential
@@ -21836,9 +21855,9 @@ var installDanAksesRemoteMariadbDiVps = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Install_dan_akses_remote_mariadb_di_vps,
-  metadata: metadata$B
+  metadata: metadata$z
 });
-var metadata$A = {
+var metadata$y = {
   "title": "Jangan Dibuka  Nanti Jadi Lemot 4.4.4.4.0.0.0.0",
   "date": "2017-11-29T05:06:37.000Z",
   "tags": ["opini"],
@@ -21847,7 +21866,7 @@ var metadata$A = {
   "slug": "jangan-dibuka-nanti-jadi-lemot-44440000"
 };
 var Jangan_dibuka_nanti_jadi_lemot_44440000 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$A), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$y), {}, {
     default: () => `<p>Judul nya apaan banget sih haha. Itulah yang hari ini sedang hits. Cerita - cerita dikit ya, pagi ini dapat kiriman whatsapp di grup, nah tulisannya tuh kayak gini</p>
 <pre class="${"language-undefined"}"><!-- HTML_TAG_START -->${`<code class="language-undefined">4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.04.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0.4.4.4.4.0.0.0.0.4.0.4.0.4.0.4.0.4.0</code>`}<!-- HTML_TAG_END --></pre>
 <p>Caption diatas nya tulisan \u201CJangan Dibuka Nanti Jadi Lemot\u201D</p>
@@ -21864,9 +21883,9 @@ var janganDibukaNantiJadiLemot44440000 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Jangan_dibuka_nanti_jadi_lemot_44440000,
-  metadata: metadata$A
+  metadata: metadata$y
 });
-var metadata$z = {
+var metadata$x = {
   "draft": false,
   "title": "Memajukan Komunitas di WebUnConfID 2018",
   "date": "2018-10-07T17:52:27.000Z",
@@ -21875,7 +21894,7 @@ var metadata$z = {
   "slug": "memajukan-komunitas-di-webunconfid-2018"
 };
 var Memajukan_komunitas_di_webunconfid_2018 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$z), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$x), {}, {
     default: () => `<p>Halo halo, sudah beberapa minggu tidak posting blog sama sekali karena kesibukan, hari ini saya mau bahas panjang lebar mengenai event webunconfid2018. Sebelumnya apa sih webunconfid2018? Kok ribet banget penamaannya. Kepanjangan dari webunconfid2018 adalah Web Unconference Indonesia 2018, sebuah event keren yang digawangi oleh seorang Developer Advocate / Web Developer Relations dari Google, yaitu om <a href="${"https://www.instagram.com/tyohan/?hl=id"}" rel="${"nofollow"}">Yohan Totting</a>, dengan mendatangkan beberapa developer TOP skala nasional untuk berkumpul bareng di satu tempat dalam dua hari. Event ini diadakan berdasarkan dua konsep, pertama mengenalkan web technology modern yang digadang gadang mampu meningkatkan kualitas sebuah web dengan konsep Progressive Web App. Yang kedua mengumpulkan leader (atau seseorang yang aktif) dalam sebuah komunitas programmer untuk kumpul bareng dan membicarakan / membahas segala hal mengenai komunitas, tujuannya untuk memajukan dan menambah kualitas dari sebuah komunitas IT di Indonesia.</p>
 <h2>Apa aja yang dibahas?</h2>
 <p><img src="${"https://cdn.staticaly.com/img/farm2.staticflickr.com/1952/45103817992_0908cd6243_c.jpg"}" alt="${"yohan ceramah"}"></p>
@@ -21907,9 +21926,9 @@ var memajukanKomunitasDiWebunconfid2018 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Memajukan_komunitas_di_webunconfid_2018,
-  metadata: metadata$z
+  metadata: metadata$x
 });
-var metadata$y = {
+var metadata$w = {
   "draft": false,
   "title": "Docker Compose PostgreSQL dan pgAdmin4",
   "date": "2019-01-07T10:57:25.000Z",
@@ -21918,7 +21937,7 @@ var metadata$y = {
   "slug": "docker-compose-postgresql-dan-pgadmin4"
 };
 var Docker_compose_postgresql_dan_pgadmin4 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$y), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$w), {}, {
     default: () => `<p>Di dunia teknologi, sangat banyaaakkk sekali yang harus dipelajari apalagi bagi seorang Full Stack seperti saya. Di development perlu belajar bahasa pemrograman nya, belajar konsep konsep / pattern dalam development, mempelajari framework, belajar backend development, frontend development, unit testing, dan segala tetek bengek nya. Belum sampai disitu, setelah app sudah selesai di develop pun, masih harus mikir gimana cara deployment ke server secara tepat. Disini bisa mempelajari Docker, Continous Integration, Continous Deployment, dll. Banyak bener haha.</p>
 <p>Nah kali ini mau bahas sedikit saja tentang docker dan docker compose. Saya ga akan bahas tentang tata cara instalasi docker dan docker compose, temen temen bisa mencari sendiri artikel artikel diluar sana. Oh iya, selain itu untuk tau apa itu docker, temen temen juga bisa baca atau liat youtube. Saya lebih menyarankan nonton youtube nya saja, karena bisa lebih mudah dipahami.</p>
 <h2>Docker Compose</h2>
@@ -21962,119 +21981,9 @@ var dockerComposePostgresqlDanPgadmin4 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Docker_compose_postgresql_dan_pgadmin4,
-  metadata: metadata$y
+  metadata: metadata$w
 });
-var metadata$x = {
-  "title": "Dasar Controller di Laravel 5 - Part 1",
-  "date": "2017-12-08T00:40:57.000Z",
-  "tags": ["laravel", "php"],
-  "draft": false,
-  "description": "Dasar Controller di Laravel 5 merupakan postingan tentang controller yang membahas method - method maupun fungsi - fungsi dasar dari sebuah Controller.",
-  "slug": "dasar-controller-di-laravel-5-part-1"
-};
-var Dasar_controller_di_laravel_5_part_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$x), {}, {
-    default: () => `<p>Setelah kemarin bahas hal yang paling dasar di Laravel 5, sekarang waktu nya kita masuk ke bahasan tentang Controller. Apa sih Controller itu? Controller adalah salah satu komponen inti dari MVC yang berfungsi sebagai penghubung antara request user (View) ke model yang nantinya akan di kembalikan lagi ke View dalam bentuk response.</p>
-<p>Controller ini juga bisa diartikan sebagai otak nya suatu web, karena seluruh aktivitas backend akan banyak berkutat di controller ini. Controller ini akan banyak berisi logika - logika dalam menyusun suatu fungsi tertentu. Contohnya adalah aktivitas CRUD (Create, Read, Update, Delete) yang prosesnya berjalan di dalam Controller. So, Controller ini sangat penting untuk dipahami karena dia ini termasuk salah satu keluarga inti yang ada di laravel.</p>
-<p><img src="${"https://farm5.staticflickr.com/4639/25137016468_451a3c2cd8_o.jpg"}" alt="${"nusendra-mvc"}" title="${"nusendra mvc"}"></p>
-<p>Saya akan jelaskan alur singkat dari cara kerja MVC ini terlebih dahulu, sebelum beranjak lebih jauh menyelami samudra MVC.</p>
-<ol><li>User melakukan request ke Controller (Misalnya User ingin menampilkan data produk)</li>
-<li>Kemudian Controller akan memeriksa / Mengakses Database melalui Model yang nantinya data dari database tersebut disimpan di dalam object Model.</li>
-<li>Setelah itu Model akan mengirimkan kembali hasil dari pencarian data produk ke Controller (dalam bentuk object).</li>
-<li>Kemudian Controller akan melempar data produk ke View berupa response (Biasanya berupaJSON ). Yang nanti nya data tersebut bisa diolah lagi di Frontend untuk menampilkan data produk yang diinginkan si user.</li></ol>
-<p>Kalo udah paham, yuk langsung melangkan ke dasar - dasar Controller</p>
-<blockquote><p>Sekedar catatan, mulai dari sini sampai kedepan kita akan menggunakan resource Controller dan route resource. Karena ini mempermudah proses development dan kodingan kita terlihat lebih cantik.</p></blockquote>
-<h2>Membuat Controller</h2>
-<p>Sebelum mulai memakai controller, ada beberapa cara untuk membuat controller. Bisa melalui php artisan yang disediakan Laravel, atau bisa create secara manual di dalam folder app/Http/Controllers. Sangat diasarankan untuk membuat controller melalui php artisan, berikut caranya. Buka terminal kalian dan masuk ke direktori project nya.</p>
-<pre class="${"language-undefined"}"><!-- HTML_TAG_START -->${`<code class="language-undefined">php artisan make:controller PostController --resource</code>`}<!-- HTML_TAG_END --></pre>
-<p>Dengan menambahkan tag \u201C\u2014resource\u201D, maka file Controller yang telah dibuat tadi sudah berisi beberapa method yang siap untuk digunakan dalam aktivitas CRUD. Dalam contoh kasus ini kita membuat Controller yang memproses data post.</p>
-<pre class="${"language-php"}"><!-- HTML_TAG_START -->${`<code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-
-<span class="token keyword">namespace</span> <span class="token package">App<span class="token punctuation"></span>Http<span class="token punctuation"></span>Controllers</span><span class="token punctuation">;</span>
-
-<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation"></span>Http<span class="token punctuation"></span>Request</span><span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name-definition class-name">PostController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Method untuk menampilkan halaman daftar post (Halaman utama)</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Method untuk menampilkan halaman form create post</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Method untuk melakukan insert / input data kedalam database</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">show</span><span class="token punctuation">(</span><span class="token variable">$id</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Method untuk menampilkan single post / detail dari sebuah post</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">edit</span><span class="token punctuation">(</span><span class="token variable">$id</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Method untuk menampilkan halaman edit post</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">update</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">,</span> <span class="token variable">$id</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Method untuk melakukan update data post ke database</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">destroy</span><span class="token punctuation">(</span><span class="token variable">$id</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Method untuk menghapus data post</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></span></code>`}<!-- HTML_TAG_END --></pre>
-<p>Berikut ini adalah beberapa route yang ditangani oleh resource controller.</p>
-<table><thead><tr><th>Verb</th>
-<th>URI</th>
-<th>Action</th></tr></thead>
-<tbody><tr><td>GET</td>
-<td>/post</td>
-<td>index</td></tr>
-<tr><td>GET</td>
-<td>/post/create</td>
-<td>create</td></tr>
-<tr><td>POST</td>
-<td>/post</td>
-<td>store</td></tr>
-<tr><td>GET</td>
-<td>/post/${escape(id)}/edit</td>
-<td>edit</td></tr>
-<tr><td>PUT / PATCH</td>
-<td>/post/${escape(id)}</td>
-<td>update</td></tr>
-<tr><td>DELETE</td>
-<td>/post/${escape(id)}</td>
-<td>destroy</td></tr></tbody></table>
-<p>Apa sih maksud dari table diatas ??? Table diatas menunjukkan beberapa URI yang ketika diakses, maka route akan secara otomatis bisa mengenali maksud dan tujuan si user dalam menentukan action, yang kemudian route akan meneruskan ke controller yang cocok. Nah karena di setiap action method pada controller membutuhkan satu buah route (URI), maka sangat boros sekali jika kita menuliskan masing - masing route nya seperti contoh dibawah ini</p>
-<pre class="${"language-php"}"><!-- HTML_TAG_START -->${`<code class="language-php"><span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/post'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@post'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/post/create'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@create'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/post'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@store'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/post/&#123;id&#125;'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@show'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/post/&#123;id&#125;/edit'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@edit'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/post/&#123;id&#125;'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@update'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/post/&#123;id&#125;'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'PostController@destroy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>`}<!-- HTML_TAG_END --></pre>
-<p>Ini adalah route normal untuk aktivitas crud adalah. Ini hanya untuk 1 controller saja loh, bagaimana kalo ada ratusan controller? Bayangin aja sendiri gimana banyak nya script seperti diatas. Nah di Laravel ada route resource yang membantu menyederhanakan script diatas, kita cuma ketik seperti dibawah ini</p>
-<pre class="${"language-php"}"><!-- HTML_TAG_START -->${`<code class="language-php"><span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">resource</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/pos'</span><span class="token punctuation">,</span>'PostController<span class="token punctuation">)</span><span class="token punctuation">;</span></code>`}<!-- HTML_TAG_END --></pre>
-<p>Keren kan? Hanya 1 baris saja sudah bisa mendefinisikan dari ke 7 baris kode diatas.</p>
-<hr>
-<p>Sampai sini dulu ya belajar controller nya, karena saya emang mau bahas yang dasar banget dari controller. Nanti part selanjutnya perlahan - lahan akan masuk dan mempelajari controller nya sedetail yang saya pahami. Semoga bermanfaat teman - teman :-)</p>`
-  })}`;
-});
-var dasarControllerDiLaravel5Part1 = /* @__PURE__ */ Object.freeze({
-  __proto__: null,
-  [Symbol.toStringTag]: "Module",
-  "default": Dasar_controller_di_laravel_5_part_1,
-  metadata: metadata$x
-});
-var metadata$w = {
+var metadata$v = {
   "title": "Migrasi dari Dynamic ke Static Blog",
   "date": "2019-05-04T07:27:00.000Z",
   "description": "Cerita singkat migrasi dari blog dinamis ke static blog",
@@ -22083,7 +21992,7 @@ var metadata$w = {
   "slug": "migrasi-dari-dynamic-ke-static-blog"
 };
 var Migrasi_dari_dynamic_ke_static_blog = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$w), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$v), {}, {
     default: () => `<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/snipcart.com/media/204009/static-site-generators.png"}" style="${"width:100%;height:auto;"}">
 <br>
 <p>Saya termasuk orang yang demen ngeblog, udah bertahun tahun melanglang buana di dunia per-blog-an mulai dari yang jadul (blogspot) hingga yang kekinian. Nah cerita kali ini sebagai ulasan singkat kenapa saya harus migrasi dari dynamic ke static blog.</p>
@@ -22108,9 +22017,9 @@ var migrasiDariDynamicKeStaticBlog = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Migrasi_dari_dynamic_ke_static_blog,
-  metadata: metadata$w
+  metadata: metadata$v
 });
-var metadata$v = {
+var metadata$u = {
   "draft": false,
   "title": "Programmer adalah Pembelajar Sejati",
   "date": "2018-10-13T19:33:14.000Z",
@@ -22119,7 +22028,7 @@ var metadata$v = {
   "slug": "programmer-adalah-pembelajar-sejati"
 };
 var Programmer_adalah_pembelajar_sejati = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$v), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$u), {}, {
     default: () => `<p>Demi mencapai level tertentu dan memperoleh wawasan yang luas, hanya bisa didapat melalui belajar. Tentunya setiap orang memiliki cara belajar dan tingkatan belajar yang berbeda beda, misalnya seorang guru bahasa Inggris hanya belajar bahasa Inggris saja (ya iyalah), beda dengan seorang arsitek bangunan yang belajar matematika serta ilmu turunannya. Nah kali ini saya akan bahas alasan apa saja yang membuat saya membentuk sebuah statemen seperti judul diatas, <strong>Programmer adalah pembelajar sejati</strong>.</p>
 <h2>Teknologi terus berkembang</h2>
 <p>Sudah bukan rahasia lagi bahwa teknologi masa kini sangat cepat sekali berkembang. Dahulu device memory untuk menyimpan data beberapa megabytes saja ukurannya naudzubillah gede nya, sekarang hanya dengan mini flashdrive kita sudah bisa membawa device memory dengan kapasitas 1TB, bahkan bisa lebih gede lagi kapasitas nya. Begitu pula dengan bahasa pemrograman yang selalu berkembang dari masa ke masa. Misalnya saja seperti PHP yang selalu bertambah versi nya dengan penambahan - penambahan fitur yang luar biasa hebat nya. Dan yang lagi hype sekarang adalah Javascript, dulu nya yang cuma jalan sebagai DOM Manipulator di web frontend sekarang udah bisa kerja jadi backend, native mobile app, bahkan sampai IOT sekalipun.</p>
@@ -22145,9 +22054,9 @@ var programmerAdalahPembelajarSejati = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Programmer_adalah_pembelajar_sejati,
-  metadata: metadata$v
+  metadata: metadata$u
 });
-var metadata$u = {
+var metadata$t = {
   "title": "Tips dan Trik Array pada Javascript",
   "date": "2019-10-27T20:53:00.000Z",
   "description": "Banyak sekali metode atau trik dalam memanipulasi data pada sebuah array, berikut ini adalah tips dan trik dalam mengolah array pada JavaScript",
@@ -22156,7 +22065,7 @@ var metadata$u = {
   "slug": "tips-dan-trik-array-pada-javascript"
 };
 var Tips_dan_trik_array_pada_javascript = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$u), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$t), {}, {
     default: () => `<p>Array pada bahasa pemrograman merupakan salah satu konsep / fitur yang sangat penting, dalam mengelola data pada array pun ada banyak sekali caranya. Nah kali ini saya akan berbagi sedikit tentang pengelolaan elemen / data pada sebuah array dengan cara yang engga biasa. Yok mulai\u2026</p>
 <h2>1. Menghapus duplikat data pada Array</h2>
 <p>Ada 2 cara</p>
@@ -22254,9 +22163,9 @@ var tipsDanTrikArrayPadaJavascript = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Tips_dan_trik_array_pada_javascript,
-  metadata: metadata$u
+  metadata: metadata$t
 });
-var metadata$t = {
+var metadata$s = {
   "draft": false,
   "title": "Membuat RBAC Sendiri : Konsep - Part 1",
   "date": "2019-02-02T23:34:11.000Z",
@@ -22265,7 +22174,7 @@ var metadata$t = {
   "slug": "membuat-rbac-sendiri-konsep-part-1"
 };
 var Membuat_rbac_sendiri_konsep_part_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$t), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$s), {}, {
     default: () => `<p>RBAC (Role Based Access Control) adalah fitur wajib yang harus ada di sebuah web aplikasi. RBAC ini sendiri berfungsi untuk membatasi suatu user dalam mengakses sebuah / beberapa fitur dalam sebuah aplikasi. Misalkan contoh yang paling gampang, dalam aplikasi yang akan kita buat membutuh kan 4 menu, yakni master barang, master user, transaksi penjualan, dan invoice. Sedangkan untuk user nya kita punya Andi, Budi, dan Candra.</p>
 <ol><li>Andi seorang Manager, dia bisa melakukan CRUD di menu master barang dan master user saja. Dan dia juga bisa memantau data transaksi penjualan, tetapi dia ga bisa melakukan create / update / delete.</li>
 <li>Budi seorang Marketing, dia bisa melakukan CRUD di menu penjualan saja, tetapi dia juga bisa melihat data barang (tanpa bisa create / update / delete data).</li>
@@ -22348,9 +22257,9 @@ var membuatRbacSendiriKonsepPart1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Membuat_rbac_sendiri_konsep_part_1,
-  metadata: metadata$t
+  metadata: metadata$s
 });
-var metadata$s = {
+var metadata$r = {
   "title": "Mengenal Route di Laravel 5 - Part 1",
   "date": "2017-11-28T15:58:19.000Z",
   "tags": ["laravel", "php"],
@@ -22359,7 +22268,7 @@ var metadata$s = {
   "slug": "mengenal-route-di-laravel-5-part-1"
 };
 var Mengenal_route_di_laravel_5_part_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$s), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$r), {}, {
     default: () => `<p>Kebanyakan para programmer yang baru mencoba suatu framework pasti kebingungan harus mulai darimana, sentuh yang mana dulu, harus ngapain dulu, dll. Dari dasar itulah saya bikin postingan ini mulai dari yang paling dasar banget (dari post sebelumnya).</p>
 <p>Sekarang ini kita akan belajar mengenal apa itu routing. Route adalah salah satu bagian paling penting yang ada di Laravel, tanpa adanya route request yang diminta oleh user tidak akan sampai ke dalam sistem. Nah URI yang akan diaksees harus kita cantumkan terlebih dahulu di file routes/web.php atau routes/api.php untuk bikin web API. Jika route sudah di definisikan didalam file routes tersebut (ambil contoh web.php), maka request yang diminta user akan diproses lebih lanjut oleh sistem Laravel.</p>
 <br>
@@ -22395,9 +22304,9 @@ var mengenalRouteDiLaravel5Part1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Mengenal_route_di_laravel_5_part_1,
-  metadata: metadata$s
+  metadata: metadata$r
 });
-var metadata$r = {
+var metadata$q = {
   "title": "Mengenal Route di Laravel 5 - Part 2",
   "date": "2017-11-29T13:27:53.000Z",
   "tags": ["laravel", "php"],
@@ -22406,7 +22315,7 @@ var metadata$r = {
   "slug": "mengenal-route-di-laravel-5-part-2"
 };
 var Mengenal_route_di_laravel_5_part_2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$r), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$q), {}, {
     default: () => `<p>Lanjutan dari postingan sebelumnya Mengenal Route di Laravel 5 - Part 1 yang membahas tentang routing dasar. Kali ini kita akan sedikit masuk kedalam palung Laravel untuk mempelajari rahasia apa aja sih yang bisa dimanfaatkan di route ini.</p>
 <h2>Segment pada Route</h2>
 <p>Segment ini berfungsi untuk mem pass / melempar parameter (variable) kedalam suatu method di controller, atau bisa juga langsung digunakan pada fungsi di route. Contohnya seperti dibawah ini</p>
@@ -22458,9 +22367,9 @@ var mengenalRouteDiLaravel5Part2 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Mengenal_route_di_laravel_5_part_2,
-  metadata: metadata$r
+  metadata: metadata$q
 });
-var metadata$q = {
+var metadata$p = {
   "title": "Berkenalan Lebih Dekat dengan PWA",
   "date": "2019-05-05T15:29:00.000Z",
   "description": "Mengenal lebih dekat dengan Progressive Web App",
@@ -22469,7 +22378,7 @@ var metadata$q = {
   "slug": "berkenalan-lebih-dekat-dengan-pwa"
 };
 var Berkenalan_lebih_dekat_dengan_pwa = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$q), {}, {
+  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$p), {}, {
     default: () => `<img class="${"center-image-post"}" src="${"https://cdn.staticaly.com/img/46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/sites/33/2018/02/cbb9dba164838b28c748310da3d4c188.png"}" style="${"width:100%;height:auto;"}">
 <br>
 <p>Artikel kali ini akan memulai seri baru yang akan membahas topik mengenai Progressive Web App (PWA). Langsung saja, PWA adalah sebuah website / aplikasi web yang dibangun diatas teknologi berbasis web modern (html, css dan js) yang berperilaku layaknya mobile native apps. Konsep PWA ini dikeluarkan oleh Google pada tahun 2015, saya sendiri tahu konsep ini dari mas Yohan Totting ketika pertama kali bikin challenge di <a href="${"https://medium.com/wwwid/tantangan-web-developer-untuk-membuat-aplikasi-web-bisa-digunakan-kurang-dari-5-detik-70bb7431741d"}" rel="${"nofollow"}">Artikel Medium</a> ini.</p>
@@ -22503,48 +22412,6 @@ var berkenalanLebihDekatDenganPwa = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Berkenalan_lebih_dekat_dengan_pwa,
-  metadata: metadata$q
-});
-var metadata$p = {
-  "title": "Bagaimana Saya Mengatur Waktu sebagai Developer",
-  "date": "2019-07-20T08:18:00.000Z",
-  "description": "Sebagai seorang developer, apalagi seorang freelancer wajib punya time management agar work-life balance nya berjalan dengan baik",
-  "tags": ["opini"],
-  "draft": false,
-  "slug": "bagaimana-saya-mengatur-waktu-sebagai-developer"
-};
-var Manajemen_waktu_sebagai_developer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$p), {}, {
-    default: () => `<img class="${"center-image-post"}" src="${"https://cdn.statically.io/img/d3tvpxjako9ywy.cloudfront.net/blog/content/uploads/2018/11/Time_Management_Apps_You_Should_Start_Using_Yesterday_1-896x518.jpg"}" style="${"width:100%;height:auto;"}">
-<br>
-<h2>Why we need a time management?</h2>
-<p>Manajemen waktu adalah bagaimana kita mengatur waktu sehingga di setiap aktivitas nya mendapatkan porsi / bagian waktu yang sesuai dengan kebutuhan. Bayangkan jika kita tidak punya manajemen waktu yang baik, hidup mu ga akan berjalan teratur dan yang terjadi malah kesehatanmu juga bakal terganggu.</p>
-<p>Bagi developer kantoran sih hal ini aman aman saja ya. Karena waktu kerja nya sudah pasti, berangkat jam 8 dan pulang jam 4 sore. Ntar dirumah terserah mau ngapain. Tidur pun terserah jam berapa. Nah bagi pekerja yang seperti ini, pulang ngantor trus nyantai, gaji dan skill nya juga biasanya nyantai, alias nyantai ga naik naik jajaja.</p>
-<p>Nah bagi seorang freelancer, time management ini sangat sangat penting sekali. Kalau sampai ga nurut, bisa <em>keteteran</em> hidup lu. Biasa nya seorang freelancer tiap bulannya punya beberapa project yang harus digarap, sehingga dia harus bener bener bisa bagi waktu kapan harus ngerjain proyek A, kapan harus ngerjain proyek B. Gak mau kan kalau si client teriak teriak mulu?</p>
-<h2>Seringnya lupa waktu</h2>
-<p>Bangsat si nusendra, sok sok an ceramah padahal diri nya juga sering lupa waktu. Saya pribadi, <em>currently</em> ketika artikel ini ditulis lagi pegang 3 project (malahan ini ada masuk 1 lagi, tapi cuman company profile aja sih, ez). Kadang kewalahan dengan pembagian waktu nya. Saking capek nya, kadang niat ngoding sampe malam eh ketiduran di sofa / bed. Padahal sebelum sebelumnya ga bakal bisa tidur sebelum jam 12an. Fisik mulai menurun kali ya haha.</p>
-<p>Nah karena amburadul nya waktu, ini juga lagi berusaha untuk memastikan bahwa time management nya berjalan dengan teratur dan baik. Biar ga nakal lagi buang buang waktu buat hal - hal yang ga penting.</p>
-<h2>Terlambat tidur, terlambat bangun</h2>
-<p>Pernah liat ada meme yang <em>nyinggung</em> kalo developer tuh, susah tidur, tapi susah bangun juga. Tidur jam 12 malem, bangun jam 8 pagi haha. Parah sih kalo ini.</p>
-<p><img src="${"https://media.giphy.com/media/xT8qBvH1pAhtfSx52U/giphy.gif"}" alt="${"ngantuk"}"></p>
-<p>Mayoritas para programmer yang doyan ngoding, doi ga akan tidur sebelum masalah nya terselesaikan. Kalau kerjaan nya belum kelar, atau bahkan masih penasaran kenapa kode nya ga <em>work</em>, dijamin dah ga bakal mampir ke tempat tidur sebelum bener bener beres. baru ntar pengen tidur kalau udah pas mentok banget dan udah males lanjut haha.</p>
-<p>Akibat nya, telat tidur, telat juga bangun nya. Telat sholat subuh juga cooyy.</p>
-<h2>How i manage my time</h2>
-<p>Oh iya, perlu diingat ya. Hidup ku dan hidup mu berbeda, kita punya masalah masing - masing. Jadi lu ga bisa telan mentah mentah tulisan ini.</p>
-<p>Oke saya telaah dulu kondisi saya. Seorang freelancer yang saat ini ngerjain 3 project. Maka time management yang akan saya terapkan adalah..</p>
-<ol><li>Pagi, ngantor dengan jarak 30 menit dari rumah. Ngerjain project kantor dari jam 08:30 - 16:30.</li>
-<li>Pulang nya, nyampe rumah rehat bentar, makan dan lainnya. Baru mulai gas lagi project kedua mulai jam 19:00 malam sampe jam 20:00. Habis itu wajib tidur.</li>
-<li>Bangun jam 4, lanjut ngoding lagi (untuk project kedua) sampe jam 07:00 / 07:30.</li>
-<li>Karena hari sabtu di kantor cuma setengah hari. Maka sisa nya bisa untuk ngerjain project ke 3 mulai dari sabtu siang sampai minggu malam.</li></ol>
-<p>Loh gak ada jam santai nya? Emang gak ada. Ingat bro, di dunia itu bukan waktu nya untuk bersantai santai, di dunia itu waktu nya kerja (kerja juga pahala kan?), nanti istirahat benerannya ketika udah di alam setelah dunia. (alesan aja ini mah, aslinya no life banget haha).</p>
-<p>NB : Padahal kenyataannya susaaaahhhh banget controlling my daily life kaya diatas. kadang ada beberapa waktu yang kelewatan, karena kecapean :(</p>
-<p><img src="${"https://media.giphy.com/media/LTYT5GTIiAMBa/giphy.gif"}" alt="${"managing time"}"></p>`
-  })}`;
-});
-var manajemenWaktuSebagaiDeveloper = /* @__PURE__ */ Object.freeze({
-  __proto__: null,
-  [Symbol.toStringTag]: "Module",
-  "default": Manajemen_waktu_sebagai_developer,
   metadata: metadata$p
 });
 var metadata$o = {
@@ -23356,7 +23223,7 @@ var metadata$e = {
   "description": "Setiap framework memiliki struktur direktori / folder yang berbeda, nah memahami struktur folder di Laravel pun sangat wajib diketahui bagi para pengguna Laravel",
   "tags": ["laravel", "php"],
   "draft": false,
-  "slug": "struktur-folder-pada-laravel-55"
+  "slug": "struktur-folder-laravel-55"
 };
 var Struktur_folder_laravel_55 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$e), {}, {
@@ -23515,7 +23382,7 @@ var metadata$c = {
   "description": "Cerita singkat mengenai meetup perdana komunitas SurabayaJS",
   "tags": ["opini"],
   "draft": false,
-  "slug": "surabayajs-meetup-perdana-1"
+  "slug": "surabayajs-meetup-perdana"
 };
 var Surabayajs_meetup_perdana = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(MarkdownLayout, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata$c), {}, {

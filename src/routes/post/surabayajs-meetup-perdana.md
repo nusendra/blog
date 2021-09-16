@@ -4,7 +4,7 @@ date: 2019-07-30 07:00:00
 description: "Cerita singkat mengenai meetup perdana komunitas SurabayaJS"
 tags: ['opini']
 draft: false
-slug: surabayajs-meetup-perdana-1
+slug: surabayajs-meetup-perdana
 ---
 
 ![surabayadev meetup #1](https://ik.imagekit.io/nusendra/_MG_9573_JXOGuftT3.jpg)

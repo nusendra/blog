@@ -35,7 +35,7 @@ public function create()
 }
 ```
 
-Setelah itu kita bisa mengakses nya melalui URL http://localhost/post/create. Kemudian silakan temen - temen create sebuah halaman view, misalnya CreatePost.blade.php. Jangan lupa untuk menampilkan teks yang di passing dari controller tadi ya. dengan cara @{{$teks}}. Maka nanti temen temen akan mendapati tulisan "Ini adalah halaman create post" di halaman CreatePost kalian.
+Setelah itu kita bisa mengakses nya melalui URL http://localhost/post/create. Kemudian silakan temen - temen create sebuah halaman view, misalnya CreatePost.blade.php. Jangan lupa untuk menampilkan teks yang di passing dari controller tadi ya.
 
 <hr/>
 
