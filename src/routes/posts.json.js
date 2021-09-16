@@ -4,8 +4,7 @@ import grayMatter from "gray-matter";
 import { format, formatDistance } from "date-fns";
 
 export async function get() {
-	const cwd = process.cwd();
-	const POSTS_DIR = path.join(cwd, "./src/routes/post");
+	const POSTS_DIR = "src/routes/post";
 
 	const posts = fs.readdirSync(POSTS_DIR).map((fileName) => {
 		const fileMd = fs.readFileSync(path.join(POSTS_DIR, fileName), "utf8");
