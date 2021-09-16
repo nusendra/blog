@@ -12,7 +12,7 @@
 			class="md:ml-auto flex flex-wrap items-center text-base justify-center"
 		>
 			<a href="/" class="mr-5 hover:text-gray-900">Home</a>
-			<a class="mr-5 hover:text-gray-900">Blog</a>
+			<a href="/blog" class="mr-5 hover:text-gray-900">Blog</a>
 			<a class="mr-5 hover:text-gray-900">Course</a>
 			<a class="mr-5 hover:text-gray-900">Now</a>
 			<a class="mr-5 hover:text-gray-900">Contact</a>
