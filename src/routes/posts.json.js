@@ -5,7 +5,7 @@ import formatDate from "date-fns/format";
 
 export async function get() {
 	const cwd = process.cwd();
-	const POSTS_DIR = path.join(cwd, "src/routes/blog");
+	const POSTS_DIR = path.join(cwd, "src/routes/post");
 
 	const posts = fs.readdirSync(POSTS_DIR).map((fileName) => {
 		const fileMd = fs.readFileSync(path.join(POSTS_DIR, fileName), "utf8");
