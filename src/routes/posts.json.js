@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import grayMatter from "gray-matter";
-import formatDate from "date-fns/format";
+import { format, formatDistance } from "date-fns";
 
 export async function get() {
 	const cwd = process.cwd();
@@ -10,17 +10,20 @@ export async function get() {
 	const posts = fs.readdirSync(POSTS_DIR).map((fileName) => {
 		const fileMd = fs.readFileSync(path.join(POSTS_DIR, fileName), "utf8");
 		const { data, content: rawContent } = grayMatter(fileMd);
-		const { title, date, slug, description } = data;
+		const { title, date, slug, description, tags } = data;
 		let content = rawContent;
 		let excerpt = "";
-		const printDate = formatDate(new Date(date), "yyyy-MM-dd");
+		const printDate = format(new Date(date), "yyyy-MM-dd");
+		const distance = formatDistance(new Date(date), new Date());
 
 		return {
 			title: title || slug,
 			slug,
 			date: printDate,
+			formatDistance: distance,
 			excerpt,
 			description,
+			tags,
 		};
 	});
 

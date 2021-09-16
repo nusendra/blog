@@ -6,7 +6,7 @@
 
 		return {
 			props: {
-				posts,
+				posts: posts.slice(0, 3),
 			},
 		};
 	}
@@ -99,13 +99,14 @@
 				Latest Blog Posts
 			</h1>
 			{#each posts as item, i}
-				<li>
-					{item.title}
-				</li>
+				<BlogList
+					slug={item.slug}
+					tags={item.tags.join(", ")}
+					date={item.formatDistance}
+					title={item.title}
+					description={item.description}
+				/>
 			{/each}
-			<BlogList />
-			<BlogList />
-			<BlogList />
 		</div>
 	</div>
 </section>

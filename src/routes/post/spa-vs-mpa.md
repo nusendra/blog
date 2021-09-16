@@ -1,0 +1,62 @@
+---
+title: SPA vs MPA
+date: 2018-01-25 00:43:46
+tags: ['opini']
+draft: false
+description: "SPA vs MPA wajib untuk diketahui, karena untuk membuat project web kita harus memilih salah satu yang paling cocok dengan kebutuhan dan spesifikasi project yang akan kita bangun."
+slug: spa-vs-mpa
+---
+
+Seperti yang sudah saya janjikan sebelumnya untuk jelasin SPA vs MPA. Apa sih SPA itu? Dan apa pula nih MPA? SPA adalah Single Page Application sedangkan MPA adalah Multi Page Application atau biasa yang disebut traditional web app. Masing - masing metode punya kelebihan dan kekurangan, tergantung kebutuhan kita apakah sistem yang akan kita buat perlu menerapkan SPA atau MPA.
+
+Sebelum lanjut membaca postingan ini, saya sarankan untuk membaca blog post saya sebelum ini [disini](https://nusendra.com/post/menentukan-teknologi-yang-tepat-sebelum-membuat-project) untuk menentukan sistem dan metode apa yang cocok untuk aplikasi yang akan temen - temen bangun. Sekali lagi saya tekankan, SPA dan MPA punya kelebihan dan kekurangan masing - masing, pakailah yang sesuai dengan situasi dan kondisi yang temen - temen butuhkan. Diharapkan setelah membaca blog post ini, temen - temen bisa menentukan sebaiknya memakai SPA atau MPA untuk web app nya.
+
+## SINGLE PAGE APPLICATION
+
+Oke, kita ke pembahasan pertama. Seperti namanya, Single Page yang berarti hanya ada 1 halaman aplikasi. Tapi ini bukan artian yang sesungguhnya ya, karena dalam real pengaplikasiannya ada beberapa halaman. maksudnya disini adalah kita gak akan menemukan reload browser ketika berpindah halaman, nah maka dari itu disebut single page #cmiiw.  Contoh nya single page application itu apa sihh??? Contohnya ada seperti di Gmail, Medium, Github, dll. Jadi detail nya seperti ini, ketika berpindah halaman, tidak semua elemen di page itu kita reload / muat ulang. Setiap kita berpindah halaman, yang di load ulang hanya elemen konten nya saja. Dengan demikian akses kedalam aplikasi ini sangat cepat dan tentunya tidak memakan banyak kuota internet.
+
+### PROS (Kelebihan)
+
+SPA sangat cepat. Kita hanya meload halaman (html + css + js) diawal membuka aplikasi, kemudian setelah nya SPA ini hanya me load data nya saja, dan tentu saja tidak meload halaman web nya (selama halaman itu tidak di refresh, kalo di refresh ya jelas dong di load lagi halamannya).
+
+Keuntungan bagi programmer, kita ga perlu sebuah web server untuk menjalankan SPA, kita hanya ngoding html, css dan js nya kemudian bisa langsung dijalankan via file (`file://uri`). Hal ini bisa dilakukan jika kita pakai framework javascript ya, kalau pakai framework PHP yang mengusung SPA, ya tentunya butuh web server.
+
+SPA mudah di debug pakai Chrome. Jika kalian menggunakan VueJS maka ketika kalian menginstall Vue Devtools, anda bisa dengan mudah memantau data, component, route, state management, dll di Chrome DevTools. Keren !!
+
+Tentu nya ketika kalian selesai dengan project javascript yang mengusung metode SPA ini, anda akan dengan mudah membuat aplikasi mobile nya. Aplikasi mobile disini adalah aplikasi yang berbasis javascript seperti React Native, Nativescript-Vue, atau Weex. Ketiga nya ini dibangun dengan memanfaatkan javascript.
+
+SPA bisa menyimpan data di cache atau local storage. Jadi jika kalian berada di kondisi offline, web app kalian masih bisa berjalan dengan baik karena SPA disimpan di ci cache / local storage. Selain itu pemanfaatan PWA (Progressive Web App) juga akan sangat membantu
+
+### CONS (Kekurangan)
+
+Sangat sulit sekali untuk optimasi SEO di SPA, karena SPA hanya meload file javascript saja. Tetapi jika ingin menerapkan SEO optimization, bisa mencoba teknik SSR (Server Side Rendering). SSR adalah merender halaman javascript menjadi html yang di proses di server, kemudian server menyajikan halaman html ke client side. Jika kalian menggunakan VueJS untuk frontend, maka alternatif SSR yang terbaik bisa mencoba NuxtJS.
+
+Jika aplikasi yang dibangun tergolong besar, maka pada load awal akan memakan waktu. Tidak jarang pula aplikasi SPA ini membutuhkan memory yang lebih besar. Tetapi ini bukan masalah besar yang dihadapi jika kalian memakai NuxtJS. Karena di Nuxt, apa yang ada di halaman itu saja yang di load, jadi sangat meringankan beban memory di sisi client.
+
+Javascript di browser harus enabled. Tetapi di jaman sekarang, mana ada sih yang menonaktifkan javascript nya?
+
+## MULTI PAGE APPLICATION
+
+MPA kebalikan dari SPA. Jika pada SPA kita mengenal single page, maka di MPA ini kita mengenal multi page (`#ya iyalah`). MPA juga disebut dengan tradisional web app. Seperti yang sudah kita ketahui, website jaman old dulu masih menggunakan MPA yakni ketika berganti ke halaman baru di web itu, maka website nya akan meload ulang seluruh elemen di halaman itu. Yang artinya ketika kita ingin melihat konten blog, maka website akan me load ulang seluruh elemen web (header, sidebar, dan footer) yang mana hal itu tidak kita inginkan, karena kita hanya ingin melihat konten nya saja. Otomatis hal ini juga berpengaruh dengan performa loading web, selain itu juga menyedot kuota internet lebih banyak. Contoh sederhanaweb MPA adalah Google.com , ketika kita pindah ke halaman 2, google akan meload ulang header nya.
+
+### PROS (Kelebihan)
+
+Sangat bagus untuk SEO. Karena di tiap halaman kita bisa menaruh keyword yang berbeda. Selain itu google crawler juga bisa langsung merayapi halaman kita, karena halaman kita sudah ter render ke mode html.
+
+### CONS (Kekurangan)
+
+Bagi user, membutuhkan banyak kuota internet karena setiap berpindah halaman, harus mendownload ulang seluruh elemen halaman, yang mana ini bukan sangat tidak efisien.
+
+Jika memakai framework, frontend dan backend menjadi satu project / repository. Hal ini menyebabkan proses maintenance akan lebih menyusahkan, bahkan untuk kerja tim kadang juga ada kendala. Tapi ini bukan masalah besar sih jika project sudah di manage dengan baik.
+
+Kesusahan dalam membuat frontend / UI yang interaktif. Bisa aja sih di frontend nya kita include kan framework JS, tapi ketika kalian mencoba nya sendiri, hal ini sama sekali tidak efisien.
+
+<hr/>
+
+## Kesimpulan
+
+Jika temen temen pengen membuat sebuah blog, yang mana membutuhkan SEO agar google bisa dengan mudah merayapi konten kita, maka pakailah MPA. Jika kalian membuat sebuah web app untuk internal kantor misalnya, atau sistem informasi di sebuah perkantoran / sekolah, halaman dashboard user, dan lainnya, temen temen bisa pakai SPA yang mana web app ini tidak membutuhkan SEO.
+
+Nah, sekarang apakah sudah ada pandangan harus pake teknologi dan metode seperti apa di project yang akan datang? :-)
+
+Jika ada tambahan dan koreksi, silakan tulis di kolom komentar yaa. Mohon maaf kalau ada kesalahan penulisan atau kurang tepat dalam menuliskan blog ini. Semoga bermanfaat bagi temen - temen pembaca.
