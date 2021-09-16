@@ -1,6 +1,22 @@
+<script context="module">
+	export async function load({ page, fetch }) {
+		const url = `/posts.json`;
+		const res = await fetch(url);
+		const posts = await res.json();
+
+		return {
+			props: {
+				posts,
+			},
+		};
+	}
+</script>
+
 <script>
 	import YoutubeCard from "../components/YoutubeCard.svelte";
 	import BlogList from "../components/BlogList.svelte";
+
+	export let posts;
 </script>
 
 <section class="text-gray-600 body-font bg-gray-100">
@@ -82,6 +98,11 @@
 			>
 				Latest Blog Posts
 			</h1>
+			{#each posts as item, i}
+				<li>
+					{item.title}
+				</li>
+			{/each}
 			<BlogList />
 			<BlogList />
 			<BlogList />
