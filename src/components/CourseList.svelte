@@ -5,7 +5,7 @@
 <div class="flex flex-wrap -m-4">
 	<YoutubeCard
 		url="https://www.youtube.com/playlist?list=PLnQvfeVegcJbbmFmN5ZMnkylQXp6mb7gP"
-		imageSource="https://i.ibb.co/tm5QJcr/VUE3-ADVANCE-1.png"
+		imageSource="https://i.ibb.co/CttDp0Q/vue-advance.webp"
 		imageAlt="vue3 advance"
 		titleTag="Frontend, Vuejs"
 		title="Vue3 Tingkat Lanjut"
@@ -13,7 +13,7 @@
 	/>
 	<YoutubeCard
 		url="https://www.youtube.com/playlist?list=PLnQvfeVegcJbn7ZDOUNbRN25obY4htSlB"
-		imageSource="https://i.ibb.co/v1x0J5R/VUE3-ADVANCE.png"
+		imageSource="https://i.ibb.co/L8d1QHH/vue-composition-api.webp"
 		imageAlt="vue3 composition api"
 		titleTag="Frontend, Vuejs"
 		title="Vue3 Composition API"
@@ -21,7 +21,7 @@
 	/>
 	<YoutubeCard
 		url="https://www.youtube.com/playlist?list=PLnQvfeVegcJbV2NGXpay7ulU6ybASzAlG"
-		imageSource="https://i.ibb.co/7JfFFRv/vue3-dasar.png"
+		imageSource="https://i.ibb.co/NTgkbH9/vue-dasar.webp"
 		imageAlt="vue3 dasar"
 		titleTag="Frontend, Vuejs"
 		title="Vue3 Tingkat Dasar"
@@ -29,7 +29,7 @@
 	/>
 	<YoutubeCard
 		url="https://www.youtube.com/playlist?list=PLnQvfeVegcJbZAXLrFm7ncMrXBP6fcb0O"
-		imageSource="https://i.ibb.co/n0xjW1L/ts-design-pattern.png"
+		imageSource="https://i.ibb.co/5kcBnWb/ts-design-patter.webp"
 		imageAlt="typescript design pattern"
 		titleTag="Backend, TypeScript"
 		title="TypeScript Design Pattern"
@@ -37,7 +37,7 @@
 	/>
 	<YoutubeCard
 		url="https://www.youtube.com/playlist?list=PLnQvfeVegcJZRieebeIp0xj1NeC5L633Y"
-		imageSource="https://i.ibb.co/brf0Cpt/ts-oop.png"
+		imageSource="https://i.ibb.co/qs93kJS/ts-oop.webp"
 		imageAlt="typescript oop"
 		titleTag="Backend, TypeScript"
 		title="TypeScript OOP"
@@ -45,7 +45,7 @@
 	/>
 	<YoutubeCard
 		url="https://www.youtube.com/playlist?list=PLnQvfeVegcJZHhImGvDpnp0P725Ykx4Qt"
-		imageSource="https://i.ibb.co/LRqWHtz/ts-express.png"
+		imageSource="https://i.ibb.co/VxzXN2h/ts-express.webp"
 		imageAlt="typescript expressjs"
 		titleTag="Backend, TypeScript"
 		title="TypeScript & ExpressJS"
@@ -53,7 +53,7 @@
 	/>
 	<YoutubeCard
 		url="https://www.youtube.com/playlist?list=PLnQvfeVegcJbjCnML6FdusK-rl-oDRMXJ"
-		imageSource="https://i.ibb.co/YZLBtYT/ts-dasar.png"
+		imageSource="https://i.ibb.co/wQqcTyX/ts-dasar.webp"
 		imageAlt="typescript dasar"
 		titleTag="Backend, TypeScript"
 		title="TypeScript Tingkat Dasar"
