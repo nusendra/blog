@@ -2,7 +2,7 @@
 draft: false
 title: Setup Vim Plug di NeoVIM
 date: 2021-10-08 15:26:52
-tags: ['vim']
+tags: ['Code Editor']
 description: "Langkah - langkah setup vim plug di NeoVIM"
 slug: setup-vim-plug-di-neovim
 ---
