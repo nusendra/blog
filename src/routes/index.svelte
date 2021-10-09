@@ -6,7 +6,7 @@
 
 		return {
 			props: {
-				posts: posts.slice(0, 3),
+				posts: posts.slice(0, 5),
 			},
 		};
 	}
