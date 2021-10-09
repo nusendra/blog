@@ -63,6 +63,7 @@ const c = [
 	() => import("../../../src/routes/post/groupby-array-pada-javascript.md"),
 	() => import("../../../src/routes/post/manfaat-dari-berpikir-negatif.md"),
 	() => import("../../../src/routes/post/how-to-setup-my-personal-vim.md"),
+	() => import("../../../src/routes/post/setup-vim-devicons-di-neovim.md"),
 	() => import("../../../src/routes/post/konfigurasi-dasar-laravel-5.md"),
 	() => import("../../../src/routes/post/struktur-folder-laravel-55.md"),
 	() => import("../../../src/routes/post/goodbye-mobx-welcome-remx.md"),
@@ -274,56 +275,59 @@ export const routes = [
 	// src/routes/post/how-to-setup-my-personal-vim.md
 	[/^\/post\/how-to-setup-my-personal-vim\/?$/, [c[0], c[63]], [c[1]]],
 
+	// src/routes/post/setup-vim-devicons-di-neovim.md
+	[/^\/post\/setup-vim-devicons-di-neovim\/?$/, [c[0], c[64]], [c[1]]],
+
 	// src/routes/post/konfigurasi-dasar-laravel-5.md
-	[/^\/post\/konfigurasi-dasar-laravel-5\/?$/, [c[0], c[64]], [c[1]]],
+	[/^\/post\/konfigurasi-dasar-laravel-5\/?$/, [c[0], c[65]], [c[1]]],
 
 	// src/routes/post/struktur-folder-laravel-55.md
-	[/^\/post\/struktur-folder-laravel-55\/?$/, [c[0], c[65]], [c[1]]],
+	[/^\/post\/struktur-folder-laravel-55\/?$/, [c[0], c[66]], [c[1]]],
 
 	// src/routes/post/goodbye-mobx-welcome-remx.md
-	[/^\/post\/goodbye-mobx-welcome-remx\/?$/, [c[0], c[66]], [c[1]]],
+	[/^\/post\/goodbye-mobx-welcome-remx\/?$/, [c[0], c[67]], [c[1]]],
 
 	// src/routes/post/surabayajs-meetup-perdana.md
-	[/^\/post\/surabayajs-meetup-perdana\/?$/, [c[0], c[67]], [c[1]]],
+	[/^\/post\/surabayajs-meetup-perdana\/?$/, [c[0], c[68]], [c[1]]],
 
 	// src/routes/post/setup-vim-plug-di-neovim.md
-	[/^\/post\/setup-vim-plug-di-neovim\/?$/, [c[0], c[68]], [c[1]]],
+	[/^\/post\/setup-vim-plug-di-neovim\/?$/, [c[0], c[69]], [c[1]]],
 
 	// src/routes/post/surabayajs-meetup-ketiga.md
-	[/^\/post\/surabayajs-meetup-ketiga\/?$/, [c[0], c[69]], [c[1]]],
+	[/^\/post\/surabayajs-meetup-ketiga\/?$/, [c[0], c[70]], [c[1]]],
 
 	// src/routes/post/berkenalan-dengan-pugjs.md
-	[/^\/post\/berkenalan-dengan-pugjs\/?$/, [c[0], c[70]], [c[1]]],
+	[/^\/post\/berkenalan-dengan-pugjs\/?$/, [c[0], c[71]], [c[1]]],
 
 	// src/routes/post/berkenalan-dengan-vuejs.md
-	[/^\/post\/berkenalan-dengan-vuejs\/?$/, [c[0], c[71]], [c[1]]],
+	[/^\/post\/berkenalan-dengan-vuejs\/?$/, [c[0], c[72]], [c[1]]],
 
 	// src/routes/post/manfaat-menggunakan-pwa.md
-	[/^\/post\/manfaat-menggunakan-pwa\/?$/, [c[0], c[72]], [c[1]]],
+	[/^\/post\/manfaat-menggunakan-pwa\/?$/, [c[0], c[73]], [c[1]]],
 
 	// src/routes/post/surabayajs-meetup-kedua.md
-	[/^\/post\/surabayajs-meetup-kedua\/?$/, [c[0], c[73]], [c[1]]],
+	[/^\/post\/surabayajs-meetup-kedua\/?$/, [c[0], c[74]], [c[1]]],
 
 	// src/routes/post/vim-keyboard-cheatsheet.md
-	[/^\/post\/vim-keyboard-cheatsheet\/?$/, [c[0], c[74]], [c[1]]],
+	[/^\/post\/vim-keyboard-cheatsheet\/?$/, [c[0], c[75]], [c[1]]],
 
 	// src/routes/post/momentjs-dengan-nuxtjs.md
-	[/^\/post\/momentjs-dengan-nuxtjs\/?$/, [c[0], c[75]], [c[1]]],
+	[/^\/post\/momentjs-dengan-nuxtjs\/?$/, [c[0], c[76]], [c[1]]],
 
 	// src/routes/post/setting-vhost-di-nginx.md
-	[/^\/post\/setting-vhost-di-nginx\/?$/, [c[0], c[76]], [c[1]]],
+	[/^\/post\/setting-vhost-di-nginx\/?$/, [c[0], c[77]], [c[1]]],
 
 	// src/routes/post/auth-module-di-nuxtjs.md
-	[/^\/post\/auth-module-di-nuxtjs\/?$/, [c[0], c[77]], [c[1]]],
+	[/^\/post\/auth-module-di-nuxtjs\/?$/, [c[0], c[78]], [c[1]]],
 
 	// src/routes/post/perubahan-jam-tidur.md
-	[/^\/post\/perubahan-jam-tidur\/?$/, [c[0], c[78]], [c[1]]],
+	[/^\/post\/perubahan-jam-tidur\/?$/, [c[0], c[79]], [c[1]]],
 
 	// src/routes/post/migrasi-ke-vim.md
-	[/^\/post\/migrasi-ke-vim\/?$/, [c[0], c[79]], [c[1]]],
+	[/^\/post\/migrasi-ke-vim\/?$/, [c[0], c[80]], [c[1]]],
 
 	// src/routes/post/spa-vs-mpa.md
-	[/^\/post\/spa-vs-mpa\/?$/, [c[0], c[80]], [c[1]]]
+	[/^\/post\/spa-vs-mpa\/?$/, [c[0], c[81]], [c[1]]]
 ];
 
 // we import the root layout/error components eagerly, so that
