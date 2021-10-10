@@ -1,6 +1,6 @@
 ---
 title: "Transform Absolute Path ke Relative Path di TypeScript"
-date: 2021-10-10 21:09:00
+date: 2021-10-11 21:09:00
 description: "Secara alami compiler TypeScript tidak bisa mentransform absolute ke relative path, begini caranya."
 tags: ['Typescript']
 draft: false
