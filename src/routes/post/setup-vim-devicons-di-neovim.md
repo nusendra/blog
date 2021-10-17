@@ -28,11 +28,16 @@ Setelah itu langsung jalanin **:PlugInstall** di NVIM kalian. Kalau kalian lihat
 
 Untuk font saya pakai ini [https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
 
-Cara instalasi nya silakan ikuti command di terminal berikut ini
-
+Cara instalasi nya silakan ikuti command di terminal berikut ini. Dibawah ini jika kalian menggunakan Linux
 ```
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+```
+
+Untuk Mac bisa pakai dibawah ini
+
+```
+cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
 Nah kalau udah silakan restart NVIM kalian, nanti seharusnya tampilan dari nerdtree kalian akan jadi seperti ini.
