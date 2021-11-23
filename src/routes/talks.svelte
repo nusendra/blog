@@ -135,6 +135,15 @@
 				title="SurabayaDev Upgrading Volunteer"
 				description="Berbagi tentang segala hal yang berkaitan dengan personal branding, karir, dan programming. Event upgrading volunteer oleh SurabayaDev"
 			/>
+
+			<TalkCard
+				thumbnailUrl="https://i.ibb.co/9b1RSKp/nusendra-surabayajs17.webp"
+				thumbnailAlt="nusendra surabayajs17"
+				tag="Seminar"
+				title="Javascript Fatigue & Frameworks War"
+				description="Sharing, diskusi, dan ngobrol bareng mengenai kelelahan atas ekosistem Javascript yang dialami para developer dan solusinya"
+				slideUrl="https://docs.google.com/presentation/d/1cjWAcw4_sS_9WxPY9rfkR5qQC8HfHPZXaNBh9aALx2E/edit?usp=sharing"
+			/>
 		</div>
 	</div>
 </section>
