@@ -1,9 +1,7 @@
 <script>
   export let description;
-  export let title;
   export let date;
   export let tags;
-  export let slug;
 </script>
 
 <div class="py-8 flex flex-wrap md:flex-nowrap">
@@ -12,9 +10,7 @@
     <span class="mt-1 text-gray-500 text-sm">{date}</span>
   </div>
   <div class="md:flex-grow">
-    <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
-      <a href="{slug}">{title}</a>
-    </h2>
+    <slot />
     <p class="leading-relaxed">
       {description}
     </p>

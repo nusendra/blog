@@ -23,12 +23,14 @@
 		<div class="-my-8 divide-y-2 divide-gray-100">
 			{#each posts as item, i}
 				<BlogList
-					slug="/post/{item.slug}"
 					tags={item.tags.join(", ")}
 					date={item.formatDistance}
-					title={item.title}
 					description={item.description}
-				/>
+				>
+					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+						<a href="/post/{item.slug}">{item.title}</a>
+					</h2>
+				</BlogList>
 			{/each}
 		</div>
 	</div>
