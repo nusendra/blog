@@ -144,6 +144,16 @@
 				description="Sharing, diskusi, dan ngobrol bareng mengenai kelelahan atas ekosistem Javascript yang dialami para developer dan solusinya"
 				slideUrl="https://docs.google.com/presentation/d/1cjWAcw4_sS_9WxPY9rfkR5qQC8HfHPZXaNBh9aALx2E/edit?usp=sharing"
 			/>
+
+
+			<TalkCard
+				thumbnailUrl="https://i.ibb.co/GcBNhN0/alterra-crop.webp"
+				thumbnailAlt="nusendra alterra clean architecture"
+				tag="Webinar"
+				title="Clean Architecture in JavaScript"
+				description="Sharing tentang clean architecture, app architecture, backend for frontend, dan monorepo"
+				slideUrl="https://docs.google.com/presentation/d/1g0w6AJRaHRJkcUmwavWzmG4l7iZJHFvrbFoIjK4I1BQ/edit?usp=sharing"
+			/>
 		</div>
 	</div>
 </section>
