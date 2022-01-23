@@ -10,6 +10,7 @@ const config = {
 			extensions: [".svelte.md", ".md", ".svx"],
 			layout: {
 				post: "./src/components/MarkdownLayout.svelte",
+				"work-log": "./src/components/MarkdownLayout.svelte",
 			},
 		}),
 		preprocess({

@@ -13,7 +13,7 @@
   </div>
   <div class="md:flex-grow">
     <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
-      <a href="/post/{slug}">{title}</a>
+      <a href="{slug}">{title}</a>
     </h2>
     <p class="leading-relaxed">
       {description}
