@@ -55,7 +55,11 @@
 					date={item.formatDistance}
 					title={item.title}
 					description={item.description}
-				/>
+				>
+					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+						<a href="/post/{item.slug}">{item.title}</a>
+					</h2>
+				</BlogList>
 			{/each}
 		</div>
 	</div>
