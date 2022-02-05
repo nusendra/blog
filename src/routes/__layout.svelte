@@ -6,6 +6,10 @@
 	import MyFooter from "../components/Footer.svelte";
 </script>
 
-<MyHeader />
-<slot />
-<MyFooter />
+<div class="flex flex-col h-screen">
+	<MyHeader />
+	<div class="mb-auto">
+		<slot />
+	</div>
+	<MyFooter />
+</div>
