@@ -59,4 +59,12 @@
 		title="TypeScript Tingkat Dasar"
 		totalVideos="25"
 	/>
+	<YoutubeCard
+		url="https://www.youtube.com/watch?v=UQQtR8FC7mQ&list=PLnQvfeVegcJYV7uSax0W8z3peCyiOxr6W"
+		imageSource="https://i.ibb.co/BtYPcnT/vue-pinia-nusendra.webp"
+		imageAlt="vue pinia nusendra"
+		titleTag="Vuejs, Pinia"
+		title="Vuejs 3 - Pinia"
+		totalVideos="4"
+	/>
 </div>
