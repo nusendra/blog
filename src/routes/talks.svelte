@@ -145,7 +145,6 @@
 				slideUrl="https://docs.google.com/presentation/d/1cjWAcw4_sS_9WxPY9rfkR5qQC8HfHPZXaNBh9aALx2E/edit?usp=sharing"
 			/>
 
-
 			<TalkCard
 				thumbnailUrl="https://i.ibb.co/GcBNhN0/alterra-crop.webp"
 				thumbnailAlt="nusendra alterra clean architecture"
@@ -153,6 +152,15 @@
 				title="Clean Architecture in JavaScript"
 				description="Sharing tentang clean architecture, app architecture, backend for frontend, dan monorepo"
 				slideUrl="https://docs.google.com/presentation/d/1g0w6AJRaHRJkcUmwavWzmG4l7iZJHFvrbFoIjK4I1BQ/edit?usp=sharing"
+			/>
+
+			<TalkCard
+				thumbnailUrl="https://i.ibb.co/bXyRPz3/nusendra-sigmatech.webp"
+				thumbnailAlt="nusendra asiansigmatect"
+				tag="Webinar"
+				title="How to Build Scalable App with JavaScript"
+				description="Sharing tentang best practices, microservices, BFF, monorepo, dan clean architecture"
+				slideUrl="https://docs.google.com/presentation/d/1J0TXT-1pjnWsoVRLbnA4kxGSF7DX4UGvnG05zAzqSC0/edit?usp=sharing"
 			/>
 		</div>
 	</div>
