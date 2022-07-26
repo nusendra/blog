@@ -51,6 +51,7 @@ const c = [
 	() => import("../../../src/routes/post/jangan-dibuka-nanti-jadi-lemot-44440000.md"),
 	() => import("../../../src/routes/post/memajukan-komunitas-di-webunconfid-2018.md"),
 	() => import("../../../src/routes/post/docker-compose-postgresql-dan-pgadmin4.md"),
+	() => import("../../../src/routes/post/mencoba-archlinux-dengan-endeavouros.md"),
 	() => import("../../../src/routes/post/migrasi-dari-dynamic-ke-static-blog.md"),
 	() => import("../../../src/routes/post/programmer-adalah-pembelajar-sejati.md"),
 	() => import("../../../src/routes/post/tips-dan-trik-array-pada-javascript.md"),
@@ -246,107 +247,110 @@ export const routes = [
 	// src/routes/post/docker-compose-postgresql-dan-pgadmin4.md
 	[/^\/post\/docker-compose-postgresql-dan-pgadmin4\/?$/, [c[0], c[51]], [c[1]]],
 
+	// src/routes/post/mencoba-archlinux-dengan-endeavouros.md
+	[/^\/post\/mencoba-archlinux-dengan-endeavouros\/?$/, [c[0], c[52]], [c[1]]],
+
 	// src/routes/post/migrasi-dari-dynamic-ke-static-blog.md
-	[/^\/post\/migrasi-dari-dynamic-ke-static-blog\/?$/, [c[0], c[52]], [c[1]]],
+	[/^\/post\/migrasi-dari-dynamic-ke-static-blog\/?$/, [c[0], c[53]], [c[1]]],
 
 	// src/routes/post/programmer-adalah-pembelajar-sejati.md
-	[/^\/post\/programmer-adalah-pembelajar-sejati\/?$/, [c[0], c[53]], [c[1]]],
+	[/^\/post\/programmer-adalah-pembelajar-sejati\/?$/, [c[0], c[54]], [c[1]]],
 
 	// src/routes/post/tips-dan-trik-array-pada-javascript.md
-	[/^\/post\/tips-dan-trik-array-pada-javascript\/?$/, [c[0], c[54]], [c[1]]],
+	[/^\/post\/tips-dan-trik-array-pada-javascript\/?$/, [c[0], c[55]], [c[1]]],
 
 	// src/routes/post/membuat-rbac-sendiri-konsep-part-1.md
-	[/^\/post\/membuat-rbac-sendiri-konsep-part-1\/?$/, [c[0], c[55]], [c[1]]],
+	[/^\/post\/membuat-rbac-sendiri-konsep-part-1\/?$/, [c[0], c[56]], [c[1]]],
 
 	// src/routes/post/mengenal-route-di-laravel-5-part-1.md
-	[/^\/post\/mengenal-route-di-laravel-5-part-1\/?$/, [c[0], c[56]], [c[1]]],
+	[/^\/post\/mengenal-route-di-laravel-5-part-1\/?$/, [c[0], c[57]], [c[1]]],
 
 	// src/routes/post/mengenal-route-di-laravel-5-part-2.md
-	[/^\/post\/mengenal-route-di-laravel-5-part-2\/?$/, [c[0], c[57]], [c[1]]],
+	[/^\/post\/mengenal-route-di-laravel-5-part-2\/?$/, [c[0], c[58]], [c[1]]],
 
 	// src/routes/post/berkenalan-lebih-dekat-dengan-pwa.md
-	[/^\/post\/berkenalan-lebih-dekat-dengan-pwa\/?$/, [c[0], c[58]], [c[1]]],
+	[/^\/post\/berkenalan-lebih-dekat-dengan-pwa\/?$/, [c[0], c[59]], [c[1]]],
 
 	// src/routes/post/menggunakan-knexjs-di-express-app.md
-	[/^\/post\/menggunakan-knexjs-di-express-app\/?$/, [c[0], c[59]], [c[1]]],
+	[/^\/post\/menggunakan-knexjs-di-express-app\/?$/, [c[0], c[60]], [c[1]]],
 
 	// src/routes/post/mengenal-middleware-di-laravel-5.md
-	[/^\/post\/mengenal-middleware-di-laravel-5\/?$/, [c[0], c[60]], [c[1]]],
+	[/^\/post\/mengenal-middleware-di-laravel-5\/?$/, [c[0], c[61]], [c[1]]],
 
 	// src/routes/post/jabber-xmpp-menggunakan-nodejs.md
-	[/^\/post\/jabber-xmpp-menggunakan-nodejs\/?$/, [c[0], c[61]], [c[1]]],
+	[/^\/post\/jabber-xmpp-menggunakan-nodejs\/?$/, [c[0], c[62]], [c[1]]],
 
 	// src/routes/post/membangun-komunitas-surabayajs.md
-	[/^\/post\/membangun-komunitas-surabayajs\/?$/, [c[0], c[62]], [c[1]]],
+	[/^\/post\/membangun-komunitas-surabayajs\/?$/, [c[0], c[63]], [c[1]]],
 
 	// src/routes/post/menyematkan-data-pada-vue-slot.md
-	[/^\/post\/menyematkan-data-pada-vue-slot\/?$/, [c[0], c[63]], [c[1]]],
+	[/^\/post\/menyematkan-data-pada-vue-slot\/?$/, [c[0], c[64]], [c[1]]],
 
 	// src/routes/post/pengenalan-dasar-tentang-lumen.md
-	[/^\/post\/pengenalan-dasar-tentang-lumen\/?$/, [c[0], c[64]], [c[1]]],
+	[/^\/post\/pengenalan-dasar-tentang-lumen\/?$/, [c[0], c[65]], [c[1]]],
 
 	// src/routes/post/groupby-array-pada-javascript.md
-	[/^\/post\/groupby-array-pada-javascript\/?$/, [c[0], c[65]], [c[1]]],
+	[/^\/post\/groupby-array-pada-javascript\/?$/, [c[0], c[66]], [c[1]]],
 
 	// src/routes/post/manfaat-dari-berpikir-negatif.md
-	[/^\/post\/manfaat-dari-berpikir-negatif\/?$/, [c[0], c[66]], [c[1]]],
+	[/^\/post\/manfaat-dari-berpikir-negatif\/?$/, [c[0], c[67]], [c[1]]],
 
 	// src/routes/post/how-to-setup-my-personal-vim.md
-	[/^\/post\/how-to-setup-my-personal-vim\/?$/, [c[0], c[67]], [c[1]]],
+	[/^\/post\/how-to-setup-my-personal-vim\/?$/, [c[0], c[68]], [c[1]]],
 
 	// src/routes/post/setup-vim-devicons-di-neovim.md
-	[/^\/post\/setup-vim-devicons-di-neovim\/?$/, [c[0], c[68]], [c[1]]],
+	[/^\/post\/setup-vim-devicons-di-neovim\/?$/, [c[0], c[69]], [c[1]]],
 
 	// src/routes/post/konfigurasi-dasar-laravel-5.md
-	[/^\/post\/konfigurasi-dasar-laravel-5\/?$/, [c[0], c[69]], [c[1]]],
+	[/^\/post\/konfigurasi-dasar-laravel-5\/?$/, [c[0], c[70]], [c[1]]],
 
 	// src/routes/post/struktur-folder-laravel-55.md
-	[/^\/post\/struktur-folder-laravel-55\/?$/, [c[0], c[70]], [c[1]]],
+	[/^\/post\/struktur-folder-laravel-55\/?$/, [c[0], c[71]], [c[1]]],
 
 	// src/routes/post/goodbye-mobx-welcome-remx.md
-	[/^\/post\/goodbye-mobx-welcome-remx\/?$/, [c[0], c[71]], [c[1]]],
+	[/^\/post\/goodbye-mobx-welcome-remx\/?$/, [c[0], c[72]], [c[1]]],
 
 	// src/routes/post/surabayajs-meetup-perdana.md
-	[/^\/post\/surabayajs-meetup-perdana\/?$/, [c[0], c[72]], [c[1]]],
+	[/^\/post\/surabayajs-meetup-perdana\/?$/, [c[0], c[73]], [c[1]]],
 
 	// src/routes/post/setup-vim-plug-di-neovim.md
-	[/^\/post\/setup-vim-plug-di-neovim\/?$/, [c[0], c[73]], [c[1]]],
+	[/^\/post\/setup-vim-plug-di-neovim\/?$/, [c[0], c[74]], [c[1]]],
 
 	// src/routes/post/surabayajs-meetup-ketiga.md
-	[/^\/post\/surabayajs-meetup-ketiga\/?$/, [c[0], c[74]], [c[1]]],
+	[/^\/post\/surabayajs-meetup-ketiga\/?$/, [c[0], c[75]], [c[1]]],
 
 	// src/routes/post/berkenalan-dengan-pugjs.md
-	[/^\/post\/berkenalan-dengan-pugjs\/?$/, [c[0], c[75]], [c[1]]],
+	[/^\/post\/berkenalan-dengan-pugjs\/?$/, [c[0], c[76]], [c[1]]],
 
 	// src/routes/post/berkenalan-dengan-vuejs.md
-	[/^\/post\/berkenalan-dengan-vuejs\/?$/, [c[0], c[76]], [c[1]]],
+	[/^\/post\/berkenalan-dengan-vuejs\/?$/, [c[0], c[77]], [c[1]]],
 
 	// src/routes/post/manfaat-menggunakan-pwa.md
-	[/^\/post\/manfaat-menggunakan-pwa\/?$/, [c[0], c[77]], [c[1]]],
+	[/^\/post\/manfaat-menggunakan-pwa\/?$/, [c[0], c[78]], [c[1]]],
 
 	// src/routes/post/surabayajs-meetup-kedua.md
-	[/^\/post\/surabayajs-meetup-kedua\/?$/, [c[0], c[78]], [c[1]]],
+	[/^\/post\/surabayajs-meetup-kedua\/?$/, [c[0], c[79]], [c[1]]],
 
 	// src/routes/post/vim-keyboard-cheatsheet.md
-	[/^\/post\/vim-keyboard-cheatsheet\/?$/, [c[0], c[79]], [c[1]]],
+	[/^\/post\/vim-keyboard-cheatsheet\/?$/, [c[0], c[80]], [c[1]]],
 
 	// src/routes/post/momentjs-dengan-nuxtjs.md
-	[/^\/post\/momentjs-dengan-nuxtjs\/?$/, [c[0], c[80]], [c[1]]],
+	[/^\/post\/momentjs-dengan-nuxtjs\/?$/, [c[0], c[81]], [c[1]]],
 
 	// src/routes/post/setting-vhost-di-nginx.md
-	[/^\/post\/setting-vhost-di-nginx\/?$/, [c[0], c[81]], [c[1]]],
+	[/^\/post\/setting-vhost-di-nginx\/?$/, [c[0], c[82]], [c[1]]],
 
 	// src/routes/post/auth-module-di-nuxtjs.md
-	[/^\/post\/auth-module-di-nuxtjs\/?$/, [c[0], c[82]], [c[1]]],
+	[/^\/post\/auth-module-di-nuxtjs\/?$/, [c[0], c[83]], [c[1]]],
 
 	// src/routes/post/perubahan-jam-tidur.md
-	[/^\/post\/perubahan-jam-tidur\/?$/, [c[0], c[83]], [c[1]]],
+	[/^\/post\/perubahan-jam-tidur\/?$/, [c[0], c[84]], [c[1]]],
 
 	// src/routes/post/migrasi-ke-vim.md
-	[/^\/post\/migrasi-ke-vim\/?$/, [c[0], c[84]], [c[1]]],
+	[/^\/post\/migrasi-ke-vim\/?$/, [c[0], c[85]], [c[1]]],
 
 	// src/routes/post/spa-vs-mpa.md
-	[/^\/post\/spa-vs-mpa\/?$/, [c[0], c[85]], [c[1]]]
+	[/^\/post\/spa-vs-mpa\/?$/, [c[0], c[86]], [c[1]]]
 ];
 
 // we import the root layout/error components eagerly, so that
