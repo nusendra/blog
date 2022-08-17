@@ -1,22 +1,10 @@
-<script context="module">
-	export async function load({ page, fetch }) {
-		const url = `posts.json`;
-		const res = await fetch(url);
-		const posts = await res.json();
-
-		return {
-			props: {
-				posts: posts.slice(0, 5),
-			},
-		};
-	}
-</script>
-
 <script>
+	/* throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)"); */
+
 	import CourseList from "../components/CourseList.svelte";
 	import BlogList from "../components/BlogList.svelte";
 
-	export let posts;
+	export let data;
 </script>
 
 <section class="text-gray-600 body-font bg-gray-100">
@@ -42,7 +30,7 @@
 			>
 				Latest Blog Posts
 			</h1>
-			{#each posts as item, i}
+			{#each data.posts as item, i}
 				<BlogList
 					slug={item.slug}
 					tags={item.tags.join(", ")}

@@ -1,25 +1,13 @@
- <script context="module">
-	export async function load({ fetch }) {
-		const url = `/work-log.json`;
-		const res = await fetch(url);
-		const posts = await res.json();
-		return {
-			props: {
-				posts: posts,
-			},
-		};
-	}
-</script>
-
-<script>
-	import BlogList from "../components/BlogList.svelte";
+ <script>
+	import BlogList from "../../components/BlogList.svelte";
 	export let posts;
+	export let data;
 </script>
 
 <section class="text-gray-600 body-font overflow-hidden">
 	<div class="container px-5 py-24 mx-auto">
 		<div class="-my-8 divide-y-2 divide-gray-100">
-			{#each posts as item, i}
+			{#each data.posts as item, i}
 				<BlogList
 					tags={item.tags.join(", ")}
 					date={item.formatDistance}

@@ -1,5 +1,5 @@
 <script>
-	import CourseList from "../components/CourseList.svelte";
+	import CourseList from "../../components/CourseList.svelte";
 </script>
 
 <section class="text-gray-600 body-font bg-gray-100">

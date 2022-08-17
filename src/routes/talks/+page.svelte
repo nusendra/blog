@@ -1,5 +1,5 @@
 <script>
-	import TalkCard from "../components/TalkCard.svelte";
+	import TalkCard from "../../components/TalkCard.svelte";
 </script>
 
 <section class="text-gray-600 body-font bg-gray-100">
