@@ -1,6 +1,5 @@
- <script>
+<script>
 	import BlogList from "../../components/BlogList.svelte";
-	export let posts;
 	export let data;
 </script>
 
