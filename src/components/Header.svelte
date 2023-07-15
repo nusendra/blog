@@ -23,15 +23,18 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+      <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+      <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
+      <a href="/projects" class="text-sm font-semibold leading-6
+        text-gray-900">Projects</a>
+      <a href="/work-log" class="text-sm font-semibold leading-6 text-gray-900">Work
+      Log</a>
+    <a href="/course" class="text-sm font-semibold leading-6
+        text-gray-900">Courses</a>
+      <a href="/talks" class="text-sm font-semibold leading-6
+        text-gray-900">Talks</a>
+      <a href="/social" class="text-sm font-semibold leading-6
+        text-gray-900">Social</a>
     </div>
   </nav>
 
