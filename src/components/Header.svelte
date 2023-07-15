@@ -6,10 +6,9 @@
   }
 </script>
 
-<header class="bg-white">
+<header>
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Global">
     <a href="#" class="-m-1.5 p-1.5">
-      <span class="sr-only">Your Company</span>
       <img class="h-12 w-auto "
         src="https://yt3.ggpht.com/3hrosdAQxWc9UC9tAKPPJXHHHl1BcbCD581ZaYFNgHE6ZDvc7T0b9Fls0JdkuNUY5B5EefuLy10=s600-c-k-c0x00ffffff-no-rj-rp-mo"
         alt="">

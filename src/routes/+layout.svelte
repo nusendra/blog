@@ -6,8 +6,41 @@
 	import MyFooter from "../components/Footer.svelte";
 </script>
 
+<div class="relative isolate overflow-hidden bg-white">
+	<div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+    <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+      <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+      <defs>
+        <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#9089FC" />
+          <stop offset="1" stop-color="#FF80B5" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <MyHeader />
+  <div class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-20 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+      <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Mau belajar Typescript, Express dan Vue.js dari dasar?</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Saya membuat beberapa series / playlist yang berisi video tutorial programming di Youtube. Saat ini masih membahas seputar
+        JavaScript, Typescript, Express dan Vue.js</p>
+      <div class="mt-10 flex items-center gap-x-6">
+        <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Gas Nonton !!</a>
+        <a href="#" class="text-base font-semibold leading-7 text-gray-900">Ini course apa sih ?<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32">
+      <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+        <div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+          <img src="/playlist.webp" alt="App screenshot" width="2432" height="1442" class="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="flex flex-col h-screen">
-	<MyHeader />
 	<div class="mb-auto">
 		<slot />
 	</div>
