@@ -3,6 +3,8 @@
 
 	import CourseList from "../components/CourseList.svelte";
 	import BlogList from "../components/BlogList.svelte";
+	import BlurryBackground from
+	"../components/BlurryBackground.svelte";
 
 	export let data;
 </script>
@@ -32,8 +34,7 @@
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Artikel terbaru</h2>
-      <p class="mt-2 text-lg leading-8 text-gray-600">Tulisan - tulisan terbaru yang bisa kamu nikmati. <a href="/blog">Klik disini untuk membaca artikel
-          yang lain</a></p>
+      <p class="mt-2 text-lg leading-8 text-gray-600">Tulisan - tulisan terbaru yang bisa kamu nikmati. 
     </div>
     <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 			{#each data.posts as item, i}
@@ -48,3 +49,6 @@
     </div>
   </div>
 </div>
+
+
+<BlurryBackground left='90%' top="50rem"/>

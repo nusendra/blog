@@ -11,7 +11,7 @@
 
 </script>
 
-<article class="flex max-w-xl flex-col items-start justify-between">
+<article class="flex max-w-xl flex-col items-start justify-between z-50">
   <div class="flex items-center gap-x-4 text-xs">
     <time datetime={formattedDate} class="text-gray-500">{formattedDate}</time>
     {#each tags as tag}

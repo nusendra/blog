@@ -8,9 +8,9 @@
 
 <header>
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Global">
-    <a href="#" class="-m-1.5 p-1.5">
+    <a href="#" class="-m-1.5 p-1.5 z-50">
       <img class="h-12 w-auto "
-        src="https://yt3.ggpht.com/3hrosdAQxWc9UC9tAKPPJXHHHl1BcbCD581ZaYFNgHE6ZDvc7T0b9Fls0JdkuNUY5B5EefuLy10=s600-c-k-c0x00ffffff-no-rj-rp-mo"
+        src="/favicon.webp"
         alt="">
     </a>
     <div class="flex lg:hidden">
@@ -22,18 +22,18 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-      <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
+      <a href="/" class="text-sm font-semibold leading-6 text-white-900 z-50">Home</a>
+      <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900 z-50">Blog</a>
       <a href="/projects" class="text-sm font-semibold leading-6
-        text-gray-900">Projects</a>
-      <a href="/work-log" class="text-sm font-semibold leading-6 text-gray-900">Work
+        text-gray-900 z-50">Projects</a>
+      <a href="/work-log" class="text-sm font-semibold leading-6 text-gray-900 z-50">Work
       Log</a>
     <a href="/course" class="text-sm font-semibold leading-6
-        text-gray-900">Courses</a>
+        text-gray-900 z-50">Courses</a>
       <a href="/talks" class="text-sm font-semibold leading-6
-        text-gray-900">Talks</a>
+        text-gray-900 z-50">Talks</a>
       <a href="/social" class="text-sm font-semibold leading-6
-        text-gray-900">Social</a>
+        text-gray-900 z-50">Social</a>
     </div>
   </nav>
 
