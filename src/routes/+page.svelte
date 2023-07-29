@@ -3,8 +3,6 @@
 
 	import CourseList from "../components/CourseList.svelte";
 	import BlogList from "../components/BlogList.svelte";
-	import BlurryBackground from
-	"../components/BlurryBackground.svelte";
 
 	export let data;
 </script>
@@ -16,7 +14,8 @@
       <p class="mt-6 text-lg leading-8 text-gray-600">Saya membuat beberapa series / playlist yang berisi video tutorial programming di Youtube. Saat ini masih membahas seputar
         JavaScript, Typescript, Express dan Vue.js</p>
       <div class="mt-10 flex items-center gap-x-6">
-        <a href="https://www.youtube.com/@leskoding" class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Gas Nonton !!</a>
+        <a href="https://www.youtube.com/@leskoding" class="rounded-md bg-blue-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm
+					hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">Gas Nonton !!</a>
         <a href="https://leskoding.com" target="_blank" rel="noopener noreferrer" class="text-base font-semibold leading-7 text-gray-900">Ini course apa sih ?<span aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -50,5 +49,33 @@
   </div>
 </div>
 
-
-<BlurryBackground left='90%' top="50rem"/>
+<div
+	class="absolute inset-x-0 top-[-10rem] transform-gpu
+	overflow-hidden blur-3xl sm:top-[50rem]"
+>
+	<svg
+		class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem]
+		max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(90%-30rem)] sm:h-[42.375rem]"
+		viewBox="0 0 1155 678"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+			fill-opacity=".3"
+			d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+		/>
+		<defs>
+			<linearGradient
+				id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+				x1="1155.49"
+				x2="-78.208"
+				y1=".177"
+				y2="474.645"
+				gradientUnits="userSpaceOnUse"
+			>
+				<stop stop-color="#538ef5" />
+				<stop offset="1" stop-color="#ff4d4d" />
+			</linearGradient>
+		</defs>
+	</svg>
+</div>
