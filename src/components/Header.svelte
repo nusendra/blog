@@ -24,8 +24,8 @@
     <div class="hidden lg:flex lg:gap-x-12">
       <a href="/" class="text-sm font-semibold leading-6 text-white-900 z-50">Home</a>
       <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900 z-50">Blog</a>
-      <a href="/projects" class="text-sm font-semibold leading-6
-        text-gray-900 z-50">Projects</a>
+      <!-- <a href="/projects" class="text-sm font-semibold leading-6
+        text-gray-900 z-50">Projects</a> -->
       <a href="/work-log" class="text-sm font-semibold leading-6 text-gray-900 z-50">Work
       Log</a>
     <a href="/course" class="text-sm font-semibold leading-6
