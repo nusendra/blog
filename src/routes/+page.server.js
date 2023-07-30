@@ -3,6 +3,6 @@ export const load = async ({ url }) => {
 	const posts = await response.json();
 
 	return {
-		posts: posts.slice(0, 3),
+		posts: posts.slice(0, 5),
 	};
 };

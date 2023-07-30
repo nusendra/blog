@@ -4,7 +4,8 @@
 	import CourseList from "../components/CourseList.svelte";
 	import BlogList from "../components/BlogList.svelte";
 	import WorkHistoryItem from "../components/WorkHistoryItem.svelte";
-	import workHistories from "../lib/utils/work-history"
+	import workHistories from "../lib/utils/work-history";
+	import playlist from "../lib/utils/video-playlist";
 
 	export let data;
 </script>
@@ -85,12 +86,48 @@
 							<h2
 								class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"
 							>
+								<span>Video Programming Series (100% Free)</span>
+							</h2>
+							<ol class="mt-6 space-y-4">
+								{#each playlist as item}
+									<li class="flex gap-4">
+										<dl class="flex flex-auto flex-wrap gap-x-2">
+											<dt class="sr-only">Playlist Title</dt>
+											<dd
+												class="text-sm font-medium text-zinc-500 dark:text-zinc-400 z-50"
+											>
+												<a
+													href={item.url}
+													target="_blank"
+													rel="noopener noreferrer">{item.title}</a
+												>
+											</dd>
+											<dt class="sr-only">Total Videos</dt>
+											<dd
+												class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+											>
+												{item.totalVideos}
+											</dd>
+										</dl>
+									</li>
+								{/each}
+							</ol>
+						</div>
+						<div
+							class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+						>
+							<h2
+								class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"
+							>
 								<span>Work History</span>
 							</h2>
 							<ol class="mt-6 space-y-4">
 								{#each workHistories as work}
-									<WorkHistoryItem company={work.company}
-										role={work.role} date={work.date}/>
+									<WorkHistoryItem
+										company={work.company}
+										role={work.role}
+										date={work.date}
+									/>
 								{/each}
 							</ol>
 						</div>

@@ -17,7 +17,6 @@
 		<dt class="sr-only">Date</dt>
 		<dd
 			class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-			aria-label="2019 until Present"
 		>
 			<time>{date}</time>
 		</dd>
