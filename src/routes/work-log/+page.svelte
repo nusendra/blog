@@ -32,7 +32,7 @@
       </svg>
     </div>
   </div>
-  <div class="relative px-6 lg:px-8">
+  <div class="relative px-6 lg:px-8 z-10">
     <div class="mx-auto max-w-prose text-lg">
 			{#each data.posts as item, i}
       <article class="flex max-w-xl flex-col items-start mt-14">
