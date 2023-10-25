@@ -162,6 +162,15 @@
 				description="Sharing tentang best practices, microservices, BFF, monorepo, dan clean architecture"
 				slideUrl="https://docs.google.com/presentation/d/1J0TXT-1pjnWsoVRLbnA4kxGSF7DX4UGvnG05zAzqSC0/edit?usp=sharing"
 			/>
+
+			<TalkCard
+				thumbnailUrl="https://i.ibb.co/Fw4P5QN/Whats-App-Image-2023-10-21-at-20-48-15.webp"
+				thumbnailAlt="nusendra sekolah beta markas surabaya"
+				tag="Offline Seminar"
+				title="How to Create Scalable App for Startup"
+				description="Sharing tentang MVP pada Startup dan bagaimana step nya"
+				slideUrl="https://docs.google.com/presentation/d/1MSol0TPHVe3Syoo_yi-WwqBj6txrkRBU/edit?usp=sharing&ouid=112526105793088490233&rtpof=true&sd=true"
+			/>
 		</div>
 	</div>
 </section>
