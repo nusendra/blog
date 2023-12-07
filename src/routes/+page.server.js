@@ -1,8 +1,11 @@
 export const load = async ({ url }) => {
-	const response = await fetch(`${url.origin}/api/posts`);
-	const posts = await response.json();
+	const blog = await fetch(`${url.origin}/api/posts`);
+	const workLog = await fetch(`${url.origin}/api/work-log`);
+
+	const blogPosts = await blog.json();
+	const workLogPosts = await workLog.json();
 
 	return {
-		posts: posts.slice(0, 5),
+		posts: [...workLogPosts, ...blogPosts].slice(0, 5),
 	};
 };
