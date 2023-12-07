@@ -2,8 +2,17 @@ export const load = async ({ url }) => {
 	const blog = await fetch(`${url.origin}/api/posts`);
 	const workLog = await fetch(`${url.origin}/api/work-log`);
 
-	const blogPosts = await blog.json();
-	const workLogPosts = await workLog.json();
+	let blogPosts = await blog.json();
+	let workLogPosts = await workLog.json();
+
+	blogPosts = blogPosts.map((item) => {
+		item.slug = `/post/${item.slug}`;
+		return item;
+	});
+	workLogPosts = workLogPosts.map((item) => {
+		item.slug = `/work-log/${item.slug}`;
+		return item;
+	});
 
 	return {
 		posts: [...workLogPosts, ...blogPosts].slice(0, 5),
