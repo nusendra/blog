@@ -1,3 +1,5 @@
+import { sortPosts } from "$lib/utils";
+
 export const load = async ({ url }) => {
 	const blog = await fetch(`${url.origin}/api/posts`);
 	const workLog = await fetch(`${url.origin}/api/work-log`);
@@ -15,6 +17,6 @@ export const load = async ({ url }) => {
 	});
 
 	return {
-		posts: [...workLogPosts, ...blogPosts].slice(0, 5),
+		posts: sortPosts([...workLogPosts, ...blogPosts]).slice(0, 5),
 	};
 };
