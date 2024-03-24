@@ -171,6 +171,15 @@
 				description="Sharing tentang MVP pada Startup dan bagaimana step nya"
 				slideUrl="https://docs.google.com/presentation/d/1MSol0TPHVe3Syoo_yi-WwqBj6txrkRBU/edit?usp=sharing&ouid=112526105793088490233&rtpof=true&sd=true"
 			/>
+
+			<TalkCard
+				thumbnailUrl="https://i.ibb.co/tcFr5GL/wowrack.webp"
+				thumbnailAlt="nusendra wowrack cloudraya github actions"
+				tag="Offline Seminar"
+				title="Automating Development Workflows with Github Actions on CloudRaya"
+				description="Materi mengenai bagaimana cara deploy ke VM secara otomatis menggunakan Github Actions"
+				slideUrl="https://docs.google.com/presentation/d/1PrBfj5R6cSbBs2FJESDqOJ6o8IEk0L3LBmV5lk9q8uU/edit?usp=sharing"
+			/>
 		</div>
 	</div>
 </section>
