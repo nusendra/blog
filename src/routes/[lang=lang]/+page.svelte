@@ -1,11 +1,11 @@
 <script>
 	/* throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)"); */
 
-	import CourseList from "../components/CourseList.svelte";
-	import BlogList from "../components/BlogList.svelte";
-	import WorkHistoryItem from "../components/WorkHistoryItem.svelte";
-	import workHistories from "../lib/utils/work-history";
-	import playlist from "../lib/utils/video-playlist";
+	import CourseList from "../../components/CourseList.svelte";
+	import BlogList from "../../components/BlogList.svelte";
+	import WorkHistoryItem from "../../components/WorkHistoryItem.svelte";
+	import workHistories from "$lib/utils/work-history";
+	import playlist from "$lib/utils/video-playlist";
 
 	export let data;
 </script>
@@ -18,6 +18,7 @@
 			<h1
 				class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
 			>
+				{data.title}
 			</h1>
 			<p class="mt-6 text-lg leading-8 text-gray-600">
 				Saya membuat beberapa series / playlist yang berisi video tutorial

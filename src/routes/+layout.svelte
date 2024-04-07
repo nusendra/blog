@@ -1,9 +1,16 @@
 <script>
+
 	import "../app.css";
 	import "../tailwind.css";
 
 	import MyHeader from "../components/Header.svelte";
 	import MyFooter from "../components/Footer.svelte";
+
+	import { setLocale } from '$lib/i18n/i18n-svelte'
+	export let data
+
+	setLocale(data.locale)
+
 </script>
 
 <MyHeader />
