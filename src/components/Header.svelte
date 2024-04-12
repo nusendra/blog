@@ -1,13 +1,14 @@
 <script>
   import { browser } from '$app/env';
   import { onMount } from "svelte"
+	import { goto } from '$app/navigation'
 
   let showSidebar = false;
-  let language = 'EN';
+  let language = 'en';
 
   onMount(async () => {
     if (browser) {
-      language = localStorage.getItem('language') ?? 'EN';
+      language = localStorage.getItem('language') ?? 'en';
     }
 	});
 
@@ -20,6 +21,7 @@
       localStorage.setItem('language', lang);
     }
     language = lang;
+    goto(`/${language}`)
   }
 
   $: toggleLanguageButton = (lang) => {
@@ -59,12 +61,12 @@
         text-gray-900 z-50">Social</a>
       <div class="flex flex-row items-center border border-gray-200 rounded-md -mt-2 z-50">
         <button class="p-2 flex flex-row items-center text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 z-50 focus:outline-none
-{toggleLanguageButton('EN')}" on:click={() => changeLanguage('EN')}>
+{toggleLanguageButton('en')}" on:click={() => changeLanguage('en')}>
             <span class="text-md">En</span>
             <span class="ml-1"> <img src="https://img.icons8.com/?size=512&id=t3NE3BsOAQwq&format=png" class="w-5 h-5" /></span>
         </button>
         <button class="p-2 flex flex-row items-center text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 z-50 focus:outline-none
-{toggleLanguageButton('ID')}" on:click={() => changeLanguage('ID')}>
+{toggleLanguageButton('id')}" on:click={() => changeLanguage('id')}>
             <span class="text-md">ID</span>
             <span class="ml-1"> <img src="/id-flag.png" class="w-5 h-5" /></span>
         </button>

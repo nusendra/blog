@@ -1,4 +1,7 @@
 <script>
+  import { browser } from '$app/env';
+  import { onMount } from "svelte"
+	import { goto } from '$app/navigation'
 
 	import "../app.css";
 	import "../tailwind.css";
@@ -9,7 +12,18 @@
 	import { setLocale } from '$lib/i18n/i18n-svelte'
 	export let data
 
-	setLocale(data.locale)
+	let language = '';
+
+  onMount(async () => {
+    if (browser) {
+			setLocale(data.locale);
+			language = localStorage.getItem('language');
+
+			console.log(language)
+			setLocale(language);
+			goto(`/${language}`)
+    }
+	});
 
 </script>
 
