@@ -2,6 +2,8 @@
   import { browser } from '$app/env';
   import { onMount } from "svelte"
 	import { goto } from '$app/navigation'
+  import { replaceLocaleInUrl } from '$lib/utils/replace-locale-in-url'
+  import { page } from '$app/stores';
 
   let showSidebar = false;
   let language = 'en';
@@ -21,12 +23,14 @@
       localStorage.setItem('language', lang);
     }
     language = lang;
-    goto(`/${language}`)
+
+    goto(replaceLocaleInUrl($page.url, language))
   }
 
   $: toggleLanguageButton = (lang) => {
     return language === lang ? "bg-gray-200" : '';
   }
+
 </script>
 
 <header>
@@ -48,16 +52,16 @@
   {/if}
     <div class="hidden lg:flex lg:gap-x-12">
       <a href="/" class="text-sm font-semibold leading-6 text-white-900 z-50">Home</a>
-      <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900 z-50">Blog</a>
+      <a href={`/${language}/blog`} class="text-sm font-semibold leading-6 text-gray-900 z-50">Blog</a>
       <!-- <a href="/projects" class="text-sm font-semibold leading-6
         text-gray-900 z-50">Projects</a> -->
-      <a href="/work-log" class="text-sm font-semibold leading-6 text-gray-900 z-50">Work
+      <a href={`/${language}/work-log`} class="text-sm font-semibold leading-6 text-gray-900 z-50">Work
       Log</a>
-      <a href="/course" class="text-sm font-semibold leading-6
+      <a href={`/${language}/course`} class="text-sm font-semibold leading-6
         text-gray-900 z-50">Courses</a>
-      <a href="/talks" class="text-sm font-semibold leading-6
+      <a href={`/${language}/talks`} class="text-sm font-semibold leading-6
         text-gray-900 z-50">Talks</a>
-      <a href="/social" class="text-sm font-semibold leading-6
+      <a href={`/${language}/social`} class="text-sm font-semibold leading-6
         text-gray-900 z-50">Social</a>
       <div class="flex flex-row items-center border border-gray-200 rounded-md -mt-2 z-50">
         <button class="p-2 flex flex-row items-center text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 z-50 focus:outline-none

@@ -19,9 +19,11 @@
 			setLocale(data.locale);
 			language = localStorage.getItem('language');
 
-			console.log(language)
 			setLocale(language);
-			goto(`/${language}`)
+
+			if (language !== data.locale) {
+				goto(`/${language}`);
+			}
     }
 	});
 

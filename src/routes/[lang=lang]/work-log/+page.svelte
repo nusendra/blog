@@ -1,4 +1,6 @@
 <script>
+  import { page } from '$app/stores';
+
   import { format, parseISO } from 'date-fns';
 	export let data;
 </script>
@@ -46,7 +48,7 @@
         </div>
         <div class="group relative">
           <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-            <a href={`/post/${item.slug}`}>
+            <a href={`/${$page.url.pathname.split('/')[1]}/work-log/${item.slug}`}>
               <span class="absolute inset-0"></span>
               {item.title}
             </a>

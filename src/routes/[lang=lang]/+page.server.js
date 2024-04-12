@@ -28,6 +28,9 @@ export const load = async ({ parent, url }) => {
 
 	return {
 		title: $LL.heroTitle(),
+		subTitle: $LL.subHeroTitle(),
+		watchButton: $LL.watchButton(),
+		whatCourseButton: $LL.whatCourseButton(),
 		posts: sortPosts([...workLogPosts, ...blogPosts]).slice(0, 5),
 	}
 }

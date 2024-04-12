@@ -21,23 +21,21 @@
 				{data.title}
 			</h1>
 			<p class="mt-6 text-lg leading-8 text-gray-600">
-				Saya membuat beberapa series / playlist yang berisi video tutorial
-				programming di Youtube. Saat ini masih membahas seputar JavaScript,
-				Typescript, Express dan Vue.js
+				{data.subTitle}
 			</p>
 			<div class="mt-10 flex items-center gap-x-6">
 				<a
 					href="https://www.youtube.com/@leskoding"
 					class="rounded-md bg-blue-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm
 					hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
-					>Gas Nonton !!</a
+					>{data.watchButton}</a
 				>
 				<a
 					href="https://leskoding.com"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="text-base font-semibold leading-7 text-gray-900"
-					>Ini course apa sih ?<span aria-hidden="true">→</span></a
+					>{data.whatCourseButton}<span aria-hidden="true">→</span></a
 				>
 			</div>
 		</div>
