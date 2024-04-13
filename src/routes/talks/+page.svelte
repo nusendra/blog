@@ -3,7 +3,8 @@
 </script>
 
 <section class="text-gray-600 body-font bg-gray-100">
-	<div class="container px-5 py-24 mx-auto">
+	<img src="https://i.ibb.co/D4j06Ym/cover-talks.webp" alt="nusendra-cover-talks" class="w-full object-contain"/>
+	<div class="container px-5 py-24 mx-auto mt-[-225px]">
 		<div class="flex flex-wrap -m-4">
 			<TalkCard
 				thumbnailUrl="https://i.ibb.co/QXwG73c/nusendra-workshop-nuxt.webp"
