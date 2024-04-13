@@ -59,6 +59,14 @@
 			/>
 
 			<TalkCard
+				thumbnailUrl="https://i.ibb.co/Rz777TC/intro-to-node-nusendra.webp"
+				thumbnailAlt="nusendra intro to nodejs"
+				tag="Webinar"
+				title="Introduction to Nodejs at Klas.or.id"
+				description="Webinar yang diselenggarakan Klas (Komunitas Linux Arek Suroboyo), membawakan topik tentang Nodejs"
+			/>
+
+			<TalkCard
 				thumbnailUrl="https://i.ibb.co/YXRsbMr/nusendra-firebase-surabayadev.webp"
 				thumbnailAlt="nusendra firebase surabayadev"
 				tag="Webinar"
