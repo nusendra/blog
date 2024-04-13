@@ -11,7 +11,7 @@ Cerita singkat kenapa saya akhirnya migrasi ke VIM, yang awalnya memakai Atom da
 
 VScode dengan segala kekerenannya punya segudang fitur yang udah tersedia, jika masih kurang atau butuh plugin kita juga bisa install sendiri. Singkat nya, VSCode ini udah include Git control, syntax highlighting, code completion, code refactoring dan snippets. Kalo pengen tampilan yang beda, bisa install berbagai macam tema, kalo pengen munculin code map, tinggal install, dll. Enak kan? butuh apa apa langsung install, udah lengkap banget. Terus kenapa saya migrasi ke vim? Apa alasannya ?
 
-![](https://cdn.staticaly.com/img/farm2.staticflickr.com/1964/30912919047_1394ebe190_b.jpg)
+![vim](https://cdn.staticaly.com/img/farm2.staticflickr.com/1964/30912919047_1394ebe190_b.jpg)
 
 ## Latar Belakang
 

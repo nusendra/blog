@@ -7,7 +7,7 @@ draft: false
 slug: manfaat-menggunakan-pwa
 ---
 
-<img class="center-image-post" src="https://cdn.staticaly.com/img/46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/sites/33/2018/02/cbb9dba164838b28c748310da3d4c188.png" style="width:100%;height:auto;">
+<img class="center-image-post" src="https://cdn.staticaly.com/img/46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/sites/33/2018/02/cbb9dba164838b28c748310da3d4c188.png" style="width:100%;height:auto;" alt="pwa">
 <br/>
 
 Episode kedua dari seri PWA kali ini adalah membahas tentang apa saja sih manfaat dari menggunakan PWA? Pasti banyak orang yang berfikir, emang apa sih kelebihan dari PWA ini dibanding native app / hybrid? Berikut ini penjelasan, semoga mudah dipahami :)

@@ -13,13 +13,13 @@ Postingan kali ini akan membahas tentang bagaimana cara mendownload video privat
 
 Kalian harus install chrome extension yang nama nya [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg), untuk browser lain silakan cari sendiri :D. Kemudian setup dulu extension nya, dan pilih export format for cookies nya menggunakan **Netscape HTTP Cookie File**.
 
-<a href="https://imgur.com/uXSZOyf"><img src="https://i.imgur.com/uXSZOyf.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/uXSZOyf"><img src="https://i.imgur.com/uXSZOyf.png" title="source: imgur.com" alt="youtube" /></a>
 
 Setelah itu silakan login ke youtube kalian terlebih dahulu.
 
 Kemudian buka [https://youtube.com](https://youtube.com), [https://myaccount.google.com/](https://myaccount.google.com/), dan [https://google.com](https://google.com) dan export cookies nya dengan cara seperti berikut ini
 
-<a href="https://imgur.com/4ZY4MEy"><img src="https://i.imgur.com/4ZY4MEy.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/4ZY4MEy"><img src="https://i.imgur.com/4ZY4MEy.png" title="source: imgur.com" alt="youtube" /></a>
 
 Setelah cookies nya berhasil di salin, kemudian paste kedalam text editor kalian. Dan jangan lupa letakkan semua cookies diatas didalam 1 file txt ya. Contohnya seperti ini
 
@@ -69,8 +69,3 @@ mantep ga?
 
 Semoga trik singkat ini membantu kalian yang sedang pengen mendownload video private kalian. Ehem, video private nya apaan ya? Kalau saya sih video anak saya yang lagi lucu lucu nya, karena storage HP udah ga cukup, ya udah simpen ke yutup aja haha.
 
-<style>
-.small img {
-  width: 80%;
-}
-</style>

@@ -7,7 +7,7 @@ draft: false
 slug: berkenalan-lebih-dekat-dengan-pwa
 ---
 
-<img class="center-image-post" src="https://cdn.staticaly.com/img/46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/sites/33/2018/02/cbb9dba164838b28c748310da3d4c188.png" style="width:100%;height:auto;">
+<img class="center-image-post" src="https://cdn.staticaly.com/img/46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/sites/33/2018/02/cbb9dba164838b28c748310da3d4c188.png" style="width:100%;height:auto;" alt="pwa">
 <br/>
 
 Artikel kali ini akan memulai seri baru yang akan membahas topik mengenai Progressive Web App (PWA). Langsung saja, PWA adalah sebuah website / aplikasi web yang dibangun diatas teknologi berbasis web modern (html, css dan js) yang berperilaku layaknya mobile native apps. Konsep PWA ini dikeluarkan oleh Google pada tahun 2015, saya sendiri tahu konsep ini dari mas Yohan Totting ketika pertama kali bikin challenge di [Artikel Medium](https://medium.com/wwwid/tantangan-web-developer-untuk-membuat-aplikasi-web-bisa-digunakan-kurang-dari-5-detik-70bb7431741d) ini.

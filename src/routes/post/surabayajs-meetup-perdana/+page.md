@@ -30,7 +30,7 @@ Pemateri kedua adalah mas Ampersanda (begitu saya memanggilnya, sesuai dengan ni
 
 ### Audience
 
-![](https://ik.imagekit.io/nusendra/_MG_9551_0wOoJ__Dc.jpg)
+![sbyjs](https://ik.imagekit.io/nusendra/_MG_9551_0wOoJ__Dc.jpg)
 
 Peserta yang datang pun lumayan banyak, dari tiket eventbrite yang kita buka (65 tiket) terkumpul audience sekitar 40 orang lebih. Permasalahannya, entah letaknya ada dimana, entah di materi yang ketinggian kah? Atau karena peserta nya pada malu malu, ketika ditanya sangat minim sekali response yang terjadi pada mereka. Ini bisa bikin suasana jadi tegang dan sedikit krik krik hehe. Tapi ya ga parah parah amat sih, ada beberapa yang tanya tanya juga.
 

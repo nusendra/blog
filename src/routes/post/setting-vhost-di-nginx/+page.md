@@ -7,7 +7,7 @@ draft: false
 slug: setting-vhost-di-nginx
 ---
 
-<img class="center-image-post" src="https://www.nginx.com/wp-content/uploads/2018/08/NGINX-logo-rgb-large.png" style="width:100%;height:auto;">
+<img class="center-image-post" src="https://www.nginx.com/wp-content/uploads/2018/08/NGINX-logo-rgb-large.png" style="width:100%;height:auto;" alt="vhost">
 <br/>
 
 ## WTF is Nginx?

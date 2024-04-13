@@ -7,7 +7,7 @@ draft: false
 slug: bagaimana-saya-mengatur-waktu-sebagai-developer
 ---
 
-<img class="center-image-post" src="https://cdn.statically.io/img/d3tvpxjako9ywy.cloudfront.net/blog/content/uploads/2018/11/Time_Management_Apps_You_Should_Start_Using_Yesterday_1-896x518.jpg" style="width:100%;height:auto;">
+<img class="center-image-post" src="https://cdn.statically.io/img/d3tvpxjako9ywy.cloudfront.net/blog/content/uploads/2018/11/Time_Management_Apps_You_Should_Start_Using_Yesterday_1-896x518.jpg" style="width:100%;height:auto;" alt="time">
 <br/>
 
 ## Why we need a time management?

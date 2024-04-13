@@ -47,10 +47,7 @@
       <div class="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6
         sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 z-50">
         <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-12 w-auto " src="https://yt3.ggpht.com/3hrosdAQxWc9UC9tAKPPJXHHHl1BcbCD581ZaYFNgHE6ZDvc7T0b9Fls0JdkuNUY5B5EefuLy10=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="">
-          </a>
+          <img class="h-12 w-auto " src="https://yt3.ggpht.com/3hrosdAQxWc9UC9tAKPPJXHHHl1BcbCD581ZaYFNgHE6ZDvc7T0b9Fls0JdkuNUY5B5EefuLy10=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="">
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"
           on:click={toggleSidebar}>
             <span class="sr-only">Close menu</span>

@@ -30,10 +30,9 @@
 		datetime={formattedDate}
 		>{formattedDate}
 		{#each tags as tag}
-			<a
-				href="#"
+			<div
 				class="relative z-10 rounded-full bg-blue-50 px-2 py-1 ml-2 font-medium
-        text-gray-600">{tag}</a
+        text-gray-600">{tag}</div
 			>
 		{/each}
 	</time>

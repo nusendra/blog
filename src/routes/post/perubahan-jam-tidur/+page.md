@@ -7,7 +7,7 @@ draft: false
 slug: perubahan-jam-tidur
 ---
 
-<a><img src="https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/2019/04/12/2975484616.jpg" title="source: https://asset-a.grid.id" /></a>
+<img src="https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/2019/04/12/2975484616.jpg" title="source: https://asset-a.grid.id" alt="perubahan jam tidur"/>
 
 Sudah bukan rahasia kalau freelancer atau remote worker bisa kerja dimana dan kapan aja, untuk hal "kapan aja" nya ini ga bisa terjadi di semua perusahaan, karena sistem tiap pekerjaan beda beda, ada yang pake tracker yang mana buat nge-track wajib kerja mulai pukul 9 sampai 5 sore misalkan. Dan ada juga perusahaan yang menerapkan asalkan task kamu selesai, yaudah, entah itu cuma makan waktu 3 jam.
 

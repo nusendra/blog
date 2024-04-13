@@ -7,7 +7,7 @@ tags: ['opini']
 slug: membangun-komunitas-surabayajs
 ---
 
-<img class="center-image-post" src="https://cdn.staticaly.com/img/raw.githubusercontent.com/nusendra/blog/master/blog/2019/gator.png" style="width:auto;height:200px;">
+<img class="center-image-post" src="https://cdn.staticaly.com/img/raw.githubusercontent.com/nusendra/blog/master/blog/2019/gator.png" style="width:auto;height:200px;" alt="sbyjs">
 
 Sudah bukan rahasia lagi bahwa seseorang yang bergerak di bidang IT, hidupnya ga akan jauh jauh dari yang namanya forum / group chat komunitas. Bayangin aja, ketika dia stuck ngoding kemana lagi dia akan bertumpu? Kalo ga google ya stackoverflow. Itu adalah solusi pasif, yang mana kita ga akan bisa secara aktif berdiskusi dan ga bisa dapet jawaban yang cepat. Kalau pengen solusi yang lebih cepat, ya gabung ke suatu komunitas tentang teknologi tertentu di group aplikasi bertukar pesan, seperti Telegram.
 

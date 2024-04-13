@@ -9,7 +9,7 @@ slug: auth-module-di-nuxtjs
 
 Hai hai mumpung lagi bikin project baru pake Nuxtjs, sekalian bikin postingan tentang auth module di Nuxtjs. Nah dari beberapa kasus ada temen temen yang tanya ke saya mengenai authentikasi di nuxtjs itu seperti apa, apakah dilakukan secara manual atau mungkin ada package / library yang bisa memudahkan? Saya bilang ada, silakan coba install Auth module nya Nuxtjs. Silakan baca docs dulu [kesini](https://auth.nuxtjs.org/).
 
-![](https://cdn.staticaly.com/img/cdn-images-1.medium.com/max/800/0*Jd5jjU4iiJcaCrXd)
+![auth nuxt](https://cdn.staticaly.com/img/cdn-images-1.medium.com/max/800/0*Jd5jjU4iiJcaCrXd)
 
 Alasan kenapa saya bikin postingan ini adalah karena mungkin bagi para pemula Nuxtjs kadang ketika pake module ini agak kebingungan harus bagaimana cara pake nya. Saya akan coba untuk jelasin gimana sih package ini bekerja, dan saya akan jelasin sesederhana mungkin ya, untuk settingan yang lebih advance bisa langsung coba sendiri sambil ber eskperimen. 
 

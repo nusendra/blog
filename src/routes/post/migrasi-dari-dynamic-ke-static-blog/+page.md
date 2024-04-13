@@ -7,7 +7,7 @@ draft: false
 slug: migrasi-dari-dynamic-ke-static-blog
 ---
 
-<img class="center-image-post" src="https://cdn.staticaly.com/img/snipcart.com/media/204009/static-site-generators.png" style="width:100%;height:auto;">
+<img class="center-image-post" src="https://cdn.staticaly.com/img/snipcart.com/media/204009/static-site-generators.png" style="width:100%;height:auto;" alt="static blog">
 <br/>
 
 Saya termasuk orang yang demen ngeblog, udah bertahun tahun melanglang buana di dunia per-blog-an mulai dari yang jadul (blogspot) hingga yang kekinian. Nah cerita kali ini sebagai ulasan singkat kenapa saya harus migrasi dari dynamic ke static blog.
