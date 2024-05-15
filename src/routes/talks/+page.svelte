@@ -3,11 +3,11 @@
 </script>
 
 <section class="text-gray-600 body-font bg-gray-100">
-	<img src="https://i.ibb.co/D4j06Ym/cover-talks.webp" alt="nusendra-cover-talks" class="w-full object-contain"/>
+	<img src="/talks/cover-talks.webp" alt="nusendra-cover-talks" class="w-full object-contain"/>
 	<div class="container px-5 py-24 mx-auto mt-[-225px]">
 		<div class="flex flex-wrap -m-4">
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/QXwG73c/nusendra-workshop-nuxt.webp"
+				thumbnailUrl="/talks/nusendra-workshop-nuxt.webp"
 				thumbnailAlt="nusendra workshop nuxt"
 				tag="Workshop"
 				title="Speed Up Vuejs Development with Nuxtjs"
@@ -16,7 +16,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/bHmcq01/nusendra-workshop-vue.webp"
+				thumbnailUrl="/talks/nusendra-workshop-vue.webp"
 				thumbnailAlt="nusendra workshop vue"
 				tag="Workshop"
 				title="Workshop Vue.js Basic"
@@ -25,7 +25,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/6FqNKmV/nusendra-vue-ssg.webp"
+				thumbnailUrl="/talks/nusendra-vue-ssg.webp"
 				thumbnailAlt="nusendra vue static site"
 				tag="Seminar"
 				title="Build a Static Web / Landing page using Vuejs"
@@ -34,7 +34,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/3CwHYxc/nusendra-seminar-svelte.webp"
+				thumbnailUrl="/talks/nusendra-seminar-svelte.webp"
 				thumbnailAlt="nusendra svelte js compiler"
 				tag="Seminar"
 				title="Svelte, the JavaScript Compiler"
@@ -43,7 +43,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/4PxPLsW/nusendra-js-community-its.webp"
+				thumbnailUrl="/talks/nusendra-js-community-its.webp"
 				thumbnailAlt="nusendra js komunitas di its"
 				tag="Promotion"
 				title="SurabayaJS at ITS 2020"
@@ -51,7 +51,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/nbgp4cD/nusendra-pwa-dilo.webp"
+				thumbnailUrl="/talks/nusendra-pwa-dilo.webp"
 				thumbnailAlt="nusendra pwa dilo"
 				tag="Webinar"
 				title="How to use Progressive Web App to Benefit Your Startup"
@@ -60,7 +60,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/Rz777TC/intro-to-node-nusendra.webp"
+				thumbnailUrl="/talks/intro-to-node-nusendra.webp"
 				thumbnailAlt="nusendra intro to nodejs"
 				tag="Webinar"
 				title="Introduction to Nodejs at Klas.or.id"
@@ -68,7 +68,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/YXRsbMr/nusendra-firebase-surabayadev.webp"
+				thumbnailUrl="/talks/nusendra-firebase-surabayadev.webp"
 				thumbnailAlt="nusendra firebase surabayadev"
 				tag="Webinar"
 				title="Firebase Online Study Jam 2020"
@@ -76,7 +76,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/dmQKM1q/nusendra-github-actions.webp"
+				thumbnailUrl="/talks/nusendra-github-actions.webp"
 				thumbnailAlt="nusendra jagoanhosting github actions"
 				tag="Webinar"
 				title="Automagically Deploy Static Site Using Github Actions"
@@ -85,7 +85,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/5vN9s1P/nusendra-js-modern.webp"
+				thumbnailUrl="/talks/nusendra-js-modern.webp"
 				thumbnailAlt="nusendra modern javascript"
 				tag="Webinar"
 				title="How to Learn Modern JavaScript"
@@ -94,7 +94,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/9qnNLsG/nusendra-hacktoberfest.webp"
+				thumbnailUrl="/talks/nusendra-hacktoberfest.webp"
 				thumbnailAlt="nusendra hacktoberfest"
 				tag="Webinar"
 				title="Hacktoberfest Online Meetup in Trunojoyo University"
@@ -103,7 +103,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/nzwqdSL/nusendra-sesindo.webp"
+				thumbnailUrl="/talks/nusendra-sesindo.webp"
 				thumbnailAlt="nusendra sesindo"
 				tag="Webinar"
 				title="Personal Branding for Software Engineer"
@@ -112,7 +112,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/GHb7hjj/nusendra-react-firebase.webp"
+				thumbnailUrl="/talks/nusendra-react-firebase.webp"
 				thumbnailAlt="nusendra react firebase"
 				tag="Webinar"
 				title="Firebase Authentication in React.js"
@@ -120,7 +120,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/jTCztk3/nusendra-berkarir-sebagai-developer.webp"
+				thumbnailUrl="/talks/nusendra-berkarir-sebagai-developer.webp"
 				thumbnailAlt="nusendra berkarir sebagai developer"
 				tag="Webinar"
 				title="Berkarir di Bidang Teknologi sebagai Developer"
@@ -129,7 +129,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/1Kk59jc/nusendra-js-dev.webp"
+				thumbnailUrl="/talks/nusendra-js-dev.webp"
 				thumbnailAlt="nusendra software dev with js"
 				tag="Webinar"
 				title="Be a Software Developer with JavaScript"
@@ -138,7 +138,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/qYb0fLN/nusendra-upgrading-volunteer.webp"
+				thumbnailUrl="/talks/nusendra-upgrading-volunteer.webp"
 				thumbnailAlt="nusendra upgrading volunteer surabayadev"
 				tag="Webinar"
 				title="SurabayaDev Upgrading Volunteer"
@@ -146,7 +146,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/9b1RSKp/nusendra-surabayajs17.webp"
+				thumbnailUrl="/talks/nusendra-surabayajs17.webp"
 				thumbnailAlt="nusendra surabayajs17"
 				tag="Seminar"
 				title="Javascript Fatigue & Frameworks War"
@@ -155,7 +155,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/GcBNhN0/alterra-crop.webp"
+				thumbnailUrl="/talks/alterra-crop.webp"
 				thumbnailAlt="nusendra alterra clean architecture"
 				tag="Webinar"
 				title="Clean Architecture in JavaScript"
@@ -164,7 +164,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/bXyRPz3/nusendra-sigmatech.webp"
+				thumbnailUrl="/talks/nusendra-sigmatech.webp"
 				thumbnailAlt="nusendra asiansigmatect"
 				tag="Webinar"
 				title="How to Build Scalable App with JavaScript"
@@ -173,7 +173,16 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/Fw4P5QN/Whats-App-Image-2023-10-21-at-20-48-15.webp"
+				thumbnailUrl="/talks/nusendra-apiary.webp"
+				thumbnailAlt="nusendra apiary"
+				tag="Online Seminar"
+				title="The Secret to Work Better with Software Engineers"
+				description="Bagaimana cara kerja bareng product managers"
+				slideUrl="https://docs.google.com/presentation/d/1JvpHipA1HkjkpTlOJeAsOfpJyGbIoVbujnvpxV56qD0/edit?usp=sharing"
+			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/Whats-App-Image-2023-10-21-at-20-48-15.webp"
 				thumbnailAlt="nusendra sekolah beta markas surabaya"
 				tag="Offline Seminar"
 				title="How to Create Scalable App for Startup"
@@ -182,7 +191,7 @@
 			/>
 
 			<TalkCard
-				thumbnailUrl="https://i.ibb.co/tcFr5GL/wowrack.webp"
+				thumbnailUrl="/talks/wowrack.webp"
 				thumbnailAlt="nusendra wowrack cloudraya github actions"
 				tag="Offline Seminar"
 				title="Automating Development Workflows with Github Actions on CloudRaya"
