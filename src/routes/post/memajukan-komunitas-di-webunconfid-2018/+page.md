@@ -29,7 +29,7 @@ Oh iya, event ini ga bisa sembarang orang bisa ikut, karena om Yohan sendiri yan
 
 ![amirul, fariz, arryangga, saya](https://cdn.staticaly.com/img/farm2.staticflickr.com/1925/45152835361_f79734d968_c.jpg)
 
-Dari Surabaya ada 3 orang yang dapat invitation, saya, [mas Amirul dari Kawankoding / SidoarjoDev](http://kawankoding.com/), dan [mas Arryangga Aliev (SurabayaDev)](http://t.me/arryanggaputra). Berangkat setelah Isya dan sampai di Jogja dini hari jam 00.00 tanggal 29 September 2018 :D. Sesampai nya disana ketemu guru saya yang udah stay juga, [mas Fariz Rizaldy](http://mas%20fariz%20rizaldy/) kemudian di susul [om Sandhika Galih dari Channel Youtube Web Programming UNPAS](https://www.youtube.com/channel/UCkXmLjEr95LVtGuIm3l2dPg) dan temen temen lainnya, keren kan? haha
+Dari Surabaya ada 3 orang yang dapat invitation, saya, [mas Amirul dari Kawankoding / SidoarjoDev](http://kawankoding.com/), dan [mas Arryangga Aliev (SurabayaDev)](http://t.me/arryanggaputra). Berangkat setelah Isya dan sampai di Jogja dini hari jam 00.00 tanggal 29 September 2018 :D. Sesampai nya disana ketemu guru saya yang udah stay juga, mas Fariz Rizaldy kemudian di susul [om Sandhika Galih dari Channel Youtube Web Programming UNPAS](https://www.youtube.com/channel/UCkXmLjEr95LVtGuIm3l2dPg) dan temen temen lainnya, keren kan? haha
 
 ## Kegiatan hari pertama
 

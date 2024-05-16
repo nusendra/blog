@@ -6,3 +6,5 @@ export const GET = async () => {
 
 	return new Response(JSON.stringify(sortPosts(posts)), responseOptions);
 };
+
+export const prerender = true;

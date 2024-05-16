@@ -1,6 +1,6 @@
 import { sortPosts } from "$lib/utils";
 
-export const load = async ({ url }) => {
+export const load = async ({ fetch, url }) => {
 	const blog = await fetch(`${url.origin}/api/posts`);
 	const workLog = await fetch(`${url.origin}/api/work-log`);
 
