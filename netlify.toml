@@ -2,3 +2,8 @@
   command = "npm run build"
   publish = "build/"
   functions = "functions/"
+
+[[redirects]]
+  from = "/map"
+  to = "https://maps.app.goo.gl/ZdMNBMQ1ER2dEBko9"
+  status = 200
