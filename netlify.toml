@@ -4,6 +4,31 @@
   functions = "functions/"
 
 [[redirects]]
-  from = "/map"
+  from = "/maps"
   to = "https://maps.app.goo.gl/ZdMNBMQ1ER2dEBko9"
+  status = 200
+
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/nusendra"
+  status = 200
+
+[[redirects]]
+  from = "/linkedin"
+  to = "https://www.linkedin.com/in/nusendra-hanggarawan-79854990/"
+  status = 200
+
+[[redirects]]
+  from = "/youtube"
+  to = "https://www.youtube.com/@leskoding"
+  status = 200
+
+[[redirects]]
+  from = "/x"
+  to = "https://x.com/nusendra_"
+  status = 200
+
+[[redirects]]
+  from = "/ig"
+  to = "https://www.instagram.com/nusendra_"
   status = 200
