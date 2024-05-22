@@ -198,6 +198,15 @@
 				description="Materi mengenai bagaimana cara deploy ke VM secara otomatis menggunakan Github Actions"
 				slideUrl="https://docs.google.com/presentation/d/1PrBfj5R6cSbBs2FJESDqOJ6o8IEk0L3LBmV5lk9q8uU/edit?usp=sharing"
 			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/nusendra cloudraya code best practice.webp"
+				thumbnailAlt="nusendra wowrack cloudraya coding best practice"
+				tag="Offline Seminar"
+				title="Coding Best Practice"
+				description="Panduan untuk proses development yang readable, maintainable dan efisien"
+				slideUrl="https://www.canva.com/design/DAGD71wwr1g/29dCm20JaCAejxbY10Rp6Q/edit?utm_content=DAGD71wwr1g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+			/>
 		</div>
 	</div>
 </section>
