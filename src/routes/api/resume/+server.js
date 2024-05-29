@@ -186,3 +186,5 @@ export const GET = () => {
 
 	return new Response(JSON.stringify(data))
 }
+
+export const prerender = true;
