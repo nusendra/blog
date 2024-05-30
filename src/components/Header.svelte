@@ -35,7 +35,7 @@
       <a href="/talks" class="text-sm font-semibold leading-6
         text-gray-900 z-50">Talks</a>
       <a href="/social" class="text-sm font-semibold leading-6
-        text-gray-900 z-50">Social</a>
+        text-gray-900 z-50">Socials</a>
     </div>
   </nav>
 

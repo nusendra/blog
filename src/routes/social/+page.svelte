@@ -39,8 +39,13 @@
 				<span class="mt-2 block text-center text-3xl font-bold leading-8
 					tracking-tight text-gray-900 sm:text-4xl">My Social Medias</span>
 			</h1>
+			<img
+				class="rounded-full w-full w-48 mx-auto mt-8"
+				src="/profile.webp"
+				alt="nusendra profile"
+			/>
 		</div>
-		<div class="prose prose-lg prose-indigo mx-auto mt-24 text-gray-500">
+		<div class="prose prose-lg prose-indigo mx-auto mt-8 text-gray-500">
 				<p>
 					Jaman sekarang siapa yang ga punya sosmed ye kan? Ada sih yang ga
 					terlalu pake banyak sosmed, dan cukup bertahan di satu platform saja.
