@@ -32,3 +32,8 @@
   from = "/ig"
   to = "https://www.instagram.com/nusendra_"
   status = 200
+
+[[redirects]]
+  from = "/fb"
+  to = "https://www.facebook.com/andraeinstein"
+  status = 200
