@@ -2,6 +2,7 @@ export const GET = () => {
 	const data = {
 		name: "Nusendra Hanggarawan",
 		title: "Fullstack Developer",
+		address: "Gresik, East Java, Indonesia, 61177",
 		about: "a passionate software developer with a strong focus on fullstack development, specializing in JavaScript technologies. With a robust understanding of both front-end and back-end development, I am adept at creating dynamic, responsive, and user-friendly web applications.",
 		objectives: [
 			'8+ years of experience working in web development as a full-stack developer.',
@@ -12,22 +13,32 @@ export const GET = () => {
 		],
 		links: [
 			{
+				id: "maps",
+				name: "Maps",
+				url: "https://nusendra.com/maps"
+			},
+			{
+				id: "github",
 				name: "Github",
 				url: "https://nusendra.com/github"
 			},
 			{
+				id: "linkedin",
 				name: "LinkedIn",
 				url: "https://nusendra.com/linkedin"
 			},
 			{
+				id: "youtube",
 				name: "Youtube",
 				url: "https://nusendra.com/youtube"
 			},
 			{
+				id: "x",
 				name: "X / Twitter",
 				url: "https://nusendra.com/x"
 			},
 			{
+				id: "instagram",
 				name: "Instagram",
 				url: "https://nusendra.com/ig"
 			},
@@ -167,19 +178,15 @@ export const GET = () => {
 			},
 			{
 				type: "Backend",
-				tools: ["Javascript", "Node.js", "Bun.js", "PHP", "Expressjs", "Hono", "Laravel", "tRPC", "GraphQL / Apollo", "Terraform"]
+				tools: ["Javascript", "Node.js", "Bun.js", "PHP", "Expressjs", "Hono", "Laravel", "tRPC", "GraphQL / Apollo"]
 			},
 			{
 				type: "Database",
 				tools: ["PostgreSQL", "MySQL", "Redis", "MongoDB", "Firestore"]
 			},
 			{
-				type: "Authentication & Authorization",
-				tools: ["Directus", "Keycloak", "JWT", "Laravel Permission"]
-			},
-			{
 				type: "Others",
-				tools: ["TypeScript", "TailwindCSS", "Monorepo", "Microservices", "Google Cloud", "Cloud Function", "VM", "Firebase", "Socket.io"]
+				tools: ["TypeScript", "TailwindCSS", "Monorepo", "Microservices", "Google Cloud", "Firebase", "Socket.io", "JWT"]
 			}
 		]
 	}
