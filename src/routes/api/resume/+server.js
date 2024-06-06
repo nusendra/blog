@@ -2,7 +2,9 @@ export const GET = () => {
 	const data = {
 		name: "Nusendra Hanggarawan",
 		title: "Fullstack Developer",
+		avatarUrl: "https://raw.githubusercontent.com/nusendra/blog/master/static/profile.webp",
 		address: "Gresik, East Java, Indonesia, 61177",
+		addressUrl: "https://nusendra.com/maps",
 		about: "a passionate software developer with a strong focus on fullstack development, specializing in JavaScript technologies. With a robust understanding of both front-end and back-end development, I am adept at creating dynamic, responsive, and user-friendly web applications.",
 		objectives: [
 			'8+ years of experience working in web development as a full-stack developer.',
