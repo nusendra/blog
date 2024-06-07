@@ -30,12 +30,14 @@
         text-gray-900 z-50">Projects</a> -->
       <a href="/work-log" class="text-sm font-semibold leading-6 text-gray-900 z-50">Work
       Log</a>
-    <a href="/course" class="text-sm font-semibold leading-6
+      <a href="/course" class="text-sm font-semibold leading-6
         text-gray-900 z-50">Courses</a>
       <a href="/talks" class="text-sm font-semibold leading-6
         text-gray-900 z-50">Talks</a>
       <a href="/social" class="text-sm font-semibold leading-6
         text-gray-900 z-50">Socials</a>
+      <a href="https://resume.nusendra.com" target="_blank" class="text-sm font-semibold leading-6
+        text-gray-900 z-50">Resume</a>
     </div>
   </nav>
 
