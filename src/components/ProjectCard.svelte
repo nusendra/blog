@@ -7,6 +7,23 @@
 	export let description;
 	export let details;
 	export let projectUrl;
+
+	/*
+		available color types = green, yellow, blue
+	 */
+	const typeStyle = (color) => {
+		// bg 50, text 700, ring 300
+		switch (color) {
+			case 'green':
+				return `background-color: #f0fdf4; color: #15803d; --tw-ring-color: #86efac`
+			case 'yellow':
+				return `background-color: #fefce8; color: #a16207; --tw-ring-color: #fde047`
+			case 'blue':
+				return `background-color: #eff6ff; color: #1d4ed8; --tw-ring-color: #93c5fd`
+			default:
+				return ""
+		}
+	}
 </script>
 
 <div class="prose prose-lg prose-indigo mx-auto mt-24 text-gray-500">
@@ -20,10 +37,9 @@
 				</div>
 				<div class="flex-none self-end px-6 pt-4">
 					<dt class="sr-only">Project Type</dt>
-						{#each types as item, i}
-							<dd class="inline-flex items-center rounded-md bg-{item.color}-50 px-2 py-1
-								text-xs font-medium text-{item.color}-700 ring-1 ring-inset
-								ring-{item.color}-600/20 mx-1">{item.type}</dd>
+						{#each types as item}
+							<dd class="inline-flex items-center rounded-md px-2 py-1 text-xs
+								font-medium ring-1 ring-inset mx-1" style={typeStyle(item.color)}>{item.type}</dd>
 						{/each}
 				</div>
 
