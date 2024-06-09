@@ -63,26 +63,26 @@
             <div class="space-y-2 py-6">
               <a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-
               <a href="/blog" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</a>
-
-              <!-- <a href="/projects" class="-mx-3 block rounded-lg px-3 py-2 text-base
-                font-semibold leading-7 text-gray-900
-                hover:bg-gray-50">Projects</a> -->
-
               <a href="/work-log" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900 hover:bg-gray-50">Work
-              Log</a>
-            <a href="/course" class="-mx-3 block rounded-lg px-3 py-2 text-base
+                Log</a>
+              <a href="/projects" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900
-                hover:bg-gray-50">Courses</a>
+                hover:bg-gray-50">Projects</a>
+              <a href="/course" class="-mx-3 block rounded-lg px-3 py-2 text-base
+                  font-semibold leading-7 text-gray-900
+                  hover:bg-gray-50">Courses</a>
               <a href="/talks" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900
                 hover:bg-gray-50">Talks</a>
               <a href="/social" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900
                 hover:bg-gray-50">Social</a>
+              <a href="https://resume.nusendra.com" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base
+                font-semibold leading-7 text-gray-900
+                hover:bg-gray-50">Resume</a>
             </div>
           </div>
         </div>
