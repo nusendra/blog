@@ -7,6 +7,10 @@
 	export let description;
 	export let details;
 	export let projectUrl;
+	export let thumbnailType = 'image';
+	export let videoSrc;
+
+	import VideoPlayer from "./VideoPlayer.svelte";
 
 	/*
 		available color types = green, yellow, blue
@@ -43,7 +47,13 @@
 						{/each}
 				</div>
 
-				<img src={imageUrl} alt={imageAlt} class="p-4"/>
+				{#if thumbnailType == 'image'}
+					<img src={imageUrl} alt={imageAlt} class="p-4"/>
+				{:else if thumbnailType == 'video'}
+					<div class="p-5">
+						<VideoPlayer posterSrc={imageUrl} videoSrc={videoSrc} />
+					</div>
+				{/if}
 
 				<div class="flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
 					<dt class="flex-none">
@@ -59,7 +69,9 @@
 				</div>
 			</dl>
 			<div class="mt-6 border-t border-gray-900/5 px-6 py-6">
-				<a href={projectUrl} class="text-sm font-semibold leading-6 text-gray-900" target="_blank">Go to project page<span aria-hidden="true">&rarr;</span></a>
+				{#if projectUrl}
+					<a href={projectUrl} class="text-sm font-semibold leading-6 text-gray-900" target="_blank">Go to project page<span aria-hidden="true">&rarr;</span></a>
+				{/if}
 			</div>
 		</div>
 	</div>
