@@ -50,7 +50,7 @@
 				{#if thumbnailType == 'image'}
 					<img src={imageUrl} alt={imageAlt} class="p-4"/>
 				{:else if thumbnailType == 'video'}
-					<div class="p-5">
+					<div class="p-5 mx-auto">
 						<VideoPlayer posterSrc={imageUrl} videoSrc={videoSrc} />
 					</div>
 				{/if}

@@ -114,5 +114,57 @@
 				},
 			]}
 		/>
+
+		<ProjectCard
+			title="Quizlr"
+			tools="React Native, Expo, Typescript"
+			imageUrl="/projects/quizlr.webp"
+			thumbnailType="video"
+			videoSrc="/projects/quizlr.mov"
+			imageAlt="nusendra mobile app"
+			description="Simple Quiz App"
+			details="This was a freelance project where I built a quizionaire app for a client based in Canada, the UX feels like scrolling in TikTok"
+			projectUrl="https://github.com/nusendra/quizlr"
+			types={[
+				{
+					type: 'Mobile App',
+					color: 'green'
+				},
+				{
+					type: 'Production',
+					color: 'yellow'
+				},
+				{
+					type: 'Private',
+					color: 'blue'
+				},
+			]}
+		/>
+
+		<ProjectCard
+			title="SpeedyCook"
+			tools="Expo, Typescript, ExpressJS, ChatGPT API"
+			imageUrl="/projects/speedycook.webp"
+			thumbnailType="video"
+			videoSrc="/projects/speedycook.mp4"
+			imageAlt="nusendra mobile app"
+			description="An AI Recipe Finder App"
+			details="A freelance project that generates a recipe based on your ingredients"
+			projectUrl="https://github.com/nusendra/speedycook"
+			types={[
+				{
+					type: 'Mobile App',
+					color: 'green'
+				},
+				{
+					type: 'Production',
+					color: 'yellow'
+				},
+				{
+					type: 'Public',
+					color: 'blue'
+				},
+			]}
+		/>
 	</div>
 </div>
