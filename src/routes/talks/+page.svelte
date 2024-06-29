@@ -207,6 +207,15 @@
 				description="Panduan untuk proses development yang readable, maintainable dan efisien"
 				slideUrl="https://www.canva.com/design/DAGD71wwr1g/29dCm20JaCAejxbY10Rp6Q/edit?utm_content=DAGD71wwr1g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
 			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/nusendra-land-job.webp"
+				thumbnailAlt="nusendra landing dream job"
+				tag="Offline Seminar"
+				title="Landing Your Dream Job as a Software Developer"
+				description="Roadmap karir, personal branding, dan tips trik upwork"
+				slideUrl="https://www.canva.com/design/DAGD7xNe2Ss/DODnimcWm1j1JD7O3E7o-w/edit?utm_content=DAGD7xNe2Ss&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+			/>
 		</div>
 	</div>
 </section>
