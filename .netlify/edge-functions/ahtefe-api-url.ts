@@ -7,6 +7,10 @@ export default async (request: Request, context: Context) => {
     url: "http://35.240.245.246",
     apiPort: "3333",
     chatPort: "4444",
+    informations: [
+      "Kini kami melayani transaksi 24 jam.",
+      "Hubungi 0896-1299-1475 untuk informasi lebih lanjut.",
+    ]
   });
 };
 
