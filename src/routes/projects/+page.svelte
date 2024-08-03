@@ -18,6 +18,31 @@
 			</h1>
 		</div>
 		<ProjectCard
+			title="AHTEFE - Phone Credit and Data Package"
+			tools="Expo - React Native, TypeScript, ExpressJS"
+			imageUrl="/projects/ahtefe.webp"
+			imageAlt="nusendra ahtefe"
+			description="Mobile phone credit and internet data package sales app"
+			details="Built with Expo React Native, ExpressJS, TypeScript, OneSignal, and XMPP Protocol"
+			projectUrl="https://play.google.com/store/apps/details?id=com.nusendra.ahtefereload&hl=id"
+			types={[
+				{
+					type: 'Mobile App',
+					color: 'green'
+				},
+				{
+					type: 'Production',
+					color: 'yellow'
+				},
+				{
+					type: 'Public',
+					color: 'blue'
+				},
+			]}
+			linkLabel="Go to download page"
+		/>
+
+		<ProjectCard
 			title="Typescript Schema Validator"
 			tools="Typescript, Ajv"
 			imageUrl="/projects/typescript-schema-validator.webp"

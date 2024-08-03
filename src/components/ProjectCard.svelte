@@ -9,6 +9,7 @@
 	export let projectUrl;
 	export let thumbnailType = 'image';
 	export let videoSrc;
+	export let linkLabel = 'Go to project page';
 
 	import VideoPlayer from "./VideoPlayer.svelte";
 
@@ -70,7 +71,7 @@
 			</dl>
 			<div class="mt-6 border-t border-gray-900/5 px-6 py-6">
 				{#if projectUrl}
-					<a href={projectUrl} class="text-sm font-semibold leading-6 text-gray-900" target="_blank">Go to project page<span aria-hidden="true">&rarr;</span></a>
+					<a href={projectUrl} class="text-sm font-semibold leading-6 text-gray-900" target="_blank">{linkLabel}<span aria-hidden="true">&rarr;</span></a>
 				{/if}
 			</div>
 		</div>
