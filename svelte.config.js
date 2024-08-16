@@ -1,7 +1,14 @@
 /** @type {import('@sveltejs/kit').Config} */
-import { mdsvex } from "mdsvex";
+import { mdsvex, escapeSvelte } from "mdsvex";
 import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-static";
+import { createHighlighter } from 'shiki';
+
+const theme = 'github-dark';
+const highlighter = await createHighlighter({
+	themes: [theme],
+	langs: ['javascript', 'typescript']
+});
 
 const config = {
 	extensions: [".svelte", ".md", ".svelte.md"],
@@ -11,6 +18,12 @@ const config = {
 			layout: {
 				post: "./src/components/MarkdownLayout.svelte",
 				"work-log": "./src/components/MarkdownLayout.svelte",
+			},
+			highlight: {
+				highlighter: async (code, lang = 'text') => {
+					const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }));
+					return `{@html \`${html}\` }`;
+				}
 			},
 		}),
 		preprocess({
