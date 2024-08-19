@@ -7,6 +7,8 @@ draft: false
 slug: avoid-typescript-enums
 ---
 
+![ts enums image](https://miro.medium.com/v2/resize:fit:1100/1*Ja-6RF9Iopr-I8NNgOtBUQ.png)
+
 We all know TypeScript is great for solving typing issues in JavaScript, especially when you want to prevent bugs by restricting what values a variable can hold. For example, say we only want the `role` variable to be either `admin`, `user`, or `employee`. If you try to assign any other string, it should throw an error. Here’s what that might look like:
 
 ```typescript
