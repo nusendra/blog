@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Enums Alternatives"
-date: 2024-08-16 19:20:00
+date: 2024-08-18 19:20:00
 description: "Better Ways to Avoid TypeScript Enums"
 tags: ['typescript']
 draft: false
