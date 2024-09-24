@@ -32,7 +32,8 @@ $ sudo sh <(curl -L https://nixos.org/nix/install)
 At this point, everything should be fine. Then, continue by installing home-manager:
 
 ```
-$ nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager\nnix-channel --update
+$ nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager
+$ nix-channel --update
 $ nix-shell '<home-manager>' -A install
 ```
 
