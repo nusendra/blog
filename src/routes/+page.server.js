@@ -1,4 +1,6 @@
 import { sortPosts } from "$lib/utils";
+import events from "../data/events.json";
+import { isBefore, isAfter } from "date-fns";
 
 export const load = async ({ fetch, url }) => {
 	const blog = await fetch(`${url.origin}/api/posts`);
@@ -16,7 +18,21 @@ export const load = async ({ fetch, url }) => {
 		return item;
 	});
 
+	const today = new Date();
+	let status = 'Current';
+	if (isBefore(today, new Date(events[0].start_date))) {
+		status = 'Incoming';
+	} else if (isAfter(today, new Date(events[0].end_date))) {
+		status = 'Past'
+	}
+
+	let event = {
+		status,
+		...events[0]
+	}
+
 	return {
-		posts: sortPosts([...workLogPosts, ...blogPosts]).slice(0, 5),
+		posts: sortPosts([...workLogPosts, ...blogPosts]).slice(0, 8),
+		event
 	};
 };

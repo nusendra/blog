@@ -61,7 +61,7 @@
 	</div>
 </div>
 
-<div class="sm:px-8 mt-24 md:mt-28">
+<div class="sm:px-8 mt-6 md:mt-6">
 	<div class="mx-auto w-full max-w-7xl lg:px-8">
 		<div class="relative px-4 sm:px-8 lg:px-12">
 			<div class="mx-auto max-w-2xl lg:max-w-5xl">
@@ -80,6 +80,23 @@
 						{/each}
 					</div>
 					<div class="space-y-10 lg:pl-16 xl:pl-24">
+						<div
+							class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+						>
+							<h2
+								class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"
+							>
+								<span>{data.event.status} Event</span>
+							</h2>
+							<img
+								class="rounded w-full object-cover object-center mb-6 md:mb-0"
+								src={data.event.image}
+								alt={data.event.alt_image}
+							/>
+						<p class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
+							{data.event.description} <!-- You can add description or more content here -->
+						</p>
+						</div>
 						<div
 							class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
 						>
