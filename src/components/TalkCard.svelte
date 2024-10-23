@@ -1,10 +1,12 @@
 <script>
-	export let thumbnailUrl;
-	export let thumbnailAlt;
-	export let tag;
-	export let title;
-	export let description;
-	export let slideUrl;
+	let {
+		thumbnailUrl,
+		thumbnailAlt,
+		tag,
+		title,
+		description,
+		slideUrl
+	} = $props();
 </script>
 
 <div class="xl:w-1/4 md:w-1/2 p-4">

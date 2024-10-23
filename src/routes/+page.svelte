@@ -7,7 +7,7 @@
 	import workHistories from "../lib/utils/work-history";
 	import playlist from "../lib/utils/video-playlist";
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <div class="relative isolate overflow-hidden bg-white">

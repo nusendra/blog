@@ -1,16 +1,17 @@
 <script>
-	// These values are bound to properties of the video
-	let time = 0;
-	let duration;
-	let paused = true;
+	import { preventDefault } from 'svelte/legacy';
 
-	let showControls = true;
+	// These values are bound to properties of the video
+	let time = $state(0);
+	let duration = $state();
+	let paused = $state(true);
+
+	let showControls = $state(true);
 	let showControlsTimeout;
 
 	// Used to track time of last mouse down event
 	let lastMouseDown;
-	export let videoSrc;
-	export let posterSrc;
+	let { videoSrc, posterSrc } = $props();
 
 	function handleMove(e) {
 		// Make the controls visible, but fade out after
@@ -55,10 +56,10 @@
 	<video
 		poster={posterSrc}
 		src={videoSrc}
-		on:mousemove={handleMove}
-		on:touchmove|preventDefault={handleMove}
-		on:mousedown={handleMousedown}
-		on:mouseup={handleMouseup}
+		onmousemove={handleMove}
+		ontouchmove={preventDefault(handleMove)}
+		onmousedown={handleMousedown}
+		onmouseup={handleMouseup}
 		bind:currentTime={time}
 		bind:duration
 		bind:paused
@@ -67,7 +68,7 @@
 	</video>
 
 	<div class="controls" style="opacity: {duration && showControls ? 1 : 0}">
-		<progress value={time / duration || 0} />
+		<progress value={time / duration || 0}></progress>
 
 		<div class="info">
 			<span class="time">{format(time)}</span>

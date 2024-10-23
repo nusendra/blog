@@ -1,7 +1,7 @@
 <script>
   import { format, parseISO } from 'date-fns';
 	import MultiDots from "../../components/MultiDots.svelte";
-	export let data;
+  let { data } = $props();
 </script>
 
 <div class="relative overflow-hidden bg-white py-16">

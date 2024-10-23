@@ -1,8 +1,7 @@
 <script>
 	import { format } from "date-fns";
 
-	export let title;
-	export let date;
+  let { title, date, children } = $props();
 </script>
 
 <svelte:head>
@@ -48,7 +47,7 @@
       </h1>
     </div>
     <div class="prose prose-lg prose-indigo mx-auto mt-24 text-gray-500">
-      <slot />
+      {@render children?.()}
     </div>
   </div>
 </div>

@@ -1,10 +1,12 @@
 <script>
 	import { format, parseISO } from "date-fns";
-	export let description;
-	export let date;
-	export let tags;
-	export let title;
-	export let slug;
+	let {
+		description,
+		date,
+		tags,
+		title,
+		slug
+	} = $props();
 
 	const parsedDate = parseISO(date);
 	const formattedDate = format(parsedDate, "PPP");
@@ -18,10 +20,10 @@
 	>
 		<div
 			class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
-		/>
+		></div>
 		<a href={slug}><span
 				class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-			/><span class="relative z-10 text-xl">{title}</span></a
+			></span><span class="relative z-10 text-xl">{title}</span></a
 		>
 	</h2>
 	<time

@@ -1,5 +1,5 @@
 <script>
-  let showSidebar = false
+  let showSidebar = $state(false)
 
   const toggleSidebar = () => {
     showSidebar = !showSidebar;
@@ -15,7 +15,7 @@
     </a>
     {#if !showSidebar}
     <div class="flex lg:hidden">
-      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 z-50" on:click={toggleSidebar}>
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 z-50" onclick={toggleSidebar}>
         <span class="sr-only">Open main menu</span>
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -51,7 +51,7 @@
         <div class="flex items-center justify-between">
           <img class="h-12 w-auto " src="https://yt3.ggpht.com/3hrosdAQxWc9UC9tAKPPJXHHHl1BcbCD581ZaYFNgHE6ZDvc7T0b9Fls0JdkuNUY5B5EefuLy10=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="">
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"
-          on:click={toggleSidebar}>
+          onclick={toggleSidebar}>
             <span class="sr-only">Close menu</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />

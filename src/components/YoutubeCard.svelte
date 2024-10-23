@@ -1,10 +1,12 @@
 <script>
-  export let imageSource;
-  export let imageAlt;
-  export let titleTag;
-  export let title;
-  export let totalVideos;
-  export let url;
+  let {
+    imageSource,
+    imageAlt,
+    titleTag,
+    title,
+    totalVideos,
+    url
+  } = $props();
 </script>
 
 <div class="xl:w-1/4 md:w-1/2 p-4">

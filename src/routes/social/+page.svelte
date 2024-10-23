@@ -58,7 +58,7 @@
 					dengan orang lain. Silakan untuk yang mau berteman, feel free to chat
 					ya :)
 				</p>
-				<p />
+				<p></p>
 				<h2>
 					<a href="https://twitter.com/nusendra_" target="_blank">Twitter</a>
 				</h2>
@@ -69,7 +69,7 @@
 					untuk mendapatkan informasi terbaru mengenai apapun itu, terlebih lagi
 					di bidang programming.
 				</p>
-				<p />
+				<p></p>
 				<h2>
 					<a href="https://www.instagram.com/nusendra_" target="_blank"
 						>Instagram</a
@@ -86,7 +86,7 @@
 					dll. Tapi ga bakal ngeshare tentang kehidupan rumah tangga disini yak
 					:D
 				</p>
-				<p />
+				<p></p>
 				<h2>
 					<a href="https://wa.me/6289612991475" target="_blank">Whatsapp</a>
 				</h2>
@@ -95,7 +95,7 @@
 					aja sekalian. Whatsapp ini kupakai untuk hal hal diranah pribadi aja
 					dan lebih private. Ngobrol ama keluarga dan juga teman dekat.
 				</p>
-				<p />
+				<p></p>
 				<h2><a href="https://t.me/nusendra" target="_blank">Telegram</a></h2>
 				<p>
 					Sekarang jarang banget pake ini (padahal jadi admin dibeberapa grup
@@ -103,7 +103,7 @@
 					Palingan pake telegram ini kalau pas pengen ngobrol atau ngedapetin
 					update dari temen temen grup nongkrong aja.
 				</p>
-				<p />
+				<p></p>
 				<h2>
 					<a href="https://www.facebook.com/andraeinstein" target="_blank"
 						>Facebook</a
@@ -114,13 +114,13 @@
 					pengen tau ada update apa dari teman teman lama, kadang juga banyak
 					dapet postingan kocak dari teman teman yang ga terlalu dikenal.
 				</p>
-				<p />
+				<p></p>
 				<h2>Discord</h2>
 				<p>
 					Yang ini juga jarang banget, paling kalau pas ada perlu dengan anak
 					anak komunitas SurabayaJS yang memang di kelola melalui Discord.
 				</p>
-				<p />
+				<p></p>
 				<h2>Slack</h2>
 				<p>Ga perlu dijelasin kalau yang ini, jelas kerjaan lah.</p>
 		</div>

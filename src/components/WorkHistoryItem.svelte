@@ -1,7 +1,5 @@
 <script>
-	export let company;
-	export let role;
-	export let date;
+	let { company, role, date } = $props();
 </script>
 
 <li class="flex gap-4">

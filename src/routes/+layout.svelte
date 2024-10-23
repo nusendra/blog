@@ -4,13 +4,20 @@
 
 	import MyHeader from "../components/Header.svelte";
 	import MyFooter from "../components/Footer.svelte";
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('svelte').Snippet} [children]
+	 */
+
+	/** @type {Props} */
+	let { children } = $props();
 </script>
 
 <MyHeader />
 
 <div class="flex flex-col h-screen">
 	<div class="mb-auto">
-		<slot />
+		{@render children?.()}
 	</div>
 	<MyFooter />
 </div>

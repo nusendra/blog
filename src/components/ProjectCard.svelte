@@ -1,17 +1,35 @@
 <script>
-	export let title;
-	export let tools;
-	export let imageUrl;
-	export let imageAlt;
-	export let types;
-	export let description;
-	export let details;
-	export let projectUrl;
-	export let thumbnailType = 'image';
-	export let videoSrc;
-	export let linkLabel = 'Go to project page';
 
 	import VideoPlayer from "./VideoPlayer.svelte";
+	/**
+	 * @typedef {Object} Props
+	 * @property {any} title
+	 * @property {any} tools
+	 * @property {any} imageUrl
+	 * @property {any} imageAlt
+	 * @property {any} types
+	 * @property {any} description
+	 * @property {any} details
+	 * @property {any} projectUrl
+	 * @property {string} [thumbnailType]
+	 * @property {any} videoSrc
+	 * @property {string} [linkLabel]
+	 */
+
+	/** @type {Props} */
+	let {
+		title,
+		tools,
+		imageUrl,
+		imageAlt,
+		types,
+		description,
+		details,
+		projectUrl,
+		thumbnailType = 'image',
+		videoSrc,
+		linkLabel = 'Go to project page'
+	} = $props();
 
 	/*
 		available color types = green, yellow, blue
