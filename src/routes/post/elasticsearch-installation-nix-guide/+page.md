@@ -3,7 +3,7 @@ draft: false
 title: Installing Elasticsearch on Nix
 date: 2024-10-15 08:00:00
 tags: ["nix", "os"]
-description: "This guid walks you through every step to get Elasticsearch up and running"
+description: "This guides walks you through every step to get Elasticsearch up and running"
 slug: elasticsearch-installation-nix-guide
 ---
 
