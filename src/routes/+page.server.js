@@ -18,16 +18,7 @@ export const load = async ({ fetch, url }) => {
 		return item;
 	});
 
-	const today = new Date();
-	let status = 'Current';
-	if (isBefore(today, new Date(events[0].start_date))) {
-		status = 'Incoming';
-	} else if (isAfter(today, new Date(events[0].end_date))) {
-		status = 'Past'
-	}
-
 	let event = {
-		status,
 		...events[0]
 	}
 

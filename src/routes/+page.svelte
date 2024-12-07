@@ -1,6 +1,8 @@
 <script>
 	/* throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)"); */
 
+	import { isBefore, isAfter } from "date-fns";
+
 	import CourseList from "../components/CourseList.svelte";
 	import BlogList from "../components/BlogList.svelte";
 	import WorkHistoryItem from "../components/WorkHistoryItem.svelte";
@@ -8,6 +10,14 @@
 	import playlist from "../lib/utils/video-playlist";
 
 	let { data } = $props();
+
+	const today = new Date();
+	let status = 'Current';
+	if (isBefore(today, new Date(data.event.start_date))) {
+		status = 'Incoming';
+	} else if (isAfter(today, new Date(data.event.end_date))) {
+		status = 'Past'
+	}
 </script>
 
 <div class="relative isolate overflow-hidden bg-white">
@@ -86,7 +96,7 @@
 							<h2
 								class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"
 							>
-								<span>{data.event.status} Event</span>
+								<span>{status} Event</span>
 							</h2>
 							<img
 								class="rounded w-full object-cover object-center mb-6 md:mb-0"
