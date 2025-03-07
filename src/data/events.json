@@ -1,10 +1,10 @@
 [
   {
-    "start_date": "2024-11-08",
-    "end_date": "2024-11-30",
-    "image": "/talks/building-with-react.webp",
-    "alt_image": "building with react",
-    "title": "Building with React",
-    "description": "Workshop membangun aplikasi menggunakan Reactjs. Materi yang disampaikan mulai dari HTML, CSS, dan JS Basic. Kemudian dilanjutkan dengan materi Reactjs hingga bisa membuat aplikasi berbasis web. Workshop akan dilaksanakan selama 8 sesi dalam sebulan."
+    "start_date": "2025-03-15",
+    "end_date": "2025-03-15",
+    "image": "/talks/nusendra-himatifta.webp",
+    "alt_image": "nusendra freelance himatifta",
+    "title": "Freelance, Personal Branding dan Kewirausahaan untuk Mahasiswa",
+    "description": "Seminar offline ini akan membahas tentang bagaimana mahasiswa dapat memulai karir sebagai freelancer, membangun personal branding, dan kewirausahaan."
   }
 ]

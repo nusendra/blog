@@ -11,7 +11,7 @@
 		<p
 			class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
 		>
-			© 2024 - Made using Svelte-kit and TailwindCSS by
+			© 2025 - Made with SvelteKit and Tailwind CSS by
 			<a
 				href="https://twitter.com/nusendra_"
 				class="text-gray-600 ml-1"

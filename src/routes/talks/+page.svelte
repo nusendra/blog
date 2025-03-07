@@ -216,6 +216,15 @@
 				description="Roadmap karir, personal branding, dan tips trik upwork"
 				slideUrl="https://www.canva.com/design/DAGD7xNe2Ss/DODnimcWm1j1JD7O3E7o-w/edit?utm_content=DAGD7xNe2Ss&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
 			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/nusendra-himatifta.webp"
+				thumbnailAlt="nusendra freelance himatifta"
+				tag="Offline Seminar"
+				title="Freelance, Personal Branding dan Karir untuk Mahasiswa"
+				description="Membahas tentang freelance, personal branding, dan karir untuk mahasiswa"
+				slideUrl=""
+			/>
 		</div>
 	</div>
 </section>
