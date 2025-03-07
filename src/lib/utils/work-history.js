@@ -5,6 +5,16 @@ const work = [
 		date: "2014 - Present",
 	},
 	{
+		company: "Streamline Technology - United States (REMOTE)",
+		role: "Software Engineer",
+		date: "2024 - Present",
+	},
+	{
+		company: "Neutrino Inc. - United States (REMOTE)",
+		role: "Software Engineer",
+		date: "2024 - Present",
+	},
+	{
 		company: "NanoPay - Malaysia (REMOTE)",
 		role: "Software Engineer",
 		date: "2023 - 2024",
