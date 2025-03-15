@@ -111,6 +111,28 @@ export const GET = () => {
 			},
 			{
 				id: 6,
+				companyName: 'Neutrino Inc.',
+				location: 'United States',
+				years: '2024 - Present',
+				roles: 'Fullstack Developer',
+				jobDesc: [
+					"Build products using Laravel, Wordpress, and Nextjs."
+				],
+				type: 'Remote'
+			},
+			{
+				id: 7,
+				companyName: 'Streamline Technology',
+				location: 'United States',
+				years: '2024 - Present',
+				roles: 'Fullstack Developer',
+				jobDesc: [
+					"Build products using Laravel, Wordpress, AI, JavaScript and Nextjs."
+				],
+				type: 'Remote'
+			},
+			{
+				id: 8,
 				companyName: 'Freelancer',
 				location: 'Anywhere',
 				years: '2014 - Present',
