@@ -223,7 +223,7 @@
 				tag="Offline Seminar"
 				title="Freelance, Personal Branding dan Karir untuk Mahasiswa"
 				description="Membahas tentang freelance, personal branding, dan karir untuk mahasiswa"
-				slideUrl=""
+				slideUrl="https://docs.google.com/presentation/d/1sLJtvMzZ0nCrzgpH6ENraXlOuFdB5FDcoVFXbwVXTww/edit?usp=sharing"
 			/>
 		</div>
 	</div>
