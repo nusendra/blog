@@ -2,7 +2,7 @@ import type { Context, Config } from "@netlify/edge-functions";
 
 export default async (request: Request, context: Context) => {
   return Response.json({
-    apiUrl: "https://ahtefe-backend.leskoding.com",
+    apiUrl: "https://kuotahub-backend.leskoding.com",
     chatUrl: "https://ahtefe-chat.leskoding.com",
     url: "http://35.240.245.246",
     apiPort: "3333",
