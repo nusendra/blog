@@ -51,7 +51,13 @@ First, make sure you have working devShells in your nix. Here's mine
 in that setup, I am adding redis to php83Extensions. But unfortunately it won't install to php module by default.
 So we need to setup manually.
 
-Enter your devshells and you will find out where is the `php.ini` file. Mine is in here
+Enter your devshells and find out where is the `php.ini` file by running this command
+
+```
+$ which php
+```
+
+Mine is in here
 
 `/nix/store/yxlsvn4biz4b2r2hajpys297r3yqsj3r-php-with-extensions-8.3.4/lib/php.ini`
 
