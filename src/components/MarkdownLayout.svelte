@@ -1,7 +1,7 @@
 <script>
 	import { format } from "date-fns";
 
-  let { title, date, children } = $props();
+  let { title, date, children, description } = $props();
 </script>
 
 <svelte:head>
@@ -41,9 +41,11 @@
   <div class="relative px-6 lg:px-8">
     <div class="mx-auto max-w-prose text-lg">
       <h1>
-        <span class="mt-2 block text-center text-3xl font-bold leading-8
-          tracking-tight text-gray-900 sm:text-4xl">{title}</span>
-        <span class="block text-center text-sm mt-4 font-semibold text-gray-500">Published at {format(new Date(date), "yyyy-MM-dd")}</span>
+        <span class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">{title}</span>
+        <div class="grid grid-cols-5 gap-4 mt-8">
+          <span class="col-span-3 block text-left text-sm font-semibold text-gray-500">{description}</span>
+          <span class="col-span-2 block text-right text-sm font-semibold text-gray-500">Published at {format(new Date(date), "yyyy-MM-dd")}</span>
+        </div>
       </h1>
     </div>
     <div class="prose prose-lg prose-indigo mx-auto mt-24 text-gray-500">
