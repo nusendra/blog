@@ -1,10 +1,9 @@
 [
   {
-    "start_date": "2025-03-17",
-    "end_date": "2025-03-17",
-    "image": "/talks/nusendra-himatifta.webp",
-    "alt_image": "nusendra freelance himatifta",
-    "title": "Freelance, Personal Branding dan Kewirausahaan untuk Mahasiswa",
-    "description": "Seminar offline ini akan membahas tentang bagaimana mahasiswa dapat memulai karir sebagai freelancer, membangun personal branding, dan kewirausahaan."
+    "start_date": "2025-09-11",
+    "end_date": "2025-09-11",
+    "image": "/talks/nusendra-cloudraya-webinar-ai.webp",
+    "alt_image": "Nusendra Cloudraya Webinar AI",
+    "title": "See How AI Agents in Your Own VM Can Redefine Your Dev Workflow"
   }
 ]
