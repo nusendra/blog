@@ -14,9 +14,9 @@
 	const today = new Date();
 	let status = 'Current';
 	if (isBefore(today, new Date(data.event.start_date))) {
-		status = 'Incoming';
+		status = 'Mendatang';
 	} else if (isAfter(today, new Date(data.event.end_date))) {
-		status = 'Past'
+		status = 'yang telah lalu'
 	}
 </script>
 
@@ -28,7 +28,7 @@
 			<h1
 				class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
 			>
-												Mau belajar Typescript, Express dan Vue.js dari dasar test 123?
+												Mau belajar Typescript, Express dan Vue.js dari dasar?
 			</h1>
 			<p class="mt-6 text-lg leading-8 text-gray-600">
 				Saya membuat beberapa series / playlist yang berisi video tutorial
@@ -96,7 +96,7 @@
 							<h2
 								class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"
 							>
-								<span>{status} Event</span>
+								<span>Event {status}</span>
 							</h2>
 							<img
 								class="rounded w-full object-cover object-center mb-6 md:mb-0"
