@@ -14,9 +14,9 @@
 	const today = new Date();
 	let status = 'Current';
 	if (isBefore(today, new Date(data.event.start_date))) {
-		status = 'Incoming';
+		status = 'Mendatang';
 	} else if (isAfter(today, new Date(data.event.end_date))) {
-		status = 'Past'
+		status = '      sudah lalu'
 	}
 </script>
 
@@ -96,7 +96,11 @@
 							<h2
 								class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"
 							>
-								<span>{status} Event</span>
+																	<span>
+
+
+
+																	Event {status} </span>
 							</h2>
 							<img
 								class="rounded w-full object-cover object-center mb-6 md:mb-0"
