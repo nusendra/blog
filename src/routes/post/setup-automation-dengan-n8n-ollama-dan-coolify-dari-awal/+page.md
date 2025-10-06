@@ -28,12 +28,12 @@ dibuka secara manual, karena *by default* port 8000 biasanya tidak tersedia untu
 
 <img src="/images/vm-detail.webp" />
 
-Setelah VM berhasil dibuat dengan spec minimum 8GB memory, yang perlu diperhatikan dihalaman `VM Detail` ini adalah `username`, `password`,
-dan `Public IP`. Untuk saat ini, akses SSH ke server akan kita lakukan dengan password, bukan dengan SSH Key. Namun kedepannya sangat
+Setelah VM berhasil dibuat dengan spec minimum 8GB memory, yang perlu diperhatikan dihalaman **VM Detail** ini adalah **username**, **password**,
+dan **Public IP**. Untuk saat ini, akses SSH ke server akan kita lakukan dengan password, bukan dengan SSH Key. Namun kedepannya sangat
 disarankan untuk login via SSH Key agar lebih aman dan mudah.
 
 Sebelum kita login ke server, baiknya perlu untuk mengkonfigurasi port melalui VPC yang sudah dibuat (Untuk pembuatan VPC bisa dilakukan
-ketika proses pembuatan VM, atau bisa secara manual di menu `Networking -> VPC`). Kali ini kita perlu untuk memperbolehkan akses port 8000 di
+ketika proses pembuatan VM, atau bisa secara manual di menu **Networking -> VPC**). Kali ini kita perlu untuk memperbolehkan akses port 8000 di
 VM kita, karena Coolify akan berjalan diatas port ini. Jika kita tidak membuka port ini, maka nantinya Coolify tidak akan bisa diakses dari
 luar.
 
@@ -62,7 +62,7 @@ terminal bisa diketik seperti ini
 ssh root@<public_ip>
 ```
 
-Kemudian untuk password bisa dicopy dibagian `VM Detail`
+Kemudian untuk password bisa dicopy dibagian **VM Detail**
 
 Setelah berhasil login ke server, saatnya kita install Coolify dengan mengetikkan perintah berikut ini di terminal
 
@@ -75,18 +75,18 @@ ini `<public_ip>:8000`. Jadi sekarang mari kita menuju ke coolify yang sudah ter
 
 Akan ada halaman Register, kita bisa register terlebih dahulu dan masuk ke halaman Coolify.
 
-Yang perlu kita lakukan pertama kali adalah membuat Project di menu `Projects`. Setelah itu nanti didalam *environment* projects nya akan ada
+Yang perlu kita lakukan pertama kali adalah membuat Project di menu **Projects**. Setelah itu nanti didalam *environment* projects nya akan ada
 environment *production* secara otomatis. Klik environment tersebut dan kita akan berada dihalaman *Resources*. Disini langsung saja kita
-klik `+ New`
+klik **+ New**
 
 <img src="/images/add-new-resource.webp" width="70%" style="margin: auto;" />
 
 ## Setup Ollama
 
 Ketika proses *create new service*, kita bisa melakukan pencarian di coolify. Karena saat ini kita akan menginstall Ollama, maka ketik Ollama
-dan coolify akan menampilkan beberapa service yang siap untuk digunakan. Pilih `Ollama with Open Webui`
+dan coolify akan menampilkan beberapa service yang siap untuk digunakan. Pilih **Ollama with Open Webui**
 
-Setelah itu centang opsi ini `Connect To Predefined Network`, kemudian klik Deploy dan tunggu hingga prosesnya selesai. Jika selesai, nanti
+Setelah itu centang opsi ini **Connect To Predefined Network**, kemudian klik Deploy dan tunggu hingga prosesnya selesai. Jika selesai, nanti
 halaman service Ollama akan terlihat seperti ini
 
 <img src="/images/ollama-coolify.webp" style="margin: auto;" />
@@ -102,14 +102,14 @@ Sekarang mari login ke server kita kembali via SSH, dan ketik dibawah ini
 docker ps
 ```
 
-Nanti akan ada beberapa docker container yang sudah jalan, salah satunya adalah Ollama. Cari `ollama/ollama:latest` kemudian catat `CONTAINER ID` dan `CONTAINER
-NAME` nya. Contohnya seperti ini
+Nanti akan ada beberapa docker container yang sudah jalan, salah satunya adalah Ollama. Cari **ollama/ollama:latest** kemudian catat **CONTAINER ID** dan **CONTAINER
+NAME** nya. Contohnya seperti ini
 
 ```
 9a8b1f1eb4ce   ollama/ollama:latest                         "/bin/ollama serve"      42 hours ago     Up 10 hours (healthy)     11434/tcp   ollama-api-z4s0wgw8osocso80cw0kcc8w
 ```
 
-Jika dilihat diatas, maka CONTAINER ID kita adalah `9a8b1f1eb4ce` dan CONTAINER NAME `ollama-api-z4s0wgw8osocso80cw0kcc8w`
+Jika dilihat diatas, maka CONTAINER ID kita adalah **9a8b1f1eb4ce** dan CONTAINER NAME **ollama-api-z4s0wgw8osocso80cw0kcc8w**
 
 Kemudian kita wajib untuk masuk ke container tersebut dengan perintah seperti ini
 
@@ -117,14 +117,14 @@ Kemudian kita wajib untuk masuk ke container tersebut dengan perintah seperti in
 docker exec -it 9a8b1f1eb4ce /bin/bash
 ```
 
-Dan nanti kita akan berada didalam container tersebut jika diterminal kita berubah menjadi seperti ini `root@9a8b1f1eb4ce:/#`
+Dan nanti kita akan berada didalam container tersebut jika diterminal kita berubah menjadi seperti ini **root@9a8b1f1eb4ce:/#**
 dan kita sudah siap untuk menginstall model kedalam Ollama
 
 > Yang perlu dilakukan sebelum install model adalah, pilih model yang pas untuk tujuan kita. Jika apps kita relatif kecil dan
 simple, maka pilihlah model yang kecil sehingga resource dari VM kita dipergunakan dengan maksimal
 
 Kali ini kita coba untuk install model yang kecil saja. Jika tugasnya hanya untuk ekstrak kata, bisa pilih model apapun yang
-ukurannya sekitar 300MB. Untuk use case kita kali ini, kita bisa pakai `llama3.2:1b`. Model ini relatif kecil dan sudah
+ukurannya sekitar 300MB. Untuk use case kita kali ini, kita bisa pakai **llama3.2:1b**. Model ini relatif kecil dan sudah
 support untuk external tools.
 
 Untuk menginstall model ini kedalam Ollama, bisa dengan mengetikkan perintah dibawah ini didalam container.
@@ -134,18 +134,18 @@ ollama pull llama3.2:1b
 ```
 
 Tunggu prosesnya hingga selesai. Jika sudah selesai kita bisa masuk ke halaman Ollama service di Coolify kita dan klik
-linknya (Ada di menu `Links`), lakukan register dan nantinya akan terlihat halaman Ollama seperti dibawah ini.
+linknya (Ada di menu **Links**), lakukan register dan nantinya akan terlihat halaman Ollama seperti dibawah ini.
 
 <img src="/images/ollama.webp" style="margin: auto;" />
 
-Disini kita sudah berhasil setup dan punya AI sendiri, dan itu `GRATIS !` Di halaman ini juga terkonfirmasi bahwa model yang
+Disini kita sudah berhasil setup dan punya AI sendiri, dan itu **GRATIS !** Di halaman ini juga terkonfirmasi bahwa model yang
 sudah kita install secara manual tadi sudah siap untuk dipakai
 
 ## Setup N8N
 
 N8N adalah tools automation yang sangat powerful dan hype saat ini. Bisa diinstall secara *self hosted* dan gratis :)
 
-Untuk installasi n8n, bisa kembali ke menu `Resources` di Coolify, kemudian klik `+ New` dan pilih Dockerfile
+Untuk installasi n8n, bisa kembali ke menu **Resources** di Coolify, kemudian klik **+ New** dan pilih Dockerfile
 
 > Kenapa tidak install n8n di menu pencarian? Dan kenapa harus pakai Dockerfile? Alasannya bisa dibaca di artikel saya disini https://nusendra.com/post/n8n-telegram-cloudflare-coolify
 
@@ -160,25 +160,25 @@ Save, dan klik Deploy. Hasilnya nanti akan seperti dibawah ini
 
 <img src="/images/n8n-coolify.webp" style="margin: auto;" />
 
-Sekarang klik `Links` yang ada di halaman itu, dan klik linknya. Nanti kita akan dibawa ke halaman register n8n. Silakan
+Sekarang klik **Links** yang ada di halaman itu, dan klik linknya. Nanti kita akan dibawa ke halaman register n8n. Silakan
 lakukan registrasi dan nanti setelah berhasil hasilnya akan seperti ini
 
 <img src="/images/n8n.webp" style="margin: auto;" />
 
-Kita sudah siap untuk membuat workflow pertama kita !!!! Klik `Create Workflow` disebelah kanan atas.
+Kita sudah siap untuk membuat workflow pertama kita !!!! Klik **Create Workflow** disebelah kanan atas.
 
 ### Simple Workflow
 
 Kali ini kita akan coba untuk super simple workflow, yaitu membuat fitur chat di n8n yang terkoneksi dengan Ollama kita.
-Pertama klik icon `+` dan cari fitur `Chat` seperti dibawah ini
+Pertama klik icon **+** dan cari fitur **Chat** seperti dibawah ini
 
 <img src="/images/n8n-chat-trigger.webp" width="70%" style="margin: auto;" />
 
-Tidak ada yang perlu kita setup di popup `Chat Trigger`. Klik keluar popup atau klik `Back to canvas`. Kemudian di sebelah
-kanan `Chat Trigger`, klik tombol `+` dan pilih `AI` -> `AI Agent`
+Tidak ada yang perlu kita setup di popup **Chat Trigger**. Klik keluar popup atau klik **Back to canvas**. Kemudian di sebelah
+kanan **Chat Trigger**, klik tombol **+** dan pilih **AI** -> **AI Agent**
 
 Di popup AI Agent juga tidak ada yang bisa kita lakukan untuk saat ini. klik keluar popup atau Back to canvas. kemudian
-dibawah node `AI Agent`, klik tombol `+` untuk **Chat Model**
+dibawah node **AI Agent**, klik tombol **+** untuk **Chat Model**
 
 <img src="/images/ai-model-node.webp" style="margin: auto;" />
 
@@ -187,14 +187,14 @@ credential dari Ollama. Klik **Create new credential**
 
 <img src="/images/ollama-popup-credential.webp" width="70%" style="margin: auto;" />
 
-Untuk mengkonfigurasi credentials dari Ollama, yang kita perlukan adalah `CONTAINER NAME` dan `API KEY` dari Ollama yang ada didalam Coolify
-kita. Karena sebelumnya kita sudah catat `CONTAINER NAME` milik Ollama (dalam kasus ini, container name nya adalah `ollama-api-z4s0wgw8osocso80cw0kcc8w`), maka sekarang kita harus mendapatkan API Key milik Ollama. Pertama pergi ke url web ui untuk Ollama dengan cara pergi ke Ollama service di Coolify, klik Links dan pergi ke URL tersebut.
+Untuk mengkonfigurasi credentials dari Ollama, yang kita perlukan adalah **CONTAINER NAME** dan **API KEY** dari Ollama yang ada didalam Coolify
+kita. Karena sebelumnya kita sudah catat **CONTAINER NAME** milik Ollama (dalam kasus ini, container name nya adalah **ollama-api-z4s0wgw8osocso80cw0kcc8w**), maka sekarang kita harus mendapatkan API Key milik Ollama. Pertama pergi ke url web ui untuk Ollama dengan cara pergi ke Ollama service di Coolify, klik Links dan pergi ke URL tersebut.
 
 Klik avatar yang ada di kanan atas di halaman Ollama web ui dan klik Settings.
 
 <img src="/images/ollama-setting.webp" width="50%" style="margin: auto;" />
 
-Kemudian klik `Account`, dan klik `Show` dibagian `API Key`
+Kemudian klik **Account**, dan klik **Show** dibagian **API Key**
 
 <img src="/images/ollama-account.webp" style="margin: auto;" />
 
