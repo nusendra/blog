@@ -225,6 +225,42 @@
 				description="Membahas tentang freelance, personal branding, dan karir untuk mahasiswa"
 				slideUrl="https://docs.google.com/presentation/d/1sLJtvMzZ0nCrzgpH6ENraXlOuFdB5FDcoVFXbwVXTww/edit?usp=sharing"
 			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/nusendra-cloudraya-webinar-ai.webp"
+				thumbnailAlt="nusendra cloudraya ai agents"
+				tag="Online Seminar"
+				title="See How AI Agents in Your Own VM Can Redefine Your Dev Workflow"
+				description="Membahas tentang bagaimana menjalankan AI Agents di VM pribadi untuk membantu pekerjaan developer"
+				slideUrl="https://www.canva.com/design/DAGycud_NVs/uZCM8yyiikKDwA7mrQ1i2Q/view?utm_content=DAGycud_NVs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h777be00d1c"
+			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/trunojoyo.webp"
+				thumbnailAlt="nusendra trunojoyo"
+				tag="Offline Seminar"
+				title="Redefine Your Dev Workflow with AI Agents"
+				description="Membahas tentang bagaimana AI Agents dapat membantu pekerjaan developer sehari-hari"
+				slideUrl="https://www.canva.com/design/DAGzi2wZwak/OVBdFUiAtUE6-38z1PSp7A/view?utm_content=DAGzi2wZwak&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7b178e6899"
+			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/nusendra-cloudraya-offline-ai-agents.webp"
+				thumbnailAlt="nusendra cloudraya ai agents"
+				tag="Offline Seminar"
+				title="Build AI Agents on Your Own VM for a Better Dev Workflow"
+				description="Membahas tentang bagaimana membangun AI Agents di VM pribadi untuk membantu pekerjaan developer"
+				slideUrl="https://nusendra.com/post/setup-automation-dengan-n8n-ollama-dan-coolify-dari-awal"
+			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/sbydev-anniv-11.webp"
+				thumbnailAlt="nusendra sbydev anniversary 11"
+				tag="Offline Seminar"
+				title="Developer Survival Guide in AI Era"
+				description="Membahas tentang bagaimana developer dapat bertahan dan berkembang di era AI saat ini"
+				slideUrl=""
+			/>
 		</div>
 	</div>
 </section>
