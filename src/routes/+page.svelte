@@ -12,11 +12,11 @@
 	let { data } = $props();
 
 	const today = new Date();
-	let status = 'Current';
+	let status = 'Sekarang';
 	if (isBefore(today, new Date(data.event.start_date))) {
-		status = 'Incoming';
+		status = 'akan datang';
 	} else if (isAfter(today, new Date(data.event.end_date))) {
-		status = 'Past'
+		status = 'sudah lewat'
 	}
 </script>
 
@@ -96,11 +96,18 @@
 							<h2
 								class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"
 							>
-								<span>{status} Event</span>
-							</h2>
-							<img
-								class="rounded w-full object-cover object-center mb-6 md:mb-0"
-								src={data.event.image}
+																<span>
+
+
+
+
+
+
+									kegiatan {status}</span>
+								</h2>
+								<img
+									class="rounded w-full object-cover object-center mb-6 md:mb-0"
+									src={data.event.image}
 								alt={data.event.alt_image}
 							/>
 						<p class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
