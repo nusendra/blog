@@ -2,7 +2,7 @@
 draft: false
 title: How to Setup OpenClaw in Ubuntu
 date: 2026-02-05 04:30:00
-tags: ['openclaw','ubuntu','ai assistant', 'setup']
+tags: ['openclaw','ai']
 description: "Step-by-step guide to install and configure OpenClaw AI assistant on Ubuntu"
 slug: how-to-setup-openclaw-in-ubuntu
 ---

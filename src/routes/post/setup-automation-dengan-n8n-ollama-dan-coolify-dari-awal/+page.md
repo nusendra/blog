@@ -2,7 +2,7 @@
 draft: false
 title: Setup Automation dengan N8N, Ollama dan Coolify di VM Cloudraya
 date: 2025-10-05 13:30:00
-tags: ['n8n','ollama','coolify', 'ai agent']
+tags: ['n8n','ollama']
 description: "Langkah - langkah membuat automation dengan AI Agent di VM Cloudraya menggunakan N8N
 dan Ollama"
 slug: setup-automation-dengan-n8n-ollama-dan-coolify-dari-awal
