@@ -4,10 +4,8 @@ title: How to Setup OpenClaw in Ubuntu
 date: 2026-02-05 04:30:00
 tags: ['openclaw','ubuntu','ai assistant', 'setup']
 description: "Step-by-step guide to install and configure OpenClaw AI assistant on Ubuntu"
-slug: how-to-setup-openclaw-in-ubuntu---
+slug: how-to-setup-openclaw-in-ubuntu
 ---
-
-<img src="/images/openclaw-ubuntu.webp" />
 
 This guide will walk you through the complete installation and setup of OpenClaw, an AI assistant that can handle messaging, file operations, web browsing, and more, all running locally on your Ubuntu system.
 

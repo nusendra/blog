@@ -7,7 +7,7 @@ import { createHighlighter } from 'shiki';
 const theme = 'github-dark';
 const highlighter = await createHighlighter({
 	themes: [theme],
-	langs: ['javascript', 'typescript', 'php', 'vim', 'vue']
+	langs: ['javascript', 'typescript', 'php', 'vim', 'vue', 'bash', 'ini']
 });
 
 const config = {
