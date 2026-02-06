@@ -2,7 +2,7 @@
 draft: false
 title: Fixing 504 Gateway Timeout in Traefik with Multi-Network Docker Compose
 date: 2026-02-07 02:30:00
-tags: ['traefik','docker','nginx','devops','coolify']
+tags: ['coolify','traefik']
 description: "How to diagnose and fix 504 Gateway Timeout errors in Traefik when using Docker Compose with multiple networks"
 slug: fixing-504-gateway-timeout-traefik-docker-networks
 ---
