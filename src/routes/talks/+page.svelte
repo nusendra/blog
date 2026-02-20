@@ -259,6 +259,24 @@
 				tag="Offline Seminar"
 				title="Developer Survival Guide in AI Era"
 				description="Membahas tentang bagaimana developer dapat bertahan dan berkembang di era AI saat ini"
+				slideUrl="https://docs.google.com/presentation/d/12f1smRGMz78JBamrjnKCpLBnDjAtYxlmZsE7CrJmozc/edit?usp=sharing"
+			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/uinsa-talk.webp"
+				thumbnailAlt="nusendra talk at uinsa"
+				tag="Offline Seminar"
+				title="From Campus to Fintech Startup"
+				description="Membahas tentang bagaimana membangun aplikasi fintech dari awal, mulai dari ide, desain, hingga implementasi"
+				slideUrl="https://docs.google.com/presentation/d/1DI9fzxbw_J3HCWMhftXfK9zJsNbLmsk2LcbJB4ali7E/edit?usp=sharing"
+			/>
+
+			<TalkCard
+				thumbnailUrl="/talks/jh-vue.webp"
+				thumbnailAlt="nusendra talk about vue js at jagoanhosting"
+				tag="Online Seminar"
+				title="Scalable Website Development with Vue.js"
+				description="Strategi membangun website yang lebih efisien, simple, dan powerful pake Vue"
 				slideUrl=""
 			/>
 		</div>
