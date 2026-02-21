@@ -9,10 +9,10 @@
 	} = $props();
 </script>
 
-<div class="xl:w-1/4 md:w-1/2 p-4">
-	<div class="bg-gray-200 p-6 rounded-lg">
+<div class="xl:w-1/4 md:w-1/2 p-4 flex">
+	<div class="bg-gray-200 p-6 rounded-lg flex flex-col w-full">
 		<img
-			class="h-40 rounded w-full object-cover object-center mb-6"
+			class="aspect-square rounded w-full object-cover object-center mb-6"
 			src={thumbnailUrl}
 			alt={thumbnailAlt}
 		/>
@@ -22,7 +22,7 @@
 		<h2 class="text-lg text-gray-900 font-medium title-font mb-4">
 			{title}
 		</h2>
-		<p class="leading-relaxed text-base">
+		<p class="leading-relaxed text-base flex-grow">
 			{description}
 		</p>
 		{#if slideUrl}
