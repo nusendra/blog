@@ -6,15 +6,8 @@ export const GET = () => {
 		avatarUrl: "https://raw.githubusercontent.com/nusendra/blog/master/static/profile.webp",
 		address: "Gresik, East Java, Indonesia",
 		addressUrl: "https://nusendra.com/maps",
-		about: "Senior fullstack developer with 10+ years building production web applications for clients across Indonesia, Malaysia, Singapore, and the United States. Specialize in JavaScript (Vue/Nuxt, React/Next) and PHP (Laravel) ecosystems, with recent focus on real-estate / proptech and LLM integration in production web applications. Tech lead background, active JavaScript community organizer in Surabaya, and programming content creator on multiple Indonesian developer platforms.",
-		objectives: [
-			'10+ years of professional fullstack experience shipping production apps for fintech, e-commerce, ERP, and SaaS clients across SE Asia and the United States.',
-			'Recent work focused on LLM integration, shipped AI-powered features in production for US clients using Claude.',
-			'Tech lead at Zetpy / Neowave Solutions, drove technical direction, code review culture, and best-practice rollout across the engineering team.',
-			'Programming educator: content creator at BuildWithAngga, CodePolitan, and Les Koding; web development mentor at Hacktiv8.',
-			'Lead organizer of SurabayaJS, the JavaScript community in Surabaya, Indonesia. Organizer at JavaScript Indonesia, Svelte Indonesia, and Vue.js Indonesia.',
-			'Public speaker, delivered talks at developer conferences, university events, and online webinars (archive: nusendra.com/talks).'
-		],
+		email: "admin@nusendra.com",
+		about: "Senior Fullstack Engineer with 10+ years building production web apps for clients across SE Asia and the United States. Currently shipping AI-powered features (Claude API, OpenAI, RAG) on Next.js + Laravel stacks. Former Tech Lead, lead organizer of SurabayaJS, and programming educator across Indonesia's biggest dev platforms.",
 		links: [
 			{
 				id: "maps",
@@ -78,9 +71,9 @@ export const GET = () => {
 				years: '2019 - 2021',
 				roles: 'Senior Fullstack Developer / Tech Lead',
 				jobDesc: [
-					"Led technical direction and best-practice adoption across the engineering team, drove code review culture, branching strategy, and architectural decisions.",
-					"Designed and shipped a multi-channel marketplace sync engine integrating Shopee, Lazada, and other e-commerce platforms, handled orders, product catalog, documents, and reporting for SME merchants.",
-					"Built backend and frontend in Laravel (PHP) + Vue.js with focus on reliability and incremental migration off the legacy stack."
+					"Led the engineering team of 5 as Tech Lead — drove code review culture, branching strategy, architectural decisions, and an onboarding flow that gets new devs productive in 1 week.",
+					"Designed and shipped a multi-channel marketplace sync engine integrating ~100 marketplace platforms (Shopee, Lazada, and regional variants) — handled orders, product catalog, documents, and reporting for 6 SME merchants.",
+					"Built backend and frontend in Laravel + Vue.js with focus on reliability, leading incremental migration off the legacy stack."
 				],
 				type: 'Remote',
 				employmentType: 'Full-time'
@@ -92,8 +85,8 @@ export const GET = () => {
 				years: '2021 - 2022',
 				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Designed and built the entire platform from zero, TypeScript monorepo (Nuxt.js frontend, Express.js + GraphQL backend) deployed to Google Cloud via Terraform under a microservice architecture.",
-					"Integrated multiple SaaS / PaaS providers (auth, payments, communication) into the platform and owned developer-experience tooling for the monorepo."
+					"Designed and built the entire platform from zero with a team of 6 — TypeScript monorepo (Nuxt.js frontend, Express.js + GraphQL backend) deployed to Google Cloud via Terraform. Shipped MVP in 2 months.",
+					"Integrated 5+ third-party services (Shopify, Stripe, FrankieOne, Singpass, etc.) covering commerce, payments, KYC, and auth — and owned developer-experience tooling for the monorepo."
 				],
 				type: 'Remote',
 				employmentType: 'Full-time'
@@ -102,11 +95,11 @@ export const GET = () => {
 				id: 5,
 				companyName: 'NanoPay',
 				location: 'Malaysia',
-				years: '2023 - 2025',
+				years: '2023 - 2024',
 				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Maintained and extended the core Laravel + Livewire + MySQL fintech platform serving 6 active merchants, shipped features, resolved production incidents, and owned reporting workflows used by the operations team.",
-					"Rebuilt the reporting pipeline, cut report build time from ~30 minutes (with frequent timeouts) to under 1 minute, eliminating production timeout errors and unblocking daily operational review."
+					"Maintained the core Laravel + Livewire + MySQL fintech platform serving 6 active merchants alongside a team of 4 engineers — handled production incidents and owned reporting workflows used by the operations team.",
+					"Rebuilt the reporting pipeline, cutting report build time from ~1 hour (with frequent timeouts) to ~5 minutes — eliminated production timeout errors and unblocked daily operational review."
 				],
 				type: 'Remote',
 				employmentType: 'Full-time'
@@ -116,47 +109,41 @@ export const GET = () => {
 				companyName: 'Neutrino Inc.',
 				location: 'United States',
 				years: '2024 - Present',
-				roles: 'Senior Fullstack Developer (Fulltime)',
+				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Primary day-to-day fullstack engineer on the project, ship features end-to-end on a Next.js + Laravel API + headless WordPress stack for a US-based product team.",
-					"Set up the local-to-staging deployment workflow, Git branching strategy, environment configuration, and staging deployment pipeline."
+					"Contract engagement with a Streamline Technology affiliate — ship features end-to-end on a Next.js + Laravel API + headless WordPress stack for a US product team.",
+					"Designed the Git branching strategy, environment configuration, and local-to-staging deployment workflow for the shared engineering team of 5."
 				],
 				type: 'Remote',
-				employmentType: 'Full-time'
+				employmentType: 'Contract'
 			},
 			{
 				id: 7,
 				companyName: 'Streamline Technology',
 				location: 'United States',
 				years: '2024 - Present',
-				roles: 'Senior Fullstack Developer (Fulltime)',
+				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Build AI-powered product features for a US-based client on a Next.js + Laravel + WordPress stack, integrated Claude API for AI-assisted content workflows, OpenAI API for automated website content generation, and built a RAG-based chatbot.",
-					"Set up production and staging environments from scratch, infrastructure provisioning, deployment pipelines, and the full local-to-live workflow.",
-					"Own ongoing DevOps, deployment automation, environment maintenance, and platform reliability.",
-					"Drove site-wide performance optimization, added database indexing on hot query paths, modernized legacy stack components, and refactored bottleneck code paths."
+					"Ship AI-powered product features for a US client on a Next.js + Laravel + WordPress stack — Claude API for AI-assisted content workflows, OpenAI API for automated website content generation, and a production RAG chatbot.",
+					"Set up production and staging environments from scratch — infrastructure provisioning, deployment pipelines, and the full local-to-live workflow supporting a team of 5 engineers and ~25 deploys per week.",
+					"Own ongoing DevOps, deployment automation, and platform reliability — sustained production stability with only one critical incident to date.",
+					"Drove site-wide performance optimization — added database indexing on hot query paths and refactored bottleneck code, cutting search response from ~4s → 1s and the slowest query from ~7s → 1s."
 				],
 				type: 'Remote',
 				employmentType: 'Full-time'
 			},
-			{
-				id: 8,
-				companyName: 'Independent / Freelance Clients',
-				location: 'Various',
-				years: '2014 - 2022',
-				roles: 'Fullstack Developer (Freelance)',
-				jobDesc: [
-					"Bukulaba, finance app for PT. Buku Laba Indonesia. Built mobile (React Native) and web (Express.js + Next.js) clients.",
-					"E-Monev, data integration & reporting system for the Government of Mojokerto, Indonesia (Nuxt.js + Lumen).",
-					"PT. Platinum Ceramics Industry, frontend (Vue.js) for internal ERP system.",
-					"PT. Antamas Indonesia, Laravel reporting application.",
-					"PT. Benteng Api Refractorindo, marketing site (Nuxt.js + Lumen).",
-					"Various web and React Native projects delivered via Upwork."
-				],
-				type: 'Remote',
-				employmentType: 'Freelance'
-			},
 		],
+		selectedFreelance: {
+			note: "alongside full-time roles",
+			items: [
+				{ name: "Bukulaba", description: "Finance app for PT. Buku Laba Indonesia. Mobile (React Native) and web (Express.js + Next.js) clients." },
+				{ name: "E-Monev", description: "Data integration & reporting system for the Government of Mojokerto, Indonesia (Nuxt.js + Lumen)." },
+				{ name: "PT. Platinum Ceramics Industry", description: "Frontend (Vue.js) for internal ERP system." },
+				{ name: "PT. Antamas Indonesia", description: "Laravel reporting application." },
+				{ name: "PT. Benteng Api Refractorindo", description: "Marketing site (Nuxt.js + Lumen)." },
+				{ name: "Upwork", description: "Various web and React Native projects delivered to international clients." }
+			]
+		},
 		notableProjects: [
 			{
 				id: 1,
@@ -165,7 +152,7 @@ export const GET = () => {
 				description: "Open-source Telegram bot bridging Claude Code CLI, enables agentic coding workflows from a Telegram chat with session persistence, working-directory control, and live typing indicators. Optimized for minimal hardware (~3 MB RAM on Raspberry Pi). An alternative to desktop Claude Code clients like openclaw and Hermes.",
 				stack: ["Rust", "Tokio", "Teloxide (Telegram Bot API)", "Claude Code CLI"],
 				url: "https://github.com/nusendra/claude-code-telegram",
-				year: "2026 - Present",
+				year: "Since 2026",
 				category: "Personal Tooling / AI / Open Source"
 			},
 			{
@@ -175,7 +162,7 @@ export const GET = () => {
 				description: "Luxury real estate platform for Christie's International Real Estate Caribbean, discovery and listing of high-end residential properties across 19+ Caribbean islands. Built from scratch with property search, island-specific browsing, agent directory, and map-based discovery for a global luxury audience.",
 				stack: ["WordPress", "Laravel"],
 				url: "https://cirecaribbean.com/",
-				year: "2025 - Present",
+				year: "Since 2025",
 				category: "Real Estate / B2C Marketplace"
 			},
 			{
@@ -185,7 +172,7 @@ export const GET = () => {
 				description: "Data management platform that enhances real estate marketing, REConnect subscribers get Listing Websites automatically populated and designed to showcase property listings. Contribute to ongoing maintenance and new feature development.",
 				stack: ["Laravel"],
 				url: "https://reconnectapp.com/",
-				year: "2025 - Present",
+				year: "Since 2025",
 				category: "Real Estate / SaaS"
 			},
 			{
@@ -195,24 +182,14 @@ export const GET = () => {
 				description: "Real estate marketplace where users can rent or buy homes, condos, and other properties. Contribute to ongoing maintenance and new feature development.",
 				stack: ["Laravel", "Wordpress"],
 				url: "https://www.seaglass.com/",
-				year: "2025 - Present",
+				year: "Since 2025",
 				category: "Real Estate / Marketplace"
 			},
 			{
 				id: 5,
-				name: "AHTEFE",
-				role: "Creator & Builder",
-				description: "Mobile phone credit and internet-data package sales app for the Indonesian market, handles top-ups across carriers. Published on Google Play.",
-				stack: ["Expo (React Native)", "TypeScript", "Express.js", "OneSignal", "XMPP Protocol"],
-				url: "https://play.google.com/store/apps/details?id=com.nusendra.ahtefereload&hl=id",
-				year: "2018 - Present",
-				category: "Mobile / Telecom / Fintech"
-			},
-			{
-				id: 6,
 				name: "NowCircular Platform",
-				role: "Lead Fullstack Engineer (zero-to-one build)",
-				description: "Designed and built the entire platform from zero, TypeScript monorepo with Nuxt.js frontend and Express.js + GraphQL backend, deployed to Google Cloud via Terraform under a microservice architecture. Integrated multiple SaaS / PaaS providers (auth, payments, communication).",
+				role: "Lead Fullstack Engineer (zero-to-one build, team of 6)",
+				description: "Designed and built the entire platform from zero with a team of 6 — TypeScript monorepo with Nuxt.js frontend and Express.js + GraphQL backend, deployed to Google Cloud via Terraform. MVP shipped in 2 months. Integrated 5+ third-party services covering commerce (Shopify), payments (Stripe), KYC (FrankieOne), and auth (Singpass).",
 				stack: ["TypeScript", "Nuxt.js", "Express.js", "GraphQL", "Google Cloud", "Terraform", "Monorepo"],
 				url: "https://nowcircular.com/",
 				year: "2021 - 2022",
@@ -272,24 +249,16 @@ export const GET = () => {
 		],
 		skills: [
 			{
-				type: "Frontend",
-				tools: ["React", "Next.js", "React Native", "Vue.js", "Nuxt.js", "Svelte", "SvelteKit"]
+				type: "Expert",
+				tools: ["TypeScript / JavaScript", "React + Next.js", "Vue.js + Nuxt.js", "PHP + Laravel", "MySQL"]
 			},
 			{
-				type: "Backend",
-				tools: ["JavaScript", "Node.js", "Bun", "PHP", "Express.js", "Hono", "Laravel", "tRPC", "GraphQL / Apollo", "Rust"]
+				type: "Strong",
+				tools: ["React Native", "Node.js + Express", "Livewire", "PostgreSQL", "Claude API + OpenAI + RAG", "TailwindCSS", "Svelte / SvelteKit"]
 			},
 			{
-				type: "Database",
-				tools: ["PostgreSQL", "MySQL", "Redis", "MongoDB", "Firestore"]
-			},
-			{
-				type: "Architecture & Infra",
-				tools: ["TypeScript", "Monorepo", "Microservices", "Google Cloud", "Firebase", "Socket.io", "JWT", "TailwindCSS"]
-			},
-			{
-				type: "AI & LLM",
-				tools: ["Anthropic Claude API", "OpenAI API", "Prompt Engineering", "RAG", "LangChain", "Mastra", "n8n", "openclaw", "Self-built Claude Code wrapper"]
+				type: "Working knowledge",
+				tools: ["Rust", "Google Cloud + Terraform"]
 			}
 		],
 		languages: [
