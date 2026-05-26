@@ -70,8 +70,8 @@ export const GET = () => {
 				years: '2019 - 2021',
 				roles: 'Senior Fullstack Developer / Tech Lead',
 				jobDesc: [
-					"Led the engineering team of 5 as Tech Lead — drove code review culture, branching strategy, architectural decisions, and an onboarding flow that gets new devs productive in 1 week.",
-					"Designed and shipped a multi-channel marketplace sync engine integrating ~100 marketplace platforms (Shopee, Lazada, and regional variants) — handled orders, product catalog, documents, and reporting for 6 SME merchants.",
+					"Led the engineering team of 5 as Tech Lead, drove code review culture, branching strategy, architectural decisions, and an onboarding flow that gets new devs productive in 1 week.",
+					"Designed and shipped a multi-channel marketplace sync engine integrating ~100 marketplace platforms (Shopee, Lazada, and regional variants), handled orders, product catalog, documents, and reporting for 6 SME merchants.",
 					"Built backend and frontend in Laravel + Vue.js with focus on reliability, leading incremental migration off the legacy stack."
 				],
 				type: 'Remote',
@@ -84,8 +84,8 @@ export const GET = () => {
 				years: '2021 - 2022',
 				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Designed and built the entire platform from zero with a team of 6 — TypeScript monorepo (Nuxt.js frontend, Express.js + GraphQL backend) deployed to Google Cloud via Terraform. Shipped MVP in 2 months.",
-					"Integrated 5+ third-party services (Shopify, Stripe, FrankieOne, Singpass, etc.) covering commerce, payments, KYC, and auth — and owned developer-experience tooling for the monorepo."
+					"Designed and built the entire platform from zero with a team of 6, TypeScript monorepo (Nuxt.js frontend, Express.js + GraphQL backend) deployed to Google Cloud via Terraform. Shipped MVP in 2 months.",
+					"Integrated 5+ third-party services (Shopify, Stripe, FrankieOne, Singpass, etc.) covering commerce, payments, KYC, and auth, and owned developer-experience tooling for the monorepo."
 				],
 				type: 'Remote',
 				employmentType: 'Full-time'
@@ -97,8 +97,8 @@ export const GET = () => {
 				years: '2023 - 2024',
 				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Maintained the core Laravel + Livewire + MySQL fintech platform serving 6 active merchants alongside a team of 4 engineers — handled production incidents and owned reporting workflows used by the operations team.",
-					"Rebuilt the reporting pipeline, cutting report build time from ~1 hour (with frequent timeouts) to ~5 minutes — eliminated production timeout errors and unblocked daily operational review."
+					"Maintained the core Laravel + Livewire + MySQL fintech platform serving 6 active merchants alongside a team of 4 engineers, handled production incidents and owned reporting workflows used by the operations team.",
+					"Rebuilt the reporting pipeline, cutting report build time from ~1 hour (with frequent timeouts) to ~5 minutes, eliminated production timeout errors and unblocked daily operational review."
 				],
 				type: 'Remote',
 				employmentType: 'Full-time'
@@ -110,7 +110,7 @@ export const GET = () => {
 				years: '2024 - Present',
 				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Contract engagement with a Streamline Technology affiliate — ship features end-to-end on a Next.js + Laravel API + headless WordPress stack for a US product team.",
+					"Contract engagement with a Streamline Technology affiliate, ship features end-to-end on a Next.js + Laravel API + headless WordPress stack for a US product team.",
 					"Designed the Git branching strategy, environment configuration, and local-to-staging deployment workflow for the shared engineering team of 5."
 				],
 				type: 'Remote',
@@ -123,10 +123,10 @@ export const GET = () => {
 				years: '2024 - Present',
 				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Ship AI-powered product features for a US client on a Next.js + Laravel + WordPress stack — Claude API for AI-assisted content workflows, OpenAI API for automated website content generation, and a production RAG chatbot.",
-					"Set up production and staging environments from scratch — infrastructure provisioning, deployment pipelines, and the full local-to-live workflow supporting a team of 5 engineers and ~25 deploys per week.",
-					"Own ongoing DevOps, deployment automation, and platform reliability — sustained production stability with only one critical incident to date.",
-					"Drove site-wide performance optimization — added database indexing on hot query paths and refactored bottleneck code, cutting search response from ~4s → 1s and the slowest query from ~7s → 1s."
+					"Ship AI-powered product features for a US client on a Next.js + Laravel + WordPress stack, Claude API for AI-assisted content workflows, OpenAI API for automated website content generation, and a production RAG chatbot.",
+					"Set up production and staging environments from scratch, infrastructure provisioning, deployment pipelines, and the full local-to-live workflow supporting a team of 5 engineers and ~25 deploys per week.",
+					"Own ongoing DevOps, deployment automation, and platform reliability, sustained production stability with only one critical incident to date.",
+					"Drove site-wide performance optimization, added database indexing on hot query paths and refactored bottleneck code, cutting search response from ~4s → 1s and the slowest query from ~7s → 1s."
 				],
 				type: 'Remote',
 				employmentType: 'Full-time'
@@ -188,7 +188,7 @@ export const GET = () => {
 				id: 5,
 				name: "NowCircular Platform",
 				role: "Lead Fullstack Engineer (zero-to-one build, team of 6)",
-				description: "Designed and built the entire platform from zero with a team of 6 — TypeScript monorepo with Nuxt.js frontend and Express.js + GraphQL backend, deployed to Google Cloud via Terraform. MVP shipped in 2 months. Integrated 5+ third-party services covering commerce (Shopify), payments (Stripe), KYC (FrankieOne), and auth (Singpass).",
+				description: "Designed and built the entire platform from zero with a team of 6, TypeScript monorepo with Nuxt.js frontend and Express.js + GraphQL backend, deployed to Google Cloud via Terraform. MVP shipped in 2 months. Integrated 5+ third-party services covering commerce (Shopify), payments (Stripe), KYC (FrankieOne), and auth (Singpass).",
 				stack: ["TypeScript", "Nuxt.js", "Express.js", "GraphQL", "Google Cloud", "Terraform", "Monorepo"],
 				url: "https://nowcircular.com/",
 				year: "2021 - 2022",
