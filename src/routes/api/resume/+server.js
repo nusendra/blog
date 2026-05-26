@@ -145,6 +145,16 @@ export const GET = () => {
 		},
 		notableProjects: [
 			{
+				id: 6,
+				name: "Ployer",
+				role: "Creator & Maintainer",
+				description: "Open-source, self-hosted PaaS for deploying apps from Git with automatic SSL (Caddy + Let's Encrypt), GitHub/GitLab webhook auto-deploys, health checks with auto-restart, real-time log streaming, and AES-256-GCM encrypted secrets. Targets <50MB RAM idle, a leaner alternative to Coolify.",
+				stack: ["Rust", "SvelteKit", "Docker", "Caddy"],
+				url: "https://github.com/nusendra/ployer",
+				year: "Since 2026",
+				category: "Personal Tooling / DevOps / Open Source"
+			},
+			{
 				id: 1,
 				name: "claude-code-telegram",
 				role: "Creator & Maintainer",
@@ -230,11 +240,10 @@ export const GET = () => {
 			{
 				type: "Conferences and Speaking",
 				activities: [
+					"Build AI Agents on Your Own VM for a Better Dev Workflow",
+					"Redefine Your Dev Workflow with AI Agents",
+					"Developer Survival Guide in AI Era",
 					"Personal Branding for Software Engineer, SESINDO 2020 (national informatics symposium).",
-					"Build a Static Web / Landing Page using Vue.js, Jatim Dev Day 2019.",
-					"Be a Software Developer with JavaScript, University of 17 Agustus 1945.",
-					"Svelte, the JavaScript Compiler, SurabayaJS Community.",
-					"Deploy Static Site Using GitHub Actions, JagoanHosting Webinar.",
 					"And more, full talk archive at https://nusendra.com/talks"
 				]
 			},
