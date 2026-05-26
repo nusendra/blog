@@ -68,9 +68,9 @@ export const GET = () => {
 				companyName: 'Zetpy / Neowave Solutions Sdn. Bhd.',
 				location: 'Kuala Lumpur, Malaysia',
 				years: '2019 - 2021',
-				roles: 'Senior Fullstack Developer / Tech Lead',
+				roles: 'Senior Fullstack Developer',
 				jobDesc: [
-					"Led the engineering team of 5 as Tech Lead, drove code review culture, branching strategy, architectural decisions, and an onboarding flow that gets new devs productive in 1 week.",
+					"Led the engineering team of 5, drove code review culture, branching strategy, architectural decisions, and an onboarding flow that gets new devs productive in 1 week.",
 					"Designed and shipped a multi-channel marketplace sync engine integrating ~100 marketplace platforms (Shopee, Lazada, and regional variants), handled orders, product catalog, documents, and reporting for 6 SME merchants.",
 					"Built backend and frontend in Laravel + Vue.js with focus on reliability, leading incremental migration off the legacy stack."
 				],
