@@ -35,13 +35,13 @@ Two compounding issues:
 
 There was **no specific A record** for the new subdomain in Cloudflare DNS. A wildcard A record (`*.example.com → <ORIGIN_IP>`) was matching the subdomain instead.
 
-While the wildcard pointed to the correct server IP, this wasn't the actual cause of the redirect — the request was reaching the right server, but Nginx wasn't handling it properly (see issue #2).
+While the wildcard pointed to the correct server IP, this wasn't the actual cause of the redirect , the request was reaching the right server, but Nginx wasn't handling it properly (see issue #2).
 
 ### 2. Missing SSL Certificate on the Ploi Site (actual cause)
 
 The new site `staging.example.com` did not have an SSL certificate provisioned on the Ploi server.
 
-When Cloudflare proxied HTTPS requests to the origin server, Nginx could not find a server block on port 443 matching the hostname. It fell through to the **default HTTPS server block** — which happened to be the admin site — and that site issued a 301 redirect to `https://admin.legacy-app.com/`.
+When Cloudflare proxied HTTPS requests to the origin server, Nginx could not find a server block on port 443 matching the hostname. It fell through to the **default HTTPS server block** , which happened to be the admin site , and that site issued a 301 redirect to `https://admin.legacy-app.com/`.
 
 **Diagnostic that confirmed it:** A direct HTTP request to Nginx (bypassing Cloudflare/HTTPS) worked perfectly:
 
@@ -53,7 +53,7 @@ Server: nginx
 Set-Cookie: <app_session_cookie>=...
 ```
 
-This proved the site config was correct on HTTP/port 80, and the problem was isolated to HTTPS/port 443 — i.e., the missing SSL certificate.
+This proved the site config was correct on HTTP/port 80, and the problem was isolated to HTTPS/port 443 , i.e., the missing SSL certificate.
 
 ---
 
@@ -124,7 +124,7 @@ From the origin server itself (no root needed):
 curl -I -H "Host: staging.example.com" http://localhost/
 ```
 
-If this returns 200 OK but the public URL returns 301, the issue is in the HTTPS layer — either Cloudflare config or missing SSL on the origin.
+If this returns 200 OK but the public URL returns 301, the issue is in the HTTPS layer , either Cloudflare config or missing SSL on the origin.
 
 ---
 
