@@ -2,10 +2,9 @@ export const GET = () => {
 	const data = {
 		name: "Nusendra Hanggarawan",
 		title: "Senior Fullstack Developer",
-		headline: "Senior Fullstack Developer · 10+ years · JavaScript & PHP · SE Asia ↔ US · LLM-focused",
+		headline: "10+ years · JavaScript & PHP · SE Asia & US · LLM-focused",
 		avatarUrl: "https://raw.githubusercontent.com/nusendra/blog/master/static/profile.webp",
 		address: "Gresik, East Java, Indonesia",
-		addressUrl: "https://nusendra.com/maps",
 		email: "admin@nusendra.com",
 		about: "Senior Fullstack Engineer with 10+ years building production web apps for clients across SE Asia and the United States. Currently shipping AI-powered features (Claude API, OpenAI, RAG) on Next.js + Laravel stacks. Former Tech Lead, lead organizer of SurabayaJS, and programming educator across Indonesia's biggest dev platforms.",
 		links: [
