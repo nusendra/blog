@@ -9,29 +9,9 @@ export const GET = () => {
 		about: "Senior Fullstack Engineer with 10+ years building production web apps for clients across SE Asia and the United States. Currently shipping AI-powered features (Claude API, OpenAI, RAG) on Next.js + Laravel stacks. Former Tech Lead, lead organizer of SurabayaJS, and programming educator across Indonesia's biggest dev platforms.",
 		links: [
 			{
-				id: "maps",
-				name: "Maps",
-				url: "https://nusendra.com/maps"
-			},
-			{
-				id: "github",
-				name: "Github",
-				url: "https://nusendra.com/github"
-			},
-			{
-				id: "linkedin",
-				name: "LinkedIn",
-				url: "https://nusendra.com/linkedin"
-			},
-			{
-				id: "youtube",
-				name: "Youtube",
-				url: "https://nusendra.com/youtube"
-			},
-			{
-				id: "x",
-				name: "X / Twitter",
-				url: "https://nusendra.com/x"
+				id: "website",
+				name: "nusendra.com",
+				url: "https://nusendra.com"
 			},
 		],
 		workExperiences: [
