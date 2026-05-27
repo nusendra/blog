@@ -18,6 +18,66 @@
 			</h1>
 		</div>
 		<ProjectCard
+			title="Ployer"
+			tools="Rust, SvelteKit, Caddy, Docker"
+			imageUrl=""
+			imageAlt="nusendra ployer"
+			description="A lightweight, self-hosted PaaS — deploy apps from Git with automatic SSL, health checks, and webhooks."
+			details="Built with Rust and SvelteKit, targeting under 50MB RAM idle. Think Coolify, but leaner. Supports multi-server deploys, encrypted secrets (AES-256-GCM), and real-time build/runtime logs over WebSocket."
+			projectUrl="https://github.com/nusendra/ployer"
+			types={[
+				{ type: 'Web App', color: 'green' },
+				{ type: 'Open Source', color: 'yellow' },
+				{ type: 'Public', color: 'blue' },
+			]}
+		/>
+
+		<ProjectCard
+			title="Claude Code Telegram"
+			tools="Rust, Telegram Bot API, Claude Code CLI"
+			imageUrl=""
+			imageAlt="nusendra claude code telegram"
+			description="Single-user Telegram bot that wraps the Claude Code CLI."
+			details="Built in Rust and designed to run on a Raspberry Pi. Lets you talk to Claude Code from your phone via Telegram."
+			projectUrl="https://github.com/nusendra/claude-code-telegram"
+			types={[
+				{ type: 'Bot', color: 'green' },
+				{ type: 'Open Source', color: 'yellow' },
+				{ type: 'Public', color: 'blue' },
+			]}
+		/>
+
+		<ProjectCard
+			title="CentralEnv"
+			tools="Rust, axum, SvelteKit, SQLite"
+			imageUrl=""
+			imageAlt="nusendra centralenv"
+			description="Self-hosted, single-admin manager for .env variables."
+			details="Run the server on a home box, expose it over a Cloudflare Tunnel or Tailscale, manage projects and environments through a SvelteKit web UI, and pull values onto any device with a small Rust CLI. AES-GCM encryption with SQLite at rest."
+			projectUrl="https://github.com/nusendra/centralenv"
+			types={[
+				{ type: 'CLI / Web App', color: 'green' },
+				{ type: 'Open Source', color: 'yellow' },
+				{ type: 'Public', color: 'blue' },
+			]}
+		/>
+
+		<ProjectCard
+			title="cmdman"
+			tools="Rust"
+			imageUrl=""
+			imageAlt="nusendra cmdman"
+			description="A CLI tool to save, manage, and execute custom commands with named aliases."
+			details="Written in Rust. Stores commands as JSON in ~/.config/cmdman/commands.json, with full terminal control when executing saved commands."
+			projectUrl="https://github.com/nusendra/cmdman"
+			types={[
+				{ type: 'CLI', color: 'green' },
+				{ type: 'Open Source', color: 'yellow' },
+				{ type: 'Public', color: 'blue' },
+			]}
+		/>
+
+		<ProjectCard
 			title="AHTEFE - Phone Credit and Data Package"
 			tools="Expo - React Native, TypeScript, ExpressJS"
 			imageUrl="/projects/ahtefe.webp"
