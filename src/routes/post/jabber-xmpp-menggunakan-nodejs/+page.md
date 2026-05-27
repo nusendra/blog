@@ -5,6 +5,7 @@ tags: ['javascript','nodejs']
 draft: false
 description: "Mari belajar membuat Jabber / XMPP client menggunakan Nodejs. XMPP ini adalah sebuah protocol komunikasi yang berbasis XML"
 slug: jabber-xmpp-menggunakan-nodejs
+is_featured: false
 ---
 
 Jabber atau yang sekarang disebut dengan XMPP ini adalah sebuah protocol komunikasi yang berbasis XML. Perusahaan yang memakai protocol XMPP untuk bertukar text atau komunikasi adalah Google Talk (Hangout), Live Journal, dan Ovi. Facebook chat juga memperbolehkan XMPP untuk mengaksees protocol komunikasi mereka. Ya intinya begini, kalau dulu kita mengenal Yahoo Messenger, karena sekarang sudah mati maka komunikasi kebanyakan memainkan protocol XMPP ini.

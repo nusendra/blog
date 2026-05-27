@@ -5,6 +5,7 @@ description: ""
 tags: ['opini']
 draft: false
 slug: cara-mudah-mengurus-atau-membuat-passport
+is_featured: false
 ---
 
 Pergi keluar negeri untuk tujuan berlibur maupun ada pekerjaan memang menyenangkan, namun sebelum bisa bepergian keluar, ada beberapa hal yang wajib dipersiapkan terlebih dahulu, salah satunya adalah passport. Passport merupakan dokumen wajib yang harus dimiliki oleh para calon imigran yang akan berkelana di luar indonesia, berfungsi sebagai dokumen / kartu identitas kita selama berada di negeri orang (semacam pengganti KTP lah).

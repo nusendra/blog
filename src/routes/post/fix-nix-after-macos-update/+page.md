@@ -5,6 +5,7 @@ date: 2024-09-02 08:00:00
 tags: ["nix", "os"]
 description: "Resolving Nix Issues After macOS Upgrades"
 slug: fix-nix-after-macos-update
+is_featured: false
 ---
 
 ![nixos image](https://jdheyburn.co.uk/blog/converting-to-the-church-of-nix/cover.png)

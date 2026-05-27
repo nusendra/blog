@@ -5,6 +5,7 @@ tags: ['opini']
 draft: false
 description: "Gak selamanya berpikir negatif itu buruk, mari manfaatkan kekuatan dari berpikir negatif."
 slug: manfaat-dari-berpikir-negatif
+is_featured: false
 ---
 
 Gak selamanya berpikir negatif itu berakibat buruk, bahkan kita bisa mendapatkan manfaat jika mampu memanfaatkan dan mengendalikan si makhluk bernama negative thinking ini. Negative thinking ini sering kali berdampak buruk bagi kehidupan dan aktivitas kedepannya, contoh gampang nya :

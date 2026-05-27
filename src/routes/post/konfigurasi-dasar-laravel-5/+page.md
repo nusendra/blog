@@ -5,6 +5,7 @@ tags: ['laravel', 'php']
 draft: false
 description: Sebelum melangkah lebih jauh dalam mengarungi lautan Laravel, kita perlu melakukan konfigurasi dasar terlebih dahulu. Agar nanti kita ngoding nya lebih nyaman
 slug: konfigurasi-dasar-laravel-5
+is_featured: false
 ---
 
 Sebelum melangkah lebih jauh dalam mengarungi samudra Laravel, temen temen harus melakukan konfigurasi dasar terlebih dahulu. Gak mau kan kalo pas nanti udah terlanjut ngoding sampe tengah jalan, eh ternyata konfigurasi nya gak sesuai dengan kebutuhan kita. Nah berikut ini akan saya sebutkan poin - poin nya.

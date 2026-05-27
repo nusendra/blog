@@ -5,6 +5,7 @@ description: "Virtual Host berguna untuk membuat domain lokal pada mesin kita un
 tags: ['devops']
 draft: false
 slug: setting-vhost-di-nginx
+is_featured: false
 ---
 
 <img class="center-image-post" src="https://www.nginx.com/wp-content/uploads/2018/08/NGINX-logo-rgb-large.png" style="width:100%;height:auto;" alt="vhost">

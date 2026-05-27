@@ -5,6 +5,7 @@ description: ""
 tags: ['opini', 'nuxtjs', 'vuejs']
 draft: false
 slug: mini-workshop-speed-up-development-with-nuxtjs
+is_featured: false
 ---
 
 Cerita sedikit mengenai pengalaman bulan Februari 2019 kemarin ketika ngisi acara mini workshop di komunitas SurabayaDev, dengan judul Speed Up Vuejs Development with Nuxtjs. Kebetulan di komunitas ini masih belum ada yang bahas Nuxt, yaudah deh bawain topik itu. Singkatnya, Nuxt ini dipakai untuk mempersingkat dan mempermudah proses development seperti vuejs tanpa route, memudahkan proses SSR, simple vuex module, dll.

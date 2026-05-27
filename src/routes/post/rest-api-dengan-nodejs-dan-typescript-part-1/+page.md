@@ -5,6 +5,7 @@ tags: ['typescript','expressjs','nodejs']
 draft: false
 description: "Cara membuat REST API menggunakan Nodejs, Expressjs, Typescript dan MongoDB"
 slug: rest-api-dengan-nodejs-dan-typescript-part-1
+is_featured: false
 ---
 
 Baik kali ini saya akan sharing sedikit bagaimana membuat REST API menggunakan Nodejs dan typescript. Sebagai informasi awal, NodeJS adalah runtime Javascript yang berjalan diatas mesin Javascript Chrome V8. Bagi kalian yang suka bikin frontend web pake javascript framework, maka tentunya dibagian backend paling enak dan cocok bisa pake Nodejs karena natively Nodejs menggunakan json sebagai komunikasi dan pertukaran data nya. Sedangkan TS (Typescript) sendiri adalah bahasa pemrograman berbasis javascript yang memiliki fitur strong-typing & konsep pemrograman OOP klasik ( class, interface), cocok banget bagi kalian yang suka main OOP.

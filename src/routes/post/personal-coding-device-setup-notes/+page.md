@@ -5,6 +5,7 @@ date: 2025-04-22 02:05:52
 tags: ['nix', 'macos']
 description: "This is just my personal notes on how to setup coding environment on new devices. Fast, reproducible, and reusable"
 slug: personal-coding-device-setup-notes
+is_featured: false
 ---
 
 ![nixos](https://upload.wikimedia.org/wikipedia/commons/c/c4/NixOS_logo.svg)

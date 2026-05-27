@@ -5,6 +5,7 @@ description: "Cerita singkat mengenai meetup ketiga komunitas SurabayaJS"
 tags: ['opini']
 draft: false
 slug: surabayajs-meetup-ketiga
+is_featured: false
 ---
 
 ![surabayajs meetup #3](https://ik.imagekit.io/nusendra/IMG_9844_2iisN9goH.jpg)

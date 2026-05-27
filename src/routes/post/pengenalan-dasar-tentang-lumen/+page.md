@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Untuk mulai membuat RESTful API, Pengenalan Dasar tentang Lumen sangat perlu dan penting untuk dipelajari agar nantinya kita lebih mudah dalam membuat sebuah API service."
 slug: pengenalan-dasar-tentang-lumen
+is_featured: false
 ---
 
 Sebagai selingan kita dalam belajar Laravel, mari kita mengenal Lumen lebih jauh. Pengenalan dasar tentang Lumen perlu dan penting untuk diperhatikan bagi yang pengen belajar lebih jauh tentang lumen. Sebagai informasi, artikel ini juga sudah saya pakai untuk kuliah telegram di group Laravel Indonesia. Mari kita mulai ..

@@ -5,6 +5,7 @@ description: "Better Ways to Avoid TypeScript Enums"
 tags: ['typescript']
 draft: false
 slug: typescript-enums-alternatives
+is_featured: false
 ---
 
 ![typescript image](https://andrejgajdos.com/wp-content/uploads/2023/08/typescript.webp)

@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Apa sih kegunaan method index di Controller Laravel 5 ?? Yuk mari kita belajar bareng - bareng mengenai method index di Controller, serta bagaimana menggunakannya."
 slug: method-index-di-controller-laravel-5-part-2
+is_featured: false
 ---
 
 Kali ini saya akan melanjutkan postingan tentang Controller di Laravel 5. Bagi yang belum baca dasar - dasar controller, bisa dilihat di postingan berikut ini [Dasar Controller di Laravel 5 - Part 1](https://nusendra.com/post/dasar-controller-di-laravel-5-part-1). Setelah kita pahami bersama bagaimana sebuah Controller bekerja, sekarang yuk mari kita lanjut selami salah satu method yang ada di Resource Controller, yaitu Index.

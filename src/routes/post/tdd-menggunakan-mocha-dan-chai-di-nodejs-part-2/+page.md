@@ -5,6 +5,7 @@ date: 2018-09-23 15:32:10
 tags: ['typescript','expressjs','nodejs']
 description: "Implementasi konsep Test Driven Development (TDD) menggunakan Mocha dan Chai di Nodejs"
 slug: tdd-menggunakan-mocha-dan-chai-di-nodejs-part-2
+is_featured: false
 ---
 
 Melanjutkan dari postingan part 1 [disini](https://nusendra.com/post/tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1), kita akan melanjutkan implementasi konsep TDD menggunakan Mocha dan Chai di nodejs. Pada tulisan part 1, kita sudah bikin testing nya (pengujian pendaftaran user dan pengujian user tidak bisa daftar jika username sudah ada). Maka pada part 2 ini kita akan memperbaiki app kita agar lolos pengujian (passed). Baik, mari kita lihat kembali hasil test dari pengujian di part 1

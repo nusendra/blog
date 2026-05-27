@@ -22,8 +22,12 @@ export const load = async ({ fetch, url }) => {
 		...events[0]
 	}
 
+	const allPosts = sortPosts([...workLogPosts, ...blogPosts]);
+	const featuredPosts = allPosts.filter((p) => p.is_featured).slice(0, 5);
+
 	return {
-		posts: sortPosts([...workLogPosts, ...blogPosts]).slice(0, 8),
+		posts: allPosts.slice(0, 8),
+		featuredPosts,
 		event
 	};
 };

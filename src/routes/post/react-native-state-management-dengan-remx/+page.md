@@ -5,6 +5,7 @@ tags: ['javascript','reactnative']
 draft: false
 description: "Cara mudah mengimplementasikan state management di React Native menggunakan remx."
 slug: react-native-state-management-dengan-remx
+is_featured: false
 ---
 
 State management di React Native ada bermacam - macam, salah satu nya remx. Oh iya, sebelum lanjut saya mau jelaskan dulu kenapa saya beralih dari Mobx ke Remx, dan kenapa saya gak pake Redux seperti pada umumnya. Silakan baca ke post saya [kesini](https://nusendra.com/post/goodbye-mobx-welcome-remx). Ok, mungkin akan saya jelaskan lagi kenapa kita harus pake state management, dan apa kelebihannya daripada kita menyimpan data di local component state.

@@ -5,6 +5,7 @@ date: 2019-02-03 16:15:13
 tags: ['opini','tips','nuxtjs']
 description: "Seri terakhir dari pembahasan RBAC ini akan fokus pada penyajian menu akses di frontend"
 slug: membuat-rbac-sendiri-menu-rendering-di-nuxtjs-part-3
+is_featured: false
 ---
 
 Pembahasan lanjutan kali ini akan fokus pada frontend menggunakan Nuxtjs, bagi yang pakai Vuejs bisa menyesuaikan dan mengikuti flow nya. Bagi temen temen yang mau ngikutin seri ini, bisa baca baca dulu 2 part sebelumnya yang membahas tentang konsep RBAC dan implementasi di Backend nya. Baik, karena kita pakai Nuxtjs dengan Auth Module, maka kita perlu menambahkan sedikit di backend nya agar sesuai dengan apa yang diminta oleh auth module. Karena Lumen lebih mudah dan banyak dipakai, untuk contoh backend saya akan pakai Laravel (Lumen) saja. Bagi pengguna framework atau bahasa lain, tinggal menyesuaikan karena ini bebas banget.

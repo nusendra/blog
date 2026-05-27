@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Mengenal middleware di Laravel 5 wajib dilakukan, karena fitur ini sangat berguna untuk melakukan aksi filter request ke Controller. Yuk simak pembahasannya berikut ini"
 slug: mengenal-middleware-di-laravel-5
+is_featured: false
 ---
 
 Setelah mengenal sistem routing, sekarang kita belajar bareng - bareng tentang Middleware. Apa itu middleware? Middleware adalah  jembatan antara validasi request terhadap controller. Bahasa gampang nya sih Middleware itu sama seperti Polisi yang ada di Laravel. Perumpamaan nya, ketika ada razia para pengendara harus menunjukkan surat - surat kendaraan bermotor, kalo ada yang gak lengkap ya kena tilang. Sedangkan yang bawa surat - surat nya lengkap, dia boleh melanjutkan perjalanan.

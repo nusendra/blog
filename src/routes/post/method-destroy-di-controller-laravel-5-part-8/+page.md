@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Method Destroy di Controller Laravel 5 merupakan salah satu dari keluarga besar yang bermarga CRUD. Method ini berfungsi untuk menghapus sebuah atau beberapa data sekaligus. Yuk mari kita cari tau.."
 slug: method-destroy-di-controller-laravel-5-part-8
+is_featured: false
 ---
 
 Method terakhir yang akan saya bahas disini adalah method destroy di controller laralel 5. Method destroy ini berfungsi untuk menghapus row berdasarkan id yang dicari. Bisa juga sih langsung menghapus beberapa / banyak row. Tergantung situasi dan kondisi.

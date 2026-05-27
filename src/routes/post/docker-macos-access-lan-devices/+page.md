@@ -5,6 +5,7 @@ date: 2025-06-04 08:00:00
 tags: ["docker"]
 description: "Steps on how to access database that live in internal network"
 slug: docker-macos-access-lan-devices
+is_featured: false
 ---
 
 Couple of weeks ago, I bought Raspberry Pi 5 and use it as my home server (currently only for entertainment and database). And this raspi5 live in my internal home network with IP 192.168.100.100. I can access it

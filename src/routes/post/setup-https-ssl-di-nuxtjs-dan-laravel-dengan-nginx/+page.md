@@ -5,6 +5,7 @@ date: 2018-12-24 14:30:09
 tags: ['devops','laravel','nuxtjs']
 description: "Memasang SSL / HTTPS di project Nuxtjs, Laravel, dan web socket Socket.io menggunakan Nginx dan Let's Encrypt."
 slug: setup-https-ssl-di-nuxtjs-dan-laravel-dengan-nginx
+is_featured: false
 ---
 
 Sebenernya agak bingung milih judul, karena bakal banyak teknologi yang akan saya usung disini. Detailnya, Bagaimana cara menerapkan HTTPS di project Nuxtjs dan Laravel menggunakan Let's Encrypt. Jadi disini ada 3 kondisi, frontend menggunakan Nuxtjs dengan mode SPA, backend menggunakan Laravel, untuk web socket memakai socket.io dan Laravel echo server, untuk SSL nya sendiri kita pakai gratisan dari Let'ts Encrypt.

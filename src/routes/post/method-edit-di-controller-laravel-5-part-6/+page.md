@@ -5,6 +5,7 @@ tags: ['laravel', 'php']
 draft: false
 description: 'Method edit hampir sama dengan method show. Mereka memang bersaudara, tetapi ada hal lain yang membedakan mereka. Mau tau perbedaan nya? Yuk mari belajar bareng disini.'
 slug: method-edit-di-controller-laravel-5-part-6
+is_featured: false
 ---
 
 Menginjak ke part 6 saya akan membahas tentang method edit di controller Laravel 5. Method ini berisi perintah yang akan menampilkan halaman edit data dari sebuah row. Sebenarnya method edit ini hampir sama dengan method show (baca Method Show di Controller Laravel 5 - Part 5), cuman bedanya kalau show hanya menampilkan data saja, sedangkan edit kita nanti bisa mengedit data nya. Bisa juga sih kita melakukan edit data menggunakan method show, tapi itu tidak disarankan dan memang bukan tempat nya.

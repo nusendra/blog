@@ -5,6 +5,7 @@ description: 'Mengorganisir dan membuat abstraksi pada setiap fungsi API call ki
 tags: ['vuejs', 'nuxtjs', javascript']
 draft: false
 slug: mengorganisir-api-call-di-nuxtjs-dengan-repository-pattern
+is_featured: false
 ---
 
 Jika kalian pernah membaca tentang beberapa design pattern, maka kalian akan sering menjumpai repository pattern. Yak, repository pattern adalah sebuah pola / pendekatan untuk memisahkan beberapa logic menjadi suatu fungsi individu (_separation of concern_), biasanya pattern ini dipakai untuk memisahkan proses antara logic dengan persistensi data. Contoh gampang nya adalah seperti berikut ini

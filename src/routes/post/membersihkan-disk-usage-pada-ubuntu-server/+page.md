@@ -5,6 +5,7 @@ description: "Solusi untuk disk usage anda yang kepenuhan"
 tags: ["DevOps"]
 draft: false
 slug: membersihkan-disk-usage-pada-ubuntu-server
+is_featured: false
 ---
 
 Postingan kali ini sebenernya lebih ke catatan pribadi, tapi kalau memang bisa membantu temen - temen yang membutuhkan ya alhamdulillah :D

@@ -5,6 +5,7 @@ date: 2024-01-11 13:59:00
 tags: ["laravel", "excel", "csv"]
 description: "How to efficiently exporting large datasets in Laravel without timeout issues"
 slug: export-large-datasets-to-csv-in-laravel-without-timeout-issues
+is_featured: false
 ---
 
 ![gateway timeout](https://kinsta.com/wp-content/uploads/2020/10/Chrome-Browser-HTTP-504-Gateway-Timeout-Error.png)

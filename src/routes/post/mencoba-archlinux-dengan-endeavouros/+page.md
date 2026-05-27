@@ -5,6 +5,7 @@ description: "Bosan pakai Ubuntu, pas ada critical error langsung reinstall ke A
 tags: ["OS", "Linux"]
 draft: false
 slug: mencoba-archlinux-dengan-endeavouros
+is_featured: false
 ---
 
 <img src="https://i.ibb.co/JjvgRYZ/endeavouros-nusendra.webp" alt="endeavouros-nusendra" border="0">

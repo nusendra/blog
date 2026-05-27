@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Menampilkan data polymorphic tanpa eloquent gampang - gampang susah. Kalo mau nampilin data polymorphic kita pake eloquent sih gampang gampang aja, tapi kalau tanpa eloquent gimana?"
 slug: menampilkan-data-polymorphic-tanpa-eloquent
+is_featured: false
 ---
 
 Menampilkan data polymorphic tanpa eloquent gampang - gampang susah. Kalo mau nampilin data polymorphic kita pake eloquent sih gampang gampang aja, tapi kalau tanpa eloquent gimana? Sebuah tantangan tersendiri bagi kemampuan logika kita hehe. Polymorphic ini sendiri merupakan fitur dari Laravel yang dipakai di model dan eloquent ORM.

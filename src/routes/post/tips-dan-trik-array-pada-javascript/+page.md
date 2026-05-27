@@ -5,6 +5,7 @@ description: 'Banyak sekali metode atau trik dalam memanipulasi data pada sebuah
 tags: ['opini', 'javascript']
 draft: false
 slug: tips-dan-trik-array-pada-javascript
+is_featured: false
 ---
 
 Array pada bahasa pemrograman merupakan salah satu konsep / fitur yang sangat penting, dalam mengelola data pada array pun ada banyak sekali caranya. Nah kali ini saya akan berbagi sedikit tentang pengelolaan elemen / data pada sebuah array dengan cara yang engga biasa. Yok mulai...

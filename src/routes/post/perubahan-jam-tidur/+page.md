@@ -5,6 +5,7 @@ description: "Terjadi perubahan jam tidur setelah fulltime kerja dirumah"
 tags: ["Story"]
 draft: false
 slug: perubahan-jam-tidur
+is_featured: false
 ---
 
 <img src="https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/2019/04/12/2975484616.jpg" title="source: https://asset-a.grid.id" alt="perubahan jam tidur"/>

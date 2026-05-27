@@ -5,6 +5,7 @@ date: 2019-01-26 12:53:35
 tags: ['expressjs']
 description: "Menggunakan Knexjs di Express App untuk memudahkan penulisan query di database."
 slug: menggunakan-knexjs-di-express-app
+is_featured: false
 ---
 
 Ketika kita membangun sebuah aplikasi dengan Express js, seringkali kita dihadapkan dengan sebuah pertanyaan besar, ORM mana yang akan kita pakai untuk memudahkan penulisan query database. Di MongoDB kita bisa menggunakan mongoose, di dunia RDBMS kita bisa pakai Sequelize, Knexjs, node-orm2, dll. Nah kali ini saya akan jelaskan bagaimana cara mudah pakai Knexjs di proyek aplikasi kita.

@@ -5,6 +5,7 @@ date: 2026-05-26 10:00:00
 tags: ['ploi','cloudflare','nginx','ssl']
 description: "How I diagnosed and fixed a new subdomain that was unexpectedly redirecting to an unrelated admin URL, due to a missing SSL certificate on the origin server."
 slug: fixing-unwanted-subdomain-redirect-issue
+is_featured: false
 ---
 
 After deploying a new site to Ploi with the subdomain `staging.example.com`, accessing the URL in a browser resulted in an unexpected 301 redirect to `https://admin.legacy-app.com/admin/login`. Here's how I tracked down the actual cause and fixed it.

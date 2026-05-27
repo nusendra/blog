@@ -5,6 +5,7 @@ date: 2021-10-08 18:54:00
 tags: ['Code Editor']
 description: "Langkah - langkah installasi plugin Nerdtree dan colorscheme di NeoVIM"
 slug: install-nerdtree-dan-colorscheme-di-neovim
+is_featured: false
 ---
 
 ![nerdtree](https://github.com/preservim/nerdtree/raw/master/screenshot.png)

@@ -5,6 +5,7 @@ tags: ['javascript','reactnative']
 draft: false
 description: "Selamat tinggal MobX, selamat datang RemX. State management minimalis untuk React Native"
 slug: goodbye-mobx-welcome-remx
+is_featured: false
 ---
 
 Dalam framework Javascript, kita membutuhkan yang namanya state management sebagai pusat data yang nantinya bisa di konsumsi oleh banyak component, sehingga data yang dijadikan acuan bisa konsisten. Dalam dunia Vuejs, kita mengenal Vuex sebagai state management nya, sedangkan di dunia React mayoritas menggunakan Redux.

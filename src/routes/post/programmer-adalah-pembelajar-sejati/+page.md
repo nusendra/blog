@@ -5,6 +5,7 @@ date: 2018-10-13 19:33:14
 tags: ['opini']
 description: "Programmer adalah pembelajar sejati, belum selesai kita belajar framework A udah muncul aja framework B. Berikut ini penjelasan dan opini saya mengenai hal ini."
 slug: programmer-adalah-pembelajar-sejati
+is_featured: false
 ---
 
 Demi mencapai level tertentu dan memperoleh wawasan yang luas, hanya bisa didapat melalui belajar. Tentunya setiap orang memiliki cara belajar dan tingkatan belajar yang berbeda beda, misalnya seorang guru bahasa Inggris hanya belajar bahasa Inggris saja (ya iyalah), beda dengan seorang arsitek bangunan yang belajar matematika serta ilmu turunannya. Nah kali ini saya akan bahas alasan apa saja yang membuat saya membentuk sebuah statemen seperti judul diatas, **Programmer adalah pembelajar sejati**.

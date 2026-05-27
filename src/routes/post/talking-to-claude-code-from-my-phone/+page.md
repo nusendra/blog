@@ -5,6 +5,7 @@ description: "Building a small Rust Telegram bot that pipes messages to Claude C
 tags: ['claude-code', 'rust', 'telegram', 'raspberry-pi']
 draft: false
 slug: talking-to-claude-code-from-my-phone
+is_featured: true
 ---
 
 I run a Raspberry Pi 5 as a home server. Anthropic doesn't ship an official Telegram integration for Claude Code, so I figured I'd write my own wrapper, a small bot that lets me chat with Claude from Telegram, anywhere I go.

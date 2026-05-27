@@ -5,6 +5,7 @@ date: 2025-01-21 18:00:00
 tags: ["docker", "coolify"]
 description: "This guide covers best practices for container-to-container communication on coolify"
 slug: access-internal-database-from-other-container-on-coolify
+is_featured: false
 ---
 
 <div align="center">

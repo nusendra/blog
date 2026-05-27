@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Method Store di Controller Laravel 5 berfungsi untuk melakukan aktivitas insert / create data ke dalam database. Bagaimana cara mengimplementasikannya? Disini kita akan belajar bareng."
 slug: method-store-di-controller-laravel-5-part-4
+is_featured: false
 ---
 
 Setelah kita di post sebelumnya belajar bareng tentang method index dan method create yang mana keduanya adalah action dengan method GET. Sekarang mari kita lanjut belajar mengenal method Store di Controller, yang mana action ini menggunakan method POST sebagai HTTP request nya.

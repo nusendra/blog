@@ -5,6 +5,7 @@ description: "A Bunch of Problems with TypeScript Enums"
 tags: ['typescript']
 draft: false
 slug: avoid-typescript-enums
+is_featured: false
 ---
 
 ![ts enums image](https://miro.medium.com/v2/resize:fit:1100/1*Ja-6RF9Iopr-I8NNgOtBUQ.png)

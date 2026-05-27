@@ -5,6 +5,7 @@ description: "Bagi yang sering lupa shortcut yang ada di VIM"
 tags: ["Code Editor"]
 draft: false
 slug: vim-keyboard-cheatsheet
+is_featured: false
 ---
 
 VIM adalah editor yang paling bikin kita pusing, apalagi dengan shortcut keyboard dari VIM yang aneh aneh kadang juga bikin kita pusing, ga jarang juga banyak yang lupa.

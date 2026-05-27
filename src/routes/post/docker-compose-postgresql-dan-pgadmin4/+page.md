@@ -5,6 +5,7 @@ date: 2019-01-07 10:57:25
 tags: ['devops']
 description: "Install PostgreSQL dan pgAdmin4 di docker menggunakan Docker Compose."
 slug: docker-compose-postgresql-dan-pgadmin4
+is_featured: false
 ---
 
 Di dunia teknologi, sangat banyaaakkk sekali yang harus dipelajari apalagi bagi seorang Full Stack seperti saya. Di development perlu belajar bahasa pemrograman nya, belajar konsep konsep / pattern dalam development, mempelajari framework, belajar backend development, frontend development, unit testing, dan segala tetek bengek nya. Belum sampai disitu, setelah app sudah selesai di develop pun, masih harus mikir gimana cara deployment ke server secara tepat. Disini bisa mempelajari Docker, Continous Integration, Continous Deployment, dll. Banyak bener haha.

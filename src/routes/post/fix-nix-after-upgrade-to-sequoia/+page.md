@@ -5,6 +5,7 @@ date: 2024-09-24 08:00:00
 tags: ["nix", "os"]
 description: "Sequoia Upgrade Broke my Nix"
 slug: fix-nix-after-upgrade-to-sequoia
+is_featured: false
 ---
 
 ![nixos image](https://jdheyburn.co.uk/blog/converting-to-the-church-of-nix/cover.png)

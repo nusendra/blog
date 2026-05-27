@@ -5,6 +5,7 @@ date: 2026-04-05 10:00:00
 tags: ['devops','docker','github-actions','coolify','ci-cd']
 description: "How to offload Docker builds to GitHub Actions with GHCR and trigger Coolify deployments, cutting deploy time from 10 minutes to 30 seconds."
 slug: github-actions-ghcr-coolify-deployment
+is_featured: false
 ---
 
 If you're using Coolify to deploy Docker-based apps, you might notice that build times on your production server can get slow — especially when the server is handling both building and serving. In this post, I'll show you how to move the Docker build step to GitHub Actions with GitHub Container Registry (GHCR), so Coolify only needs to pull and run a pre-built image.

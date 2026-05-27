@@ -5,6 +5,7 @@ date: 2018-11-26 20:25:55
 tags: ['laravel','php','javascript','nuxtjs']
 description: "Membuat notifikasi dengan Laravel Broadcast Notifications dan Socket.io"
 slug: laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1
+is_featured: false
 ---
 
 Mau bahas Laravel lagi, mumpung ada project yang balik pake Laravel lagi. Kali ini mau bahas Laravel broadcast notification menggunakan socket.io. Sebenernya bingung mau bikin judul apa, karena nanti insya allah bakal lumayan panjang, bahkan judul segitu pun kayaknya belum cukup untuk menampung apa yang mau kita bahas kali ini. Yak secara singkat kita akan belajar bikin sebuah sistem notifikasi menggunakan Laravel, gak berhenti sampai disitu kita akan coba pakai socket.io untuk server websocket nya (engga pakai Pusher, soalnya ada limitasi) yang berfungsi untuk mengirimkan sebuah notifikasi jika ada event yang sedang / telah dilakukan. Lebih jauh lagi kita akan coba terapkan socket listener nya di Nuxtjs. Oh iya untuk channel nya kita pake Private Channel ya, karena ini kan notifikasi, jadi ga semua orang bisa dapat notifikasi nya.

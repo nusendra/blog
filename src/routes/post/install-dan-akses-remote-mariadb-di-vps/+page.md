@@ -5,6 +5,7 @@ date: 2018-12-20 14:38:18
 tags: ['devops']
 description: "Mengakses database di VPS secara remote melalui mysql-client kita"
 slug: install-dan-akses-remote-mariadb-di-vps
+is_featured: false
 ---
 
 Apa banget ya bahasannya, terkesan receh memang haha. Tapi saya pribadi perlu mencatat ini karena barusan entah kenapa problem banget ngurusin hal hal receh begini. Takut lupa, maka perlu saya catat saja. Materi kali ini bagaimana cara kita install MariaDB 10.2 dan bagaimana cara akses remote database melalui mysql client (cli / GUI) di sistem lokal kita.

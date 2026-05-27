@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Method Update data di Controller Laravel 5 sangat penting untuk dipelajari, karena method ini merupakan salah satu keluarga dari marga CRUD. Mari simak penjelasan singkat nya disini.."
 slug: method-update-di-controller-laravel-5-part-7
+is_featured: false
 ---
 
 Setelah kita belajar method edit, lanjut kita belajar mengenai method update di Controller Laravel 5. Method update ini berfungsi untuk melakukan perubahan data yang ada di dalam database. Sebenarnya kita juga bisa sih melakukan update data di method store, tapi itu tidak direkomendasikan karena tujuan kita adalah menjadikan route kita RESTful.

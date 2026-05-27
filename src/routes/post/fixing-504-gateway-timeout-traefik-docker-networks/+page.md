@@ -5,6 +5,7 @@ date: 2026-02-07 02:30:00
 tags: ['coolify','traefik']
 description: "How to diagnose and fix 504 Gateway Timeout errors in Traefik when using Docker Compose with multiple networks"
 slug: fixing-504-gateway-timeout-traefik-docker-networks
+is_featured: false
 ---
 
 When you're running a Laravel application via Coolify with separate PHP-FPM and Nginx containers, you might encounter a frustrating **504 Gateway Timeout** error through your public domain, even though both containers show as `running:healthy`. This guide walks you through diagnosing and fixing this issue.

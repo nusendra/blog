@@ -5,6 +5,7 @@ date: 2019-02-02 23:34:11
 tags: ['opini','tips']
 description: "RBAC menggunakan library orang lain itu ga keren. Yuk kita bikin RBAC dengan konsep kita sendiri..."
 slug: membuat-rbac-sendiri-konsep-part-1
+is_featured: false
 ---
 
 RBAC (Role Based Access Control) adalah fitur wajib yang harus ada di sebuah web aplikasi. RBAC ini sendiri berfungsi untuk membatasi suatu user dalam mengakses sebuah / beberapa fitur dalam sebuah aplikasi. Misalkan contoh yang paling gampang, dalam aplikasi yang akan kita buat membutuh kan 4 menu, yakni master barang, master user, transaksi penjualan, dan invoice. Sedangkan untuk user nya kita punya Andi, Budi, dan Candra.

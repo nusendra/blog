@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "CSRF merupakan salah satu ancaman besar bagi keamanan suatu website. Nah, di Laravel sendiri om Taylor udah nyediain fitur yang keren buat menanggulangi hal ini. Yuk simak penjelasannya."
 slug: memproteksi-laravel-web-app-dari-serangan-csrf
+is_featured: false
 ---
 
 Memproteksi laravel app dari serangan CSRF sangatlah penting dan wajib diimplementasikan di setiap aksi post / put / patch.  CSRF sendiri adalah cross site request forgery, apa maksudnya nih?? Maksudnya adalah csrf ini merupakan salah satu lubang di web app yang bekerja dengan cara mengeksploitasi suatu aksi dan eksploitasi ini memanfaatkan otentikasi milik salah satu user.

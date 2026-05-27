@@ -5,6 +5,7 @@ description: "Membuat tampilan Nerdtree makin cantik dengan vim-devicons"
 tags: ["Code Editor"]
 draft: false
 slug: setup-vim-devicons-di-neovim
+is_featured: false
 ---
 
 ![vim-devicons](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.10.x/branding-logo-3.svg?sanitize=true)

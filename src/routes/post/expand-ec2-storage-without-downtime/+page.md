@@ -5,6 +5,7 @@ date: 2026-03-04 10:00:00
 tags: ['aws','ec2','devops']
 description: "Running out of disk space on EC2? You can expand storage without stopping your instance. Here's how."
 slug: expand-ec2-storage-without-downtime
+is_featured: false
 ---
 
 So you've been running your EC2 instance and suddenly you're at 95% disk usage. Your app is sluggish, deployments are failing, and you're getting that dreaded "No space left on device" error. Sound familiar?

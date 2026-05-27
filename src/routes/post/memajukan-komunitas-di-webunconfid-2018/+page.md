@@ -5,6 +5,7 @@ date: 2018-10-07 17:52:27
 tags: ['opini']
 description: "Cerita ketika mengikuti event WebUnconfID 2018 di Jogja"
 slug: memajukan-komunitas-di-webunconfid-2018
+is_featured: false
 ---
 
 Halo halo, sudah beberapa minggu tidak posting blog sama sekali karena kesibukan, hari ini saya mau bahas panjang lebar mengenai event webunconfid2018. Sebelumnya apa sih webunconfid2018? Kok ribet banget penamaannya. Kepanjangan dari webunconfid2018 adalah Web Unconference Indonesia 2018, sebuah event keren yang digawangi oleh seorang Developer Advocate / Web Developer Relations dari Google, yaitu om [Yohan Totting](https://www.instagram.com/tyohan/?hl=id), dengan mendatangkan beberapa developer TOP skala nasional untuk berkumpul bareng di satu tempat dalam dua hari. Event ini diadakan berdasarkan dua konsep, pertama mengenalkan web technology modern yang digadang gadang mampu meningkatkan kualitas sebuah web dengan konsep Progressive Web App. Yang kedua mengumpulkan leader (atau seseorang yang aktif) dalam sebuah komunitas programmer untuk kumpul bareng dan membicarakan / membahas segala hal mengenai komunitas, tujuannya untuk memajukan dan menambah kualitas dari sebuah komunitas IT di Indonesia.

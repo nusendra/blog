@@ -5,6 +5,7 @@ description: "My home server's Tailscale expired while I was working from a cafe
 tags: ['claude-code', 'telegram', 'tailscale', 'raspberry-pi', 'home-server']
 draft: false
 slug: the-day-my-telegram-bot-saved-my-workday
+is_featured: true
 ---
 
 A few days ago I packed my laptop and went to work from a cafe. Nothing unusual, I do it most weeks. What was unusual was that, about ten minutes after I sat down with my coffee, none of my apps could reach the database.

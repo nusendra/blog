@@ -5,6 +5,7 @@ date: 2026-03-28 10:00:00
 tags: ['wordpress','devops','docker','performance']
 description: "A side-by-side performance comparison of Apache and OpenLiteSpeed running the same WordPress site with a shared backend API."
 slug: apache-vs-openlitespeed-wordpress-performance-comparison
+is_featured: true
 ---
 
 I recently had the chance to run a proper side-by-side comparison between Apache and OpenLiteSpeed on the same WordPress site. Not synthetic benchmarks — actual page loads, property searches, and static asset delivery on a real production site.

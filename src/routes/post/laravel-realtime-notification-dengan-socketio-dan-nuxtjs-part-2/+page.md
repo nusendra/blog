@@ -5,6 +5,7 @@ date: 2018-11-30 22:37:07
 tags: ['laravel','php','javascript','nuxtjs']
 description: "Realtime notification menggunakan Laravel Echo di project Nuxt.js"
 slug: laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-2
+is_featured: false
 ---
 
 Melanjutkan dari postingan yang [pertama](https://nusendra.com/post/laravel-realtime-notification-dengan-socketio-dan-nuxtjs-part-1) dengan judul yang sama, yakni Laravel realtime notification dengan socket.io. Pada postingan kali ini kita akan coba implementasi Laravel echo kedalam Nuxtjs. Pastikan kalian udah baca part pertama nya ya, karena kali ini kita akan coba menerapkan notifikasi di Nuxtjs menggunakan socket.io dengan private channel.

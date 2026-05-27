@@ -5,6 +5,7 @@ date: 2024-11-06 08:00:00
 tags: ["nix", "os"]
 description: "This guides walks you through every step to get redis-php up and running"
 slug: redis-installation-nix-guide
+is_featured: false
 ---
 
 <div align="center">

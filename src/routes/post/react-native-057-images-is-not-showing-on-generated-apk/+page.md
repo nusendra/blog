@@ -5,6 +5,7 @@ date: 2018-10-23 22:25:35
 tags: ['javascript','reactnative']
 description: "Gambar ga muncul setelah generate APK di React Native 0.57? Baca postingan saya ini, insyaallah manjur :D"
 slug: react-native-057-images-is-not-showing-on-generated-apk
+is_featured: false
 ---
 
 Permasalahan pertama setelah upgrade React Native dari 0.56 ke 0.57. Yaitu Gambar tidak muncul ketika APK release React native 0.57 (Image Not Showing on Generated APK). Oh iya, postingan kali ini bakal singkat banget, cuma sebagai catatan bagaimana cara ngebenerin masalah seperti ini.

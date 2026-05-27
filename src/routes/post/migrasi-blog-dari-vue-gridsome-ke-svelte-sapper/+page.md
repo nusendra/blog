@@ -5,6 +5,7 @@ description: 'Cerita mengenai perpindahan / migrasi stack blog dari Gridsome ke 
 tags: ['vuejs', javascript', 'svelte']
 draft: false
 slug: migrasi-blog-dari-vue-gridsome-ke-svelte-sapper
+is_featured: false
 ---
 
 Artikel kali ini akan membahas tentang kenapa saya migrasi blog dari yang awalnya menggunakan Vue dengan framework Gridsome ke Svelte dengan Sapper nya. Mungkin sebelum masuk kesana saya pengen cerita bentar tentang stack apa saja yang saya pakai ketika menggeluti dunia blogging ini.

@@ -5,6 +5,7 @@ description: "Ada banyak sekali manfaat yang kita dapat dari menerapkan PWA di w
 tags: ['opini', 'pwa']
 draft: false
 slug: manfaat-menggunakan-pwa
+is_featured: false
 ---
 
 <img class="center-image-post" src="https://cdn.staticaly.com/img/46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/sites/33/2018/02/cbb9dba164838b28c748310da3d4c188.png" style="width:100%;height:auto;" alt="pwa">

@@ -5,6 +5,7 @@ description: "Pemula yang gampang marah-marah, kesel dan bosenan dilarang pakai 
 tags: ['sveltekit', 'svelte']
 draft: false
 slug: sveltekit-bukan-mainan-untuk-para-pemula-dan-pemarah
+is_featured: false
 ---
 
 <img src="https://media.istockphoto.com/id/1369139581/photo/confused-arab-man-talking-on-mobile-phone-using-laptop.jpg?s=612x612&w=0&k=20&c=ad73buCnD2TAlOgNevnSfx7C7W30UvzUXX8dwbPVGMc=" width="100%">

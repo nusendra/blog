@@ -6,6 +6,7 @@ tags: ['n8n','ollama']
 description: "Langkah - langkah membuat automation dengan AI Agent di VM Cloudraya menggunakan N8N
 dan Ollama"
 slug: setup-automation-dengan-n8n-ollama-dan-coolify-dari-awal
+is_featured: true
 ---
 
 <img src="/images/n8n-ollama-coolify.webp" />

@@ -5,6 +5,7 @@ date: 2024-10-15 08:00:00
 tags: ["nix", "os"]
 description: "This guides walks you through every step to get Elasticsearch up and running"
 slug: elasticsearch-installation-nix-guide
+is_featured: false
 ---
 
 ![elasticsearch image](https://antaresnet.com/wp-content/uploads/2018/07/Elasticsearch-Logo-Color-V-768x400.png)

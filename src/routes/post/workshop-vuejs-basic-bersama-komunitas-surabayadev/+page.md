@@ -5,6 +5,7 @@ description: "Pengalaman sewaktu mengisi workshop Vuejs basic bareng SurabayaDEV
 tags: ['opini', 'vuejs']
 draft: false
 slug: workshop-vuejs-basic-bersama-komunitas-surabayadev
+is_featured: false
 ---
 
 Setelah ngisi mini workshop yang bahas Nuxt pada bulan Februari kemarin, karena antusias dari audience dan bahkan ada beberapa peserta yang pengen datang namun kuota sudah penuh, akhirnya SurabayaDev dan saya *partner*an untuk ngadain acara workshop Vuejs basic. Workshop ini ditujukan untuk peserta yang benar benar masih baru mulai di dunia Vuejs, jadi topik yang saya bahas adalah topik yang basic banget. Namun saya juga bawa beberapa kasus beserta best practice di *real world*.

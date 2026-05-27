@@ -5,6 +5,7 @@ date: 2018-11-02 21:58:52
 tags: ['nuxtjs']
 description: "Autentikasi jadi lebih mudah menggunakan Auth Module di Nuxtjs"
 slug: auth-module-di-nuxtjs
+is_featured: false
 ---
 
 Hai hai mumpung lagi bikin project baru pake Nuxtjs, sekalian bikin postingan tentang auth module di Nuxtjs. Nah dari beberapa kasus ada temen temen yang tanya ke saya mengenai authentikasi di nuxtjs itu seperti apa, apakah dilakukan secara manual atau mungkin ada package / library yang bisa memudahkan? Saya bilang ada, silakan coba install Auth module nya Nuxtjs. Silakan baca docs dulu [kesini](https://auth.nuxtjs.org/).

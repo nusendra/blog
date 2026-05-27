@@ -5,6 +5,7 @@ tags: ['opini']
 draft: false
 description: Jangan Dibuka  Nanti Jadi Lemot 4.4.4.4.0.0.0.0 adalah sebuah pesan singkat yang dikirimkan seseorang ke aplikasi chat Whatsapp kita. Aneh nya, teks ini bisa bikin Whatsapp kamu hang loh.
 slug: jangan-dibuka-nanti-jadi-lemot-44440000
+is_featured: false
 ---
 
 Judul nya apaan banget sih haha. Itulah yang hari ini sedang hits. Cerita - cerita dikit ya, pagi ini dapat kiriman whatsapp di grup, nah tulisannya tuh kayak gini

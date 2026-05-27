@@ -5,6 +5,7 @@ description: 'Catatan singkat tentang cara menyematkan sebuah attribute atau dat
 tags: ['vuejs', javascript']
 draft: false
 slug: menyematkan-data-pada-vue-slot
+is_featured: false
 ---
 
 Kali ini mau ngebahas singkat aja nih, tentang bagaimana cara menyematkan sebuah attribute atau data kedalam vue slot, karena fitur ini sering kali terdapat perubahan di sisi sintaks vue nya, jadi rasanya perlu saya catat juga di blog ini. Kenapa perlu dicatat? Karena saya sendiri ga pernah menghafal sintaks.

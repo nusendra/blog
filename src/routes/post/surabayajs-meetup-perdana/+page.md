@@ -5,6 +5,7 @@ description: "Cerita singkat mengenai meetup perdana komunitas SurabayaJS"
 tags: ['opini']
 draft: false
 slug: surabayajs-meetup-perdana
+is_featured: false
 ---
 
 ![surabayadev meetup #1](https://ik.imagekit.io/nusendra/_MG_9573_JXOGuftT3.jpg)

@@ -5,6 +5,7 @@ tags: ['javascript']
 draft: false
 description: "Pug hadir untuk menyederhanakan format html kalian sehingga kode html kalian bisa lebih mudah dan enak dibaca"
 slug: berkenalan-dengan-pugjs
+is_featured: false
 ---
 
 Pernahkah kalian pusing melihat baris kode html yang berjejer tak beraturan? Saya sering haha. Ribet nya koding html kini bisa di sederhanakan berkat kehadiran **Pugjs**. Pugjs merupakan template engine yang akan membaca template yang berformat *lang="pug"* dan mengkonversikan nya kedalam format html. Lebih jelas nya silakan mampir e [official site](https://pugjs.org/api/getting-started.html) nya.

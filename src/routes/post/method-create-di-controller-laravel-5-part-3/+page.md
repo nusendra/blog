@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Method Create di Controller Laravel berguna untuk menampilkan halaman form input data. Bagaimana cara penggunaan nya? Mari belajar bareng ..."
 slug: method-create-di-controller-laravel-5-part-3
+is_featured: false
 ---
 
 Setiap aktivitas CRUD di web app manapun membutuhkan halaman form untuk menginput data, nah disinilah kegunaan dari method create. Method ini berfungsi untuk menampilkan halaman input / insert data yang umumnya berupa form.

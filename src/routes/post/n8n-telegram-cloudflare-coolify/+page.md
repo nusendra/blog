@@ -5,6 +5,7 @@ description: "How I solved HTTPS and DNS issues for Telegram triggers in n8n by 
 tags: ['coolify', 'n8n']
 draft: false
 slug: n8n-telegram-cloudflare-coolify
+is_featured: false
 ---
 
 <img src="https://blog.n8n.io/content/images/size/w1200/2021/03/cover-2.png" />

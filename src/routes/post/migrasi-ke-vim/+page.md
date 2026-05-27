@@ -5,6 +5,7 @@ date: 2018-11-13 06:46:35
 tags: ['opini']
 description: "Cerita singkat kenapa saya akhirnya migrasi ke VIM, yang awalnya memakai Atom dan Visual Studio Code"
 slug: migrasi-ke-vim
+is_featured: false
 ---
 
 Cerita singkat kenapa saya akhirnya migrasi ke VIM, yang awalnya memakai Atom dan Visual Studio Code. VSCode adalah sebuah text editor yang saat ini lagi hits banget, siapa sih programmer yang belum pernah pake ini? Mayoritas orang orang banyak yang pake editor ini, karena memang fitur fitur yang ditawarkan disini sangatlah lengkap, apalagi didukung oleh plugin - plugin yang kece. Postingan kali ini kita bahas vscode ama vim doang yak, Atom gak ikut soalnya udah lama ga pake Atom :D.

@@ -5,6 +5,7 @@ date: 2019-04-29 17:11:00
 description: "Cerita singkat membangun komunitas IT di surabaya yang bernama SurabayaJS"
 tags: ['opini']
 slug: membangun-komunitas-surabayajs
+is_featured: false
 ---
 
 <img class="center-image-post" src="https://cdn.staticaly.com/img/raw.githubusercontent.com/nusendra/blog/master/blog/2019/gator.png" style="width:auto;height:200px;" alt="sbyjs">

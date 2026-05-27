@@ -5,6 +5,7 @@ tags: ['opini']
 draft: false
 description: "Berikut ini kiat kiat yang lumayan penting untuk diperhatikan ketika ngoding, biar fokus kita makin meningkat."
 slug: fokus-sangat-membantu-kita-saat-ngoding
+is_featured: false
 ---
 
 **Fokus sangat membantu kita saat ngoding**. Fokus, adalah sebuah syarat utama agar kita bisa mengerjakan suatu pekerjaan dengan lebih cepat, cermat dan tepat. Bagi developer / programmer, fokus ini adalah suatu elemen penting yang tidak boleh dilewatkan ketika bekerja. Nah, sekarang bagaimana kita bisa mendapatkan kekuatan super yang bernama fokus ini? Tentunya banyak sekali cara nya, yuk kita bahas bareng bareng.

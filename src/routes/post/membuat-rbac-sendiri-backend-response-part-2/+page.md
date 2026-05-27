@@ -5,6 +5,7 @@ date: 2019-02-03 14:55:37
 tags: ['opini','tips']
 description: "Memberikan response yang dibutuhkan oleh Frontend untuk rendering menu RBAC."
 slug: membuat-rbac-sendiri-backend-response-part-2
+is_featured: false
 ---
 
 Melanjutkan dari postingan [part 1](https://nusendra.com/post/membuat-rbac-sendiri-konsep-part-1), kali ini kita akan belajar bagaimana mengimplementasi kan konsep kita di aplikasi yang sesungguh nya. Di part 1 saya bilang untuk backend saya skip saja, ah oke saya akan mengingkari nya :D. Di part 2 ini saya akan mulai dari backend yang akan saya paparkan secara sederhana dan simple saja. Jadi pada backend ini kita akan membuat fungsi login, yang mana jika user berhasil login, maka user akan mendapatkan detail si user tersebut (nama, username, jabatan, token, write_menu, dan readonly_menu). Jadi ketika frontend mendapatkan response dari backend yang berupa data data tersebut, nanti nya tinggal urusan frontend me render menu menu nya (sesuai dengan user role).

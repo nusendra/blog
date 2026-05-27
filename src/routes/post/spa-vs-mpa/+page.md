@@ -5,6 +5,7 @@ tags: ['opini']
 draft: false
 description: "SPA vs MPA wajib untuk diketahui, karena untuk membuat project web kita harus memilih salah satu yang paling cocok dengan kebutuhan dan spesifikasi project yang akan kita bangun."
 slug: spa-vs-mpa
+is_featured: false
 ---
 
 Seperti yang sudah saya janjikan sebelumnya untuk jelasin SPA vs MPA. Apa sih SPA itu? Dan apa pula nih MPA? SPA adalah Single Page Application sedangkan MPA adalah Multi Page Application atau biasa yang disebut traditional web app. Masing - masing metode punya kelebihan dan kekurangan, tergantung kebutuhan kita apakah sistem yang akan kita buat perlu menerapkan SPA atau MPA.

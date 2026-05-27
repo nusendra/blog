@@ -5,6 +5,7 @@ description: "Secara alami compiler TypeScript tidak bisa mentransform absolute 
 tags: ['Typescript']
 draft: false
 slug: transforms-absolute-ke-relative-path-di-typescript
+is_featured: false
 ---
 
 Ketika kita bermain - main dengan typescript, memang mesti banyak melakukan instalasi tools - tools pendukung nya. Apalagi kalau kalian lebih suka atau memilih untuk mengimplementasikan TS ke unopinionated framework macam ExpressJS, sudah harus siap untuk oprek tools sana sini supaya app kita berjalan sesuai dengan ekspektasi. Kalau ga mau ribet, mending pakai opinionated framework seperti NestJS saja. Tinggal install, maenin, deploy. Gampang...

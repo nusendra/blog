@@ -5,6 +5,7 @@ date: 2025-02-05 17:05:52
 tags: ['coolify', 'traefik']
 description: "Do you want to build your own Saas and wonder how to do that with wildcard subdomain in Coolify?"
 slug: how-to-setup-wildcard-subdomain-in-coolify-using-traefik
+is_featured: false
 ---
 
 ![traefik](https://blog.networkprofile.org/content/images/size/w2000/2019/01/architecture.png)

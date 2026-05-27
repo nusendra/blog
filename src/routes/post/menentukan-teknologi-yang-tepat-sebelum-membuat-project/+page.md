@@ -5,6 +5,7 @@ tags: ['opini']
 draft: false
 description: "Banyak programmer yang salah dalam menentukan teknologi sebelum membuat project, hal ini bisa mengakibatkan proses development kita jadi terganggu, bahkan bisa bikin pindah jalur. Duhh..."
 slug: menentukan-teknologi-yang-tepat-sebelum-membuat-project
+is_featured: false
 ---
 
 Sebelum mulai melangkah untuk membuat project baru, alangkah bijaknya jika **kita menentukan teknologi sebelum membuat project**. Kenapa kita perlu memikirkan teknologi apa yang akan kita pakai untuk project kita, karena jika kita salah pilih maka ditengah tengah proses development, kita akan merasa tersesat dan tidak bisa mengembangkan aplikasi secara maksimal. Misalnya kita pengen bikin aplikasi internal untuk kantor, kemudian kita asal aja pake C# untuk aplikasi desktop. Eh ternyata di kemudian hari, si bos minta dibuatin aplikasi mobile nya, nah loh ujung ujungnya kita bakal create new project untuk handle API nya. Jadi nya kita kerja dua kali, huuhuuhuu...

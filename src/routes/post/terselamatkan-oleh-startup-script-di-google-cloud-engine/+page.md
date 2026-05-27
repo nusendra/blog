@@ -5,6 +5,7 @@ date: 2019-01-09 13:48:58
 tags: ['tips','opini']
 description: "Lupa membuka akses ssh / port 22 di ufw bisa diatasi dengan fitur Startup Script di metadata GCE"
 slug: terselamatkan-oleh-startup-script-di-google-cloud-engine
+is_featured: false
 ---
 
 Manusia tempat nya salah dan lupa, gak ada orang yang ga pernah lupa, adanya ya cuma keseringan lupa atau jarang mengalami kelupaan? Kalau saya termasuk yang pertama, sering lupa haha. Kelupaan ini terjadi ketika saya ingin membuka port tertentu di VPS Google Cloud melalui UFW.

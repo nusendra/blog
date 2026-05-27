@@ -5,6 +5,7 @@ description: "Langkah - langkah installasi sampai konfigurasi vim seperti milik 
 tags: ['opini', 'vim']
 draft: false
 slug: how-to-setup-my-personal-vim
+is_featured: false
 ---
 
 ![nusendra vim](https://ik.imagekit.io/nusendra/Screenshot_20190804_191653_hgQ-O1VD_.png)

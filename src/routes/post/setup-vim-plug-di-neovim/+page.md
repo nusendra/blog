@@ -5,6 +5,7 @@ date: 2021-10-08 15:26:52
 tags: ['Code Editor']
 description: "Langkah - langkah setup vim plug di NeoVIM"
 slug: setup-vim-plug-di-neovim
+is_featured: false
 ---
 
 ![neovim](https://ichi.pro/assets/images/max/724/1*5UlKPl_PKAor556Smxkykw.png)

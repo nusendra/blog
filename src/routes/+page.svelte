@@ -1,7 +1,7 @@
 <script>
 	/* throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)"); */
 
-	import { isBefore, isAfter } from "date-fns";
+	import { isBefore, isAfter, format, parseISO } from "date-fns";
 
 	import CourseList from "../components/CourseList.svelte";
 	import BlogList from "../components/BlogList.svelte";
@@ -20,56 +20,6 @@
 	}
 </script>
 
-<div class="relative isolate overflow-hidden bg-white">
-	<div
-		class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-20 lg:px-8"
-	>
-		<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-			<h1
-				class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
-			>
-				Mau belajar Typescript, Express dan Vue.js dari dasar banget bro?
-			</h1>
-			<p class="mt-6 text-lg leading-8 text-gray-600">
-				Saya membuat beberapa series / playlist yang berisi video tutorial
-				programming di Youtube. Saat ini masih membahas seputar JavaScript,
-				Typescript, Express dan Vue.js
-			</p>
-			<div class="mt-10 flex items-center gap-x-6">
-				<a
-					href="https://www.youtube.com/@leskoding"
-					class="rounded-md bg-blue-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm
-					hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
-					>Gas Nonton !!</a
-				>
-				<a
-					href="https://leskoding.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="text-base font-semibold leading-7 text-gray-900"
-					>Ini course apa sih ?<span aria-hidden="true">→</span></a
-				>
-			</div>
-		</div>
-		<div
-			class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32"
-		>
-			<div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-				<div
-					class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4"
-				>
-					<img
-						src="/playlist.webp"
-						alt="App screenshot"
-						width="2432"
-						height="1442"
-						class="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
-					/>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 <div class="sm:px-8 mt-6 md:mt-6">
 	<div class="mx-auto w-full max-w-7xl lg:px-8">
@@ -79,6 +29,29 @@
 					class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2"
 				>
 					<div class="flex flex-col gap-5 z-50">
+						{#if data.featuredPosts && data.featuredPosts.length > 0}
+							<div class="rounded-2xl border border-zinc-100 bg-zinc-50 p-6 dark:border-zinc-700/40 dark:bg-zinc-800/50">
+								<h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+									<span>Featured Posts</span>
+								</h2>
+								<ol class="mt-6 space-y-4">
+									{#each data.featuredPosts as item}
+										<li class="flex w-full">
+											<dl class="flex w-full items-baseline">
+												<dt class="sr-only">Title</dt>
+												<dd class="w-4/5 min-w-0 pr-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 z-50 truncate">
+													<a href={item.slug}>{item.title}</a>
+												</dd>
+												<dt class="sr-only">Date</dt>
+												<dd class="w-1/5 text-right text-xs text-zinc-400 dark:text-zinc-500">
+													{format(parseISO(item.date), "MMM d, yyyy")}
+												</dd>
+											</dl>
+										</li>
+									{/each}
+								</ol>
+							</div>
+						{/if}
 						{#each data.posts as item, i}
 							<BlogList
 								slug={item.slug}

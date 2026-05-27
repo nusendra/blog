@@ -5,6 +5,7 @@ date: 2018-09-17 07:48:05
 tags: ['typescript','expressjs','nodejs']
 description: "Cara membuat REST API menggunakan Nodejs, Expressjs, Typescript dan MongoDB"
 slug: rest-api-dengan-nodejs-dan-typescript-part-3
+is_featured: false
 ---
 
 Di penghujung tutorial series ini, kita menginjak part 3 cara membuat REST API dengan Nodejs dan Typescript. Kita kilas balik sebentar, pada [part 1](https://nusendra.com/post/rest-api-dengan-nodejs-dan-typescript-part-1) kita sudah belajar bagaimana memulai membuat project ini, dengan menambahkan dependencies yang diperlukan. Kemudian lanjut ke [part 2](https://nusendra.com/post/rest-api-dengan-nodejs-dan-typescript-part-1) kita membuat file core server yang mana ini akan menjalankan server REST API kita. Nah di penghujung tutorial series part 3 ini kita akan belajar bareng bagaimana membuat routes dan model mongodb nya.

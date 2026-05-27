@@ -5,6 +5,7 @@ description: "Ga perlu web hosting, ga perlu beli layanan email, hanya dengan do
 tags: ["Others"]
 draft: false
 slug: hanya-modal-domain-untuk-email-pribadi-dan-website
+is_featured: false
 ---
 
 <img src="https://lh4.googleusercontent.com/Bv2KF8hORY9RmCPHrR0NJN-z9WBT0ig3yJdwVBnxT5uZ2icuXWxh1M5_1InrJ6vogyHPIuRiNo0itDRDvVzddCT4ATEJetqsblGYZ7f63_LLJsti_oTzoCCsUTKU3FJeO9-p5Vus" alt="email-domain-nusendra" border="0">

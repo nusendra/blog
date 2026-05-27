@@ -4,7 +4,7 @@ export const fetchMarkdown = async (allPostFiles) => {
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const { title, date, slug, description, tags } = metadata;
+			const { title, date, slug, description, tags, is_featured } = metadata;
 
 			return {
 				title,
@@ -12,6 +12,7 @@ export const fetchMarkdown = async (allPostFiles) => {
 				slug,
 				description,
 				tags,
+				is_featured,
 			};
 		})
 	);

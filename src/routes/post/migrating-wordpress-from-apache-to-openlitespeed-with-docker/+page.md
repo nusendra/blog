@@ -5,6 +5,7 @@ date: 2026-03-28 10:00:00
 tags: ['docker','wordpress','devops','coolify']
 description: "A walkthrough on migrating a WordPress site from Apache to OpenLiteSpeed using Docker, deployed via Coolify."
 slug: migrating-wordpress-from-apache-to-openlitespeed-with-docker
+is_featured: false
 ---
 
 If you're running a WordPress site on Apache inside Docker and you're looking for something faster and more efficient, OpenLiteSpeed might be worth checking out. I recently migrated a WordPress site from Apache to OpenLiteSpeed, deployed via Docker on Coolify, and it went pretty smooth. Here's how it went and what I learned along the way.

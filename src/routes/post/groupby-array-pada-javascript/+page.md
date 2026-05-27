@@ -5,6 +5,7 @@ description: "Catatan / snippet singkat tentang bagaimana cara membuat fungsi gr
 tags: ['opini', 'snippet']
 draft: false
 slug: groupby-array-pada-javascript
+is_featured: false
 ---
 
 Kadangkala kita menemukan suatu kondisi yang mengharuskan kita untuk melakukan group by pada koleksi didalam data array kita. Nah cara yang paling mudah adalah menggunakan lodash. Tapi masa iya sih hal yang begini saja harus pake lodash? Kalau bisa bikin sendiri, kenapa harus pake lodash? Betul ga?

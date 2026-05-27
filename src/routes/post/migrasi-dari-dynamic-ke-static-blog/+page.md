@@ -5,6 +5,7 @@ description: "Cerita singkat migrasi dari blog dinamis ke static blog"
 tags: ['opini', 'tips']
 draft: false
 slug: migrasi-dari-dynamic-ke-static-blog
+is_featured: false
 ---
 
 <img class="center-image-post" src="https://cdn.staticaly.com/img/snipcart.com/media/204009/static-site-generators.png" style="width:100%;height:auto;" alt="static blog">

@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Menampilkan detail dari sebuah data merupakan salah satu fitur dari sebuah web yang harus ada. Bagaimana cara implementasi nya? Saya akan memaparkan nya secara ringkas di postingan kali ini."
 slug: method-show-di-controller-laravel-5-part-5
+is_featured: false
 ---
 
 Udah sekitar seminggu nih belum update blog hehe. Kali ini saya akan bahas sedikit tentang method show yang ada di Controller. Show ini berfungsi untuk menampilkan single row dari database. Single row disini maksudnya kita menampilkan detail data dari sebuah row. Contoh mudahnya, kita menampilkan blog post, menampilkan detail dari suatu barang di inventory, menampilkan user profile, dll.

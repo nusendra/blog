@@ -5,6 +5,7 @@ description: "Sebagai seorang developer, apalagi seorang freelancer wajib punya 
 tags: ['opini']
 draft: false
 slug: bagaimana-saya-mengatur-waktu-sebagai-developer
+is_featured: false
 ---
 
 <img class="center-image-post" src="https://cdn.statically.io/img/d3tvpxjako9ywy.cloudfront.net/blog/content/uploads/2018/11/Time_Management_Apps_You_Should_Start_Using_Yesterday_1-896x518.jpg" style="width:100%;height:auto;" alt="time">

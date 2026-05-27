@@ -5,6 +5,7 @@ tags: ['laravel','php']
 draft: false
 description: "Part lanjutan dari pembahasan route di Laravel ini akan sedikit masuk kedalam samudra routing nya Laravel. Yuk mari kita simak biar kita pinter :-)"
 slug: mengenal-route-di-laravel-5-part-2
+is_featured: false
 ---
 
 Lanjutan dari postingan sebelumnya Mengenal Route di Laravel 5 - Part 1 yang membahas tentang routing dasar. Kali ini kita akan sedikit masuk kedalam palung Laravel untuk mempelajari rahasia apa aja sih yang bisa dimanfaatkan di route ini.

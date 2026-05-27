@@ -5,6 +5,7 @@ tags: ['opini']
 draft: false
 description: "Sebagai programmer kita wajib untuk berkomunitas untuk mendapatkan berbagai manfaat. Salah satu nya bersosialisasi"
 slug: berkomunitaslah-dapatkan-dan-sebarkan-manfaat
+is_featured: false
 ---
 
 Komunitas merupakan faktor yang sangat penting bagi keberlangsungan hidup kita, baik secara real maupun digital. Kita hidup sebagai makhluk yang bersosial sepatutnya juga menjaga kehidupan sosial kita. Komunitas bisa meliputi banyak hal, contoh nya komunitas pecinta motor, komunitas pendaki gunung, dan yang sekarang akan saya bahas adalah komunitas programming.

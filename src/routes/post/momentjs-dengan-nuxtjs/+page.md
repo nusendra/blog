@@ -5,6 +5,7 @@ tags: ['javascript','nuxtjs']
 draft: false
 description: "Menggunakan Momentjs di Nuxtjs untuk memanipulasi dan menampilkan tanggal dengan keren"
 slug: momentjs-dengan-nuxtjs
+is_featured: false
 ---
 
 Hari ini mau post yang ringan ringan, yaitu menggunakan Momentjs di Nuxtjs. Sebelumnya saya jelaskan dahulu secara singkat kegunaan momentjs. Momentjs ini berfungsi untuk memparse, memanipulasi, dan menampilkan tanggal / waktu dengan mudah.

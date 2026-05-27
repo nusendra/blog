@@ -5,6 +5,7 @@ date: 2018-09-23 14:29:38
 tags: ['typescript','expressjs','nodejs']
 description: "Implementasi konsep Test Driven Development (TDD) menggunakan Mocha dan Chai di Nodejs"
 slug: tdd-menggunakan-mocha-dan-chai-di-nodejs-part-1
+is_featured: false
 ---
 
 Halo man teman, kali ini saya akan share tentang TDD menggunakan mocha dan chai di nodejs. Sebelum kita belajar bikin testing nya, lebih baik kita harus paham dan tau dulu mengenai apa itu TDD. TDD adalah singkatan dari Test Driven Development, kalian dapat dengan mudah mencari artikel mengenai TDD ini di mbah kita, yaitu google. Namun saya akan jelaskan secara singkat disini, TDD adalah sebuah konsep development yang berbasis test.
