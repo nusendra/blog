@@ -2,7 +2,7 @@
 title: "Talking to Claude Code from my phone"
 date: 2026-05-12 09:00:00
 description: "Building a small Rust Telegram bot that pipes messages to Claude Code running on my Raspberry Pi 5, so I can chat with Claude from anywhere."
-tags: ['claude-code', 'rust', 'telegram', 'raspberry-pi']
+tags: ['claude-code', 'telegram']
 draft: false
 slug: talking-to-claude-code-from-my-phone
 is_featured: true

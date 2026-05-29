@@ -2,7 +2,7 @@
 title: "The day my Telegram bot saved my workday"
 date: 2026-05-23 09:00:00
 description: "My home server's Tailscale expired while I was working from a cafe. I couldn't SSH in to fix it, but I could still talk to Claude Code over Telegram, and that turned out to be enough."
-tags: ['claude-code', 'telegram', 'tailscale', 'raspberry-pi', 'home-server']
+tags: ['claude-code', 'telegram', 'tailscale']
 draft: false
 slug: the-day-my-telegram-bot-saved-my-workday
 is_featured: true

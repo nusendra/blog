@@ -2,7 +2,7 @@
 draft: false
 title: "Faster Deployments with GitHub Actions, GHCR, and Coolify"
 date: 2026-04-05 10:00:00
-tags: ['devops','docker','github-actions','coolify','ci-cd']
+tags: ['docker','github-actions']
 description: "How to offload Docker builds to GitHub Actions with GHCR and trigger Coolify deployments, cutting deploy time from 10 minutes to 30 seconds."
 slug: github-actions-ghcr-coolify-deployment
 is_featured: false
