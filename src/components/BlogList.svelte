@@ -27,15 +27,16 @@
 		>
 	</h2>
 	<time
-		class="relative z-10 order-first mb-3 flex items-center text-sm
+		class="relative z-30 order-first mb-3 flex items-center text-sm
 								text-zinc-400 text-gray-400"
 		datetime={formattedDate}
 		>{formattedDate}
 		{#each tags as tag}
-			<div
-				class="relative z-10 rounded-full bg-blue-50 px-2 py-1 ml-2 font-medium
-        text-gray-600">{tag}</div
-			>
+			<a
+				href={`/blog?tag=${encodeURIComponent(tag)}`}
+				class="relative z-30 rounded-full bg-blue-50 px-2 py-1 ml-2 font-medium
+        text-gray-600 hover:bg-blue-100"
+			>{tag}</a>
 		{/each}
 	</time>
 	<p class="relative z-10 mt-2 text-md text-zinc-600">

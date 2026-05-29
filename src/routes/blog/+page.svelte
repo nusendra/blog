@@ -1,6 +1,14 @@
 <script>
   import { format, parseISO } from 'date-fns';
+  import { page } from '$app/stores';
   let { data } = $props();
+
+  let activeTag = $derived($page.url.searchParams.get('tag'));
+  let filteredPosts = $derived(
+    activeTag
+      ? data.posts.filter((p) => Array.isArray(p.tags) && p.tags.includes(activeTag))
+      : data.posts
+  );
 </script>
 
 <div class="relative overflow-hidden bg-white py-16">
@@ -14,14 +22,24 @@
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-5">
         <div class="lg:col-span-3">
           <div class="mx-auto max-w-prose text-lg">
-            {#each data.posts as item, i}
+            {#if activeTag}
+              <div class="flex items-center gap-x-3 text-sm text-gray-600">
+                <span>Filtering by tag:</span>
+                <span class="rounded-full bg-blue-50 px-3 py-1 font-medium text-blue-700">{activeTag}</span>
+                <a href="/blog" class="text-gray-500 underline hover:text-gray-700">Clear</a>
+              </div>
+            {/if}
+            {#each filteredPosts as item, i}
             <article class="flex max-w-xl flex-col items-start mt-14 first:mt-0">
               <div class="flex items-center gap-x-4 text-xs">
                 <time datetime={format(parseISO(item.date), 'PPP')}
                   class="text-gray-500">{format(parseISO(item.date), 'PPP')}</time>
                 {#each item.tags as tag}
-                  <div class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium
-                    text-gray-600 hover:bg-gray-100">{tag}</div>
+                  <a
+                    href={`/blog?tag=${encodeURIComponent(tag)}`}
+                    class="relative z-20 rounded-full bg-gray-50 px-3 py-1.5 font-medium
+                      text-gray-600 hover:bg-gray-100"
+                  >{tag}</a>
                 {/each}
               </div>
               <div class="group relative">
@@ -34,6 +52,8 @@
                 <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{item.description}</p>
               </div>
             </article>
+            {:else}
+              <p class="mt-14 text-sm text-gray-500">No posts found for tag "{activeTag}".</p>
             {/each}
           </div>
         </div>
