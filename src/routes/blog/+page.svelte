@@ -1,11 +1,12 @@
 <script>
   import { format, parseISO } from 'date-fns';
   import { page } from '$app/stores';
+  import { browser } from '$app/environment';
   let { data } = $props();
 
   const PER_PAGE = 15;
 
-  let activeTag = $derived($page.url.searchParams.get('tag'));
+  let activeTag = $derived(browser ? $page.url.searchParams.get('tag') : null);
   let filteredPosts = $derived(
     activeTag
       ? data.posts.filter((p) => Array.isArray(p.tags) && p.tags.includes(activeTag))
@@ -13,10 +14,12 @@
   );
   let totalPages = $derived(Math.max(1, Math.ceil(filteredPosts.length / PER_PAGE)));
   let currentPage = $derived(
-    Math.min(
-      Math.max(1, parseInt($page.url.searchParams.get('page') ?? '1', 10) || 1),
-      totalPages
-    )
+    browser
+      ? Math.min(
+          Math.max(1, parseInt($page.url.searchParams.get('page') ?? '1', 10) || 1),
+          totalPages
+        )
+      : 1
   );
   let paginatedPosts = $derived(
     filteredPosts.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE)
