@@ -4,19 +4,16 @@
 </svelte:head>
 
 <script>
-	import MultiDots from "../../components/MultiDots.svelte";
 	import ProjectCard from "../../components/ProjectCard.svelte";
 </script>
 
-<div class="relative overflow-hidden bg-white py-16">
-	<MultiDots />
+<div class="relative overflow-hidden bg-white pb-16">
+	<img
+		src="/projects-header.webp"
+		alt="Projects header"
+		class="mb-12 w-full object-cover"
+	/>
 	<div class="relative px-6 lg:px-8">
-		<div class="mx-auto max-w-prose text-lg">
-			<h1>
-				<span class="mt-2 block text-center text-3xl font-bold leading-8
-					tracking-tight text-gray-900 sm:text-4xl">Personal Projects</span>
-			</h1>
-		</div>
 		<ProjectCard
 			title="Ployer"
 			tools="Rust, SvelteKit, Caddy, Docker"

@@ -3,15 +3,35 @@
   import { page } from '$app/stores';
   let { data } = $props();
 
+  const PER_PAGE = 15;
+
   let activeTag = $derived($page.url.searchParams.get('tag'));
   let filteredPosts = $derived(
     activeTag
       ? data.posts.filter((p) => Array.isArray(p.tags) && p.tags.includes(activeTag))
       : data.posts
   );
+  let totalPages = $derived(Math.max(1, Math.ceil(filteredPosts.length / PER_PAGE)));
+  let currentPage = $derived(
+    Math.min(
+      Math.max(1, parseInt($page.url.searchParams.get('page') ?? '1', 10) || 1),
+      totalPages
+    )
+  );
+  let paginatedPosts = $derived(
+    filteredPosts.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE)
+  );
+
+  function pageHref(n) {
+    const params = new URLSearchParams();
+    if (activeTag) params.set('tag', activeTag);
+    if (n > 1) params.set('page', String(n));
+    const qs = params.toString();
+    return qs ? `/blog?${qs}` : '/blog';
+  }
 </script>
 
-<div class="relative overflow-hidden bg-white py-16">
+<div class="relative overflow-hidden bg-white pb-16">
   <img
     src="/blog-header.webp"
     alt="Blog header"
@@ -29,7 +49,7 @@
                 <a href="/blog" class="text-gray-500 underline hover:text-gray-700">Clear</a>
               </div>
             {/if}
-            {#each filteredPosts as item, i}
+            {#each paginatedPosts as item, i}
             <article class="flex max-w-xl flex-col items-start mt-14 first:mt-0">
               <div class="flex items-center gap-x-4 text-xs">
                 <time datetime={format(parseISO(item.date), 'PPP')}
@@ -55,6 +75,22 @@
             {:else}
               <p class="mt-14 text-sm text-gray-500">No posts found for tag "{activeTag}".</p>
             {/each}
+
+            {#if totalPages > 1}
+              <nav class="mt-14 flex items-center justify-between border-t border-gray-200 pt-6 text-sm">
+                {#if currentPage > 1}
+                  <a href={pageHref(currentPage - 1)} class="text-gray-700 hover:text-gray-900">&larr; Previous</a>
+                {:else}
+                  <span class="text-gray-300">&larr; Previous</span>
+                {/if}
+                <span class="text-gray-500">Page {currentPage} of {totalPages}</span>
+                {#if currentPage < totalPages}
+                  <a href={pageHref(currentPage + 1)} class="text-gray-700 hover:text-gray-900">Next &rarr;</a>
+                {:else}
+                  <span class="text-gray-300">Next &rarr;</span>
+                {/if}
+              </nav>
+            {/if}
           </div>
         </div>
         <aside class="lg:col-span-2">

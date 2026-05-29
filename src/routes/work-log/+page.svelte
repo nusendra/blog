@@ -1,11 +1,14 @@
 <script>
   import { format, parseISO } from 'date-fns';
-  import MultiDots2 from '../../components/MultiDots2.svelte';
   let { data } = $props();
 </script>
 
-<div class="relative overflow-hidden bg-white py-16">
-  <MultiDots2 />
+<div class="relative overflow-hidden bg-white pb-16">
+  <img
+    src="/work-log-header.webp"
+    alt="Work log header"
+    class="mb-12 w-full object-cover"
+  />
   <div class="relative px-6 lg:px-8 z-10">
     <div class="mx-auto max-w-prose text-lg">
 			{#each data.posts as item, i}
