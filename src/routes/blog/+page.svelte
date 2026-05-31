@@ -54,16 +54,18 @@
             {/if}
             {#each paginatedPosts as item, i}
             <article class="flex max-w-xl flex-col items-start mt-14 first:mt-0">
-              <div class="flex items-center gap-x-4 text-xs">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-x-4 text-xs">
                 <time datetime={format(parseISO(item.date), 'PPP')}
-                  class="text-gray-500">{format(parseISO(item.date), 'PPP')}</time>
-                {#each item.tags as tag}
-                  <a
-                    href={`/blog?tag=${encodeURIComponent(tag)}`}
-                    class="relative z-20 rounded-full bg-gray-50 px-3 py-1.5 font-medium
-                      text-gray-600 hover:bg-gray-100"
-                  >{tag}</a>
-                {/each}
+                  class="text-gray-500 whitespace-nowrap">{format(parseISO(item.date), 'PPP')}</time>
+                <div class="flex flex-wrap gap-2">
+                  {#each item.tags as tag}
+                    <a
+                      href={`/blog?tag=${encodeURIComponent(tag)}`}
+                      class="relative z-20 rounded-full bg-gray-50 px-3 py-1.5 font-medium
+                        text-gray-600 hover:bg-gray-100"
+                    >{tag}</a>
+                  {/each}
+                </div>
               </div>
               <div class="group relative">
                 <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
