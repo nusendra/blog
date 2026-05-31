@@ -43,11 +43,11 @@
 
   {#if showSidebar}
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
+    <div class="lg:hidden relative z-[100]" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div class="fixed inset-0"></div>
+      <div class="fixed inset-0 bg-gray-900/40 z-[100]"></div>
       <div class="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6
-        sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 z-50">
+        sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 z-[110]">
         <div class="flex items-center justify-between">
           <img class="h-12 w-auto " src="https://yt3.ggpht.com/3hrosdAQxWc9UC9tAKPPJXHHHl1BcbCD581ZaYFNgHE6ZDvc7T0b9Fls0JdkuNUY5B5EefuLy10=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="">
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -60,7 +60,7 @@
         </div>
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
+            <div class="space-y-2 py-6" onclick={(e) => { if (e.target.closest('a')) toggleSidebar(); }} role="none">
               <a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
               <a href="/blog" class="-mx-3 block rounded-lg px-3 py-2 text-base
