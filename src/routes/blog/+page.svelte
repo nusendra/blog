@@ -105,13 +105,13 @@
               <ol class="mt-6 space-y-4">
                 {#each data.featuredPosts as item}
                   <li class="flex w-full">
-                    <dl class="flex w-full items-baseline">
+                    <dl class="flex w-full items-baseline gap-2">
                       <dt class="sr-only">Title</dt>
-                      <dd class="w-4/5 min-w-0 pr-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 truncate">
+                      <dd class="min-w-0 flex-1 text-sm font-medium text-zinc-700 dark:text-zinc-300 truncate">
                         <a href={`/post/${item.slug}`}>{item.title}</a>
                       </dd>
                       <dt class="sr-only">Date</dt>
-                      <dd class="w-1/5 text-right text-xs text-zinc-400 dark:text-zinc-500">
+                      <dd class="shrink-0 text-right text-xs text-zinc-400 dark:text-zinc-500 whitespace-nowrap">
                         {format(parseISO(item.date), 'MMM d, yyyy')}
                       </dd>
                     </dl>

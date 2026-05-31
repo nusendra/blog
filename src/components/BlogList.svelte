@@ -26,19 +26,22 @@
 			></span><span class="relative z-10 text-xl">{title}</span></a
 		>
 	</h2>
-	<time
-		class="relative z-30 order-first mb-3 flex items-center text-sm
-								text-zinc-400 text-gray-400"
-		datetime={formattedDate}
-		>{formattedDate}
-		{#each tags as tag}
-			<a
-				href={`/blog?tag=${encodeURIComponent(tag)}`}
-				class="relative z-30 rounded-full bg-blue-50 px-2 py-1 ml-2 font-medium
-        text-gray-600 hover:bg-blue-100"
-			>{tag}</a>
-		{/each}
-	</time>
+	<div class="order-first mb-3 flex flex-col sm:flex-row sm:items-center gap-2">
+		<time
+			class="relative z-30 flex items-center text-sm whitespace-nowrap
+									text-zinc-400 text-gray-400"
+			datetime={formattedDate}
+		>{formattedDate}</time>
+		<div class="relative z-30 flex flex-wrap gap-2">
+			{#each tags as tag}
+				<a
+					href={`/blog?tag=${encodeURIComponent(tag)}`}
+					class="rounded-full bg-blue-50 px-2 py-1 font-medium text-sm
+          text-gray-600 hover:bg-blue-100"
+				>{tag}</a>
+			{/each}
+		</div>
+	</div>
 	<p class="relative z-10 mt-2 text-md text-zinc-600">
 		{description}
 	</p>
