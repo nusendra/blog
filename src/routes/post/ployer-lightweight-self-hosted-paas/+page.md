@@ -2,7 +2,7 @@
 title: "Ployer: A Lightweight Self-Hosted PaaS That Doesn't Eat Your RAM"
 date: 2026-06-01 09:00:00
 description: "Ployer is a single-binary, Git-driven self-hosted PaaS built in Rust and SvelteKit, doing roughly what Coolify does at about 30% of the memory."
-tags: ['ployer', 'rust', 'sveltekit', 'self-hosted', 'paas', 'coolify']
+tags: ['ployer', 'coolify']
 draft: false
 slug: ployer-lightweight-self-hosted-paas
 is_featured: true
