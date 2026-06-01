@@ -5,6 +5,7 @@ description: "Ployer is a single-binary, Git-driven self-hosted PaaS built in Ru
 tags: ['ployer', 'rust', 'sveltekit', 'self-hosted', 'paas', 'coolify']
 draft: false
 slug: ployer-lightweight-self-hosted-paas
+is_featured: true
 ---
 
 If you've ever spun up Coolify on a small VPS and watched your free memory evaporate, this post is for you. Ployer is a self-hosted, Git-driven Platform-as-a-Service built in Rust + SvelteKit, designed to do roughly what Coolify does, deploy your apps with automatic SSL, health checks, and webhooks, without taking a gigabyte of RAM to do it.
