@@ -7,6 +7,15 @@
 	<div class="container px-5 py-24 mx-auto mt-0 lg:mt-[-225px]">
 		<div class="flex flex-wrap -m-4">
 			<TalkCard
+				thumbnailUrl="/talks/nusendra-gdgocunesa.webp"
+				thumbnailAlt="nusendra talks about level up ai engineering at unesa gdg"
+				tag="Offline Seminar"
+				title="Levelling Up with Agentic Engineering"
+				description="Membahas tentang cara penggunaan agentic engineering untuk production"
+				slideUrl="https://docs.google.com/presentation/d/1VLi1rvcIRCy-9lehre-vm7TnkXLtsmTQ1Y1W4Jyf73I/edit?usp=sharing"
+			/>
+
+			<TalkCard
 				thumbnailUrl="/talks/jh-vue.webp"
 				thumbnailAlt="nusendra talk about vue js at jagoanhosting"
 				tag="Online Seminar"
