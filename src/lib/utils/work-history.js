@@ -1,10 +1,5 @@
 const work = [
 	{
-		company: "Freelancer (REMOTE)",
-		role: "Software Engineer",
-		date: "2014 - Present",
-	},
-	{
 		company: "Streamline Technology - United States (REMOTE)",
 		role: "Software Engineer",
 		date: "2024 - Present",
