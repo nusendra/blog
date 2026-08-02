@@ -36,6 +36,8 @@
         text-gray-900 z-50">Talks</a>
       <a href="/social" class="text-sm font-semibold leading-6
         text-gray-900 z-50">Socials</a>
+      <a href="/rate-card" class="text-sm font-semibold leading-6
+        text-gray-900 z-50">Rate Card</a>
       <a href="https://resume.nusendra.com" target="_blank" class="text-sm font-semibold leading-6
         text-gray-900 z-50">Resume</a>
     </div>
@@ -80,6 +82,9 @@
               <a href="/social" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900
                 hover:bg-gray-50">Social</a>
+              <a href="/rate-card" class="-mx-3 block rounded-lg px-3 py-2 text-base
+                font-semibold leading-7 text-gray-900
+                hover:bg-gray-50">Rate Card</a>
               <a href="https://resume.nusendra.com" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base
                 font-semibold leading-7 text-gray-900
                 hover:bg-gray-50">Resume</a>
