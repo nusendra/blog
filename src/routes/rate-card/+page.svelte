@@ -84,14 +84,14 @@
 			<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
 				<a
 					href="#speaking"
-					class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 z-50"
+					class="inline-flex min-h-[44px] items-center rounded-md bg-indigo-600 px-5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 z-50"
 					>See the Rate</a
 				>
 				<a
 					href="https://wa.me/6289612991475"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="rounded-md border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50 z-50"
+					class="inline-flex min-h-[44px] items-center rounded-md border border-gray-300 px-5 text-sm font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 z-50"
 					>Let's Talk First</a
 				>
 			</div>
@@ -117,9 +117,9 @@
 							free, so let's start there.
 						</p>
 					</div>
-					<div class="shrink-0 sm:text-right">
-						<p class="text-3xl font-bold tracking-tight text-green-600">Free</p>
-						<p class="mt-1 text-sm text-gray-500">
+					<div class="flex-shrink-0 sm:text-right">
+						<p class="text-3xl font-bold tracking-tight text-green-700">Free</p>
+						<p class="mt-1 text-sm text-gray-600">
 							preferred, whoever is inviting
 						</p>
 						<p class="mt-3 max-w-xs text-sm leading-6 text-gray-600">
@@ -140,7 +140,8 @@
 							{#each speakingFormats as item}
 								<li class="flex gap-3 text-sm leading-6 text-gray-600">
 									<svg
-										class="mt-1 h-4 w-4 shrink-0 text-indigo-600"
+										class="mt-1 h-4 w-4 flex-shrink-0 text-indigo-600"
+										aria-hidden="true"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke-width="2"
@@ -167,7 +168,8 @@
 							{#each speakingTopics as item}
 								<li class="flex gap-3 text-sm leading-6 text-gray-600">
 									<svg
-										class="mt-1 h-4 w-4 shrink-0 text-indigo-600"
+										class="mt-1 h-4 w-4 flex-shrink-0 text-indigo-600"
+										aria-hidden="true"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke-width="2"
@@ -185,7 +187,7 @@
 						</ul>
 						<a
 							href="/talks"
-							class="mt-5 inline-block text-sm font-semibold text-indigo-600 hover:text-indigo-500 z-50"
+							class="mt-5 inline-flex min-h-[44px] items-center text-sm font-semibold text-indigo-600 transition-colors duration-200 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 z-50"
 							>See previous talks &rarr;</a
 						>
 					</div>
@@ -217,7 +219,7 @@
 						<p class="mt-2 flex-1 text-sm leading-6 text-gray-600">
 							{service.description}
 						</p>
-						<p class="mt-4 text-sm font-semibold text-green-600">
+						<p class="mt-4 text-sm font-semibold text-green-700">
 							Free for individuals
 						</p>
 						<p class="mt-1 text-sm font-semibold text-indigo-600">
@@ -238,7 +240,8 @@
 					{#each includedItems as item}
 						<li class="flex gap-3 text-sm leading-6 text-gray-600">
 							<svg
-								class="mt-1 h-4 w-4 shrink-0 text-indigo-600"
+								class="mt-1 h-4 w-4 flex-shrink-0 text-indigo-600"
+									aria-hidden="true"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke-width="2"
@@ -260,7 +263,7 @@
 				<ul class="mt-4 space-y-3">
 					{#each terms as item}
 						<li class="flex gap-3 text-sm leading-6 text-gray-600">
-							<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400"
+							<span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400"
 							></span>
 							<span>{item}</span>
 						</li>
@@ -287,19 +290,19 @@
 					href="https://wa.me/6289612991475"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 z-50"
+					class="inline-flex min-h-[44px] items-center rounded-md bg-white px-5 text-sm font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 z-50"
 					>WhatsApp</a
 				>
 				<a
 					href="https://t.me/nusendra"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="rounded-md border border-gray-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-gray-800 z-50"
+					class="inline-flex min-h-[44px] items-center rounded-md border border-gray-500 px-5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 z-50"
 					>Telegram</a
 				>
 				<a
 					href="mailto:admin@nusendra.com"
-					class="rounded-md border border-gray-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-gray-800 z-50"
+					class="inline-flex min-h-[44px] items-center rounded-md border border-gray-500 px-5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 z-50"
 					>Email</a
 				>
 			</div>
