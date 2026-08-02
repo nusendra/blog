@@ -1,5 +1,13 @@
 [
   {
+    "start_date": "2026-07-16",
+    "end_date": "2026-07-16",
+    "image": "/talks/nusendra-exabytes-ai-agents.webp",
+    "alt_image": "nusendra talks about developing actionable ai agent at exabytes developer club",
+    "title": "Developing Actionable AI Agent",
+    "description": "Membangun AI Agent yang bisa mengerjakan tasks secara otomatis"
+  },
+  {
     "start_date": "2026-06-13",
     "end_date": "2026-06-13",
     "image": "/talks/nusendra-gdgocunesa.webp",

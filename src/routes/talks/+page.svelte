@@ -7,6 +7,15 @@
 	<div class="container px-5 py-24 mx-auto mt-0 lg:mt-[-225px]">
 		<div class="flex flex-wrap -m-4">
 			<TalkCard
+				thumbnailUrl="/talks/nusendra-exabytes-ai-agents.webp"
+				thumbnailAlt="nusendra talks about developing actionable ai agent at exabytes developer club"
+				tag="Offline Seminar"
+				title="Developing Actionable AI Agent"
+				description="Membangun AI Agent yang bisa mengerjakan tasks secara otomatis"
+				slideUrl="https://docs.google.com/presentation/d/1kaJFBdiC1CrVsWxBlAUmtVNDZKKAe7O6xQ3P65TtJzE/edit?usp=sharing"
+			/>
+
+			<TalkCard
 				thumbnailUrl="/talks/nusendra-gdgocunesa.webp"
 				thumbnailAlt="nusendra talks about level up ai engineering at unesa gdg"
 				tag="Offline Seminar"
