@@ -8,17 +8,17 @@ slug: expand-ec2-storage-without-downtime
 is_featured: false
 ---
 
-So you've been running your EC2 instance and suddenly you're at 95% disk usage. Your app is sluggish, deployments are failing, and you're getting that dreaded "No space left on device" error. Sound familiar?
+You're running an EC2 instance, disk usage hits 95%, deployments start failing, and eventually you get "No space left on device".
 
-Good news — AWS lets you expand EBS volumes **live**, without stopping your instance. No panic, no downtime. Let's get into it.
+AWS lets you expand EBS volumes live, without stopping the instance. Here's the whole procedure.
 
 ---
 
-## The Problem
+## The problem
 
-Here's the thing. When you resize an EBS volume in the AWS Console, AWS does expand the underlying disk. But your OS inside the instance doesn't know about it yet. The partition and filesystem still show the old size.
+When you resize an EBS volume in the AWS Console, AWS does expand the underlying disk. Your OS inside the instance has no idea, though. The partition and filesystem still report the old size.
 
-So you might end up seeing something like this after "supposedly" resizing:
+So after "supposedly" resizing, you get this:
 
 ```bash
 $ df -h
@@ -26,31 +26,31 @@ Filesystem       Size  Used Avail Use% Mounted on
 /dev/root         58G   55G  3.1G  95% /
 ```
 
-Still showing 58G even though you just upgraded to 120GB. That's what we need to fix.
+Still 58G even though you just upgraded to 120GB. That's the part you have to fix yourself.
 
 ---
 
-## Step 1: Resize the EBS Volume in AWS Console
+## Step 1: resize the EBS volume in the AWS Console
 
-1. Open the **AWS Console** -> go to **EC2 -> Volumes**
+1. Open the AWS Console, go to EC2 -> Volumes
 2. Select the volume attached to your instance
-3. Click **Actions -> Modify Volume**
+3. Click Actions -> Modify Volume
 4. Enter the new size (e.g., `120` GB)
-5. Click **Modify** and confirm
+5. Click Modify and confirm
 
-This works **without stopping your instance** for gp2, gp3, io1, and io2 volume types. Wait about 1-2 minutes for the modification to complete before moving on.
+This works without stopping your instance for gp2, gp3, io1, and io2 volume types. Give it a minute or two to finish before moving on.
 
 ---
 
-## Step 2: SSH Into Your Instance
+## Step 2: SSH into your instance
 
-Connect to your EC2 instance and check the current disk layout:
+Connect to the instance and check the current disk layout:
 
 ```bash
 lsblk
 ```
 
-You should see the new disk size is recognized by the kernel, but the partition hasn't been extended yet:
+The kernel recognises the new disk size, but the partition hasn't been extended:
 
 ```
 NAME         MAJ:MIN  SIZE
@@ -60,21 +60,21 @@ nvme0n1      259:0    120G   <- new size is here
 
 ---
 
-## Step 3: Grow the Partition
+## Step 3: grow the partition
 
 ```bash
 sudo growpart /dev/nvme0n1 1
 ```
 
-This extends partition `1` to use all available space on the disk.
+That extends partition `1` to use all the available space on the disk.
 
 ---
 
-## Step 4: Extend the Filesystem
+## Step 4: extend the filesystem
 
 Now resize the filesystem to fill the newly expanded partition.
 
-**For ext4** (Ubuntu default):
+For ext4, which is the Ubuntu default:
 
 ```bash
 sudo resize2fs /dev/root
@@ -82,7 +82,7 @@ sudo resize2fs /dev/root
 sudo resize2fs /dev/nvme0n1p1
 ```
 
-**For XFS** (Amazon Linux 2 / AL2023 default):
+For XFS, the default on Amazon Linux 2 and AL2023:
 
 ```bash
 sudo xfs_growfs -d /
@@ -90,24 +90,24 @@ sudo xfs_growfs -d /
 
 ---
 
-## Step 5: Verify
+## Step 5: verify
 
 ```bash
 df -h
 ```
 
-You should now see the full size:
+You should see the full size now:
 
 ```bash
 Filesystem       Size  Used Avail Use% Mounted on
 /dev/root        117G   55G   62G  47% /
 ```
 
-From 3.1G free to 62G free. Done!
+From 3.1G free to 62G free.
 
 ---
 
-## Quick Reference
+## Quick reference
 
 | Step | Command |
 |------|---------|
@@ -119,17 +119,18 @@ From 3.1G free to 62G free. Done!
 
 ---
 
-## Things to Keep in Mind
+## Things to keep in mind
 
-- **No downtime needed** — the entire process happens on a live instance
-- **AWS-side changes take a few minutes** — wait for the volume state to show "optimizing" or "completed" before running the commands
-- **Device names can vary** — use `lsblk` to confirm whether your disk is `/dev/xvda` or `/dev/nvme0n1`
-- **Ubuntu uses ext4**, Amazon Linux 2/AL2023 uses XFS by default
+The whole process happens on a live instance, so there's no downtime. The AWS-side change takes a few minutes, so wait for the volume state to show "optimizing" or "completed" before you run any of the commands.
+
+Device names vary. Use `lsblk` to confirm whether your disk is `/dev/xvda` or `/dev/nvme0n1` rather than copying the names above.
+
+Ubuntu uses ext4; Amazon Linux 2 and AL2023 use XFS by default. That decides which of the two resize commands you need.
 
 ---
 
-## Wrapping Up
+## Wrapping up
 
-Expanding EC2 storage is basically a two-part process: resize the volume in AWS, then extend the partition and filesystem inside the OS. Once you know the steps, it takes less than 2 minutes and your instance never needs to go offline.
+Expanding EC2 storage is two parts: resize the volume in AWS, then extend the partition and filesystem inside the OS. Once you know the steps it takes under two minutes and the instance never goes offline.
 
-If you're regularly hitting disk limits, it might be worth setting up a **CloudWatch alarm** on disk usage so you catch it before it becomes a problem.
+If you keep hitting disk limits, put a CloudWatch alarm on disk usage so you catch it earlier.

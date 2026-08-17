@@ -8,39 +8,39 @@ slug: apache-vs-openlitespeed-wordpress-performance-comparison
 is_featured: true
 ---
 
-I recently had the chance to run a proper side-by-side comparison between Apache and OpenLiteSpeed on the same WordPress site. Not synthetic benchmarks — actual page loads, property searches, and static asset delivery on a real production site.
+I recently got to run a proper side-by-side comparison between Apache and OpenLiteSpeed on the same WordPress site. Not synthetic benchmarks, but real page loads, property searches and static asset delivery on a live production site.
 
-Here's a bit of context first. The site is a WordPress-based real estate platform. The WordPress frontend doesn't just serve pages on its own — it connects to a shared backend API that handles property data, search results, and agent info. Both the production and staging environments hit the exact same backend, so any performance difference we see is purely from the web server and caching layer. The backend is not a variable here.
+Some context. The site is a WordPress-based real estate platform, and the frontend doesn't serve everything on its own. It talks to a shared backend API for property data, search results and agent info. Production and staging both hit the exact same backend, so whatever difference shows up comes from the web server and caching layer rather than the API.
 
-The setup looked like this:
+The setup:
 
-- **Production**: `https://example-realestate.com/` — Apache + PHP 8.1
-- **Staging**: `https://staging.example-realestate.dev/` — OpenLiteSpeed + PHP 8.2
-- **Shared Backend API**: `https://api.example-realestate.com/` — used by both environments
+- Production: `https://example-realestate.com/`, running Apache and PHP 8.1
+- Staging: `https://staging.example-realestate.dev/`, running OpenLiteSpeed and PHP 8.2
+- Shared backend API: `https://api.example-realestate.com/`, used by both
 
-Same WordPress codebase, same database, same backend. The only difference was the web server stack. Let's see how they compare.
+Same WordPress codebase, same database, same backend. The web server stack was the only thing that changed.
 
 ---
 
-## The Quick Summary
+## The quick summary
 
 | Metric | Apache | OpenLiteSpeed | Improvement |
 |--------|--------|---------------|-------------|
-| **Homepage TTFB (avg)** | 5.03s | 0.86s | **5.8x faster** |
-| **Homepage Total (avg)** | 10.88s | 1.23s | **8.8x faster** |
-| **Search Page TTFB** | 3.22s | 1.45s | **2.2x faster** |
-| **Search Page Total** | 6.49s | 2.65s | **2.5x faster** |
-| **Static Assets TTFB** | 1.70s | 1.30s | **1.3x faster** |
-| **PHP Version** | 8.1 | 8.2 | Newer |
-| **Caching** | None | LiteSpeed Cache | Active |
+| Homepage TTFB (avg) | 5.03s | 0.86s | 5.8x faster |
+| Homepage total (avg) | 10.88s | 1.23s | 8.8x faster |
+| Search page TTFB | 3.22s | 1.45s | 2.2x faster |
+| Search page total | 6.49s | 2.65s | 2.5x faster |
+| Static assets TTFB | 1.70s | 1.30s | 1.3x faster |
+| PHP version | 8.1 | 8.2 | Newer |
+| Caching | None | LiteSpeed Cache | Active |
 
-Yeah, those numbers are not a typo. The homepage went from almost 11 seconds to about 1.2 seconds. Let's break it down.
+Those numbers are not a typo. The homepage went from almost 11 seconds to about 1.2 seconds.
 
 ---
 
-## Homepage Performance
+## Homepage performance
 
-### Apache (Production)
+### Apache (production)
 
 ```
 Request 1:  TTFB: 15.10s | Total: 24.05s | Size: 285,688 bytes
@@ -54,9 +54,9 @@ Average (excluding cold start):
 - Total Load: 10.88s
 ```
 
-That first request at 15 seconds TTFB is rough. Even after warming up, it's still hovering around 3-6 seconds. And request 5 just straight up timed out.
+That first request at 15 seconds TTFB is rough. Even warmed up it sits around 3 to 6 seconds, and request 5 timed out entirely.
 
-### OpenLiteSpeed (Staging)
+### OpenLiteSpeed (staging)
 
 ```
 Request 1:  TTFB: 2.69s | Total: 3.04s | Size: 290,800 bytes
@@ -70,13 +70,13 @@ Average (excluding cold start):
 - Total Load: 1.23s
 ```
 
-After the cache warms up, sub-second TTFB consistently. The `x-litespeed-cache: hit` header confirmed the cache was doing its job.
+Once the cache warms up, TTFB stays under a second consistently. The `x-litespeed-cache: hit` header confirmed the cache was doing its job.
 
 ---
 
-## Property Search Performance
+## Property search performance
 
-This is where it gets interesting because the search page hits the shared backend API for property data. Both environments are making the same API calls to the same backend.
+The search page is the more interesting test, because it hits the shared backend API for property data. Both environments make the same API calls to the same backend.
 
 ### Apache
 
@@ -98,13 +98,13 @@ Request 3:  TTFB: 1.10s | Total: 1.40s
 Average TTFB: 1.45s | Average Total: 2.65s
 ```
 
-Even though both are hitting the same backend API, OpenLiteSpeed still comes in at **2.2x faster TTFB** and **2.5x faster total load**. The caching layer and LSAPI make a real difference here.
+Same backend on both sides, and OpenLiteSpeed still comes in at 2.2x faster TTFB and 2.5x faster total load. The caching layer and LSAPI account for that.
 
 ---
 
-## The Backend API Bottleneck
+## The backend API bottleneck
 
-Speaking of the backend, here's how the shared API performed on its own:
+Here's how the shared API performed on its own:
 
 ```
 Request 1:  TTFB: 5.56s | Total: 5.56s
@@ -114,26 +114,26 @@ Request 3:  TTFB: 2.05s | Total: 2.05s
 Average: 2.33s
 ```
 
-The backend itself has variable response times (1.38s to 5.56s) with a noticeable cold start penalty. This affects both environments equally and is the next bottleneck to tackle after the web server migration — likely through API response caching, database optimization, or connection pooling.
+Response times swing between 1.38s and 5.56s, with a noticeable cold start penalty. That hits both environments equally, and it's the next bottleneck after the web server migration. API response caching, database optimization or connection pooling are the likely levers.
 
 ---
 
-## Static Asset Loading
+## Static asset loading
 
 Tested with a CSS file from the theme:
 
 | | Apache | OpenLiteSpeed |
 |---|--------|---------------|
-| **TTFB** | 1.70s | 1.30s |
-| **Total** | 2.23s | 1.53s |
+| TTFB | 1.70s | 1.30s |
+| Total | 2.23s | 1.53s |
 
-Not as dramatic as the homepage numbers, but still a **1.3x improvement** on TTFB and **1.5x on total load**.
+Less dramatic than the homepage numbers, but still 1.3x on TTFB and 1.5x on total load.
 
 ---
 
-## Why Apache Was Slow
+## Why Apache was slow
 
-Looking at the response headers told the whole story:
+The response headers told the whole story:
 
 ```
 Server: cloudflare
@@ -144,15 +144,9 @@ Set-Cookie: PHPSESSID=...
 CF-Cache-Status: DYNAMIC
 ```
 
-A few problems here:
+There's no caching at all, so every request hits PHP and the database. PHP sessions run on every request, and the `PHPSESSID` cookie both adds I/O overhead and prevents caching. The `Cache-Control` headers explicitly tell browsers and CDNs not to cache anything. Cloudflare can't compensate for that either: `CF-Cache-Status: DYNAMIC` means it's passing everything straight through because of the no-cache headers and the cookies. On top of it all, mod_php is slower than LSAPI and uses more memory per request.
 
-1. **No caching at all** — every single request hits PHP and the database
-2. **PHP sessions on every request** — the `PHPSESSID` cookie adds I/O overhead and prevents caching
-3. **Cache-Control headers say no** — explicitly telling browsers and CDNs not to cache
-4. **Cloudflare can't help** — `CF-Cache-Status: DYNAMIC` means Cloudflare is just passing everything through because of the no-cache headers and cookies
-5. **mod_php** — slower than LSAPI, higher memory usage per request
-
-### Why OpenLiteSpeed Was Fast
+### Why OpenLiteSpeed was fast
 
 ```
 Server: cloudflare
@@ -160,48 +154,28 @@ X-LiteSpeed-Cache: hit
 CF-Cache-Status: DYNAMIC
 ```
 
-1. **LiteSpeed Cache is active** — `x-litespeed-cache: hit` means most requests are served from cache, bypassing PHP entirely
-2. **LSAPI** — faster PHP handler with lower memory footprint and better process management
-3. **PHP 8.2** — performance improvements, better JIT compilation
-4. **OPcache enabled** — PHP bytecode caching reduces compilation overhead
+`x-litespeed-cache: hit` means most requests come out of cache without touching PHP. Behind that, LSAPI is a faster PHP handler with a lower memory footprint and better process management, PHP 8.2 brings its own performance improvements and better JIT compilation, and OPcache cuts the bytecode compilation overhead.
 
 ---
 
-## What to Do About It
+## What to do about it
 
-### Quick wins
+The quick wins are straightforward. Switch to OpenLiteSpeed, since staging already proved it works. Enable the LiteSpeed Cache plugin for page cache, object cache and image optimization. Upgrade to PHP 8.2, which is already tested and compatible. And cache the backend API responses with WordPress transients or Redis so you're not calling the API on every request.
 
-- **Switch to OpenLiteSpeed** — the staging environment already proved it works
-- **Enable LiteSpeed Cache plugin** — page cache, object cache, and image optimization all in one
-- **Upgrade to PHP 8.2** — already tested and compatible
-- **Cache backend API responses** — use WordPress transients or Redis to avoid hitting the API on every request
-
-### Longer term
-
-- **Move PHP sessions to Redis** — reduce file I/O and allow better page caching
-- **Optimize database queries** — add indexes for property searches, review slow queries
-- **Configure Cloudflare properly** — adjust cache-control headers, set up page rules for static content
-- **Set up monitoring** — track TTFB and API response times so you catch regressions early
+Longer term, move PHP sessions to Redis to cut file I/O and unblock better page caching. Optimize the database by adding indexes for property searches and reviewing slow queries. Configure Cloudflare properly, adjusting cache-control headers and setting page rules for static content. And put monitoring on TTFB and API response times so regressions surface early.
 
 ---
 
-## Expected Results After Migration
+## Expected results after migration
 
-Based on what we saw on staging:
+Based on the staging numbers, homepage TTFB should land around 0.8s, down from 5.0s, which is 83% faster. Homepage total load should be around 1.2s, down from 10.9s, or 89% faster. Search TTFB should come in near 1.4s from 3.2s, 56% faster, and search total near 2.7s from 6.5s, 59% faster.
 
-- **Homepage TTFB**: ~0.8s (down from 5.0s) — **83% faster**
-- **Homepage Total**: ~1.2s (down from 10.9s) — **89% faster**
-- **Search TTFB**: ~1.4s (down from 3.2s) — **56% faster**
-- **Search Total**: ~2.7s (down from 6.5s) — **59% faster**
-
-On top of that: reduced server load (80-90% fewer PHP executions), lower hosting costs, better Core Web Vitals for SEO, and a noticeably snappier user experience.
+That also means 80 to 90% fewer PHP executions, which reduces server load and hosting cost, and better Core Web Vitals for SEO.
 
 ---
 
-## Wrapping Up
+## Wrapping up
 
-This was one of those cases where the numbers speak for themselves. Same WordPress site, same backend API, same database — just swapping Apache for OpenLiteSpeed with LiteSpeed Cache gave us a **5-8x performance improvement** across the board.
+Same WordPress site, same backend API, same database. Swapping Apache for OpenLiteSpeed with LiteSpeed Cache produced a 5 to 8x improvement across the board.
 
-The only remaining bottleneck is the backend API averaging 2.33s response times, which is the next thing to tackle. But the web server swap alone already made a massive difference.
-
-If you're running WordPress on Apache and wondering if it's worth switching, hopefully these numbers give you a clear answer.
+The remaining bottleneck is the backend API at 2.33s average, which is next on the list. But the web server swap alone did most of the work.

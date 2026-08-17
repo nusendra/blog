@@ -8,65 +8,60 @@ slug: ployer-lightweight-self-hosted-paas
 is_featured: true
 ---
 
-If you've ever spun up Coolify on a small VPS and watched your free memory evaporate, this post is for you. Ployer is a self-hosted, Git-driven Platform-as-a-Service built in Rust + SvelteKit, designed to do roughly what Coolify does, deploy your apps with automatic SSL, health checks, and webhooks, without taking a gigabyte of RAM to do it.
+Spin up Coolify on a small VPS and you watch your free memory evaporate. Ployer is my attempt at the same job with a smaller appetite: a self-hosted, Git-driven PaaS built in Rust and SvelteKit that deploys your apps with automatic SSL, health checks and webhooks, without spending a gigabyte of RAM to do it.
 
 ## What is Ployer?
 
-Ployer is a single-binary PaaS for people who want the "push to Git, get a deployed app with HTTPS" workflow but don't want to dedicate a beefy server to the control plane itself.
+It's a single-binary PaaS for people who want the "push to Git, get a deployed app with HTTPS" workflow but don't want to dedicate a beefy server to the control plane itself.
 
-It manages Docker containers on one or more servers, fronts them with Caddy for automatic Let's Encrypt certificates, and exposes a SvelteKit dashboard for everything else. The backend is Rust (Axum + sqlx + bollard), the frontend is compiled to static assets and embedded into the binary, and the database is SQLite with WAL mode, no separate Postgres, no Redis, no message queue.
-
-The whole runtime is: **one binary, one SQLite file, Caddy, and Docker.**
+Ployer manages Docker containers on one or more servers, fronts them with Caddy for automatic Let's Encrypt certificates, and gives you a SvelteKit dashboard for everything else. The backend is Rust (Axum, sqlx, bollard), the frontend compiles to static assets embedded in the binary, and the database is SQLite in WAL mode. No separate Postgres, no Redis, no message queue. The whole runtime is one binary, one SQLite file, Caddy, and Docker.
 
 ## What it actually does
 
-- **One-command deploys** from a Git URL, Dockerfile, Nixpacks (no Dockerfile needed), or Docker Compose
-- **Automatic SSL** via Caddy + Let's Encrypt, zero certbot wrangling
-- **Webhooks** for GitHub and GitLab push events
-- **Health checks** with HTTP polling and auto-restart on failure
-- **Real-time logs** streamed over WebSocket (build + runtime)
-- **Container stats**, CPU, memory, network I/O
-- **Encrypted secrets**, env vars stored with AES-256-GCM at rest
-- **Multi-server**, manage apps across more than one host
-- **LAN access**, the dashboard is also reachable over plain HTTP on the local network, so `http://192.168.x.x` or `http://hostname.local` works when your domain doesn't
-- **In-dashboard self-update**, upgrade by clicking a button instead of SSHing in
+- One-command deploys from a Git URL, Dockerfile, Nixpacks (no Dockerfile needed), or Docker Compose
+- Automatic SSL through Caddy and Let's Encrypt, with no certbot wrangling
+- Webhooks for GitHub and GitLab push events
+- Health checks over HTTP polling, with auto-restart on failure
+- Build and runtime logs streamed live over WebSocket
+- Container stats for CPU, memory and network I/O
+- Env vars encrypted at rest with AES-256-GCM
+- Multi-server support, so you can manage apps across more than one host
+- LAN access, so `http://192.168.x.x` or `http://hostname.local` still reaches the dashboard when your domain doesn't
+- Self-update from inside the dashboard, so upgrading is a button instead of an SSH session
 
-Install is a single `curl | sudo bash`. The installer detects your OS and architecture, pulls the prebuilt binary from GitHub Releases (no Rust toolchain needed on the target machine), sets up Caddy and two systemd units, and prints your dashboard URL.
+Install is a single `curl | sudo bash`. The installer detects your OS and architecture, pulls the prebuilt binary from GitHub Releases so you don't need a Rust toolchain on the target machine, sets up Caddy and two systemd units, and prints your dashboard URL.
 
 ## Why Ployer over Coolify
 
-Coolify is genuinely good software and has a wider feature surface than Ployer does today. But if your goal is "run a few apps on a small server without the control plane being the heaviest thing on the box," the trade-offs look different.
+Coolify is genuinely good software and covers more ground than Ployer does today. But if what you want is to run a few apps on a small server without the control plane being the heaviest thing on the box, the trade-offs look different.
 
 ### The memory difference
 
-This is the headline. On the same server:
+On the same server:
 
 | | Coolify | Ployer |
 |---|---|---|
-| Idle memory usage | **1.3 GB** | **400 MB** |
+| Idle memory usage | 1.3 GB | 400 MB |
 
-> Before: installed Coolify, memory usage became **1.3 GB**.
-> After: uninstalled Coolify and switched to Ployer, memory usage dropped to **400 MB**.
+I installed Coolify and memory usage sat at 1.3 GB. I uninstalled it, switched to Ployer, and it dropped to 400 MB. That's about a 70% cut in baseline RAM.
 
-That's roughly a **70% reduction** in baseline RAM usage. On a 1 GB or 2 GB VPS, the kind of box people actually use for side projects and small production workloads, that gap is the difference between "no room left for my app" and "room to actually run things."
+On a 1 GB or 2 GB VPS, which is what people actually use for side projects and small production workloads, that gap decides whether there's room left to run your app at all.
 
-The reason is architectural: Coolify runs as a PHP/Laravel app plus Postgres, Redis, a queue worker, Soketi, and a few helper containers. Ployer is one Rust binary and a SQLite file. Fewer moving parts, less memory.
+The reason is architectural. Coolify runs as a PHP/Laravel app plus Postgres, Redis, a queue worker, Soketi, and a few helper containers. Ployer is one Rust binary and a SQLite file.
 
 ### Other advantages
 
-- **Single binary, no docker-in-docker control plane.** Ployer itself runs natively under systemd. Only your *apps* run in Docker. Less startup time, less log noise, easier to debug.
-- **SQLite, not Postgres.** One file. No separate database container, no tuning, no backup pipeline beyond `cp ployer.db`.
-- **Predictable footprint.** Rust + a static SvelteKit bundle gives you flat memory usage, no PHP-FPM workers ballooning under load, no queue worker holding heap.
-- **Fast cold start.** Systemd restart is sub-second. No waiting for a half-dozen containers to come up healthy.
-- **Caddy from day one.** Automatic HTTPS is built in, not a checkbox you have to find.
-- **In-dashboard self-update.** Click "Update", no SSH, no remembering install commands.
-- **Honest scope.** Ployer is for small-to-medium self-hosted deployments. It doesn't pretend to be a Kubernetes replacement, and the surface area reflects that.
+Ployer itself runs natively under systemd, so there's no docker-in-docker control plane. Only your apps run in Docker, which means less startup time, less log noise, and less to dig through when something breaks. Systemd restarts are sub-second, so you're not waiting for half a dozen containers to come up healthy.
+
+SQLite means one file: no separate database container, no tuning, and no backup pipeline beyond `cp ployer.db`. Rust and a static SvelteKit bundle give you flat memory usage, with no PHP-FPM workers ballooning under load and no queue worker sitting on heap.
+
+Caddy is there from day one, so automatic HTTPS is built in rather than a checkbox you have to go find. And updates happen from the dashboard, so you don't have to remember install commands.
+
+Ployer is scoped for small to medium self-hosted deployments, and the surface area reflects that.
 
 ### Where Coolify still wins
 
-Worth being honest: Coolify has more integrations, more one-click app templates, a larger team, and a longer track record. If you want a giant catalog of preconfigured services or you're running a deployment platform for a team that needs all the bells and whistles, Coolify is the more feature-complete choice today.
-
-Ployer is the right pick when you want **the core workflow without the overhead**.
+Coolify has more integrations, more one-click app templates, a larger team, and a longer track record. If you want a big catalog of preconfigured services, or you're running a deployment platform for a team that needs all the bells and whistles, Coolify is the more feature-complete choice today.
 
 ## Architecture at a glance
 
@@ -84,7 +79,7 @@ Internet
     └── Caddy Admin API   ← Dynamic reverse proxy routes
 ```
 
-That's the whole thing. No hidden sidecars.
+That's the whole thing, with no sidecars behind it.
 
 ## Getting started
 
@@ -94,12 +89,12 @@ Point your domain's DNS A record at your server, then:
 curl -fsSL https://ployer.nusendra.com/install.sh | sudo bash
 ```
 
-The installer asks for your domain (or auto-detects your IP if you run it non-interactively), generates a JWT secret, installs Caddy, sets up systemd, and prints the dashboard URL. HTTPS is provisioned automatically when you use a real domain.
+The installer asks for your domain, or auto-detects your IP if you run it non-interactively. It generates a JWT secret, installs Caddy, sets up systemd, and prints the dashboard URL. HTTPS gets provisioned automatically once you use a real domain.
 
-> **Heads up:** install on a fresh, dedicated server. Ployer owns ports 80 and 443 via Caddy, so it will conflict with Nginx, Apache, or Coolify if any of those are still running. If you're migrating from Coolify, uninstall it first, that's also when you'll see the memory drop.
+Install it on a fresh, dedicated server. Ployer owns ports 80 and 443 through Caddy, so it will conflict with Nginx, Apache, or Coolify if any of those are still running. If you're migrating from Coolify, uninstall that first, which is also when you'll see the memory drop.
 
 ## Closing thought
 
-The pitch isn't "Ployer does everything Coolify does." The pitch is: **most self-hosters don't need everything Coolify does, and they're paying for it in RAM.** If you want a Git-driven PaaS workflow on a small server and you'd rather spend your memory on the apps you're actually running, Ployer is built for exactly that case.
+Most self-hosters don't need everything Coolify does, and they pay for it in RAM anyway. If you want a Git-driven PaaS workflow on a small server and you'd rather spend your memory on the apps you're actually running, that's the case Ployer was built for.
 
 Repo and install instructions: <https://ployer.nusendra.com>

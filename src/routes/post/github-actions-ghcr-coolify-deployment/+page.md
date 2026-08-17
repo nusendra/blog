@@ -8,19 +8,19 @@ slug: github-actions-ghcr-coolify-deployment
 is_featured: false
 ---
 
-If you're using Coolify to deploy Docker-based apps, you might notice that build times on your production server can get slow — especially when the server is handling both building and serving. In this post, I'll show you how to move the Docker build step to GitHub Actions with GitHub Container Registry (GHCR), so Coolify only needs to pull and run a pre-built image.
+If you deploy Docker-based apps with Coolify, build times on the production server get slow once that server is doing the building and the serving at the same time. Moving the Docker build to GitHub Actions and GitHub Container Registry (GHCR) leaves Coolify with nothing to do but pull and run a pre-built image.
 
-## The Problem
+## The problem
 
-With the default Coolify setup, every deployment means:
+With a default Coolify setup, every deployment means:
 
 1. Coolify clones the repo on the production server
 2. Builds the Docker image locally
 3. Runs the container
 
-This took **~10 minutes** because the server handled both building and serving the application.
+That took about 10 minutes, because the server was building and serving the application at once.
 
-## The Solution
+## The solution
 
 Offload the build to GitHub Actions:
 
@@ -28,7 +28,7 @@ Offload the build to GitHub Actions:
 2. Pushes the image to GHCR
 3. Triggers Coolify via webhook to pull and run the pre-built image
 
-The Coolify deployment step now takes **~30 seconds**.
+The Coolify deployment step now takes about 30 seconds.
 
 ## Architecture
 
@@ -49,39 +49,39 @@ GitHub Actions (CI runner)
                     └── Restarts the container
 ```
 
-## Step-by-Step Setup
+## Setup
 
-### 1. Add GitHub Repository Secrets
+### 1. Add GitHub repository secrets
 
-Go to your GitHub repository: **Settings > Secrets and variables > Actions > Secrets tab > Repository secrets**.
+Go to your GitHub repository, then Settings > Secrets and variables > Actions > Secrets tab > Repository secrets.
 
-Add these two secrets:
+Add these two:
 
 | Secret Name       | Description                                      |
 |-------------------|--------------------------------------------------|
 | `COOLIFY_WEBHOOK` | The webhook URL from Coolify to trigger a deploy |
 | `COOLIFY_TOKEN`   | The Coolify API token with `deploy` permission   |
 
-> `GITHUB_TOKEN` is automatically provided by GitHub Actions — no manual setup needed.
+GitHub Actions provides `GITHUB_TOKEN` itself, so that one needs no setup.
 
-### 2. Create a Coolify API Token
+### 2. Create a Coolify API token
 
 1. Log in to your Coolify dashboard
-2. Navigate to **Keys & Tokens** (or **API Tokens**)
-3. Create a new API token with **deploy** permission — this is the minimum required
+2. Navigate to Keys & Tokens (or API Tokens)
+3. Create a new API token with `deploy` permission, which is the minimum required
 4. Copy the token and add it as `COOLIFY_TOKEN` in GitHub secrets
 
-### 3. Get the Coolify Webhook URL
+### 3. Get the Coolify webhook URL
 
-1. In the Coolify dashboard, go to your application/service
-2. Navigate to the **Webhooks** section
+1. In the Coolify dashboard, go to your application or service
+2. Navigate to the Webhooks section
 3. Copy the webhook URL and add it as `COOLIFY_WEBHOOK` in GitHub secrets
 
-### 4. Authenticate Docker on the Coolify Server
+### 4. Authenticate Docker on the Coolify server
 
-Since the GitHub repository is private, the Coolify server needs to authenticate with GHCR to pull the image.
+For a private repository, the Coolify server needs to authenticate with GHCR before it can pull the image.
 
-Create a GitHub **Personal Access Token (Classic)** with the `read:packages` scope, then SSH into your Coolify server:
+Create a GitHub Personal Access Token (Classic) with the `read:packages` scope, then SSH into your Coolify server:
 
 ```bash
 sudo su -
@@ -90,13 +90,13 @@ echo "<YOUR_GITHUB_PAT>" | docker login ghcr.io -u <YOUR_GITHUB_USERNAME> --pass
 
 You should see `Login Succeeded`.
 
-> **Important:** Run this as root. Coolify runs Docker as root, so credentials must be in `/root/.docker/config.json`, not your regular user's home directory.
+Run this as root. Coolify runs Docker as root, so the credentials have to land in `/root/.docker/config.json` rather than your own user's home directory.
 
-### 5. Configure Coolify Build Pack
+### 5. Configure the Coolify build pack
 
-Set Coolify to use the **Docker Compose** build pack. The `docker-compose.yml` references the pre-built GHCR image directly (no `build:` directive), so Coolify will pull instead of build.
+Set Coolify to use the Docker Compose build pack. The `docker-compose.yml` references the pre-built GHCR image directly, with no `build:` directive, so Coolify pulls instead of building.
 
-## The GitHub Actions Workflow
+## The GitHub Actions workflow
 
 Create `.github/workflows/deploy.yml`:
 
@@ -152,14 +152,11 @@ jobs:
             --fail --silent --show-error
 ```
 
-Key things to note:
-- Each build gets tagged with both `latest` and the commit SHA — this enables easy rollbacks
-- `type=gha` cache means subsequent builds only rebuild changed layers
-- The Coolify webhook is only triggered on successful builds
+Every build gets tagged with both `latest` and the commit SHA, which is what makes rollbacks easy. The `type=gha` cache means later builds only rebuild the layers that changed. And the Coolify webhook fires only when the build succeeds.
 
 ## Docker Compose for Coolify
 
-Your `docker-compose.yml` should reference the GHCR image instead of building locally:
+Your `docker-compose.yml` should point at the GHCR image instead of building locally:
 
 ```yaml
 services:
@@ -177,38 +174,38 @@ networks:
 
 ## Deploying
 
-Just push to `master`:
+Push to `master`:
 
 ```bash
 git push origin master
 ```
 
-Monitor the build in the **Actions** tab of your GitHub repository.
+Then watch the build in the Actions tab of your GitHub repository.
 
 ## Troubleshooting
 
-### "unauthorized" error when Coolify pulls the image
+### "unauthorized" when Coolify pulls the image
 
-Docker on the Coolify server isn't authenticated with GHCR, or the login was done as a non-root user. Fix by running `docker login` as root on the server.
+Docker on the Coolify server isn't authenticated with GHCR, or the login happened as a non-root user. Run `docker login` as root on the server.
 
-### GitHub Actions build fails at login step
+### The Actions build fails at the login step
 
-The repository may not have the correct `GITHUB_TOKEN` permissions. Go to **Settings > Actions > General > Workflow permissions** and set it to **Read and write permissions**.
+The repository probably lacks the right `GITHUB_TOKEN` permissions. Go to Settings > Actions > General > Workflow permissions and set it to Read and write permissions.
 
-### GitHub Actions succeeds but Coolify doesn't deploy
+### Actions succeeds but Coolify doesn't deploy
 
-Verify both `COOLIFY_WEBHOOK` and `COOLIFY_TOKEN` secrets are correct. Check that the API token has `deploy` permission.
+Check that both `COOLIFY_WEBHOOK` and `COOLIFY_TOKEN` are correct, and that the API token carries `deploy` permission.
 
 ### Rolling back
 
-Each build is tagged with the commit SHA. To roll back, update the image tag in `docker-compose.yml`:
+Every build is tagged with its commit SHA, so a rollback is an image tag change in `docker-compose.yml`:
 
 ```yaml
 image: ghcr.io/your-org/your-repo:<commit-sha>
 ```
 
-Then trigger a redeploy in Coolify or push the change.
+Then trigger a redeploy in Coolify, or push the change.
 
 ## Conclusion
 
-Moving the Docker build from Coolify to GitHub Actions with GHCR is a simple but impactful optimization. Your production server only pulls and runs pre-built images, reducing deployment time significantly and freeing up server resources for actually serving your application.
+With the build living in GitHub Actions and the image living in GHCR, the production server only pulls and runs. Deploys drop from ten minutes to about thirty seconds, and the server spends its cycles serving the application instead of compiling it.

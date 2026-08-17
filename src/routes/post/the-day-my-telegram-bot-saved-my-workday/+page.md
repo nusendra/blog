@@ -14,13 +14,13 @@ That database lives on my home server. It's the shared backend for a few of my s
 
 The obvious fix is to SSH in and re-authenticate. Except SSH also goes over Tailscale. The whole reason Tailscale is there is so I don't have to expose SSH to the public internet. With Tailscale down on the server, there was no path in.
 
-So there I was, sitting in a cafe with a flat white going cold next to me, locked out of my own home server.
+So there I was, sitting in a cafe with an untouched flat white next to me, locked out of my own home server.
 
 ---
 
 ## Remembering the bot
 
-I sat there for a minute trying to think of a workaround. Drive home? An hour each way. Ask someone at the house to plug in a monitor? Nobody was there. Wait it out and hope Tailscale would re-auth itself? It wouldn't, that's the whole point of the expiry.
+I sat there for a minute looking for a workaround. Driving home was an hour each way, and nobody was at the house to plug in a monitor for me. Waiting it out was pointless, since Tailscale expiring on purpose is the entire point of Tailscale expiring.
 
 Then I remembered the [Telegram bot I'd written a couple of weeks ago](/post/talking-to-claude-code-from-my-phone).
 
@@ -50,7 +50,7 @@ A minute later my database client reconnected. I went back to work.
 
 ## Why this worked
 
-The interesting thing isn't that Claude could run `tailscale up`, anyone with shell access could do that. The interesting thing is the path that *got* a shell to the right machine.
+Anyone with a shell on that Pi could have run `tailscale up`. The hard part was getting a shell onto the Pi in the first place.
 
 Normally my mental model of "remote access to home server" is a single chain:
 
@@ -58,7 +58,7 @@ Normally my mental model of "remote access to home server" is a single chain:
 laptop → Tailscale → Pi → shell
 ```
 
-If any link breaks, I'm out. That morning, Tailscale was the broken link, and it happened to be the link closest to the destination, the one I couldn't reach over the chain itself.
+If any link breaks, I'm out. That morning Tailscale was the broken link, and it sat at the far end of the chain, so the only tool that could have fixed it was the tool that was down.
 
 The Telegram bot gave me a completely independent path:
 
@@ -66,20 +66,20 @@ The Telegram bot gave me a completely independent path:
 phone → Telegram cloud → Pi (outbound) → Claude → shell
 ```
 
-No incoming connections, no VPN, no port forwards. The Pi reaches out to Telegram's servers and stays connected. As long as the Pi has any working internet connection at all, I can send it commands. Even if every other remote-access tool on the box is broken.
+The Pi dials out to Telegram and holds that connection open, so nothing ever has to come in: no VPN to keep alive, no port to forward. As long as the Pi has some kind of working internet, I can send it commands, even when every other remote-access tool on the box is dead.
 
-I didn't design it that way. I built the bot because I wanted to chat with Claude from the train. The fact that it doubles as an out-of-band recovery channel was a happy accident, the kind you only appreciate when you're sitting in a cafe staring at a connection timeout.
+None of that was deliberate. I built the bot so I could talk to Claude from the train. It doubling as an out-of-band recovery channel was luck, and I only noticed the luck while staring at a connection timeout in a cafe.
 
 ---
 
 ## The lesson, such as it is
 
-There's a real principle hiding in here, and it's older than Tailscale or Telegram or Claude: **your recovery channel must not depend on the thing it's trying to recover.** If the only way to fix your VPN is through your VPN, you don't have a recovery channel, you have a single point of failure with extra steps.
+The principle here is old and fairly boring: your recovery channel should not depend on the thing it is recovering. If the only way to fix your VPN is through your VPN, it isn't a recovery channel.
 
-For home labs this usually means a dumb second path: a static IP with port-forwarded SSH, a cellular dongle, a friend who can power-cycle a box for you. Those all work. But they're also all things I'd have to *set up*, and historically I have not set them up, because the day they're needed feels infinitely far away, right up until the moment it isn't.
+For a home lab that usually means a dumb second path. SSH on a port-forwarded static IP, a cellular dongle, a friend who can power-cycle the box. All of them work, and all of them need setting up, which is why I had never set any of them up. The morning you need one always feels far away until it's the morning.
 
-What's nice about the Telegram-bot path is that I didn't set it up *as* a recovery channel. I set it up because chatting with Claude from my phone is genuinely useful for normal work. The recovery property came along for free, and "free" is the only price at which I'll reliably maintain a backup system.
+The Telegram bot survived that problem by not being a recovery tool. I keep it running because talking to Claude from my phone is useful on ordinary days, so it stays maintained without me deciding to maintain it. The recovery path came along for free, which is roughly the only price at which I keep a backup system alive.
 
-If you've got a home server and an LLM-CLI you like talking to, this is a pattern worth copying. The bot itself is small, [it lives here](https://github.com/nusendra/claude-code-telegram). Configure the user-ID allowlist properly so you're the only one who can drive it, point it at a Claude session with sensible permissions, and forget about it until the day you really, really need it.
+If you've got a home server and an LLM CLI you like talking to, the pattern is worth copying. The bot is small and [it lives here](https://github.com/nusendra/claude-code-telegram). Configure the user-ID allowlist so you're the only one who can drive it, point it at a Claude session with sensible permissions, and then forget it exists until the day you need it.
 
-That day, for me, was last Tuesday. I'll take it.
+Mine was last Tuesday.
