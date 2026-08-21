@@ -1,11 +1,11 @@
 ---
-draft: false
+draft: true
 title: "Preview First, Merge Later: Wiring an AI Agent Into a Container Deploy Loop"
 date: 2026-08-17 09:00:00
 tags: ['ai','docker','coolify','devops']
 description: "Building a Slack-driven agent loop where the running app is the review artifact. Four assumptions I had about containers, caches and process managers turned out to be wrong, and all of them failed silently."
 slug: preview-first-merge-later
-is_featured: true
+is_featured: false
 ---
 
 I wanted a specific loop: type a request in Slack, have an AI agent change the code, watch the change appear on a real URL, and only after I'd looked at it with my own eyes let the agent open a pull request.
