@@ -4,7 +4,7 @@ export const fetchMarkdown = async (allPostFiles) => {
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const { title, date, slug, description, tags, is_featured } = metadata;
+			const { title, date, slug, description, tags, is_featured, draft } = metadata;
 
 			return {
 				title,
@@ -13,9 +13,10 @@ export const fetchMarkdown = async (allPostFiles) => {
 				description,
 				tags,
 				is_featured,
+				draft,
 			};
 		})
 	);
 
-	return allPosts;
+	return allPosts.filter((post) => !post.draft);
 };
