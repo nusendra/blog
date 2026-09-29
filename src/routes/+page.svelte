@@ -72,13 +72,17 @@
 								<span>{status} Event</span>
 							</h2>
 							<img
-								class="rounded w-full object-cover object-center mb-6 md:mb-0"
+								class="rounded w-full h-auto object-cover object-center mb-6 md:mb-0"
 								src={data.event.image}
 								alt={data.event.alt_image}
+								width={data.event.image_width}
+								height={data.event.image_height}
+								loading="lazy"
+								decoding="async"
 							/>
-						<p class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-							{data.event.description} <!-- You can add description or more content here -->
-						</p>
+							<p class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
+								{data.event.description}
+							</p>
 						</div>
 						<div
 							class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
