@@ -7,6 +7,15 @@
 	<div class="container px-5 py-24 mx-auto mt-0 lg:mt-[-225px]">
 		<div class="flex flex-wrap -m-4">
 			<TalkCard
+				thumbnailUrl="/talks/nusendra-mxfest-talks.webp"
+				thumbnailAlt="nusendra talks about how ai is redesigning who does the work at road to mx fest 2026 surabaya"
+				tag="Offline Seminar"
+				title="How AI is redesigning who does the work"
+				description="Membahas tentang bagaimana AI mengubah peta dunia kerja dari tiga sudut pandang: perusahaan, junior, dan solo builder"
+				slideUrl="https://docs.google.com/presentation/d/1uZLKEB5pCIMNhkLrrk0DHqr-vk0vshIgpuxlrM0n37g/edit?usp=sharing"
+			/>
+
+			<TalkCard
 				thumbnailUrl="/talks/nusendra-exabytes-ai-agents.webp"
 				thumbnailAlt="nusendra talks about developing actionable ai agent at exabytes developer club"
 				tag="Offline Seminar"

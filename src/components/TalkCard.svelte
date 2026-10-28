@@ -27,9 +27,14 @@
 		</p>
 		{#if slideUrl}
 			<div class="flex flex-row-reverse">
-				<a href={slideUrl} target="_blank">
+				<a
+					href={slideUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-200"
+				>
 					<button
-						class="mt-3 text-black bg-yellow-400 border-0 py-1 px-5 focus:outline-none hover:bg-indigo-600 rounded text-md"
+						class="mt-3 text-black bg-yellow-400 border-0 py-1 px-5 hover:bg-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-200 rounded text-md"
 						>Slide</button
 					></a
 				>
