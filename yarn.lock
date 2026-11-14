@@ -337,10 +337,10 @@
   dependencies:
     "@types/hast" "^3.0.4"
 
-"@sveltejs/adapter-static@^3.0.0":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.1.tgz#64c36020435d7b1eacd362b2d027fefda5ec2e44"
-  integrity sha512-6lMvf7xYEJ+oGeR5L8DFJJrowkefTK6ZgA4JiMqoClMkKq0s6yvsd3FZfCFvX1fQ0tpCD7fkuRVHsnUVgsHyNg==
+"@sveltejs/adapter-static@^3.0.11":
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.11.tgz#387bda4c84d18185d9339ab0fa7b35b9f905514f"
+  integrity sha512-DyX1bWx9uiPxzq7Mr+jnxqY+w3UhE3pYy5D1LcfdS++2KZTHSZBD60BoP44LjVgtGILfeOQCF8ESqzmLVrz4Ng==
 
 "@sveltejs/kit@^2.5.27":
   version "2.7.2"
